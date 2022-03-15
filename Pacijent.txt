@@ -1,0 +1,16 @@
+Zakazivanje pregleda (kod izabranog lekara, osim kada specijalista naglasi da je pregled kod njega onda zakazuje kod njega odmah)
+Pomeranje pregleda, otkazivanje pregleda (blokiranje korisnika koji pokusava da zloupotrebi sistem)
+Pregled izvestaja pregleda (mogucnost ostavljanja komentare/beleske)
+Opciono dozvoliti opis simptoma
+Obavestenja (putem notifikacije iako je aplikacija zatvorena) (terapije, pregledi) (cekiranje da li je terapija uzeta, ako nije naknadno obavestiti da nije uzeta)
+(za razlicite pacijente razliciti vid notifikacije text-to-speech...)
+Mogucnost da se vidi sta je lekar prepisao (kada treba ponovo da se dodje, sta treba od lekova, kada treba meriti pritisak...)
+Automatski pravi raspored za uzimanje lekova
+Ocenjivanje lekara (ostavljanje komentara) (posle svakog pregleda)
+Ocenjivanje bolnice (medicinsko osoblje, opremljenost, ljubaznost...)
+Aplikacija da bude azurna (notifikacija da je neka operacija izvrsena)
+Otporna na razlicite greske
+Podrska za srpski jezik (latinica, cirilica), engleski jezik (vremenom za nemacki, italijanski, spanski, francuki...)
+Opravdanje za skolu
+U slucaju otkazivanja termina od strane doktora dati mogucnost pacijentu da zakaze ponovo pregled kod nekog drugog lekara
+Pregled svog kartona (cuvanje recepta ako zatreba nekada)
