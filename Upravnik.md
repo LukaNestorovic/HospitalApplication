@@ -3,7 +3,7 @@
 ## Legenda
 
 - *italics* nije sigurno - mozda
-- **BOLD** vazno
+- **BOLD** - vazno
 
 ## Potrebne funkcionalnosti
 
