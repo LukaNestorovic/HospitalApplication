@@ -2,7 +2,7 @@
 
 ## Legenda
 
-- *italics* nije sigurno - mozda
+- *italics* - nije sigurno/mozda
 - **BOLD** - vazno
 
 ## Potrebne funkcionalnosti
