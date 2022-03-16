@@ -1,5 +1,5 @@
 # Specifikacija za pacijenta
-_________________
+
 - Zakazivanje, pomeranje i otkazivanje pregleda
 - Pregled izvestaja pregleda
 - Opciono dozvoliti opis simptoma
