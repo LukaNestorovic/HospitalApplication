@@ -4,7 +4,10 @@
 
 <Workspace>
 	<Local Expanded="Yes">
-		<Model Expanded="Yes" ID="{A36D58F4-126A-45F8-B6D8-FC833536CFB8}" Name="dijagram_pacijenta" Selected="Yes" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="dijagram_pacijenta.oom"/>
+		<Model Expanded="Yes" ID="{A36D58F4-126A-45F8-B6D8-FC833536CFB8}" Loaded="No" Name="dijagram_pacijenta" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="dijagram_pacijenta.oom"/>
+		<Model Expanded="Yes" ID="{A36D58F4-126A-45F8-B6D8-FC833536CFB8}" Name="Dijagrami" Selected="Yes" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="dijagram_pacijenta.oom"/>
+		<Model Expanded="Yes" ID="{BBD330FF-EED0-451D-9B67-4C9BB6C555F0}" Name="Sekretar" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="Sekretar.oom"/>
+		<Model Expanded="Yes" ID="{64AD090D-D6A7-49FF-9C51-BD68C704CEF5}" Name="zadatak_1" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="dijagram_upravnik.oom"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>
