@@ -14,7 +14,7 @@ public class PatientRepository
       return null;
    }
    
-   public Patient FindByJMBG(int id)
+   public Patient FindById(int id)
    {
       // TODO: implement
       return null;
@@ -26,13 +26,13 @@ public class PatientRepository
       return null;
    }
    
-   public Boolean DeleteByJMBG(int id)
+   public Boolean DeleteById(int id)
    {
       // TODO: implement
       return null;
    }
    
-   public Boolean UpdateByJMBG(Patient jmbg)
+   public Boolean UpdateById(Patient patient)
    {
       // TODO: implement
       return null;

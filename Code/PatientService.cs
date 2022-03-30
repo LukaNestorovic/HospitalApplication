@@ -29,13 +29,13 @@ public class PatientService
         return null;
     }
 
-    public Boolean DeletePatient(String jmbg)
+    public Boolean DeletePatient(int id)
     {
         // TODO: implement
         return null;
     }
 
-    public Patient ReadPatient(String jmbg)
+    public Patient ReadPatient(int id)
     {
         // TODO: implement
         return null;
