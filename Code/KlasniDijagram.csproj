@@ -102,6 +102,25 @@
                     BuildAction = "Compile"
                 />
                 <File
+                    RelPath = "Controller\RoomController.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Controller\AppointmentController.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Controller\PatientController.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Controller\OperationController.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                /><File
                     RelPath = "Model\Work.cs"
                     SubType = "Code"
                     BuildAction = "Compile"
@@ -229,8 +248,38 @@
                     RelPath = "Repository\PatientRepository.cs"
                     SubType = "Code"
                     BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Repository\AppointmentRepository.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Repository\OperationRepository.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Repository\RoomRepository.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
                 /><File
                     RelPath = "Service\PatientService.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Service\AppointmentService.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Service\OperationService.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Service\RoomService.cs"
                     SubType = "Code"
                     BuildAction = "Compile"
                 />
