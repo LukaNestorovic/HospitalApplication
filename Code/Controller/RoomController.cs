@@ -1,40 +1,38 @@
 /***********************************************************************
- * Module:  AppointmentService.cs
+ * Module:  RoomController.cs
  * Author:  lukaa
- * Purpose: Definition of the Class Service.AppointmentService
+ * Purpose: Definition of the Class Controller.RoomController
  ***********************************************************************/
 
 using System;
 
-namespace Service
+namespace Controller
 {
-   public class AppointmentService
+   public class RoomController
    {
-      public Boolean CreateApp(DateTIme dateTime, String description, int duration, Boolean emergency, int id)
+      public Boolean CreateRoom()
       {
          // TODO: implement
          return null;
       }
       
-      public Boolean UpdateApp(Appointment appointment)
+      public Boolean DeleteRoom()
       {
          // TODO: implement
          return null;
       }
       
-      public Boolean DeleteApp(int id)
+      public Boolean ReadRoom()
       {
          // TODO: implement
          return null;
       }
       
-      public Appointment ReadApp(int id)
+      public Boolean UpdateRoom()
       {
          // TODO: implement
          return null;
       }
-   
-      public Repository.AppointmentRepository appointmentRepository;
    
    }
 }

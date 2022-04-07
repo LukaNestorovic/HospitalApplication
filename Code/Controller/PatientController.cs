@@ -1,40 +1,38 @@
 /***********************************************************************
- * Module:  AppointmentService.cs
+ * Module:  PatientController.cs
  * Author:  lukaa
- * Purpose: Definition of the Class Service.AppointmentService
+ * Purpose: Definition of the Class Controller.PatientController
  ***********************************************************************/
 
 using System;
 
-namespace Service
+namespace Controller
 {
-   public class AppointmentService
+   public class PatientController
    {
-      public Boolean CreateApp(DateTIme dateTime, String description, int duration, Boolean emergency, int id)
+      public Boolean CreatePatient()
       {
          // TODO: implement
          return null;
       }
       
-      public Boolean UpdateApp(Appointment appointment)
+      public Boolean UpdatePatient()
       {
          // TODO: implement
          return null;
       }
       
-      public Boolean DeleteApp(int id)
+      public Boolean DeletePatient()
       {
          // TODO: implement
          return null;
       }
       
-      public Appointment ReadApp(int id)
+      public Boolean ReadPatient()
       {
          // TODO: implement
          return null;
       }
-   
-      public Repository.AppointmentRepository appointmentRepository;
    
    }
 }

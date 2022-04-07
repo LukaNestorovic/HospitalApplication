@@ -10,7 +10,7 @@ namespace Service
 {
    public class RoomService
    {
-      public Boolean CreateRoom(Room room)
+      public Boolean CreateRoom(String roomType, String name, Inventory inventory, int id)
       {
          // TODO: implement
          return null;
