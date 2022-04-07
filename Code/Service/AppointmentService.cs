@@ -10,13 +10,13 @@ namespace Service
 {
    public class AppointmentService
    {
-      public Boolean CreateApp(DateTime dateTime)
+      public Boolean CreateApp(DateTime dateTime, String description, int duration, Boolean emergency)
       {
          // TODO: implement
          return null;
       }
       
-      public Boolean UpdateApp(DateTime dateTime)
+      public Boolean UpdateApp(DateTime dateTime, String description, int duration, Boolean emergency)
       {
          // TODO: implement
          return null;
@@ -34,7 +34,7 @@ namespace Service
          return null;
       }
    
-      public Repository.Appointment appointment;
+      public Repository.AppointmentRepository appointmentRepository;
    
    }
 }
