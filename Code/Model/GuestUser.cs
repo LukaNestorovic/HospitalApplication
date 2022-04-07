@@ -13,6 +13,7 @@ namespace Model
       private String Name;
       private String Surname;
       private String Jmbg;
+      private int Id;
    
    }
 }

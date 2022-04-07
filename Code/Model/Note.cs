@@ -13,6 +13,7 @@ namespace Model
       private String Descritpion;
       private DateTime BeginAbsence;
       private DateTime EndAbsence;
+      private int Id;
    
    }
 }

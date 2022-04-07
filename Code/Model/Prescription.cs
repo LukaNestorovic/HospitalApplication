@@ -12,6 +12,7 @@ namespace Model
    {
       private Drug Drug;
       private String Instructions;
+      private int Id;
    
    }
 }

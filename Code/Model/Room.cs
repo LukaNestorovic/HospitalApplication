@@ -13,6 +13,7 @@ namespace Model
       private String RoomType;
       private String Name;
       private Inventory Inventorty;
+      private int Id;
    
    }
 }

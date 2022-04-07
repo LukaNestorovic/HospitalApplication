@@ -13,6 +13,7 @@ namespace Model
       private String Name;
       private int Quantity;
       private int Price;
+      private int Id;
    
    }
 }

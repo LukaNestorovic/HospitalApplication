@@ -18,6 +18,7 @@ namespace Model
       private String Therhapy;
       private String Diagnosis;
       private String Symptoms;
+      private int Id;
    
    }
 }

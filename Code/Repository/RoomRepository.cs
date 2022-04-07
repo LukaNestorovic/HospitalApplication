@@ -1,28 +1,28 @@
 /***********************************************************************
- * Module:  AppointmentRepository.cs
+ * Module:  RoomRepository.cs
  * Author:  lukaa
- * Purpose: Definition of the Class Repository.AppointmentRepository
+ * Purpose: Definition of the Class Repository.RoomRepository
  ***********************************************************************/
 
 using System;
 
 namespace Repository
 {
-   public class AppointmentRepository
+   public class RoomRepository
    {
-      public List<Appointment> FindAll()
+      public List<Room> FindAll()
       {
          // TODO: implement
          return null;
       }
       
-      public Appointment FindByID(int id)
+      public Room FindByID(int id)
       {
          // TODO: implement
          return null;
       }
       
-      public Boolean Save(Appointment appointment)
+      public Boolean Save(Room room)
       {
          // TODO: implement
          return null;
@@ -34,7 +34,7 @@ namespace Repository
          return null;
       }
       
-      public Boolean UpdateByID(Appointment appointment)
+      public Boolean UpdateByID(Room room)
       {
          // TODO: implement
          return null;

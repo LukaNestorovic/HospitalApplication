@@ -10,5 +10,7 @@ namespace Model
 {
    public class Survey
    {
+      private int Id;
+   
    }
 }

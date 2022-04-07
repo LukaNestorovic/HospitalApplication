@@ -1,40 +1,40 @@
 /***********************************************************************
- * Module:  SavePatient.cs
+ * Module:  OperationService.cs
  * Author:  lukaa
- * Purpose: Definition of the Class SavePatient
+ * Purpose: Definition of the Class Service.OperationService
  ***********************************************************************/
 
 using System;
 
 namespace Service
 {
-   public class PatientService
+   public class OperationService
    {
-      public Boolean CreatePatient(Patient patient)
+      public Boolean CreateOperation(Operation operation)
       {
          // TODO: implement
          return null;
       }
       
-      public Boolean UpdatePatient(Patient patient)
+      public Boolean UpdateOperation(Operation operation)
       {
          // TODO: implement
          return null;
       }
       
-      public Boolean DeletePatient(int id)
+      public Boolean DeleteOperation(int id)
       {
          // TODO: implement
          return null;
       }
       
-      public Patient ReadPatient(int id)
+      public Operation ReadOperation(int id)
       {
          // TODO: implement
          return null;
       }
    
-      public Repository.PatientRepository patientRepository;
+      public Repository.OperationRepository operationRepository;
    
    }
 }

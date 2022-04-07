@@ -36,6 +36,7 @@ namespace Model
       private String Email;
       private DateTime BirthDate;
       private String Adress;
+      private int Id;
    
    }
 }

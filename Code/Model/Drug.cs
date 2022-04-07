@@ -13,6 +13,7 @@ namespace Model
       private String Name;
       private String Ingredients;
       private Boolean Approved;
+      private int Id;
    
    }
 }

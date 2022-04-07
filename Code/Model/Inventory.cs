@@ -13,6 +13,7 @@ namespace Model
       private String Name;
       private TypeOfEquip Type;
       private int Quntaty;
+      private int Id;
    
    }
 }

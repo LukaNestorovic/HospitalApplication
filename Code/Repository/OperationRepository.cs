@@ -1,28 +1,28 @@
 /***********************************************************************
- * Module:  AppointmentRepository.cs
+ * Module:  OperationRepository.cs
  * Author:  lukaa
- * Purpose: Definition of the Class Repository.AppointmentRepository
+ * Purpose: Definition of the Class Repository.OperationRepository
  ***********************************************************************/
 
 using System;
 
 namespace Repository
 {
-   public class AppointmentRepository
+   public class OperationRepository
    {
-      public List<Appointment> FindAll()
+      public List<Operation> FindAll()
       {
          // TODO: implement
          return null;
       }
       
-      public Appointment FindByID(int id)
+      public Operation FindByID(int id)
       {
          // TODO: implement
          return null;
       }
       
-      public Boolean Save(Appointment appointment)
+      public Boolean Save(Operation operation)
       {
          // TODO: implement
          return null;
@@ -34,7 +34,7 @@ namespace Repository
          return null;
       }
       
-      public Boolean UpdateByID(Appointment appointment)
+      public Boolean UpdateByID(Operation operation)
       {
          // TODO: implement
          return null;

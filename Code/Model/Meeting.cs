@@ -14,6 +14,7 @@ namespace Model
       private int Duration;
       private Room Room;
       private String Description;
+      private int Id;
    
    }
 }

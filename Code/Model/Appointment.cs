@@ -20,6 +20,7 @@ namespace Model
       private String Descripton;
       private int Duration;
       private Boolean Emergency;
+      private int Id;
    
    }
 }

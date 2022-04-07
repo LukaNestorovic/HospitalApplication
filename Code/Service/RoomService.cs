@@ -1,40 +1,40 @@
 /***********************************************************************
- * Module:  SavePatient.cs
+ * Module:  RoomService.cs
  * Author:  lukaa
- * Purpose: Definition of the Class SavePatient
+ * Purpose: Definition of the Class Service.RoomService
  ***********************************************************************/
 
 using System;
 
 namespace Service
 {
-   public class PatientService
+   public class RoomService
    {
-      public Boolean CreatePatient(Patient patient)
+      public Boolean CreateRoom(Room room)
       {
          // TODO: implement
          return null;
       }
       
-      public Boolean UpdatePatient(Patient patient)
+      public Boolean UpdateRoom(Room room)
       {
          // TODO: implement
          return null;
       }
       
-      public Boolean DeletePatient(int id)
+      public Boolean DeleteRoom(int id)
       {
          // TODO: implement
          return null;
       }
       
-      public Patient ReadPatient(int id)
+      public Room ReadRoom(int id)
       {
          // TODO: implement
          return null;
       }
    
-      public Repository.PatientRepository patientRepository;
+      public Repository.RoomRepository roomRepository;
    
    }
 }

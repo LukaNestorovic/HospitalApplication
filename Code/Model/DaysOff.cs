@@ -13,6 +13,7 @@ namespace Model
       private DateTime Begin;
       private DateTime End;
       private Boolean Approved;
+      private int Id;
    
    }
 }

@@ -10,13 +10,13 @@ namespace Service
 {
    public class AppointmentService
    {
-      public Boolean CreateApp(DateTime dateTime, String description, int duration, Boolean emergency)
+      public Boolean CreateApp(Appointment appointment)
       {
          // TODO: implement
          return null;
       }
       
-      public Boolean UpdateApp(DateTime dateTime, String description, int duration, Boolean emergency)
+      public Boolean UpdateApp(Appointment appointment)
       {
          // TODO: implement
          return null;

@@ -14,6 +14,7 @@ namespace Model
       private DateTime DateTime;
       private int Duration;
       private String Type;
+      private int Id;
    
    }
 }
