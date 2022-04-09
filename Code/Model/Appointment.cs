@@ -16,15 +16,15 @@ namespace Model
          return 0.0F;
       }
    
-      public Doctor doctor;
+      public DateTime DateTime;
+      public String Descripton;
+      public int Duration;
+      public Boolean Emergency;
+      public int Id;
+      
       public Patient patient;
-   
-      private DateTime DateTime;
-      private String Descripton;
-      private int Duration;
-      private Boolean Emergency;
-      private int Id;
-      private Boolean Taken;
+      public Doctor doctor;
+      public Room room;
    
    }
 }

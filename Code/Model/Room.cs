@@ -10,10 +10,9 @@ namespace Model
 {
    public class Room
    {
-      private String RoomType;
-      private String Name;
-      private Inventory Inventorty;
-      private int Id;
+      public String RoomType;
+      public String Name;
+      public int Id;
    
    }
 }

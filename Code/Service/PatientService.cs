@@ -10,7 +10,7 @@ namespace Service
 {
    public class PatientService
    {
-      public Boolean CreatePatient(String name, String surname, String jmbg, Model.Gender gender, String telephone, String email, DateTime birthDate, String adress, int id)
+      public Boolean CreatePatient(Patient patient)
       {
          // TODO: implement
          return null;

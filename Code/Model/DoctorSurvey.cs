@@ -1,19 +1,20 @@
 /***********************************************************************
- * Module:  StaticEquipment.cs
- * Author:  Ryzen
- * Purpose: Definition of the Class StaticEquipment
+ * Module:  Survey.cs
+ * Author:  lukaa
+ * Purpose: Definition of the Class Survey
  ***********************************************************************/
 
 using System;
 
 namespace Model
 {
-   public class DynamicEquipment
+   public class DoctorSurvey
    {
-      public String Name;
-      public int Quantity;
-      public int Price;
       public int Id;
+      public int Grade;
+      
+      public Patient patient;
+      public Doctor doctor;
    
    }
 }

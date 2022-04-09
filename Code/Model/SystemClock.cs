@@ -16,7 +16,7 @@ namespace Model
          return 0;
       }
    
-      private long ElapsedTime;
+      public long ElapsedTime;
    
    }
 }

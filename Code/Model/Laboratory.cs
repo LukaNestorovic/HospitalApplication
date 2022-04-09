@@ -1,18 +1,19 @@
 /***********************************************************************
- * Module:  MedicalRecord.cs
- * Author:  lukaa
- * Purpose: Definition of the Class MedicalRecord
+ * Module:  Laboratory.cs
+ * Author:  SN CAR CODING
+ * Purpose: Definition of the Class Model.Laboratory
  ***********************************************************************/
 
 using System;
 
 namespace Model
 {
-   public class MedicalRecord
+   public class Laboratory
    {
-      public String Allergies;
-      
+      public Doctor doctor;
       public Patient patient;
+   
+      private String Description;
    
    }
 }

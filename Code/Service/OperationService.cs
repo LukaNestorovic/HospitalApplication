@@ -10,7 +10,7 @@ namespace Service
 {
    public class OperationService
    {
-      public Boolean CreateOperation(Doctor doctor, DateTIme dateTime, int duratin, String type, int id)
+      public Boolean CreateOperation(Operation operation)
       {
          // TODO: implement
          return null;

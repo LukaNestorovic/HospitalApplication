@@ -10,10 +10,13 @@ namespace Model
 {
    public class Note
    {
-      private String Descritpion;
-      private DateTime BeginAbsence;
-      private DateTime EndAbsence;
-      private int Id;
+      public String Descritpion;
+      public DateTime BeginAbsence;
+      public DateTime EndAbsence;
+      public int Id;
+      
+      public Patient patient;
+      public Doctor doctor;
    
    }
 }

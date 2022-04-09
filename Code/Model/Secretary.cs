@@ -16,7 +16,7 @@ namespace Model
          return null;
       }
    
-      private int Salary;
+      public int Salary;
    
    }
 }

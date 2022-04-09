@@ -1,6 +1,6 @@
 /***********************************************************************
  * Module:  PatientController.cs
- * Author:  lukaa
+ * Author:  SN CAR CODING
  * Purpose: Definition of the Class Controller.PatientController
  ***********************************************************************/
 
@@ -33,6 +33,8 @@ namespace Controller
          // TODO: implement
          return null;
       }
+   
+      public Service.PatientService patientService;
    
    }
 }

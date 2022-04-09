@@ -10,9 +10,9 @@ namespace Model
 {
    public class Doctor : User
    {
-      private String Specialty;
-      private float Grade;
-      private int Salary;
+      public String Specialty;
+      public float Grade;
+      public int Salary;
    
    }
 }

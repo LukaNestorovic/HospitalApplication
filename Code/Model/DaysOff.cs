@@ -10,10 +10,12 @@ namespace Model
 {
    public class DaysOff
    {
-      private DateTime Begin;
-      private DateTime End;
-      private Boolean Approved;
-      private int Id;
+      public DateTime Begin;
+      public DateTime End;
+      public Boolean Approved;
+      public int Id;
+      
+      public Doctor doctor;
    
    }
 }

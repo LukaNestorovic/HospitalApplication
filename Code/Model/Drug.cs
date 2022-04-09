@@ -10,10 +10,10 @@ namespace Model
 {
    public class Drug
    {
-      private String Name;
-      private String Ingredients;
-      private Boolean Approved;
-      private int Id;
+      public String Name;
+      public String Ingredients;
+      public Boolean Approved;
+      public int Id;
    
    }
 }

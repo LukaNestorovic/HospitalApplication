@@ -10,8 +10,11 @@ namespace Model
 {
    public class Instructions
    {
-      private String ForWho;
-      private String Description;
+      public String ForWho;
+      public String Description;
+      
+      public Appointment appointment;
+      public Doctor doctor;
    
    }
 }

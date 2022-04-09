@@ -1,19 +1,19 @@
 /***********************************************************************
- * Module:  StaticEquipment.cs
- * Author:  Ryzen
- * Purpose: Definition of the Class StaticEquipment
+ * Module:  HospitalSurvey.cs
+ * Author:  SN CAR CODING
+ * Purpose: Definition of the Class Model.HospitalSurvey
  ***********************************************************************/
 
 using System;
 
 namespace Model
 {
-   public class DynamicEquipment
+   public class HospitalSurvey
    {
-      public String Name;
-      public int Quantity;
-      public int Price;
+      public int Grade;
       public int Id;
+      
+      public Patient patient;
    
    }
 }

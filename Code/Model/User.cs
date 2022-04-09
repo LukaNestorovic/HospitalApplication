@@ -28,15 +28,15 @@ namespace Model
          return 0;
       }
    
-      private String Name;
-      private String Surname;
-      private String Jmbg;
-      private Gender Gender;
-      private String Telephone;
-      private String Email;
-      private DateTime BirthDate;
-      private String Adress;
-      private int Id;
+      public String Name;
+      public String Surname;
+      public String Jmbg;
+      public Gender Gender;
+      public String Telephone;
+      public String Email;
+      public DateTime BirthDate;
+      public String Adress;
+      public int Id;
    
    }
 }

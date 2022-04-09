@@ -22,7 +22,8 @@ namespace Model
          return 0;
       }
    
-      private String InsuranceCarrier;
+      public String InsuranceCarrier;
+      public Boolean Guest;
    
    }
 }

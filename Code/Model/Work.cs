@@ -10,8 +10,10 @@ namespace Model
 {
    public class Work
    {
-      private int Duration;
-      private Room Room;
+      public DateTime StartDate;
+      public DateTime EndDate;
+      
+      public Room[] room;
    
    }
 }

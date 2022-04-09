@@ -15,10 +15,13 @@ namespace Model
          // TODO: implement
       }
    
-      private String Therhapy;
-      private String Diagnosis;
-      private String Symptoms;
-      private int Id;
+      public String Therhapy;
+      public String Diagnosis;
+      public String Symptoms;
+      public int Id;
+      
+      public Doctor doctor;
+      public Patient patient;
    
    }
 }

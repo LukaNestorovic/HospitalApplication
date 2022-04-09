@@ -126,22 +126,17 @@
                     BuildAction = "Compile"
                 />
                 <File
-                    RelPath = "Model\StaticEquipment.cs"
+                    RelPath = "Model\DynamicEquipment.cs"
                     SubType = "Code"
                     BuildAction = "Compile"
                 />
                 <File
-                    RelPath = "Model\Survey.cs"
+                    RelPath = "Model\DoctorSurvey.cs"
                     SubType = "Code"
                     BuildAction = "Compile"
                 />
                 <File
                     RelPath = "Model\TypeOfEquip.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\Inventory.cs"
                     SubType = "Code"
                     BuildAction = "Compile"
                 />
@@ -161,17 +156,12 @@
                     BuildAction = "Compile"
                 />
                 <File
-                    RelPath = "Model\DynamicEquipment.cs"
+                    RelPath = "Model\StaticEquipment.cs"
                     SubType = "Code"
                     BuildAction = "Compile"
                 />
                 <File
                     RelPath = "Model\MedicalRecord.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\GuestUser.cs"
                     SubType = "Code"
                     BuildAction = "Compile"
                 />
@@ -242,6 +232,16 @@
                 />
                 <File
                     RelPath = "Model\User.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Model\Laboratory.cs"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Model\HospitalSurvey.cs"
                     SubType = "Code"
                     BuildAction = "Compile"
                 /><File

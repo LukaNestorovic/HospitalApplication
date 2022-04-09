@@ -1,7 +1,7 @@
 /***********************************************************************
- * Module:  StaticEquipment.cs
+ * Module:  DynamicEquipment.cs
  * Author:  Ryzen
- * Purpose: Definition of the Class StaticEquipment
+ * Purpose: Definition of the Class DynamicEquipment
  ***********************************************************************/
 
 using System;
@@ -10,10 +10,11 @@ namespace Model
 {
    public class StaticEquipment
    {
-      private String Name;
-      private int Quantity;
-      private int Price;
-      private int Id;
+      public String Name;
+      public int Price;
+      public int Id;
+      
+      public Room room;
    
    }
 }
