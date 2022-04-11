@@ -5,6 +5,7 @@
  ***********************************************************************/
 
 using System;
+using Model;
 
 namespace Service
 {
@@ -13,19 +14,19 @@ namespace Service
       public Boolean CreateOperation(Operation operation)
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean UpdateOperation(Operation operation)
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean DeleteOperation(int id)
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Operation ReadOperation(int id)

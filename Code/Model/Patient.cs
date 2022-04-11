@@ -8,7 +8,7 @@ using System;
 
 namespace Model
 {
-   public class Patient : User, User
+   public class Patient : User
    {
       public int RateDoctor()
       {

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KlasniDijagram", "KlasniDijagram.csproj", "{73B52618-912F-426E-8B1B-D85FF7E3EA0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{73B52618-912F-426E-8B1B-D85FF7E3EA0C}.Debug.ActiveCfg = Debug|.NET
+		{73B52618-912F-426E-8B1B-D85FF7E3EA0C}.Debug.Build.0 = Debug|.NET
+		{73B52618-912F-426E-8B1B-D85FF7E3EA0C}.Release.ActiveCfg = Release|.NET
+		{73B52618-912F-426E-8B1B-D85FF7E3EA0C}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

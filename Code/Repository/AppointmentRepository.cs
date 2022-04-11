@@ -5,6 +5,8 @@
  ***********************************************************************/
 
 using System;
+using System.Collections.Generic;
+using Model;
 
 namespace Repository
 {
@@ -25,22 +27,23 @@ namespace Repository
       public Boolean Save(Appointment appointment)
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean DeleteByID(int id)
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean UpdateByID(Appointment appointment)
       {
          // TODO: implement
-         return null;
+         return false;
       }
    
       private String FileName;
+
    
    }
 }

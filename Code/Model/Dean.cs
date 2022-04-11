@@ -10,17 +10,5 @@ namespace Model
 {
    public class Dean : User
    {
-      public Inventory FilterInventory()
-      {
-         // TODO: implement
-         return null;
-      }
-      
-      public Inventory SearchInventory()
-      {
-         // TODO: implement
-         return null;
-      }
-   
    }
 }

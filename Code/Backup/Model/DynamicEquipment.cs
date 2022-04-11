@@ -1,19 +1,19 @@
 /***********************************************************************
- * Module:  Inventory.cs
+ * Module:  StaticEquipment.cs
  * Author:  Ryzen
- * Purpose: Definition of the Class Inventory
+ * Purpose: Definition of the Class StaticEquipment
  ***********************************************************************/
 
 using System;
 
 namespace Model
 {
-   public class Inventory
+   public class DynamicEquipment
    {
-      private String Name;
-      private TypeOfEquip Type;
-      private int Quntaty;
-      private int Id;
+      public String Name;
+      public int Quantity;
+      public int Price;
+      public int Id;
    
    }
 }

@@ -1,289 +1,214 @@
-<VisualStudioProject>
-    <CSHARP
-        ProjectType = "Local"
-        ProductVersion = "7.10.3077"
-        SchemaVersion = "2.0"
-        ProjectGuid = "{73B52618-912F-426E-8B1B-D85FF7E3EA0C}"
-    >
-        <Build>
-            <Settings
-                ApplicationIcon = ""
-                AssemblyKeyContainerName = ""
-                AssemblyName = "KlasniDijagram"
-                AssemblyOriginatorKeyFile = ""
-                DefaultClientScript = "JScript"
-                DefaultHTMLPageLayout = "Grid"
-                DefaultTargetSchema = "IE50"
-                DelaySign = "false"
-                OutputType = "Library"
-                RootNamespace = "KlasniDijagram"
-                StartupObject = ""
-            >
-                <Config
-                    Name = "Debug"
-                    AllowUnsafeBlocks = "false"
-                    BaseAddress = "285212672"
-                    CheckForOverflowUnderflow = "false"
-                    ConfigurationOverrideFile = ""
-                    DefineConstants = "DEBUG;TRACE"
-                    DocumentationFile = ""
-                    DebugSymbols = "true"
-                    FileAlignment = "4096"
-                    IncrementalBuild = "true"
-                    Optimize = "false"
-                    OutputPath = "bin\Debug\"
-                    RegisterForComInterop = "false"
-                    RemoveIntegerChecks = "false"
-                    TreatWarningsAsErrors = "false"
-                    WarningLevel = "4"
-                />
-                <Config
-                    Name = "Release"
-                    AllowUnsafeBlocks = "false"
-                    BaseAddress = "285212672"
-                    CheckForOverflowUnderflow = "false"
-                    ConfigurationOverrideFile = ""
-                    DefineConstants = "TRACE"
-                    DocumentationFile = ""
-                    DebugSymbols = "false"
-                    FileAlignment = "4096"
-                    IncrementalBuild = "false"
-                    Optimize = "true"
-                    OutputPath = "bin\Release\"
-                    RegisterForComInterop = "false"
-                    RemoveIntegerChecks = "false"
-                    TreatWarningsAsErrors = "false"
-                    WarningLevel = "4"
-                />
-            </Settings>
-            <References>
-                <Reference
-                    Name = "System"
-                    AssemblyName = "System"
-                    HintPath = "%windowsDirectory%\\Microsoft.NET\\Framework\\v1.0.3705\\System.dll"
-                />
-                <Reference
-                    Name = "System.Data"
-                    AssemblyName = "System.Data"
-                    HintPath = "%windowsDirectory%\\Microsoft.NET\\Framework\\v1.0.3705\\System.Data.dll"
-                />
-                <Reference
-                    Name = "System.Drawing"
-                    AssemblyName = "System.Drawing"
-                    HintPath = "%windowsDirectory%\\Microsoft.NET\\Framework\\v1.0.3705\\System.Drawing.dll"
-                />
-                <Reference
-                    Name = "System.Windows.Forms"
-                    AssemblyName = "System.Windows.Forms"
-                    HintPath = "%windowsDirectory%\\Microsoft.NET\\Framework\\v1.0.3705\\System.Windows.Forms.dll"
-                />
-                <Reference
-                    Name = "System.XML"
-                    AssemblyName = "System.Xml"
-                    HintPath = "%windowsDirectory%\\Microsoft.NET\\Framework\\v1.0.3705\\System.XML.dll"
-                />
-                <Reference
-                    Name = "System.Web"
-                    AssemblyName = "System.Web"
-                    HintPath = "%windowsDirectory%\\Microsoft.NET\\Framework\\v1.0.3705\\System.Web.dll"
-                />
-                <Reference
-                    Name = "System.Web.Services"
-                    AssemblyName = "System.Web.Services"
-                    HintPath = "%windowsDirectory%\\Microsoft.NET\\Framework\\v1.0.3705\\System.Web.Services.dll"
-                />
-            </References>
-        </Build>
-        <Files>
-            <Include>
-                <File
-                    RelPath = "AssemblyInfo.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Controller\RoomController.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Controller\AppointmentController.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Controller\PatientController.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Controller\OperationController.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                /><File
-                    RelPath = "Model\Work.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\DynamicEquipment.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\DoctorSurvey.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\TypeOfEquip.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\DaysOff.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\Operation.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\Instructions.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\StaticEquipment.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\MedicalRecord.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\Room.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\Meeting.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\SystemClock.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\Drug.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\Prescription.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\Note.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\ExamReport.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\Appointment.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\Secretary.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\Doctor.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\Dean.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\Patient.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\Gender.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\User.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\Laboratory.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Model\HospitalSurvey.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                /><File
-                    RelPath = "Repository\PatientRepository.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Repository\AppointmentRepository.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Repository\OperationRepository.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Repository\RoomRepository.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                /><File
-                    RelPath = "Service\PatientService.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Service\AppointmentService.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Service\OperationService.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Service\RoomService.cs"
-                    SubType = "Code"
-                    BuildAction = "Compile"
-                />
-            </Include>
-        </Files>
-    </CSHARP>
-</VisualStudioProject>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>7.10.3077</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{73B52618-912F-426E-8B1B-D85FF7E3EA0C}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>KlasniDijagram</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>KlasniDijagram</RootNamespace>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+      <HintPath>%25windowsDirectory%25\\Microsoft.NET\\Framework\\v1.0.3705\\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <HintPath>%25windowsDirectory%25\\Microsoft.NET\\Framework\\v1.0.3705\\System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+      <HintPath>%25windowsDirectory%25\\Microsoft.NET\\Framework\\v1.0.3705\\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+      <HintPath>%25windowsDirectory%25\\Microsoft.NET\\Framework\\v1.0.3705\\System.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+      <HintPath>%25windowsDirectory%25\\Microsoft.NET\\Framework\\v1.0.3705\\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+      <HintPath>%25windowsDirectory%25\\Microsoft.NET\\Framework\\v1.0.3705\\System.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <HintPath>%25windowsDirectory%25\\Microsoft.NET\\Framework\\v1.0.3705\\System.XML.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\AppointmentController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\OperationController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\PatientController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controller\RoomController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Appointment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\DaysOff.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Dean.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Doctor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\DoctorSurvey.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Drug.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\DynamicEquipment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\ExamReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\HospitalSurvey.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Instructions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Laboratory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\MedicalRecord.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Meeting.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Note.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Operation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Patient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Prescription.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Room.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Secretary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\StaticEquipment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\SystemClock.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\User.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Work.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Repository\AppointmentRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Repository\OperationRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Repository\PatientRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Repository\RoomRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\AppointmentService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\OperationService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\PatientService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Service\RoomService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

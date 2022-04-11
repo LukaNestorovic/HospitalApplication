@@ -5,6 +5,8 @@
  ***********************************************************************/
 
 using System;
+using System.Collections.Generic;
+using Model;
 
 namespace Repository
 {
@@ -25,19 +27,19 @@ namespace Repository
       public Boolean Save(Room room)
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean DeleteByID(int id)
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean UpdateByID(Room room)
       {
          // TODO: implement
-         return null;
+         return false;
       }
    
       private String FileName;

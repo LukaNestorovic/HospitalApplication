@@ -5,6 +5,7 @@
  ***********************************************************************/
 
 using System;
+using Model;
 
 namespace Service
 {
@@ -13,19 +14,19 @@ namespace Service
       public Boolean CreatePatient(Patient patient)
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean UpdatePatient(Patient patient)
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean DeletePatient(int id)
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Patient ReadPatient(int id)

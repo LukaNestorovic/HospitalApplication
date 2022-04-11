@@ -13,13 +13,13 @@ namespace Model
       public Boolean LogIn()
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean LogOut()
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public int ViewProfile()
@@ -31,7 +31,6 @@ namespace Model
       public String Name;
       public String Surname;
       public String Jmbg;
-      public Gender Gender;
       public String Telephone;
       public String Email;
       public DateTime BirthDate;

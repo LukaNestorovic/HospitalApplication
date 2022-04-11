@@ -13,25 +13,25 @@ namespace Controller
       public Boolean CreateRoom()
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean DeleteRoom()
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean ReadRoom()
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean UpdateRoom()
       {
          // TODO: implement
-         return null;
+         return false;
       }
    
       public Service.RoomService roomService;

@@ -13,25 +13,25 @@ namespace Controller
       public Boolean CreateApp()
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean DeleteApp()
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean UpdateApp()
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean ReadApp()
       {
          // TODO: implement
-         return null;
+         return false;
       }
    
       public Service.AppointmentService appointmentService;

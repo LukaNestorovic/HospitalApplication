@@ -5,6 +5,7 @@
  ***********************************************************************/
 
 using System;
+using Model;
 
 namespace Service
 {
@@ -13,19 +14,19 @@ namespace Service
       public Boolean CreateRoom(Room room)
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean UpdateRoom(Room room)
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean DeleteRoom(int id)
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Room ReadRoom(int id)

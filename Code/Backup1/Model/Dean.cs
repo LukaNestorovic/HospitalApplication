@@ -1,16 +1,14 @@
 /***********************************************************************
- * Module:  Survey.cs
+ * Module:  Dean.cs
  * Author:  lukaa
- * Purpose: Definition of the Class Survey
+ * Purpose: Definition of the Class Dean
  ***********************************************************************/
 
 using System;
 
 namespace Model
 {
-   public class Survey
+   public class Dean : User
    {
-      private int Id;
-   
    }
 }

@@ -13,25 +13,25 @@ namespace Controller
       public Boolean CreateOperation()
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean DeleteOperation()
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean UpdateOperation()
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean ReadOperation()
       {
          // TODO: implement
-         return null;
+         return false;
       }
    
       public Service.OperationService operationService;

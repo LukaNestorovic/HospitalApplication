@@ -13,25 +13,25 @@ namespace Controller
       public Boolean CreatePatient()
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean UpdatePatient()
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean DeletePatient()
       {
          // TODO: implement
-         return null;
+         return false;
       }
       
       public Boolean ReadPatient()
       {
          // TODO: implement
-         return null;
+         return false;
       }
    
       public Service.PatientService patientService;

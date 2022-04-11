@@ -13,7 +13,7 @@ namespace Model
       public Boolean ApproveDaysOff()
       {
          // TODO: implement
-         return null;
+         return false;
       }
    
       public int Salary;

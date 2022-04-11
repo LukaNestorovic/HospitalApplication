@@ -1,19 +1,14 @@
 /***********************************************************************
- * Module:  GuestUser.cs
+ * Module:  Dean.cs
  * Author:  lukaa
- * Purpose: Definition of the Class GuestUser
+ * Purpose: Definition of the Class Dean
  ***********************************************************************/
 
 using System;
 
 namespace Model
 {
-   public class GuestUser
+   public class Dean : User
    {
-      private String Name;
-      private String Surname;
-      private String Jmbg;
-      private int Id;
-   
    }
 }
