@@ -5,16 +5,17 @@
  ***********************************************************************/
 
 using System;
+using System.Collections;
 
 namespace Model
 {
    public class Prescription
    {
-      public String Instructions;
-      public int Id;
+      public String Instructions { get; set; }
+      public int Id { get; set; }
       
-      public Doctor doctor;
-      public Patient patient;
+      public Doctor doctor { get; set; }
+      public Patient patient { get; set; }
       public System.Collections.ArrayList drug;
       
       /// <pdGenerated>default getter</pdGenerated>
@@ -60,6 +61,18 @@ namespace Model
          if (drug != null)
             drug.Clear();
       }
-   
-   }
+
+        public Prescription(string instructions, int id, Doctor doctor, Patient patient, ArrayList drug)
+        {
+            Instructions = instructions;
+            Id = id;
+            this.doctor = doctor;
+            this.patient = patient;
+            this.drug = drug;
+        }
+
+        public Prescription()
+        {
+        }
+    }
 }

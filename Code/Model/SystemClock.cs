@@ -16,7 +16,15 @@ namespace Model
          return 0;
       }
    
-      public long ElapsedTime;
-   
-   }
+      public long ElapsedTime { get; set; }
+
+        public SystemClock(long elapsedTime)
+        {
+            ElapsedTime = elapsedTime;
+        }
+
+        public SystemClock()
+        {
+        }
+    }
 }

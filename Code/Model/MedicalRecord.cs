@@ -10,9 +10,18 @@ namespace Model
 {
    public class MedicalRecord
    {
-      public String Allergies;
+      public String Allergies { get; set; }
       
-      public Patient patient;
-   
-   }
+      public Patient patient { get; set; }
+
+        public MedicalRecord(string allergies, Patient patient)
+        {
+            Allergies = allergies;
+            this.patient = patient;
+        }
+
+        public MedicalRecord()
+        {
+        }
+    }
 }

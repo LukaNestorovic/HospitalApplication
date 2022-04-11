@@ -5,17 +5,18 @@
  ***********************************************************************/
 
 using System;
+using System.Collections;
 
 namespace Model
 {
    public class Operation
    {
-      public DateTime DateTime;
-      public int Duration;
-      public String Type;
-      public int Id;
+      public DateTime DateTime { get; set; }
+      public int Duration { get; set; }
+      public String Type { get; set; }
+      public int Id { get; set; }
       
-      public Patient patient;
+      public Patient patient { get; set; }
       public System.Collections.ArrayList doctor;
       
       /// <pdGenerated>default getter</pdGenerated>
@@ -61,7 +62,21 @@ namespace Model
          if (doctor != null)
             doctor.Clear();
       }
-      public Room room;
-   
-   }
+      public Room room { get; set; }
+
+        public Operation(DateTime dateTime, int duration, string type, int id, Patient patient, ArrayList doctor, Room room)
+        {
+            DateTime = dateTime;
+            Duration = duration;
+            Type = type;
+            Id = id;
+            this.patient = patient;
+            this.doctor = doctor;
+            this.room = room;
+        }
+
+        public Operation()
+        {
+        }
+    }
 }

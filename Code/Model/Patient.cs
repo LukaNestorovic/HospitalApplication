@@ -22,8 +22,17 @@ namespace Model
          return 0;
       }
    
-      public String InsuranceCarrier;
-      public Boolean Guest;
-   
-   }
+      public String InsuranceCarrier { get; set; }
+      public Boolean Guest { get; set; }
+
+        public Patient(string insuranceCarrier, bool guest)
+        {
+            InsuranceCarrier = insuranceCarrier;
+            Guest = guest;
+        }
+
+        public Patient()
+        {
+        }
+    }
 }

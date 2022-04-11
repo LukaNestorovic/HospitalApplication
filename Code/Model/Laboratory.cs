@@ -10,10 +10,20 @@ namespace Model
 {
    public class Laboratory
    {
-      public Doctor doctor;
-      public Patient patient;
+      public Doctor doctor { get; set; }
+      public Patient patient { get; set; }
    
-      private String Description;
-   
-   }
+      private String Description { get; set; }
+
+        public Laboratory(Doctor doctor, Patient patient, string description)
+        {
+            this.doctor = doctor;
+            this.patient = patient;
+            Description = description;
+        }
+
+        public Laboratory()
+        {
+        }
+    }
 }

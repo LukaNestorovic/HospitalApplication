@@ -5,20 +5,21 @@
  ***********************************************************************/
 
 using System;
+using System.Collections;
 
 namespace Model
 {
    public class Meeting
    {
-      public DateTime DateTime;
-      public int Duration;
-      public String Description;
-      public int Id;
+      public DateTime DateTime { get; set; }
+      public int Duration { get; set; }
+      public String Description { get; set; }
+      public int Id { get; set; }
       
       public System.Collections.ArrayList doctor;
-      
-      /// <pdGenerated>default getter</pdGenerated>
-      public System.Collections.ArrayList GetDoctor()
+
+        /// <pdGenerated>default getter</pdGenerated>
+        public System.Collections.ArrayList GetDoctor()
       {
          if (doctor == null)
             doctor = new System.Collections.ArrayList();
@@ -60,8 +61,22 @@ namespace Model
          if (doctor != null)
             doctor.Clear();
       }
-      public Secretary secretary;
-      public Room room;
-   
-   }
+      public Secretary secretary { get; set; }
+      public Room room { get; set; }
+
+        public Meeting(DateTime dateTime, int duration, string description, int id, ArrayList doctor, Secretary secretary, Room room)
+        {
+            DateTime = dateTime;
+            Duration = duration;
+            Description = description;
+            Id = id;
+            this.doctor = doctor;
+            this.secretary = secretary;
+            this.room = room;
+        }
+
+        public Meeting()
+        {
+        }
+    }
 }

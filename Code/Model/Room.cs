@@ -10,9 +10,19 @@ namespace Model
 {
    public class Room
    {
-      public String RoomType;
-      public String Name;
-      public int Id;
-   
-   }
+      public String RoomType { get; set; }
+      public String Name { get; set; }
+      public int Id { get; set; }
+
+        public Room(string roomType, string name, int id)
+        {
+            RoomType = roomType;
+            Name = name;
+            Id = id;
+        }
+
+        public Room()
+        {
+        }
+    }
 }

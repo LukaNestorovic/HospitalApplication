@@ -28,14 +28,29 @@ namespace Model
          return 0;
       }
    
-      public String Name;
-      public String Surname;
-      public String Jmbg;
-      public String Telephone;
-      public String Email;
-      public DateTime BirthDate;
-      public String Adress;
-      public int Id;
-   
-   }
+      public String Name { get; set; }
+      public String Surname { get; set; }
+      public String Jmbg { get; set; }
+      public String Telephone { get; set; }
+      public String Email { get; set; }
+      public DateTime BirthDate { get; set; }
+      public String Adress { get; set; }
+      public int Id { get; set; }
+
+        protected User(string name, string surname, string jmbg, string telephone, string email, DateTime birthDate, string adress, int id)
+        {
+            Name = name;
+            Surname = surname;
+            Jmbg = jmbg;
+            Telephone = telephone;
+            Email = email;
+            BirthDate = birthDate;
+            Adress = adress;
+            Id = id;
+        }
+
+        protected User()
+        {
+        }
+    }
 }

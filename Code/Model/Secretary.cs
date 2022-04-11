@@ -16,7 +16,15 @@ namespace Model
          return false;
       }
    
-      public int Salary;
-   
-   }
+      public int Salary { get; set; }
+
+        public Secretary(int salary)
+        {
+            Salary = salary;
+        }
+
+        public Secretary()
+        {
+        }
+    }
 }

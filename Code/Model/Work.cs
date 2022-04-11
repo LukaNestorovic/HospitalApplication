@@ -10,10 +10,20 @@ namespace Model
 {
    public class Work
    {
-      public DateTime StartDate;
-      public DateTime EndDate;
-      
-      public Room[] room;
-   
-   }
+      public DateTime StartDate { get; set; }
+      public DateTime EndDate { get; set; }
+
+        public Room[] room;
+
+        public Work(DateTime startDate, DateTime endDate, Room[] room)
+        {
+            StartDate = startDate;
+            EndDate = endDate;
+            this.room = room;
+        }
+
+        public Work()
+        {
+        }
+    }
 }
