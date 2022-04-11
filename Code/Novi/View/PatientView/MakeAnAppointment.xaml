@@ -1,0 +1,17 @@
+﻿<Window x:Class="ProjekatSIMS.View.PatientView.MakeAnAppointment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatSIMS.View.PatientView"
+        mc:Ignorable="d"
+        Title="MakeAnAppointment" Height="450" Width="800">
+    <Grid RenderTransformOrigin="0.416,0.506">
+        <Button x:Name="Cancel" Content="Cancel" HorizontalAlignment="Left" Margin="55,365,0,0" VerticalAlignment="Top" Width="153" Click="Cancel_Click"/>
+        <Button  x:Name="Confirm" Content="Confirm" HorizontalAlignment="Left" Margin="581,365,0,0" VerticalAlignment="Top" Width="153" Click="Confirm_Click"/>
+        <DatePicker x:Name="DatePicker" HorizontalAlignment="Center" Margin="0,167,0,0" VerticalAlignment="Top" Width="304" SelectedDateChanged="DatePicker_SelectedDateChanged" Height="28"/>
+        <Label Margin="0,0,704,393"/>
+        <Label Content="Select Date:" HorizontalAlignment="Center" Margin="0,121,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.982,0.36"/>
+
+    </Grid>
+</Window>

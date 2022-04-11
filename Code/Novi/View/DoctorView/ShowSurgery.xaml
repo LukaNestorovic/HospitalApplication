@@ -1,0 +1,45 @@
+﻿<Window x:Class="ProjekatSIMS.View.DoctorView.ShowSurgery"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatSIMS.View.DoctorView"
+        mc:Ignorable="d"
+        Title="ShowSurgery" Height="450" Width="800">
+    
+    <Grid Background="LightGray" RenderTransformOrigin="0.508,0.682" >
+        <DataGrid x:Name="dgSurgery" GridLinesVisibility="None" Margin="40,128,56,112" HorizontalContentAlignment="Right" VerticalContentAlignment="Stretch" FontStyle="Normal" FontWeight="Bold" Opacity="0.99" IsSynchronizedWithCurrentItem="False" RenderTransformOrigin="0.487,0.503" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding dataSale}">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="*"/>
+                <DataGridTextColumn Header="Type" Binding="{Binding Type}" Width="*"/>
+                <DataGridTextColumn Header="Time" Binding="{Binding Time}" Width="*"/>
+                <DataGridTextColumn Header="Doctor" Binding="{Binding Doctor}" Width="*"/>
+                <DataGridTextColumn Header="Patient" Binding="{Binding Patient}" Width="*"/>
+                
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button x:Name ="ScheduleSurgery"  Click="ScheduleSurgery_Click"  Content="Schedule new Surgery" Background="White" HorizontalAlignment="Left" Height="26" Margin="40,373,0,0" VerticalAlignment="Top" Width="138">
+        </Button>
+        <Button x:Name ="EditSugery"  Click="EditSugery_Click" Content="Edit Surgery" Background="White" HorizontalAlignment="Center" Height="26" Margin="0,373,0,0" VerticalAlignment="Top" Width="98">
+        </Button>
+        <Button x:Name ="CancelSurgery" Click="CancelSurgery_Click"  Content="Cancel Surgery" Background="White" HorizontalAlignment="Left" Height="26" Margin="646,373,0,0" VerticalAlignment="Top" Width="98">
+        </Button>
+
+
+
+
+        <Label Content="Surgeries" HorizontalAlignment="Center" Height="56" Margin="0,33,0,0" VerticalAlignment="Top" Width="120" FontSize="26"/>
+        <Label HorizontalAlignment="Left" BorderBrush="{x:Null}" Height="36" Margin="1013,150,0,0" VerticalAlignment="Top" Width="41">
+        </Label>
+        <Button x:Name="Back" Click="Back_Click" Content="Back" Background="White" HorizontalAlignment="Left" Height="30" Margin="25,31,0,0" VerticalAlignment="Top" Width="64"/>
+
+    </Grid>
+</Window>

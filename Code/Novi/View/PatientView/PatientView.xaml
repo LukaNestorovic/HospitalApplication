@@ -1,0 +1,32 @@
+﻿<Window x:Class="ProjekatSIMS.View.PatientView.PatientView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatSIMS.View.PatientView"
+        mc:Ignorable="d"
+        Title="PatientView" Height="450" Width="800">
+    <Grid>
+
+
+        <DataGrid x:Name="PatientAppointments" Margin="37,103,36,31" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding Path=pregledi}">
+
+            <DataGrid.Columns>
+
+
+                <DataGridTextColumn Header="Examination id" Binding="{Binding Id}"    Width="*"/>
+                <DataGridTextColumn Header="Start time" Binding="{Binding StartTime}"   Width="*"/>
+                <DataGridTextColumn Header="Duration"  Binding="{Binding Length}" Width="*"/>
+                <DataGridTextColumn Header="Room"  Binding="{Binding room}" Width="*"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Create Appointment" HorizontalAlignment="Left" Margin="37,57,0,0" VerticalAlignment="Top" Height="23" Width="215" Click="Button_Click_1"/>
+        <Button Content="Edit Appointments" HorizontalAlignment="Left" Margin="506,57,0,0" VerticalAlignment="Top" Height="23" Width="258"/>
+        <Button Content="Cancel Appointments" HorizontalAlignment="Left" Margin="257,57,0,0" VerticalAlignment="Top" Height="23" Width="244" Click="Button_Click"/>
+
+
+
+
+    </Grid>
+</Window>

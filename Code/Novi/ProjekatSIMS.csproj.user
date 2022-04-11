@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="View\DoctorView\DoctorView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ManagerView\ManagerView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PatientView\PatientView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\SecretaryView\CreatePatient.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\SecretaryView\EditPatient.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\SecretaryView\ShowPatient.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\DoctorView\DoctorView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ManagerView\ManagerView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PatientView\PatientView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\SecretaryView\CreatePatient.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\SecretaryView\EditPatient.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\SecretaryView\ShowPatient.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

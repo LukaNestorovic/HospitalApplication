@@ -1,0 +1,28 @@
+﻿<Window x:Class="ProjekatSIMS.View.DoctorView.EditSurgeryData"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatSIMS.View.DoctorView"
+        mc:Ignorable="d"
+        Title="EditSurgeryData" Height="450" Width="800">
+    <Grid>
+        <Label Content="Date" HorizontalAlignment="Left" Height="25" Margin="213,33,0,0" VerticalAlignment="Top" Width="122"/>
+        <Label Content="Time" HorizontalAlignment="Left" Height="25" Margin="213,83,0,0" VerticalAlignment="Top" Width="122"/>
+        <Label Content="Patient" HorizontalAlignment="Left" Height="25" Margin="213,133,0,0" VerticalAlignment="Top" Width="122"/>
+        <Label Content="Doctor" HorizontalAlignment="Left" Height="25" Margin="213,193,0,0" VerticalAlignment="Top" Width="122"/>
+        <Label Content="Room" HorizontalAlignment="Left" Height="25" Margin="212,250,0,0" VerticalAlignment="Top" Width="122"/>
+        <Label Content="Surgery Type" HorizontalAlignment="Left" Height="25" Margin="212,298,0,0" VerticalAlignment="Top" Width="122"/>
+
+        <Button Name="Potvrdi" Click="Potvrdi_Click" Content="Potvrdi" HorizontalAlignment="Left" Height="40" Margin="387,356,0,0" VerticalAlignment="Top" Width="140"/>
+        <Button Name="Odustani" Click="Odustani_Click" Content="Odustani" HorizontalAlignment="Left" Height="40" Margin="213,356,0,0" VerticalAlignment="Top" Width="140"/>
+
+        <TextBox x:Name="Date" HorizontalAlignment="Left" Margin="360,33,0,0" VerticalAlignment="Top" Width="167" Height="25" TextChanged="Doctor_TextChanged"/>
+        <TextBox x:Name="Time" HorizontalAlignment="Left" IsEnabled="False" Margin="360,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Height="26" TextChanged="Time_TextChanged"/>
+        <TextBox x:Name="Patient" HorizontalAlignment="Left" IsEnabled="False" Margin="360,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Height="26" TextChanged="Patient_TextChanged"/>
+        <TextBox x:Name="Doctor" HorizontalAlignment="Left" IsEnabled="False" Margin="360,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Height="26" TextChanged="Doctor_TextChanged"/>
+        <TextBox x:Name="Room" HorizontalAlignment="Left" VerticalAlignment="Top" Width="167" Margin="360,252,0,0" Height="23" TextChanged="Room_TextChanged" />
+        <TextBox x:Name="Type" HorizontalAlignment="Left" Margin="360,298,0,0" VerticalAlignment="Top" Width="167" Height="25" TextChanged="Type_TextChanged"/>
+
+    </Grid>
+</Window>
