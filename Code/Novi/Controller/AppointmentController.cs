@@ -5,27 +5,29 @@
  ***********************************************************************/
 
 using System;
+using Service;
+using Model;
 
 namespace Controller
 {
    public class AppointmentController
    {
-      public Boolean CreateApp()
+      public Boolean CreateApp(Appointment appointment)
       {
          // TODO: implement
-         return false;
+         return appointmentService.CreateApp(appointment);
       }
       
-      public Boolean DeleteApp()
+      public Boolean DeleteApp(int id)
       {
          // TODO: implement
-         return false;
+         return appointmentService.DeleteApp(id);
       }
       
-      public Boolean UpdateApp()
+      public Boolean UpdateApp(Appointment appointment)
       {
          // TODO: implement
-         return false;
+         return appointmentService.UpdateApp(appointment);
       }
       
       public Boolean ReadApp()
@@ -34,7 +36,7 @@ namespace Controller
          return false;
       }
    
-      public Service.AppointmentService appointmentService;
+      public AppointmentService appointmentService = new AppointmentService();
    
    }
 }
