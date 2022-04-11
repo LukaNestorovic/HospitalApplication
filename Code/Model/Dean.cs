@@ -8,7 +8,10 @@ using System;
 
 namespace Model
 {
-   public class Dean : User
-   {
-   }
+    public class Dean : User
+    {
+        public Dean()
+        {
+        }
+    }
 }
