@@ -193,7 +193,6 @@
     <Compile Include="Repository\RoomRepository.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Serial\Serializer.cs" />
     <Compile Include="Service\AppointmentService.cs">
       <SubType>Code</SubType>
     </Compile>
