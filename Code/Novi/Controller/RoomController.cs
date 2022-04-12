@@ -22,9 +22,14 @@ namespace Controller
 			return roomService.DeleteRoom(id);
 		}
 		
-		public Boolean ReadRoom(int id)
+		public String[] ReadRoom(int id)
 		{
-			return roomService.ReadRoom(id);
+			Room room = roomService.ReadRoom(id);
+			String[] roomDTO = new String[3];
+			roomDTO[0] = room.RoomType;
+			roomDTO[1] = room.Name;
+			roomDTO[2] = room.Id.ToString();
+			return roomDTO;
 		}
 		
 		public Boolean UpdateRoom(String RoomType, String RoomName, int id)
