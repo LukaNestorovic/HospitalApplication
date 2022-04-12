@@ -15,7 +15,7 @@ using Controller;
 using Model;
 using Repository;
 using System.Collections.ObjectModel;
-/*
+
 namespace ProjekatSIMS.View.SecretaryView
 {
     /// <summary>
@@ -23,21 +23,16 @@ namespace ProjekatSIMS.View.SecretaryView
     /// </summary>
     public partial class ShowPatient : Window
     {
-        private PatientAccountController patientAccountController = new PatientAccountController();
-        public PatientAccountRepository patientAccountRepository = new PatientAccountRepository();
-        public ObservableCollection<Patient> patients;
+       
 
         public ShowPatient()
         {
-            InitializeComponent();
-            patients = new ObservableCollection<Patient>(patientAccountRepository.ShowAllPatients());
-            dgDataBinding.ItemsSource = patients;
+            
         }
 
         private void CreateAccount_Click(object sender, RoutedEventArgs e)
         {
-            var s = new CreatePatient(patients);
-            s.Show();
+            
         }
 
         private void ShowAccount_Click(object sender, RoutedEventArgs e)
@@ -53,13 +48,8 @@ namespace ProjekatSIMS.View.SecretaryView
 
         private void DeleteAccount_Click(object sender, RoutedEventArgs e)
         {
-            if ((Patient)dgDataBinding.SelectedItem != null) 
-            {
-                patientAccountController.DeletePatient((Patient)dgDataBinding.SelectedItem);
-                patients.Remove((Patient)dgDataBinding.SelectedItem);
-            }
+            
             
         }
     }
 }
-*/

@@ -7,6 +7,7 @@
 using System;
 using System.Collections.Generic;
 using Model;
+using Serialization;
 
 namespace Repository
 {

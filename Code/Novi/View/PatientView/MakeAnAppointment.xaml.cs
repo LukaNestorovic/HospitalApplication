@@ -24,20 +24,15 @@ namespace ProjekatSIMS.View.PatientView
     /// </summary>
     public partial class MakeAnAppointment : Window
     {
-/*        public ExaminationAppointmentController pregledikontroler = new ExaminationAppointmentController();
-        public ExaminationAppointmentService preglediservis = new ExaminationAppointmentService();
-        public ExaminationAppointmentRepository pregledirepozitorijm = new ExaminationAppointmentRepository();
-        public ObservableCollection<ExaminationAppointment> pregledi;
-        public MakeAnAppointment(ObservableCollection<ExaminationAppointment> pregledi)
+        
+        public MakeAnAppointment()
         {
-            InitializeComponent();
-            this.pregledi = pregledi;
+            
             
         }
-        private ExaminationAppointment ucitaj()
+/*        private ExaminationAppointment ucitaj()
         {
-            ExaminationAppointment pregled = new ExaminationAppointment("id", DatePicker.SelectedDate.GetValueOrDefault(), 234, null);
-            return pregled;
+            
         }*/
 
 
@@ -62,16 +57,10 @@ namespace ProjekatSIMS.View.PatientView
 
         }
 
-/*        private void Confirm_Click(object sender, RoutedEventArgs e)
+        private void Confirm_Click(object sender, RoutedEventArgs e)
         {
 
-            ExaminationAppointment pregled = ucitaj();
-            preglediservis.CreateAppointment(pregled);
-            this.pregledi.Add(pregled);
-
-
-
-            Close();
-        }*/
+          
+        }
     }
 }

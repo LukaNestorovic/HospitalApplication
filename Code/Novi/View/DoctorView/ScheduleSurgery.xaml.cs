@@ -51,21 +51,18 @@ namespace ProjekatSIMS.View.DoctorView
 
         private Operation GetFromDG()
         {
-            return operationController.CreateOperation();
+          
         }
 
         private void Potvrdi_Click(object sender, RoutedEventArgs e)
         {
-            SurgeryAppointment surgeryAppointment = GetFromDG();
-
-            surgeryService.ScheduleSurgery(surgeryAppointment);
-            this.surgeryAppointments.Add(surgeryAppointment);
+            
 
             var s = new ShowSurgery();
             s.Show();
             Close();
         }
- */
+
 
 
         private void Doctor_SelectionChanged(object sender, SelectionChangedEventArgs e)

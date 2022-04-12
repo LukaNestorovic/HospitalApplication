@@ -23,18 +23,12 @@ namespace ProjekatSIMS.View.PatientView
     /// </summary>
     public partial class PatientView : Window
     {
-/*        public ObservableCollection<ExaminationAppointment> pregledi;
-        public ExaminationAppointmentRepository examinationrepo = new ExaminationAppointmentRepository();
-
-       public ExaminationAppointmentController examinationcontroller = new ExaminationAppointmentController();
+        
 
 
         public PatientView()
         {
-            InitializeComponent();
             
-            pregledi = new ObservableCollection<ExaminationAppointment>(examinationrepo.ListAppointments());
-            PatientAppointments.ItemsSource = pregledi;
         }
 
        
@@ -42,24 +36,12 @@ namespace ProjekatSIMS.View.PatientView
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            if ((ExaminationAppointment)PatientAppointments.SelectedItem == null)
-            {
-                MessageBox.Show("There is no selected appointment");
-
-            }
-
-            else
-            {
-                ExaminationAppointment objekat = ((ExaminationAppointment)PatientAppointments.SelectedItem);
-                examinationcontroller.DeleteAppointment(objekat.Id);
-                pregledi.Remove(objekat);
-            }
+            
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            var d = new MakeAnAppointment(pregledi);
-            d.Show();
-        }*/
+            
+        }
     }
 }

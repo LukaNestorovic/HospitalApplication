@@ -29,32 +29,21 @@ namespace ProjekatSIMS.View.ManagerView
         {
             get; set;
         }
-/*        public ManagerView()
+        public ManagerView()
         {
-            InitializeComponent();
-            Rooms = new ObservableCollection<Room>(roomRep.ReadAll());
-            dataGridRooms.ItemsSource = Rooms;
+            
 
         }
-*/
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var s = new AddRoomView();
             s.Show();
         }
 
-/*        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            if(dataGridRooms.SelectedIndex != -1)
-            {
-                Room roomNum = (Room)dataGridRooms.SelectedItem;
-                roomController.DeleteRoom(roomNum.Id);
-                Rooms.Remove(roomNum);
-            }
-            else
-            {
-                MessageBox.Show("You have to select a room!");
-            }
-        }*/
+            
+        }
     }
 }
