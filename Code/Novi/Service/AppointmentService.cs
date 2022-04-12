@@ -58,7 +58,7 @@ namespace Service
 			return appointmentRepository.FindAll();
 		}
 
+		public String idFile = @"..\..\..\Data\appointment.txt";
 		public Repository.AppointmentRepository appointmentRepository;
-		public static String idFile = "appointmentID.txt";
 	}
 }

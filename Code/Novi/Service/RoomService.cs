@@ -52,6 +52,6 @@ namespace Service
 		}
 		
 		public Repository.RoomRepository roomRepository = new RoomRepository();
-		public String idFile = "roomID.txt";
+		public String idFile = @"..\..\..\Data\roomID.txt";
 	}
 }

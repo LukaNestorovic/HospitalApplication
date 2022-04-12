@@ -59,6 +59,6 @@ namespace Service
 		}
 
 		public static Repository.OperationRepository operationRepository = new OperationRepository();
-		public static String idFile = "operationID.txt";
+		public String idFile = @"..\..\..\Data\operationID.txt";
 	}
 }

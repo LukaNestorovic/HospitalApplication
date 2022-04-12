@@ -36,6 +36,7 @@ namespace Service
 		}
 	
 		public Repository.DoctorRepository patientRepository;
-	
+		public String idFile = @"..\..\..\Data\doctorID.txt";
+
 	}
 }
