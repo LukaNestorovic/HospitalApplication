@@ -29,7 +29,7 @@ namespace Serialization
 		public List<T> fromJSON(String fileName){
 			List<T> objects = new List<T>();
 
-			try
+//			try
 			{
 				String jsonString = File.ReadAllText(fileName);
 				jsonString.Trim(TRAILING);
@@ -42,7 +42,7 @@ namespace Serialization
 					objects.Add(obj);
 				}
 			}
-			catch (Exception e)
+//			catch (Exception e)
 			{
 			}
 			return objects;
