@@ -30,7 +30,11 @@ namespace Model
             InsuranceCarrier = insuranceCarrier;
             Guest = guest;
         }
-
+        public Patient(string name, string surname, string jmbg, string telephone, string email, DateTime birthDate, string adress, string insuranceCarrier, bool guest, int id):base(name, surname, jmbg, telephone, email, birthDate, adress, id)
+        {
+            InsuranceCarrier = insuranceCarrier;
+            Guest = guest;
+        }
         public Patient()
         {
         }
