@@ -7,6 +7,7 @@
 using System;
 using Service;
 using Model;
+using System.Collections.Generic;
 
 namespace Controller
 {
@@ -50,8 +51,26 @@ namespace Controller
             operationDTO[6] = operation.Id.ToString();
             return operationDTO;
         }
-   
-      public OperationService operationService = new OperationService();
+
+        public List<String[]> ReadAll()
+        {
+            List<Operation> operations = operationService.ReadAll();
+            List<String[]> operationDTOs = new List<String[]>();
+            foreach (Operation operation in operations)
+            {
+                String[] operationDTO = new String[8];
+                operationDTO[0] = operation.DateTime.ToString();
+                operationDTO[1] = operation.Duration.ToString();
+                operationDTO[2] = operation.Type.ToString();
+                operationDTO[3] = operation.patient.Id.ToString();
+                operationDTO[4] = operation.doctor.Id.ToString();
+                operationDTO[5] = operation.room.Id.ToString();
+                operationDTO[6] = operation.Id.ToString();
+            }
+            return operationDTOs;
+        }
+
+        public OperationService operationService = new OperationService();
    
    }
 }

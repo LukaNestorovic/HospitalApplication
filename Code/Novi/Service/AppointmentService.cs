@@ -7,6 +7,7 @@
 using System;
 using Model;
 using System.IO;
+using System.Collections.Generic;
 
 namespace Service
 {
@@ -51,7 +52,12 @@ namespace Service
 		{
 			return appointmentRepository.FindByID(id);
 		}
-	
+
+		public List<Appointment> ReadAll()
+		{
+			return appointmentRepository.FindAll();
+		}
+
 		public Repository.AppointmentRepository appointmentRepository;
 		public static String idFile = "appointmentID.txt";
 	}

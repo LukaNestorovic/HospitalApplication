@@ -8,6 +8,7 @@ using System;
 using Model;
 using Repository;
 using System.IO;
+using System.Collections.Generic;
 
 namespace Service
 {
@@ -50,7 +51,12 @@ namespace Service
 		{
 			return patientRepository.FindByID(id);
 		}
-	
+
+		public List<Patient> ReadAll()
+		{
+			return patientRepository.FindAll();
+		}
+
 		public Repository.PatientRepository patientRepository = new PatientRepository();
 		public static String idFile = "patientID.txt";
 	}

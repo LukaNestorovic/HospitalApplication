@@ -8,6 +8,7 @@ using System;
 using Model;
 using Repository;
 using System.IO;
+using System.Collections.Generic;
 
 namespace Service
 {
@@ -50,6 +51,11 @@ namespace Service
 		public Operation ReadOperation(int id)
 		{
 			return operationRepository.FindByID(id);
+		}
+
+		public List<Operation> ReadAll()
+		{
+			return operationRepository.FindAll();
 		}
 
 		public static Repository.OperationRepository operationRepository = new OperationRepository();
