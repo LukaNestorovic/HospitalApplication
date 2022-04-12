@@ -6,6 +6,8 @@
 
 using System;
 using Model;
+using Repository;
+using System.IO;
 
 namespace Service
 {
@@ -13,14 +15,15 @@ namespace Service
 	{
 		public Boolean CreateRoom(String roomType, String roomName)
 		{
-			
+			int newID;
 			if(File.Exists(idFile)){
-				int newID = ++(int.Parse(File.ReadAllText(idFile)));
+				newID = int.Parse(File.ReadAllText(idFile));
+				newID++;
 			}else
-				int newID = 0;
+				newID = 0;
 			Room newRoom = new Room(roomType, roomName, newID);
 			
-			File.WriteAllText(idFile, newID.ToStrint());
+			File.WriteAllText(idFile, newID.ToString());
 			
 			return roomRepository.Save(newRoom);
 		}
