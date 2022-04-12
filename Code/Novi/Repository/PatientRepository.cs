@@ -66,7 +66,7 @@ namespace Repository
 			return false;
 		}
 	
-		private static String FileName = "Patients.json";
+		private static String FileName = "Pat.json";
 		
 		private static Serializer<Patient> serializer = new Serializer<Patient>();
 	}

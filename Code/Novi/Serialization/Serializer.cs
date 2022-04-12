@@ -29,7 +29,7 @@ namespace Serialization
 		public List<T> fromJSON(String fileName){
 			List<T> objects = new List<T>();
 
-//			try
+			try
 			{
 				String jsonString = File.ReadAllText(fileName);
 				jsonString.Trim(TRAILING);
@@ -38,12 +38,12 @@ namespace Serialization
 
 				foreach (String objStr in objectStrings)
 				{
-					File.WriteLine(@"..\..\..\data\aaa.txt");
+					File.WriteAllText(@"..\..\..\data\aaa.txt",jsonString);
 					T obj = JsonSerializer.Deserialize<T>(jsonString);
 					objects.Add(obj);
 				}
 			}
-//			catch (Exception e)
+			catch (Exception e)
 			{
 			}
 			return objects;
