@@ -13,14 +13,14 @@ namespace Service
 {
 	public class PatientService
 	{
-		public Boolean CreatePatient(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String insuranceCarrier, Boolean guest)
+		public Boolean CreatePatient(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String insuranceCarrier, Boolean guest) { 
 			int newID;
 			if(File.Exists(idFile)){
 				newID = int.Parse(File.ReadAllText(idFile));
 				newID++;
 			}else
 				newID = 0;
-		{
+		
 			Patient patient = new Patient(name, surname, jmbg, telephone, email, birthDate, adress, insuranceCarrier, guest, newID);
 
 			return patientRepository.Save(patient);
