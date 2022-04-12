@@ -29,6 +29,7 @@ namespace Serialization
 		public List<T> fromJSON(String fileName){
 			List<T> objects = new List<T>();
 			
+			try{
 			String jsonString = File.ReadAllText(fileName);
 			jsonString.Trim(TRAILING);
 			
@@ -37,6 +38,7 @@ namespace Serialization
 			foreach(String objStr in objectStrings){
 				T obj = JsonSerializer.Deserialize<T>(jsonString);
 				objects.Add(obj);
+			}
 			}
 			return objects;
 		}
