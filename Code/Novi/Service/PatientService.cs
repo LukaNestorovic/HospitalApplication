@@ -6,36 +6,52 @@
 
 using System;
 using Model;
+using Repository;
+using System.IO;
 
 namespace Service
 {
 	public class PatientService
 	{
-		public Boolean CreatePatient(Patient patient)
+		public Boolean CreatePatient(string name, string surname, string jmbg, string telephone, string email, DateTime birthDate, string adress, string insuranceCarrier, bool guest)
+			int newID;
+			if(File.Exists(idFile)){
+				newID = int.Parse(File.ReadAllText(idFile));
+				newID++;
+			}else
+				newID = 0;
 		{
-			// TODO: implement
-			return false;
+			Patient patient = new Patient(name, surname, jmbg, telephone, email, birthDate, adress, insuranceCarrier, guest, newID);
+
+			return patientRepository.Save(patient);
 		}
 		
-		public Boolean UpdatePatient(Patient patient)
+		public Boolean UpdatePatient(string name, string surname, string jmbg, string telephone, string email, DateTime birthDate, string adress, string insuranceCarrier, bool guest, int id)
 		{
-			// TODO: implement
-			return false;
+			Patient patient = patientRepository.FindByID(id);
+			patient.Name = name;
+			patient.Surname = surname;
+			patient.Jmbg = jmbg;
+			patient.Telephone = telephone;
+			patient.Email = email;
+			patient.BirthDate = birthDate;
+			patient.Adress = adress;
+			patient.InsuranceCarrier = insuranceCarrier;
+			patient.Guest = guest;
+			return patientRepository.UpdateByID(patient);
 		}
 		
 		public Boolean DeletePatient(int id)
 		{
-			// TODO: implement
-			return false;
+			return patientRepository.DeleteByID(id);
 		}
 		
 		public Patient ReadPatient(int id)
 		{
-			// TODO: implement
-			return null;
+			return patientRepository.FindByID(id);
 		}
 	
-		public Repository.PatientRepository patientRepository;
+		public Repository.PatientRepository patientRepository = new PatientRepository();
 	
 	}
 }
