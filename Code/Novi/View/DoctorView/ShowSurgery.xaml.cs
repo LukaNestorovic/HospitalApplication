@@ -24,17 +24,22 @@ namespace ProjekatSIMS.View.DoctorView
     /// </summary>
     public partial class ShowSurgery : Window
     {
-
+        public ObservableCollection<Operation> operations;
+        public OperationController operationController = new OperationController();
+        public OperationRepository operationRepository = new OperationRepository();
 
         public ShowSurgery()
         {
             InitializeComponent();
-
+ //           operations = new ObservableCollection<Operation>(operationRepository.FindAll());
+ //           dgSurgery.ItemsSource = operations;
         }
 
         private void ScheduleSurgery_Click(object sender, RoutedEventArgs e)
         {
-           
+            var s = new ScheduleSurgery(operations);
+            s.Show();
+            Close();
         }
 
         private void EditSugery_Click(object sender, RoutedEventArgs e)

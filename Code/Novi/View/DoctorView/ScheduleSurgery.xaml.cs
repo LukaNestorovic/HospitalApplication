@@ -25,21 +25,14 @@ namespace ProjekatSIMS.View.DoctorView
     public partial class ScheduleSurgery : Window
     {
 
-        public ObservableCollection<Appointment> appointments;
+        public ObservableCollection<Operation> operations;
         public OperationRepository operationRepository = new OperationRepository();
         public OperationController operationController = new OperationController();
         public OperationService operationService = new OperationService();
-        public ScheduleSurgery(ObservableCollection<Appointment> appointment)
+        public ScheduleSurgery(ObservableCollection<Operation> operation)
         {
             InitializeComponent();
-            this.appointments = appointment;
-            InitializaCombo();
-        }
-
-        private void InitializaCombo()
-        {
-            CBDoctor.ItemsSource = operationRepository.FindAll();
-            
+            this.operations = operation;
         }
 
         private void Odustani_Click(object sender, RoutedEventArgs e)
@@ -49,14 +42,10 @@ namespace ProjekatSIMS.View.DoctorView
             Close();
         }
 
- /*       private Operation GetFromDG()
-        {
-          
-        }*/
 
         private void Potvrdi_Click(object sender, RoutedEventArgs e)
         {
-            
+            operationController.CreateOperation(DPTime.SelectedDate.GetValueOrDefault(), Int32.Parse(TBDuration.Text), TBType.Text, Int32.Parse(TBPatient.Text), Int32.Parse(TBDoctor.Text), Int32.Parse(TBRoom.Text));
 
             var s = new ShowSurgery();
             s.Show();

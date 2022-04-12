@@ -65,7 +65,7 @@ namespace Repository
 			return false;
 		}
 	
-		private static String FileName = "Operations.json";
+		private static String FileName = @"..\..\..\data\Operations.json";
 		
 		private static Serializer<Operation> serializer = new Serializer<Operation>();
 	}
