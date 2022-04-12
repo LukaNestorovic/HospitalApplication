@@ -26,21 +26,30 @@ namespace Controller
       
       public Boolean DeleteOperation(int id)
       {
-         // TODO: implement
          return operationService.DeleteOperation(id);
       }
       
-      public Boolean UpdateOperation(Operation operation)
+      public Boolean UpdateOperation(DateTime dateTime, int duration, String type, int patientId, int doctorId, int roomId, int operationID)
       {
-         // TODO: implement
-         return operationService.UpdateOperation(operation);
+            Patient patient = patientService.ReadPatient(patientId);
+            Doctor doctor = doctorService.ReadDoctor(doctorId);
+            Room room = roomService.ReadRoom(roomId);
+            return operationService.UpdateOperation(dateTime, duration, type, patientId, doctorId, roomId, operationID);
       }
       
-      public Boolean ReadOperation()
+      public String[] ReadOperation()
       {
-         // TODO: implement
-         return false;
-      }
+            Operation operation = operationService.ReadOperation(id);
+            String[] operationDTO = new String[8];
+            operationDTO[0] = operation.DateTime.ToString();
+            operationDTO[2] = operation.Duration.ToString();
+            operationDTO[3] = operation.Type.ToString();
+            operationDTO[4] = operation.patient.Id.ToString();
+            operationDTO[5] = operation.doctor.Id.ToString();
+            operationDTO[6] = operation.room.Id.ToString();
+            operationDTO[7] = operation.Id.ToString();
+            return operationtDTO;
+        }
    
       public OperationService operationService = new OperationService();
    
