@@ -52,6 +52,6 @@ namespace Service
 		}
 	
 		public Repository.PatientRepository patientRepository = new PatientRepository();
-		public static String idFile = "operationID.txt";
+		public static String idFile = "patientID.txt";
 	}
 }

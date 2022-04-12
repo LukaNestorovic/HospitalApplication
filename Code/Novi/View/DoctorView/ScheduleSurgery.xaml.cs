@@ -49,10 +49,10 @@ namespace ProjekatSIMS.View.DoctorView
             Close();
         }
 
-        private Operation GetFromDG()
+ /*       private Operation GetFromDG()
         {
           
-        }
+        }*/
 
         private void Potvrdi_Click(object sender, RoutedEventArgs e)
         {

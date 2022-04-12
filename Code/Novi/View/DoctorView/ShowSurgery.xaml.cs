@@ -28,7 +28,8 @@ namespace ProjekatSIMS.View.DoctorView
 
         public ShowSurgery()
         {
-            
+            InitializeComponent();
+
         }
 
         private void ScheduleSurgery_Click(object sender, RoutedEventArgs e)

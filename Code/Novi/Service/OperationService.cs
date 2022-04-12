@@ -9,7 +9,7 @@ using Model;
 using Repository;
 using System.IO;
 
-namespace Operation
+namespace Service
 {
 	public class OperationService
 	{
@@ -23,7 +23,7 @@ namespace Operation
 			}
 			else
 				newID = 0;
-			Operation newOperation = new Operation(dateTime, duration, type, patient, doctor, room, newID);
+			Operation newOperation = new Operation(dateTime, duration, type, newID, patient, doctor, room);
 
 			File.WriteAllText(idFile, newID.ToString());
 
@@ -33,12 +33,12 @@ namespace Operation
 		public Boolean UpdateOperation(DateTime dateTime, int duration, String type, Patient patient, Doctor doctor, Room room, int id)
 		{
 			Operation operation = operationRepository.FindByID(id);
-			operation.OperationDateTime = dateTime;
+			operation.DateTime = dateTime;
 			operation.Duration = duration;
 			operation.Type = type;
-			operation.Patient = patient;
-			operation.Doctor = doctor;
-			operation.Room = room;
+			operation.patient = patient;
+			operation.doctor = doctor;
+			operation.room = room;
 			return operationRepository.UpdateByID(operation);
 		}
 
@@ -47,7 +47,7 @@ namespace Operation
 			return operationRepository.DeleteByID(id);
 		}
 
-		public Room ReadOperation(int id)
+		public Operation ReadOperation(int id)
 		{
 			return operationRepository.FindByID(id);
 		}

@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\App.xaml
 13-194759690
 
-52-1448963444
+532014737207
 194429290068
 MainWindow.xaml;View\DoctorView\DoctorView.xaml;View\DoctorView\EditSurgeryData.xaml;View\DoctorView\ScheduleSurgery.xaml;View\DoctorView\ShowSurgery.xaml;View\ManagerView\AddRoomView.xaml;View\ManagerView\EditRoomView.xaml;View\ManagerView\ManagerView.xaml;View\PatientView\MakeAnAppointment.xaml;View\PatientView\PatientView.xaml;View\SecretaryView\CreatePatient.xaml;View\SecretaryView\EditPatient.xaml;View\SecretaryView\ShowPatient.xaml;
 
-True
+False
 

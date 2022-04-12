@@ -34,21 +34,21 @@ namespace Controller
             Patient patient = patientService.ReadPatient(patientId);
             Doctor doctor = doctorService.ReadDoctor(doctorId);
             Room room = roomService.ReadRoom(roomId);
-            return operationService.UpdateOperation(dateTime, duration, type, patientId, doctorId, roomId, operationID);
+            return operationService.UpdateOperation(dateTime, duration, type, patient, doctor, room, operationID);
       }
       
-      public String[] ReadOperation()
+      public String[] ReadOperation(int id)
       {
             Operation operation = operationService.ReadOperation(id);
             String[] operationDTO = new String[8];
             operationDTO[0] = operation.DateTime.ToString();
-            operationDTO[2] = operation.Duration.ToString();
-            operationDTO[3] = operation.Type.ToString();
-            operationDTO[4] = operation.patient.Id.ToString();
-            operationDTO[5] = operation.doctor.Id.ToString();
-            operationDTO[6] = operation.room.Id.ToString();
-            operationDTO[7] = operation.Id.ToString();
-            return operationtDTO;
+            operationDTO[1] = operation.Duration.ToString();
+            operationDTO[2] = operation.Type.ToString();
+            operationDTO[3] = operation.patient.Id.ToString();
+            operationDTO[4] = operation.doctor.Id.ToString();
+            operationDTO[5] = operation.room.Id.ToString();
+            operationDTO[6] = operation.Id.ToString();
+            return operationDTO;
         }
    
       public OperationService operationService = new OperationService();
