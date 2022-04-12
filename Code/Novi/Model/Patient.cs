@@ -21,7 +21,7 @@ namespace Model
          // TODO: implement
          return 0;
       }
-   
+       
       public String InsuranceCarrier { get; set; }
       public Boolean Guest { get; set; }
 

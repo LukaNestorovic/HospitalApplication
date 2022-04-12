@@ -1,6 +1,0 @@
-C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\obj\Debug\KlasniDijagram.csproj.AssemblyReference.cache
-C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\obj\Debug\KlasniDijagram.csproj.CoreCompileInputs.cache
-C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\bin\Debug\KlasniDijagram.dll
-C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\bin\Debug\KlasniDijagram.pdb
-C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\obj\Debug\KlasniDijagram.dll
-C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\obj\Debug\KlasniDijagram.pdb
