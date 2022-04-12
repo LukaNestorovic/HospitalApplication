@@ -38,7 +38,7 @@ namespace Serialization
 
 				foreach (String objStr in objectStrings)
 				{
-					Console.WriteLine(jsonString);
+					File.WriteLine(@"..\..\..\data\aaa.txt");
 					T obj = JsonSerializer.Deserialize<T>(jsonString);
 					objects.Add(obj);
 				}
