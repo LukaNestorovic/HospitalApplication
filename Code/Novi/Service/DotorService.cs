@@ -1,7 +1,7 @@
 /***********************************************************************
- * Module:	SavePatient.cs
+ * Module:	SaveDoctor.cs
  * Author:	lukaa
- * Purpose: Definition of the Class SavePatient
+ * Purpose: Definition of the Class SaveDoctor
  ***********************************************************************/
 
 using System;
@@ -9,33 +9,33 @@ using Model;
 
 namespace Service
 {
-	public class PatientService
+	public class DoctorService
 	{
-		public Boolean CreatePatient(Patient patient)
+		public Boolean CreateDoctor(Doctor patient)
 		{
 			// TODO: implement
 			return false;
 		}
 		
-		public Boolean UpdatePatient(Patient patient)
+		public Boolean UpdateDoctor(Doctor patient)
 		{
 			// TODO: implement
 			return false;
 		}
 		
-		public Boolean DeletePatient(int id)
+		public Boolean DeleteDoctor(int id)
 		{
 			// TODO: implement
 			return false;
 		}
 		
-		public Patient ReadPatient(int id)
+		public Doctor ReadDoctor(int id)
 		{
 			// TODO: implement
 			return null;
 		}
 	
-		public Repository.PatientRepository patientRepository;
+		public Repository.DoctorRepository patientRepository;
 	
 	}
 }
