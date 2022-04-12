@@ -31,8 +31,8 @@ namespace ProjekatSIMS.View.DoctorView
         public ShowSurgery()
         {
             InitializeComponent();
- //           operations = new ObservableCollection<Operation>(operationRepository.FindAll());
- //           dgSurgery.ItemsSource = operations;
+            operations = new ObservableCollection<Operation>(operationRepository.FindAll());
+            dgSurgery.ItemsSource = operations;
         }
 
         private void ScheduleSurgery_Click(object sender, RoutedEventArgs e)
