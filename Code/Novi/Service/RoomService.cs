@@ -13,7 +13,14 @@ namespace Service
 	{
 		public Boolean CreateRoom(String roomType, String roomName)
 		{
-			Room newRoom = new Room(roomType, roomName);
+			
+			if(File.Exists(idFile)){
+				int newID = ++(int.Parse(File.ReadAllText(idFile)));
+			}else
+				int newID = 0;
+			Room newRoom = new Room(roomType, roomName, newID);
+			
+			File.WriteAllText(idFile, newID.ToStrint());
 			
 			return roomRepository.Save(newRoom);
 		}
@@ -36,7 +43,7 @@ namespace Service
 			return roomRepository.FindByID(id);
 		}
 	
-		public Repository.RoomRepository roomRepository;
-	
+		public static Repository.RoomRepository roomRepository = new RoomRepository();
+		public static String idFile = "roomID.txt";
 	}
 }
