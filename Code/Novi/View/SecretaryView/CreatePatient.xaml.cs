@@ -34,13 +34,6 @@ namespace ProjekatSIMS.View.SecretaryView
             }
         }
 
-        
-
-
-       
-
-       
-
         public CreatePatient(ObservableCollection<Patient> patients) {
            
         }
@@ -62,4 +55,3 @@ namespace ProjekatSIMS.View.SecretaryView
         }
     }
 }
-*/

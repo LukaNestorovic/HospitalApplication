@@ -14,10 +14,12 @@ namespace Controller
    {
         public PatientService patientService = new PatientService();
         public RoomService roomService = new RoomService();
+        public DoctorService doctorService = new DoctorService();
       public Boolean CreateOperation(DateTime dateTime, int duration, String type, int patientId, int doctorId, int roomId)
       {
             Patient patient = patientService.ReadPatient(patientId);
             Room room = roomService.ReadRoom(roomId);
+            Doctor doctor = doctorService.ReadDoctor(doctorId);
 
          return operationService.CreateOperation(dateTime, duration, type, patient, doctor, room);
       }
