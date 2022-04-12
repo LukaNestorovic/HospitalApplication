@@ -32,6 +32,18 @@ namespace Controller
 			return roomDTO;
 		}
 		
+		public List<String[]> ReadAll(){
+			List<Room> rooms = roomService.ReadAll();
+			List<String[]> roomDTOs = new List<String[]>();
+			foreach(Room r in rooms){
+				String[] dto = new String[3];
+				dto[0] = r.RoomType;
+				dto[1] = r.Name;
+				dto[2] = r.Id.ToString();
+				roomDTOs.Add(dto);
+			}
+			return roomDTOs;
+		}
 		public Boolean UpdateRoom(String RoomType, String RoomName, int id)
 		{
 			return roomService.UpdateRoom(RoomType, RoomName, id);

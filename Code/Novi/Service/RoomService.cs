@@ -45,7 +45,11 @@ namespace Service
 		{
 			return roomRepository.FindByID(id);
 		}
-	
+		
+		public List<Room> ReadAll(){
+			return roomRepository.FindAll();
+		}
+		
 		public Repository.RoomRepository roomRepository = new RoomRepository();
 		public String idFile = "roomID.txt";
 	}
