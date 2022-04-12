@@ -30,10 +30,10 @@ namespace Repository
 			return a;
 		}
 		
-		public Boolean Save(Operation appointment)
+		public Boolean Save(Operation operation)
 		{
 			List<Operation> all = serializer.fromJSON(FileName);
-			all.Add(appointment);
+			all.Add(operation);
 			serializer.toJSON(FileName, all);
 			return true;
 		}
@@ -51,12 +51,12 @@ namespace Repository
 			return true;
 		}
 		
-		public Boolean UpdateByID(Operation appointment)
+		public Boolean UpdateByID(Operation operation)
 		{
 			List<Operation> all = serializer.fromJSON(FileName);
 			for(int i = 0; i < all.Count; i++){
-				if(all[i].Id == appointment.Id){
-					all[i] = appointment;
+				if(all[i].Id == operation.Id){
+					all[i] = operation;
 					break;
 				}
 			}
