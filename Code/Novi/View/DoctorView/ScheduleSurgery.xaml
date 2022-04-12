@@ -10,7 +10,7 @@
         <Label Content="Id" HorizontalAlignment="Left" Height="25" Margin="235,40,0,0" VerticalAlignment="Top" Width="122"/>
         <Label Content="Time" HorizontalAlignment="Left" Height="25" Margin="235,90,0,0" VerticalAlignment="Top" Width="122"/>
         <Label Content="Patient" HorizontalAlignment="Left" Height="25" Margin="235,140,0,0" VerticalAlignment="Top" Width="122"/>
-        <Label Content="Doctor" HorizontalAlignment="Left" Height="25" Margin="235,200,0,0" VerticalAlignment="Top" Width="122"/>
+        <Label Content="Doctor" HorizontalAlignment="Left" Height="25" Margin="235,217,0,0" VerticalAlignment="Top" Width="122"/>
         <Label Content="Room" HorizontalAlignment="Left" Height="25" Margin="234,257,0,0" VerticalAlignment="Top" Width="122"/>
         <Label Content="Surgery Type" HorizontalAlignment="Left" Height="25" Margin="234,305,0,0" VerticalAlignment="Top" Width="122"/>
 
@@ -20,9 +20,11 @@
         <TextBox x:Name="TBId" HorizontalAlignment="Left" Margin="382,40,0,0" VerticalAlignment="Top" Width="167" Height="25" TextChanged="Id_TextChanged"/>
         <DatePicker x:Name="DPTime" HorizontalAlignment="Left" Margin="382,89,0,0" VerticalAlignment="Top" Width="167" Height="26" SelectedDateChanged="Time_SelectedDateChanged" />
         <TextBox x:Name="TBPatient" HorizontalAlignment="Left" Margin="382,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Height="26" TextChanged="Patient_TextChanged" />
-        <ComboBox x:Name="CBDoctor" HorizontalAlignment="Left" Margin="382,199,0,0" VerticalAlignment="Top" Width="167" Height="26" SelectionChanged="Doctor_SelectionChanged"/>
+        <ComboBox x:Name="CBDoctor" HorizontalAlignment="Left" Margin="382,219,0,0" VerticalAlignment="Top" Width="167" Height="26" SelectionChanged="Doctor_SelectionChanged"/>
         <ComboBox x:Name="CBRoom" HorizontalAlignment="Left" VerticalAlignment="Top" Width="167" Margin="382,259,0,0" Height="23" SelectionChanged="Room_SelectionChanged" />
         <TextBox x:Name="TBType" HorizontalAlignment="Left" Margin="382,305,0,0" VerticalAlignment="Top" Width="167" Height="25" TextChanged="Type_TextChanged"/>
+        <Label Content="Duration" HorizontalAlignment="Left" Height="25" Margin="235,187,0,0" VerticalAlignment="Top" Width="122"/>
+        <TextBox x:Name="TBPatient_Copy" HorizontalAlignment="Left" Margin="382,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Height="26" TextChanged="Patient_TextChanged" />
 
     </Grid>
 </Window>
