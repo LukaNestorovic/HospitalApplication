@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace ConsoleApp.serialization
+namespace Serialization
 {
 	class Serializer<T>
 	{

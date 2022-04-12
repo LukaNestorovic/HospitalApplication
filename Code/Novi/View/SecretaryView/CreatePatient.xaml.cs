@@ -1,6 +1,6 @@
 ﻿using Controller;
 using Model;
-using ProjekatSIMS.Service;
+using Service;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
