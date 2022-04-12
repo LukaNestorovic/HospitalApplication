@@ -25,23 +25,23 @@ namespace ProjekatSIMS.View.DoctorView
     public partial class ScheduleSurgery : Window
     {
 
-//        public ObservableCollection<SurgeryAppointment> surgeryAppointments;
-//        public SurgeryRepository surgeryRepository = new SurgeryRepository();
-//        public SurgeryController surgeryController = new SurgeryController();
-//        public SurgeryService surgeryService = new SurgeryService();
-/*       public ScheduleSurgery(ObservableCollection<SurgeryAppointment> surgeryAppointment)
+        public ObservableCollection<Appointment> appointments;
+        public OperationRepository operationRepository = new OperationRepository();
+        public OperationController operationController = new OperationController();
+        public OperationService operationService = new OperationService();
+        public ScheduleSurgery(ObservableCollection<Appointment> appointment)
         {
             InitializeComponent();
-            this.surgeryAppointments = surgeryAppointment;
+            this.appointments = appointment;
             InitializaCombo();
         }
 
         private void InitializaCombo()
         {
-            CBDoctor.ItemsSource = surgeryRepository.GetAllSurgeries();
+            CBDoctor.ItemsSource = operationRepository.FindAll();
             
         }
-*/
+
         private void Odustani_Click(object sender, RoutedEventArgs e)
         {
             var s = new ShowSurgery();
@@ -49,10 +49,9 @@ namespace ProjekatSIMS.View.DoctorView
             Close();
         }
 
- /*       private SurgeryAppointment GetFromDG()
+        private Operation GetFromDG()
         {
-            SurgeryAppointment surgeryAppointment = new SurgeryAppointment(TBId.Text, TBType.Text, DPTime.SelectedDate.GetValueOrDefault(), TBPatient.Text, (String)CBDoctor.SelectedItem, (String)CBRoom.SelectedItem);
-            return surgeryAppointment;
+            return operationController.CreateOperation();
         }
 
         private void Potvrdi_Click(object sender, RoutedEventArgs e)

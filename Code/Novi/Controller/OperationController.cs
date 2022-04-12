@@ -12,10 +12,14 @@ namespace Controller
 {
    public class OperationController
    {
-      public Boolean CreateOperation(Operation operation)
+        public PatientService patientService = new PatientService();
+        public RoomService roomService = new RoomService();
+      public Boolean CreateOperation(DateTime dateTime, int duration, String type, int patientId, int doctorId, int roomId)
       {
-         // TODO: implement
-         return operationService.CreateOperation(operation);
+            Patient patient = patientService.ReadPatient(patientId);
+            Room room = roomService.ReadRoom(roomId);
+
+         return operationService.CreateOperation(dateTime, duration, type, patient, doctor, room);
       }
       
       public Boolean DeleteOperation(int id)
