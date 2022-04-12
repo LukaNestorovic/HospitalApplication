@@ -12,6 +12,7 @@ namespace Repository
 {
    public class OperationRepository
    {
+   
       public List<Operation> FindAll()
       {
          // TODO: implement
@@ -43,6 +44,5 @@ namespace Repository
       }
    
       private String FileName;
-   
    }
 }

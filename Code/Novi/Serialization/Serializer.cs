@@ -7,7 +7,7 @@ using System.Text.Json.Serialization;
 
 namespace ConsoleApp.serialization
 {
-	class Serializer<T> where T: Serializable, new()
+	class Serializer<T>
 	{
 		private static char DELIMITER = ',';
 		private static char[] TRAILING = {'[', ']'};

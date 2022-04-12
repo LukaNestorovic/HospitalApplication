@@ -7,7 +7,7 @@
 using System;
 using System.Collections.Generic;
 using Model;
-using ConsoleApp.serialization;
+using Serialization;
 
 namespace Repository
 {
@@ -55,9 +55,9 @@ namespace Repository
 		public Boolean UpdateByID(Appointment appointment)
 		{
 			List<Appointment> all = serializer.fromJSON(FileName);
-			foreach(Appointment i in all){
-				if(i.Id == appointment.Id){
-					i = appointment;
+			for(int i = 0; i < all.Count; i++){
+				if(all[i].Id == appointment.Id){
+					all[i] = appointment;
 					break;
 				}
 			}
