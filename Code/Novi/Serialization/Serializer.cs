@@ -38,6 +38,7 @@ namespace Serialization
 
 				foreach (String objStr in objectStrings)
 				{
+					Console.WriteLine(jsonString);
 					T obj = JsonSerializer.Deserialize<T>(jsonString);
 					objects.Add(obj);
 				}
