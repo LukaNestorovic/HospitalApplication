@@ -46,7 +46,7 @@ namespace Service
 			return roomRepository.FindByID(id);
 		}
 	
-		public static Repository.RoomRepository roomRepository = new RoomRepository();
-		public static String idFile = "roomID.txt";
+		public Repository.RoomRepository roomRepository = new RoomRepository();
+		public String idFile = "roomID.txt";
 	}
 }
