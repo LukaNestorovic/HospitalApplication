@@ -5,21 +5,23 @@
  ***********************************************************************/
 
 using System;
+using Service;
+using Model;
 
 namespace Controller
 {
    public class RoomController
    {
-      public Boolean CreateRoom()
+      public Boolean CreateRoom(Room room)
       {
          // TODO: implement
-         return false;
+         return roomService.CreateRoom(room);
       }
       
-      public Boolean DeleteRoom()
+      public Boolean DeleteRoom(int id)
       {
          // TODO: implement
-         return false;
+         return roomService.DeleteRoom(id);
       }
       
       public Boolean ReadRoom()
@@ -28,13 +30,13 @@ namespace Controller
          return false;
       }
       
-      public Boolean UpdateRoom()
+      public Boolean UpdateRoom(Room room)
       {
          // TODO: implement
-         return false;
+         return roomService.UpdateRoom(room);
       }
    
-      public Service.RoomService roomService;
+      public RoomService roomService = new RoomService();
    
    }
 }

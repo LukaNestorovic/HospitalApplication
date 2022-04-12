@@ -5,27 +5,29 @@
  ***********************************************************************/
 
 using System;
+using Service;
+using Model;
 
 namespace Controller
 {
    public class PatientController
    {
-      public Boolean CreatePatient()
+      public Boolean CreatePatient(Patient patient)
       {
          // TODO: implement
-         return false;
+         return patientService.CreatePatient(patient);
       }
       
-      public Boolean UpdatePatient()
+      public Boolean UpdatePatient(Patient patient)
       {
          // TODO: implement
-         return false;
+         return patientService.UpdatePatient(patient);
       }
       
-      public Boolean DeletePatient()
+      public Boolean DeletePatient(int id)
       {
          // TODO: implement
-         return false;
+         return patientService.DeletePatient(id);
       }
       
       public Boolean ReadPatient()
@@ -34,7 +36,7 @@ namespace Controller
          return false;
       }
    
-      public Service.PatientService patientService;
+      public PatientService patientService = new PatientService();
    
    }
 }

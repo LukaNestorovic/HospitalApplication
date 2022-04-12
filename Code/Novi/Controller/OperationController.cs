@@ -5,27 +5,29 @@
  ***********************************************************************/
 
 using System;
+using Service;
+using Model;
 
 namespace Controller
 {
    public class OperationController
    {
-      public Boolean CreateOperation()
+      public Boolean CreateOperation(Operation operation)
       {
          // TODO: implement
-         return false;
+         return operationService.CreateOperation(operation);
       }
       
-      public Boolean DeleteOperation()
+      public Boolean DeleteOperation(int id)
       {
          // TODO: implement
-         return false;
+         return operationService.DeleteOperation(id);
       }
       
-      public Boolean UpdateOperation()
+      public Boolean UpdateOperation(Operation operation)
       {
          // TODO: implement
-         return false;
+         return operationService.UpdateOperation(operation);
       }
       
       public Boolean ReadOperation()
@@ -34,7 +36,7 @@ namespace Controller
          return false;
       }
    
-      public Service.OperationService operationService;
+      public OperationService operationService = new OperationService();
    
    }
 }
