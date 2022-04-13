@@ -24,6 +24,7 @@ namespace ProjekatSIMS.View.SecretaryView
     /// </summary>
     public partial class CreatePatient : Window, INotifyPropertyChanged
     {
+        public PatientController patientController = new PatientController();
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string n)
@@ -40,8 +41,9 @@ namespace ProjekatSIMS.View.SecretaryView
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-
-           
+            var s = new ShowPatient();
+            s.Show();
+            Close();
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
