@@ -37,7 +37,7 @@ namespace Controller
 			return appointmentService.UpdateApp(dateTime, description, duration, emergency, patient, doctor, room, appId);
 		}
 		
-		public String[] ReadApp(int id)
+		public Appointment ReadApp(int id)
 		{
 			Appointment appointment = appointmentService.ReadApp(id);
 //			String[] appointmentDTO = new String[8];
@@ -52,7 +52,7 @@ namespace Controller
 			return appointment;
 		}
 
-		public List<String[]> ReadAll()
+		public List<Appointment> ReadAll()
 		{
 			List<Appointment> appointments = appointmentService.ReadAll();
 //			List<String[]> appointmentDTOs = new List<String[]>();

@@ -23,7 +23,7 @@ namespace Controller
 			return roomService.DeleteRoom(id);
 		}
 		
-		public String[] ReadRoom(int id)
+		public Room ReadRoom(int id)
 		{
 			Room room = roomService.ReadRoom(id);
 //			String[] roomDTO = new String[3];
@@ -33,7 +33,7 @@ namespace Controller
 			return room;
 		}
 		
-		public List<String[]> ReadAll(){
+		public List<Room> ReadAll(){
 			List<Room> rooms = roomService.ReadAll();
 //			List<String[]> roomDTOs = new List<String[]>();
 //			foreach(Room r in rooms){
