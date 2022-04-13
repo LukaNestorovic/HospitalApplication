@@ -11,31 +11,51 @@ namespace Service
 {
 	public class DoctorService
 	{
-		public Boolean CreateDoctor(Doctor patient)
+		public Boolean CreateDoctor(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String speciality, float grade, int salary)
 		{
-			// TODO: implement
-			return false;
+			int newID;
+			if(File.Exists(idFile)){
+				newID = int.Parse(File.ReadAllText(idFile));
+				newID++;
+			}else
+				newID = 0;
+			
+			Doctor doctor = new Doctor(name, surname, jmbg, telephone, email, birthDate, adress, speciality, grade, salary, newID);
+			return doctorRepository.Save(doctor);
 		}
 		
-		public Boolean UpdateDoctor(Doctor patient)
+		public Boolean UpdateDoctor(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String speciality, float grade, int salary, int id)
 		{
-			// TODO: implement
-			return false;
+			Doctor doctor = doctorRepository.FindByID(id);
+			doctor.Name = name;
+			doctor.Surname = surname;
+			doctor.Jmbg = jmbg;
+			doctor.Telephone = telephone;
+			doctor.Email = email;
+			doctor.BirthDate = birthDate;
+			doctor.Adress = adress;
+			doctor.Speciality = speciality;
+			doctor.Grade = grade;
+			doctor.Salary = salary;
+			return doctorRepository.UpdateByID(doctor);
 		}
 		
 		public Boolean DeleteDoctor(int id)
 		{
-			// TODO: implement
-			return false;
+			return doctorRepository.DeleteByID(id);
 		}
 		
 		public Doctor ReadDoctor(int id)
 		{
-			// TODO: implement
-			return null;
+			return doctorRepository.FindByID(id);
+		}
+		
+		public List<Doctor> ReadAll()
+		{
+			return doctorRepository.FindAll();
 		}
 	
-		public Repository.DoctorRepository patientRepository;
+		public Repository.DoctorRepository doctorRepository = new DoctorRepository();
 		public String idFile = @"..\..\..\Data\doctorID.txt";
 
 	}
