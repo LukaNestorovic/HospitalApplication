@@ -14,7 +14,7 @@ namespace Model
 		public float Grade { get; set; }
 		public int Salary { get; set; }
 
-		public Doctor(string specialty, float grade, int salary)
+		public Doctor(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, string specialty, float grade, int salary):base(name, surname, jmbg, telephone, email, birthDate, adress, id)
 		{
 		  	Specialty = specialty;
 		  	Grade = grade;
