@@ -23,16 +23,14 @@ namespace ProjekatSIMS.View.ManagerView
     /// </summary>
     public partial class ManagerView : Window
     {
-        private RoomRepository roomRep = new RoomRepository();
-        private RoomController roomController = new RoomController();
-        private ObservableCollection<Room> Rooms
-        {
-            get; set;
-        }
+        public RoomRepository roomRepository = new RoomRepository();
+        public RoomController roomController = new RoomController();
+        public ObservableCollection<Room> rooms;
         public ManagerView()
         {
-            
-
+            InitializeComponent();
+            rooms = new ObservableCollection<Room>(roomRepository.FindAll());
+            dataGridRooms.ItemsSource = rooms;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

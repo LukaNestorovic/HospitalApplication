@@ -10,9 +10,8 @@
         <DataGrid x:Name="dataGridRooms" IsReadOnly="True" SelectionMode="Single" Height="300" Width="500" Margin="150,97,150,37" ItemsSource="{Binding Path=Rooms}" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ROOM ID" Binding="{Binding Id}" Width="*"/>
-                <DataGridTextColumn Header="ROOM NAME" Binding="{Binding RoomName}" Width="*"/>
-                <DataGridTextColumn Header="ROOM TYPE" Binding="{Binding Type}" Width="*"/>
-                <DataGridTextColumn Header="FLOOR" Binding="{Binding Floor}" Width="*"/>
+                <DataGridTextColumn Header="ROOM NAME" Binding="{Binding Name}" Width="*"/>
+                <DataGridTextColumn Header="ROOM TYPE" Binding="{Binding RoomType}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Add room" HorizontalAlignment="Left" Margin="169,46,0,0" VerticalAlignment="Top" Height="33" Width="115" Click="Button_Click"/>
