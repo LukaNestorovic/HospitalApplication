@@ -14,14 +14,14 @@ using System.Windows.Shapes;
 
 namespace ProjekatSIMS.View.ManagerView
 {
-    /// <summary>
-    /// Interaction logic for EditRoomView.xaml
-    /// </summary>
-    public partial class EditRoomView : Window
-    {
-        public EditRoomView()
-        {
-            InitializeComponent();
-        }
-    }
+	 /// <summary>
+	 /// Interaction logic for EditRoomView.xaml
+	 /// </summary>
+	 public partial class EditRoomView : Window
+	 {
+		  public EditRoomView()
+		  {
+				InitializeComponent();
+		  }
+	 }
 }
