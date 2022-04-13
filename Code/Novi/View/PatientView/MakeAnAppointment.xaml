@@ -9,7 +9,7 @@
     <Grid RenderTransformOrigin="0.416,0.506">
         <Button x:Name="Cancel" Content="Cancel" HorizontalAlignment="Left" Margin="55,365,0,0" VerticalAlignment="Top" Width="153" Click="Cancel_Click"/>
         <Button  x:Name="Confirm" Content="Confirm" HorizontalAlignment="Left" Margin="581,365,0,0" VerticalAlignment="Top" Width="153" Click="Confirm_Click"/>
-        <DatePicker x:Name="DatePicker" HorizontalAlignment="Center" Margin="0,21,0,0" VerticalAlignment="Top" Width="304" SelectedDateChanged="DatePicker_SelectedDateChanged" Height="28"/>
+        <DatePicker x:Name="DatePicker" HorizontalAlignment="Center" Margin="0,21,0,0" VerticalAlignment="Top" Width="304"  Height="28"/>
         <Label Margin="0,0,704,393"/>
         <Label Content="Select Date:" HorizontalAlignment="Left" Margin="154,21,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.982,0.36"/>
         <TextBox Height="23" HorizontalAlignment="Left" Margin="248,67,0,0" x:Name="TBDescription" VerticalAlignment="Top" Width="222" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />

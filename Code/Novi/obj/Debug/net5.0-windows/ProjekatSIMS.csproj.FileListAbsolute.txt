@@ -162,3 +162,9 @@ C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\Projekat
 C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\ProjekatSIMS.csproj.CopyComplete
 C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\ProjekatSIMS.genruntimeconfig.cache
 C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\ref\ProjekatSIMS.dll
+C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\Delete.g.cs
+C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\Edit.g.cs
+C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\Delete.baml
+C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\Edit.baml
+C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\Delete.g.cs
+C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\Delete.baml

@@ -16,6 +16,7 @@
 
             </DataGrid.Resources>
             <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Width="102" Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="Name" Width="102" Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="Surname" Width="102" Binding="{Binding Surname}"/>
                 <DataGridTextColumn Header="Jmbg" Width="102" Binding="{Binding Jmbg}"/>

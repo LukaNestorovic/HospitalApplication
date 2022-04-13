@@ -46,7 +46,7 @@ namespace ProjekatSIMS.View.SecretaryView
         }
         private void EditAccount_Click(object sender, RoutedEventArgs e)
         {
-            var s = new EditPatient();
+            var s = new EditPatient(patients);
             s.Show();
         }
 

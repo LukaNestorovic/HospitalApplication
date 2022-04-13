@@ -49,7 +49,9 @@ namespace ProjekatSIMS.View.DoctorView
 
         private void CancelSurgery_Click(object sender, RoutedEventArgs e)
         {
-           
+            var s = new Delete(operations);
+            s.Show();
+            Close();
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)

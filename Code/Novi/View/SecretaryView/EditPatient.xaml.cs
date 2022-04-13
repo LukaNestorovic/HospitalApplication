@@ -1,5 +1,10 @@
-﻿using System;
+﻿using Controller;
+using Model;
+using Service;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +24,27 @@ namespace ProjekatSIMS.View.SecretaryView
     /// </summary>
     public partial class EditPatient : Window
     {
-        public EditPatient()
+        public PatientController patientController = new PatientController();
+        public ObservableCollection<Patient> patients;
+        public EditPatient(ObservableCollection<Patient> patients)
         {
             InitializeComponent();
+            this.patients = patients;
+        }
+
+        private void Submit_Click(object sender, RoutedEventArgs e)
+        {
+            patientController.UpdatePatient(TBName.Text, TBSurname.Text, TBJmbg.Text, TBTelephone.Text, TBEmail.Text, DPBirthDate.SelectedDate.GetValueOrDefault(), TBAdress.Text, TBInsurance.Text, (Boolean)CBGuest.IsChecked, Int32.Parse(TBId.Text));
+            var s = new ShowPatient();
+            s.Show();
+            Close();
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new ShowPatient();
+            s.Show();
+            Close();
         }
     }
 }

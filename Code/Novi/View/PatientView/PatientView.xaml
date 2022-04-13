@@ -22,7 +22,7 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Create Appointment" HorizontalAlignment="Left" Margin="37,57,0,0" VerticalAlignment="Top" Height="23" Width="215" Click="Button_Click_1"/>
-        <Button Content="Edit Appointments" HorizontalAlignment="Left" Margin="506,57,0,0" VerticalAlignment="Top" Height="23" Width="258"/>
+        <Button Content="Edit Appointments" HorizontalAlignment="Left" Margin="506,57,0,0" VerticalAlignment="Top" Height="23" Width="258" Click="Button_Click_2"/>
         <Button Content="Cancel Appointments" HorizontalAlignment="Left" Margin="257,57,0,0" VerticalAlignment="Top" Height="23" Width="244" Click="Button_Click"/>
 
 
