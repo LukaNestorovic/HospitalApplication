@@ -65,7 +65,7 @@ namespace Repository
 			return false;
 		}
 	
-		private static String FileName = "Appointments.json";
+		private static String FileName = @"..\..\..\data\Appointments.json";
 		
 		private static Serializer<Appointment> serializer = new Serializer<Appointment>();
 	

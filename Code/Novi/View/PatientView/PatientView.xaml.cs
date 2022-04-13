@@ -24,11 +24,15 @@ namespace ProjekatSIMS.View.PatientView
     public partial class PatientView : Window
     {
         
-
+        public AppointmentController appointmentController = new AppointmentController();
+        public AppointmentRepository appointmentRepository = new AppointmentRepository();
+        public ObservableCollection<Appointment> appointments;
 
         public PatientView()
         {
-            
+            InitializeComponent();
+            appointments = new ObservableCollection<Appointment>(appointmentRepository.FindAll());
+            PatientAppointments.ItemsSource = appointments;
         }
 
        
