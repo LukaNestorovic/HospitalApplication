@@ -19,9 +19,9 @@ namespace Serialization
 				jsonList[i] = JsonSerializer.Serialize(objects[i]);
 			}
 			
-			String jsonString = Char.ToString(TRAILING[0]);
-			jsonString += String.Join(DELIMITER, jsonList);
-			jsonString += TRAILING[1];
+			//String jsonString = Char.ToString(TRAILING[0]);
+			String jsonString = String.Join(DELIMITER, jsonList);
+			//jsonString += TRAILING[1];
 			
 			File.WriteAllText(fileName, jsonString);
 		}
