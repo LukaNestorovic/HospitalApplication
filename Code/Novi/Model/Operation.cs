@@ -19,19 +19,19 @@ namespace Model
 		public Patient patient { get; set; }
 		public Room room { get; set; }
 
-		  public Operation(DateTime dateTime, int duration, String type, int id, Patient patient, Doctor doctor, Room room)
-		  {
-				DateTime = dateTime;
-				Duration = duration;
-				Type = type;
-				Id = id;
-				this.patient = patient;
-				this.doctor = doctor;
-				this.room = room;
-		  }
+		public Operation(DateTime dateTime, int duration, String type, int id, Patient patient, Doctor doctor, Room room)
+		{
+		  	DateTime = dateTime;
+		  	Duration = duration;
+		  	Type = type;
+		  	Id = id;
+		  	this.patient = patient;
+		  	this.doctor = doctor;
+		  	this.room = room;
+		}
 
-		  public Operation()
-		  {
-		  }
+		public Operation()
+		{
+		}
 	 }
 }
