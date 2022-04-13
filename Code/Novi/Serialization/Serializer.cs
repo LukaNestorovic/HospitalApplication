@@ -14,13 +14,14 @@ namespace Serialization
 		
 		public void toJSON(String fileName, List<T> objects){
 			
-			String[] jsonList = new String[objects.Count];
-			for(int i = 0; i < objects.Count; i++){
-				jsonList[i] = JsonSerializer.Serialize(objects[i]);
-			}
+			String jsonString = JsonSerializer.Serialoze(objects);
+		//	String[] jsonList = new String[objects.Count];
+		//	for(int i = 0; i < objects.Count; i++){
+		//		jsonList[i] = JsonSerializer.Serialize(objects[i]);
+		//	}
 			
 			//String jsonString = Char.ToString(TRAILING[0]);
-			String jsonString = String.Join(DELIMITER, jsonList);
+		//	String jsonString = String.Join(DELIMITER, jsonList);
 			//jsonString += TRAILING[1];
 			
 			File.WriteAllText(fileName, jsonString);
@@ -32,16 +33,18 @@ namespace Serialization
 			try
 			{
 				String jsonString = File.ReadAllText(fileName);
-				jsonString.Trim(TRAILING);
+				//jsonString.Trim(TRAILING);
+				objects = JsonSerializer.Deserialize<List<T>>(jsonString);
 
-				String[] objectStrings = jsonString.Split(DELIMITER);
+				//String[] objectStrings = jsonString.Split(DELIMITER);
 
-				foreach (String objStr in objectStrings)
-				{
-					File.WriteAllText(@"..\..\..\data\aaa.txt",jsonString);
-					T obj = JsonSerializer.Deserialize<T>(jsonString);
-					objects.Add(obj);
-				}
+				//foreach (String objStr in objectStrings)
+				//{
+				//	File.WriteAllText(@"..\..\..\data\aaa.txt",jsonString);
+				//	T obj = JsonSerializer.Deserialize<T>(jsonString);
+			//		objects.Add(obj);
+				//}
+
 			}
 			catch (Exception e)
 			{
