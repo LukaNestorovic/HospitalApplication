@@ -38,7 +38,7 @@ namespace Controller
             return operationService.UpdateOperation(dateTime, duration, type, patient, doctor, room, operationID);
       }
       
-      public String[] ReadOperation(int id)
+      public Operation ReadOperation(int id)
       {
             Operation operation = operationService.ReadOperation(id);
 //            String[] operationDTO = new String[8];
@@ -52,7 +52,7 @@ namespace Controller
             return operation;
         }
 
-        public List<String[]> ReadAll()
+        public List<Operation> ReadAll()
         {
             List<Operation> operations = operationService.ReadAll();
 //            List<String[]> operationDTOs = new List<String[]>();

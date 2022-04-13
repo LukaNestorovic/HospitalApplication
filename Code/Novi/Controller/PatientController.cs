@@ -28,7 +28,7 @@ namespace Controller
          return patientService.DeletePatient(id);
       }
       
-      public String[] ReadPatient(int id)
+      public Patient ReadPatient(int id)
       {
             Patient patient = patientService.ReadPatient(id);
 //            String[] patientDTO = new String[10];
@@ -45,7 +45,7 @@ namespace Controller
             return patient;
       }
 
-        public List<String[]> ReadAll()
+        public List<Patient> ReadAll()
         {
             List<Patient> patients = patientService.ReadAll();
 //            List<String[]> patientDTOs = new List<String[]>();
