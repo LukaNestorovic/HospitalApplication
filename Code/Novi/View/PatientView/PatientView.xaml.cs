@@ -1,6 +1,5 @@
 ﻿using Controller;
 using Model;
-using Repository;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -25,13 +24,12 @@ namespace ProjekatSIMS.View.PatientView
     {
         
         public AppointmentController appointmentController = new AppointmentController();
-        public AppointmentRepository appointmentRepository = new AppointmentRepository();
         public ObservableCollection<Appointment> appointments;
 
         public PatientView()
         {
             InitializeComponent();
-            appointments = new ObservableCollection<Appointment>(appointmentRepository.FindAll());
+            appointments = new ObservableCollection<Appointment>(appointmentController.ReadAll());
             PatientAppointments.ItemsSource = appointments;
         }
 
