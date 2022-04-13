@@ -24,10 +24,15 @@ namespace ProjekatSIMS.View.SecretaryView
     public partial class ShowPatient : Window
     {
        
+        public PatientController patientController = new PatientController();
+        public PatientRepository patientRepository = new PatientRepository();
+        public ObservableCollection<Patient> patients;
 
         public ShowPatient()
         {
-            
+            InitializeComponent();
+            patients = new ObservableCollection<Patient>(patientRepository.FindAll());
+            dgDataBinding.ItemsSource = patients;
         }
 
         private void CreateAccount_Click(object sender, RoutedEventArgs e)
