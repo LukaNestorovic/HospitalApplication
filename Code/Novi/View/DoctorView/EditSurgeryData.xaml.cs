@@ -1,5 +1,10 @@
-﻿using System;
+﻿using Controller;
+using Model;
+using Repository;
+using Service;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,13 +24,17 @@ namespace ProjekatSIMS.View.DoctorView
     /// </summary>
     public partial class EditSurgeryData : Window
     {
-        public EditSurgeryData()
+        public OperationController operationController = new OperationController();
+        public ObservableCollection<Operation> operations;
+        public EditSurgeryData(ObservableCollection<Operation> operation)
         {
             InitializeComponent();
+            this.operations = operation;
         }
 
         private void Potvrdi_Click(object sender, RoutedEventArgs e)
         {
+            
             var s = new ShowSurgery();
             s.Show();
             Close();
@@ -33,6 +42,7 @@ namespace ProjekatSIMS.View.DoctorView
 
         private void Odustani_Click(object sender, RoutedEventArgs e)
         {
+            operationController.UpdateOperation(DPTime.SelectedDate.GetValueOrDefault(), Int32.Parse(Duration.Text), Type.Text, Int32.Parse(Patient.Text), Int32.Parse(Doctor.Text), Int32.Parse(Room.Text), Int32.Parse(Id.Text));
             var s = new ShowSurgery();
             s.Show();
             Close();
