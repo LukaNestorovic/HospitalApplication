@@ -26,24 +26,24 @@ namespace Controller
 		public String[] ReadRoom(int id)
 		{
 			Room room = roomService.ReadRoom(id);
-			String[] roomDTO = new String[3];
-			roomDTO[0] = room.RoomType;
-			roomDTO[1] = room.Name;
-			roomDTO[2] = room.Id.ToString();
-			return roomDTO;
+//			String[] roomDTO = new String[3];
+//			roomDTO[0] = room.RoomType;
+//			roomDTO[1] = room.Name;
+//			roomDTO[2] = room.Id.ToString();
+			return room;
 		}
 		
 		public List<String[]> ReadAll(){
 			List<Room> rooms = roomService.ReadAll();
-			List<String[]> roomDTOs = new List<String[]>();
-			foreach(Room r in rooms){
-				String[] dto = new String[3];
-				dto[0] = r.RoomType;
-				dto[1] = r.Name;
-				dto[2] = r.Id.ToString();
-				roomDTOs.Add(dto);
-			}
-			return roomDTOs;
+//			List<String[]> roomDTOs = new List<String[]>();
+//			foreach(Room r in rooms){
+//				String[] dto = new String[3];
+//				dto[0] = r.RoomType;
+//				dto[1] = r.Name;
+//				dto[2] = r.Id.ToString();
+//				roomDTOs.Add(dto);
+//			}
+			return rooms;
 		}
 		public Boolean UpdateRoom(String RoomType, String RoomName, int id)
 		{
