@@ -13,6 +13,9 @@
     <Compile Update="View\DoctorView\DoctorView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\ManagerView\Delete.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\ManagerView\ManagerView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -43,6 +46,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\DoctorView\DoctorView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ManagerView\Delete.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\ManagerView\ManagerView.xaml">

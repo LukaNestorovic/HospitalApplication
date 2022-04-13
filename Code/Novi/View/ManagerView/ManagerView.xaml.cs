@@ -49,7 +49,7 @@ namespace ProjekatSIMS.View.ManagerView
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            var s = new EditRoomView(rooms);
+            var s = new Delete();
             s.Show();
             Close();
         }

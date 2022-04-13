@@ -1,0 +1,15 @@
+﻿<Window x:Class="ProjekatSIMS.View.ManagerView.Delete"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatSIMS.View.ManagerView"
+        mc:Ignorable="d"
+        Title="Delete" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="Id" HorizontalAlignment="Left" VerticalAlignment="Top" Width="167" Margin="328,151,0,0" Height="23"  />
+        <Label Content="Id" HorizontalAlignment="Left" Margin="260,151,0,0" VerticalAlignment="Top"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="347,267,0,0" VerticalAlignment="Top" Width="96" Height="37" Click="Button_Click"/>
+
+    </Grid>
+</Window>
