@@ -37,8 +37,10 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            var s = new Delete();
+            s.Show();
+            Close();
 
-            
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
