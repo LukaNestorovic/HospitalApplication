@@ -1,5 +1,9 @@
-﻿using System;
+﻿using Controller;
+using Model;
+using Repository;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +23,22 @@ namespace ProjekatSIMS.View.ManagerView
 	 /// </summary>
 	 public partial class EditRoomView : Window
 	 {
-		  public EditRoomView()
+		public ObservableCollection<Room> rooms;
+
+		public RoomController roomController = new RoomController();
+		public EditRoomView(ObservableCollection<Room> room)
 		  {
 				InitializeComponent();
-		  }
-	 }
+				this.rooms = room;
+		}
+
+		private void ConfirmButton_Click(object sender, RoutedEventArgs e)
+		{
+			roomController.UpdateRoom(TBType.Text, TBName.Text, Int32.Parse(TBId.Text));
+
+			var s = new ManagerView();
+			s.Show();
+			Close();
+		}
+	}
 }

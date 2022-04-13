@@ -8,6 +8,7 @@ using System;
 using Model;
 using System.Collections.Generic;
 using System.IO;
+using Repository;
 
 namespace Service
 {
@@ -36,7 +37,7 @@ namespace Service
 			doctor.Email = email;
 			doctor.BirthDate = birthDate;
 			doctor.Adress = adress;
-			doctor.Speciality = speciality;
+			doctor.Specialty = speciality;
 			doctor.Grade = grade;
 			doctor.Salary = salary;
 			return doctorRepository.UpdateByID(doctor);
