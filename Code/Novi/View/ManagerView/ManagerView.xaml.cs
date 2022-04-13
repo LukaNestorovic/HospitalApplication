@@ -35,8 +35,9 @@ namespace ProjekatSIMS.View.ManagerView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var s = new AddRoomView();
+            var s = new AddRoomView(rooms);
             s.Show();
+            Close();
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)

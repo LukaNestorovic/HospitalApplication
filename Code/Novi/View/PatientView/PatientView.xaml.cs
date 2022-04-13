@@ -45,7 +45,9 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            
+            var s = new MakeAnAppointment(appointments);
+            s.Show();
+            Close();
         }
     }
 }

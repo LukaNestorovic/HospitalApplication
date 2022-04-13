@@ -8,6 +8,7 @@ using System;
 using Model;
 using System.IO;
 using System.Collections.Generic;
+using Repository;
 
 namespace Service
 {
@@ -58,7 +59,7 @@ namespace Service
 			return appointmentRepository.FindAll();
 		}
 
-		public String idFile = @"..\..\..\Data\appointment.txt";
-		public Repository.AppointmentRepository appointmentRepository;
+		public String idFile = @"..\..\..\Data\appointmentID.txt";
+		public Repository.AppointmentRepository appointmentRepository = new Repository.AppointmentRepository();
 	}
 }
