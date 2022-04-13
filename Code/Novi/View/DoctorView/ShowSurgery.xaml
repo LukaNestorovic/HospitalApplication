@@ -19,9 +19,11 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="*"/>
                 <DataGridTextColumn Header="Type" Binding="{Binding Type}" Width="*"/>
-                <DataGridTextColumn Header="Time" Binding="{Binding Time}" Width="*"/>
+                <DataGridTextColumn Header="Time" Binding="{Binding DateTime}" Width="*"/>
                 <DataGridTextColumn Header="Doctor" Binding="{Binding Doctor}" Width="*"/>
                 <DataGridTextColumn Header="Patient" Binding="{Binding Patient}" Width="*"/>
+                <DataGridTextColumn Header="Duration" Binding="{Binding Duration}" Width="*"/>
+                <DataGridTextColumn Header="Room" Binding="{Binding Room}" Width="*"/>
                 
             </DataGrid.Columns>
         </DataGrid>

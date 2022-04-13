@@ -1,1 +1,1 @@
-[{"DateTime":"2022-04-17T00:00:00","Duration":5,"Type":"5","Id":1,"doctor":null,"patient":null,"room":null}]
+{"DateTime":"2022-04-17T00:00:00","Duration":5,"Type":"5","Id":1,"doctor":null,"patient":null,"room":null}
