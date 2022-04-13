@@ -40,9 +40,18 @@ namespace ProjekatSIMS.View.ManagerView
             Close();
         }
 
+        private void EditButton_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new EditRoomView(rooms);
+            s.Show();
+            Close();
+        }
+
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            var s = new EditRoomView(rooms);
+            s.Show();
+            Close();
         }
     }
 }

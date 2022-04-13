@@ -42,7 +42,9 @@ namespace ProjekatSIMS.View.DoctorView
 
         private void EditSugery_Click(object sender, RoutedEventArgs e)
         {
-           
+            var s = new EditSurgeryData(operations);
+            s.Show();
+            Close();
         }
 
         private void CancelSurgery_Click(object sender, RoutedEventArgs e)

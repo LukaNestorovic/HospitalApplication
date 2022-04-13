@@ -32,7 +32,7 @@ namespace ProjekatSIMS.View.DoctorView
             this.operations = operation;
         }
 
-        private void Potvrdi_Click(object sender, RoutedEventArgs e)
+        private void Odustani_Click(object sender, RoutedEventArgs e)
         {
             
             var s = new ShowSurgery();
@@ -40,7 +40,7 @@ namespace ProjekatSIMS.View.DoctorView
             Close();
         }
 
-        private void Odustani_Click(object sender, RoutedEventArgs e)
+        private void Potvrdi_Click(object sender, RoutedEventArgs e)
         {
             operationController.UpdateOperation(DPTime.SelectedDate.GetValueOrDefault(), Int32.Parse(Duration.Text), Type.Text, Int32.Parse(Patient.Text), Int32.Parse(Doctor.Text), Int32.Parse(Room.Text), Int32.Parse(Id.Text));
             var s = new ShowSurgery();

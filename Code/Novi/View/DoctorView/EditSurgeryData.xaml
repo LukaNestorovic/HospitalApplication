@@ -14,15 +14,15 @@
 
         <Button Name="Potvrdi" Click="Potvrdi_Click" Content="Potvrdi" HorizontalAlignment="Left" Height="40" Margin="387,356,0,0" VerticalAlignment="Top" Width="140"/>
         <Button Name="Odustani" Click="Odustani_Click" Content="Odustani" HorizontalAlignment="Left" Height="40" Margin="213,356,0,0" VerticalAlignment="Top" Width="140"/>
-        <TextBox x:Name="Patient" HorizontalAlignment="Left" IsEnabled="False" Margin="360,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Height="26" TextChanged="Patient_TextChanged"/>
-        <TextBox x:Name="Doctor" HorizontalAlignment="Left" IsEnabled="False" Margin="360,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Height="26" TextChanged="Doctor_TextChanged"/>
         <TextBox x:Name="Room" HorizontalAlignment="Left" VerticalAlignment="Top" Width="167" Margin="360,252,0,0" Height="23" TextChanged="Room_TextChanged" />
         <TextBox x:Name="Type" HorizontalAlignment="Left" Margin="360,298,0,0" VerticalAlignment="Top" Width="167" Height="25" TextChanged="Type_TextChanged"/>
         <TextBox x:Name="Id" HorizontalAlignment="Left" Margin="360,16,0,0" VerticalAlignment="Top" Width="167" Height="24" TextChanged="Doctor_TextChanged"/>
         <Label Content="Id&#xD;&#xA;" HorizontalAlignment="Left" Height="24" Margin="213,16,0,0" VerticalAlignment="Top" Width="122"/>
-        <DatePicker x:Name="DPTime" HorizontalAlignment="Left" Margin="360,57,0,0" VerticalAlignment="Top" Width="167" Height="26" SelectedDateChanged="Time_SelectedDateChanged" />
-        <TextBox x:Name="Duration" HorizontalAlignment="Left" IsEnabled="False" Margin="360,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Height="26" TextChanged="Patient_TextChanged"/>
+        <DatePicker x:Name="DPTime" HorizontalAlignment="Left" Margin="360,57,0,0" VerticalAlignment="Top" Width="167" Height="26"  />
         <Label Content="Duration&#xD;&#xA;" HorizontalAlignment="Left" Height="24" Margin="213,103,0,0" VerticalAlignment="Top" Width="122"/>
+        <TextBox x:Name="Doctor" HorizontalAlignment="Left" VerticalAlignment="Top" Width="167" Margin="360,195,0,0" Height="23" TextChanged="Room_TextChanged" />
+        <TextBox x:Name="Patient" HorizontalAlignment="Left" VerticalAlignment="Top" Width="167" Margin="360,149,0,0" Height="23" TextChanged="Room_TextChanged" />
+        <TextBox x:Name="Duration" HorizontalAlignment="Left" VerticalAlignment="Top" Width="167" Margin="360,104,0,0" Height="23" TextChanged="Room_TextChanged" />
 
     </Grid>
 </Window>

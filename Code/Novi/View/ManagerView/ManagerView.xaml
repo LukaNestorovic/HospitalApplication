@@ -16,6 +16,6 @@
         </DataGrid>
         <Button Content="Add room" HorizontalAlignment="Left" Margin="169,46,0,0" VerticalAlignment="Top" Height="33" Width="115" Click="Button_Click"/>
         <Button Content="Delete room" HorizontalAlignment="Center" Margin="0,46,0,0" VerticalAlignment="Top" Height="33" Width="116" Click="DeleteButton_Click"/>
-        <Button Content="Edit room" HorizontalAlignment="Left" Margin="516,46,0,0" VerticalAlignment="Top" Height="33" Width="116"/>
+        <Button Content="Edit room" HorizontalAlignment="Left" Margin="516,46,0,0" VerticalAlignment="Top" Height="33" Width="116" Click="EditButton_Click"/>
     </Grid>
 </Window>
