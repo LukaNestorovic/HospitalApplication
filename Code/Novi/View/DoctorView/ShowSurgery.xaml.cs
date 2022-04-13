@@ -14,7 +14,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Controller;
 using Model;
-using Repository;
 using Service;
 
 namespace ProjekatSIMS.View.DoctorView
@@ -26,12 +25,11 @@ namespace ProjekatSIMS.View.DoctorView
     {
         public ObservableCollection<Operation> operations;
         public OperationController operationController = new OperationController();
-        public OperationRepository operationRepository = new OperationRepository();
 
         public ShowSurgery()
         {
             InitializeComponent();
-            operations = new ObservableCollection<Operation>(operationRepository.FindAll());
+            operations = new ObservableCollection<Operation>(operationController.ReadAll());
             dgSurgery.ItemsSource = operations;
         }
 

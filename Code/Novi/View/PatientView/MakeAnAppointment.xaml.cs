@@ -33,17 +33,6 @@ namespace ProjekatSIMS.View.PatientView
 
         }
       
-
-        private void DatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged_4(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             var s = new PatientView();

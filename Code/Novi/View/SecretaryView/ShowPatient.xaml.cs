@@ -13,7 +13,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Controller;
 using Model;
-using Repository;
 using System.Collections.ObjectModel;
 
 namespace ProjekatSIMS.View.SecretaryView
@@ -25,13 +24,12 @@ namespace ProjekatSIMS.View.SecretaryView
     {
        
         public PatientController patientController = new PatientController();
-        public PatientRepository patientRepository = new PatientRepository();
         public ObservableCollection<Patient> patients;
 
         public ShowPatient()
         {
             InitializeComponent();
-            patients = new ObservableCollection<Patient>(patientRepository.FindAll());
+            patients = new ObservableCollection<Patient>(patientController.ReadAll());
             dgDataBinding.ItemsSource = patients;
         }
 
