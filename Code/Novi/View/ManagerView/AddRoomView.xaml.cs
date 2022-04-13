@@ -23,15 +23,23 @@ namespace ProjekatSIMS.View.ManagerView
     /// </summary>
     public partial class AddRoomView : Window
     {
-
-        public AddRoomView()
+        public ObservableCollection<Room> rooms;
+        
+        public RoomController roomController = new RoomController();
+        
+        public AddRoomView(ObservableCollection<Room> room)
         {
-            
+            InitializeComponent();
+            this.rooms = room;
         }
 
         private void ConfirmButton_Click(object sender, RoutedEventArgs e)
         {
-           
+            roomController.CreateRoom(TBType.Text, TBName.Text);
+
+            var s = new ManagerView();
+            s.Show();
+            Close();
         }
     }
     }

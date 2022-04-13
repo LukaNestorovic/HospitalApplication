@@ -26,9 +26,7 @@ namespace ProjekatSIMS.View.DoctorView
     {
 
         public ObservableCollection<Operation> operations;
-        public OperationRepository operationRepository = new OperationRepository();
         public OperationController operationController = new OperationController();
-        public OperationService operationService = new OperationService();
         public ScheduleSurgery(ObservableCollection<Operation> operation)
         {
             InitializeComponent();

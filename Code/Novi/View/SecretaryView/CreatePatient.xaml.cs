@@ -25,6 +25,7 @@ namespace ProjekatSIMS.View.SecretaryView
     public partial class CreatePatient : Window, INotifyPropertyChanged
     {
         public PatientController patientController = new PatientController();
+        public ObservableCollection<Patient> patients;
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string n)
@@ -37,7 +38,7 @@ namespace ProjekatSIMS.View.SecretaryView
 
         public CreatePatient(ObservableCollection<Patient> patients) {
             InitializeComponent();
-    
+            this.patients = patients;
         }
 
         private void Submit_Click(object sender, RoutedEventArgs e)

@@ -7,14 +7,12 @@
         mc:Ignorable="d"
         Title="AddRoomView" Height="450" Width="800">
     <Grid RenderTransformOrigin="0.523,0.514">
-        <TextBox HorizontalAlignment="Left" Margin="415,110,0,0" Name="TextBoxId" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="415,158,0,0" Name="TextBoxRoomName" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="415,158,0,0" Name="TBName" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="233,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <ComboBox Name="cbType" HorizontalAlignment="Left" Margin="415,212,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Room ID:" HorizontalAlignment="Left" Margin="319,102,0,0" VerticalAlignment="Top"/>
         <Label Content="Room Name:" HorizontalAlignment="Left" Margin="299,149,0,0" VerticalAlignment="Top"/>
         <Label Content="Room Type:" HorizontalAlignment="Left" Margin="306,210,0,0" VerticalAlignment="Top"/>
         <Button Content="Confirm" HorizontalAlignment="Left" Margin="358,348,0,0" VerticalAlignment="Top" Height="30" Width="108" Click="ConfirmButton_Click"/>
+        <TextBox HorizontalAlignment="Left" Margin="415,217,0,0" x:Name="TBType" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

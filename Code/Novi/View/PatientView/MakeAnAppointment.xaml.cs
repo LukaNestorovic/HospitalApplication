@@ -24,18 +24,14 @@ namespace ProjekatSIMS.View.PatientView
     /// </summary>
     public partial class MakeAnAppointment : Window
     {
-        
-        public MakeAnAppointment()
+        public AppointmentController appointmentController = new AppointmentController();
+        public ObservableCollection<Appointment> appointments;
+        public MakeAnAppointment(ObservableCollection<Appointment> appointments)
         {
-            
-            
+            InitializeComponent();
+            this.appointments = appointments;
+
         }
-/*        private ExaminationAppointment ucitaj()
-        {
-            
-        }*/
-
-
       
 
         private void DatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
@@ -59,8 +55,10 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
-
-          
+            appointmentController.CreateApp(DatePicker.SelectedDate.GetValueOrDefault(), TBDescription.Text, Int32.Parse(TBDuration.Text), (Boolean)CBEmergency.IsChecked, Int32.Parse(TBPatient.Text), Int32.Parse(TBDoctor.Text), Int32.Parse(TBRoom.Text));
+            var s = new PatientView();
+            s.Show();
+            Close();
         }
     }
 }
