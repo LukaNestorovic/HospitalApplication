@@ -52,7 +52,8 @@ namespace ProjekatSIMS.View.SecretaryView
 
         private void DeleteAccount_Click(object sender, RoutedEventArgs e)
         {
-            
+            var s = new Delete();
+            s.Show();
             
         }
     }

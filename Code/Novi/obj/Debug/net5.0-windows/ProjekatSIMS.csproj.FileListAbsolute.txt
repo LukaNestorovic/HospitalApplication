@@ -170,3 +170,5 @@ C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\Doc
 C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\Delete.baml
 C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\ManagerView\Delete.g.cs
 C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\ManagerView\Delete.baml
+C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\Delete.g.cs
+C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\Delete.baml
