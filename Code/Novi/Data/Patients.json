@@ -1,11 +1,1 @@
-
-  {
-    "Name": "aaa",
-    "Surname": "aaa",
-    "Jmbg": "123",
-    "Telephone": "23",
-    "Email": "@gmail.com",
-    "BirthDate": "2022-04-17T00:00:00",
-    "Adress": "aaaa",
-    "Id": 1
-  }
+[{"InsuranceCarrier":null,"Guest":false,"Name":"aaa","Surname":"aaa","Jmbg":"123","Telephone":"23","Email":"@gmail.com","BirthDate":"2022-04-17T00:00:00","Adress":"aaaa","Id":1},{"InsuranceCarrier":"zfcdvsx","Guest":false,"Name":"asd","Surname":"asd","Jmbg":"asd","Telephone":"asdf","Email":"asdfs","BirthDate":"2022-03-31T00:00:00","Adress":"asd","Id":0}]

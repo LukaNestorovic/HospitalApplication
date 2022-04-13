@@ -37,7 +37,8 @@ namespace ProjekatSIMS.View.SecretaryView
 
         private void CreateAccount_Click(object sender, RoutedEventArgs e)
         {
-            
+            var s = new CreatePatient(patients);
+            s.Show();
         }
 
         private void ShowAccount_Click(object sender, RoutedEventArgs e)

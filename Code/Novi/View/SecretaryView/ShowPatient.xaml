@@ -19,9 +19,10 @@
                 <DataGridTextColumn Header="Name" Width="102" Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="Surname" Width="102" Binding="{Binding Surname}"/>
                 <DataGridTextColumn Header="Jmbg" Width="102" Binding="{Binding Jmbg}"/>
-                <DataGridTextColumn Header="Date of birth" Width="102" Binding="{Binding birthDate, StringFormat={}{0:dd.MM.yyyy.}}"/>
+                <DataGridTextColumn Header="Date of birth" Width="102" Binding="{Binding BirthDate, StringFormat={}{0:dd.MM.yyyy.}}"/>
                 <DataGridTextColumn Header="Email" Width="*" Binding="{Binding Email}"/>
                 <DataGridTextColumn Header="Telephone" Width="*" Binding="{Binding Telephone}"/>
+                <DataGridTextColumn Header="Guest" Width="*" Binding="{Binding Guest}"/>
             </DataGrid.Columns>
         </DataGrid>
         <DockPanel HorizontalAlignment="Center" VerticalAlignment="Top">

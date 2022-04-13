@@ -36,11 +36,13 @@ namespace ProjekatSIMS.View.SecretaryView
         }
 
         public CreatePatient(ObservableCollection<Patient> patients) {
-           
+            InitializeComponent();
+    
         }
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
+            patientController.CreatePatient(TBName.Text, TBSurname.Text, TBJmbg.Text, TBTelephone.Text, TBEmail.Text, DPBirthDate.SelectedDate.GetValueOrDefault(), TBAdress.Text, TBInsurance.Text, (Boolean)CBGuest.IsChecked);
             var s = new ShowPatient();
             s.Show();
             Close();
