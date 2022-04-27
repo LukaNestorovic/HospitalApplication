@@ -12,7 +12,9 @@
             <Button x:Name="Secretary" Content="Secretary" Height="32" Width="468" Margin="0,0,0,10" Click="Secretary_Click"/>
             <Button x:Name="Patient" Content="Patient" Height="32" Width="468" Margin="0,0,0,10" Click="Patient_Click"/>
             <Button x:Name="Manager" Content="Manager" Height="32" Width="468" Margin="0,0,0,10" Click="Manager_Click"/>
+
         </StackPanel>
+
 
     </Grid>
 </Window>

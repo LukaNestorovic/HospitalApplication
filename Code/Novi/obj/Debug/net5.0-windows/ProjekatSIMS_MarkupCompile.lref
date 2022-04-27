@@ -1,6 +1,5 @@
 ﻿
 
-FC:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\MainWindow.xaml;;
 FC:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\View\DoctorView\DoctorView.xaml;;
 FC:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\View\DoctorView\EditSurgeryData.xaml;;
 FC:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\View\DoctorView\ScheduleSurgery.xaml;;
@@ -18,4 +17,9 @@ FC:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\View\PatientView\Edit.xaml;;
 FC:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\View\DoctorView\Delete.xaml;;
 FC:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\View\ManagerView\Delete.xaml;;
 FC:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\View\SecretaryView\Delete.xaml;;
+FC:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\MainWindow.xaml;;
+FC:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\View\DoctorView\LogInDoctor.xaml;;
+FC:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\View\ManagerView\LogInManager.xaml;;
+FC:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\View\PatientView\LogInPatient.xaml;;
+FC:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\View\SecretaryView\LogInSecretary.xaml;;
 

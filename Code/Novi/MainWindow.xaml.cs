@@ -31,28 +31,28 @@ namespace ProjekatSIMS
 
         private void Doctor_Click(object sender, RoutedEventArgs e)
         {
-            var s = new DoctorView();
+            var s = new LogInDoctor();
             s.Show();
             Close();
         }
 
         private void Secretary_Click(object sender, RoutedEventArgs e)
         {
-            var s = new ShowPatient();
+            var s = new LogInSecretary();
             s.Show();
             Close();
         }
 
         private void Patient_Click(object sender, RoutedEventArgs e)
         {
-            var s = new PatientView();
+            var s = new LogInPatient();
             s.Show();
             Close();
         }
 
         private void Manager_Click(object sender, RoutedEventArgs e)
         {
-            var s = new ManagerView();
+            var s = new LogInManager();
             s.Show();
             Close();
         }

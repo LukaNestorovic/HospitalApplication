@@ -115,7 +115,6 @@ C:\Users\Ryzen\Desktop\FAX\SIMS\Proba\ConsoleApp1\obj\Debug\net5.0-windows\Proje
 C:\Users\Ryzen\Desktop\FAX\SIMS\Proba\ConsoleApp1\obj\Debug\net5.0-windows\refint\ProjekatSIMS.dll
 C:\Users\Ryzen\Desktop\FAX\SIMS\Proba\ConsoleApp1\obj\Debug\net5.0-windows\ProjekatSIMS.pdb
 C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\ProjekatSIMS.csproj.AssemblyReference.cache
-C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\MainWindow.g.cs
 C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\DoctorView.g.cs
 C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\EditSurgeryData.g.cs
 C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\ScheduleSurgery.g.cs
@@ -141,7 +140,6 @@ C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\bin\Debug\net5.0-windows\Projekat
 C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\bin\Debug\net5.0-windows\ProjekatSIMS.dll
 C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\bin\Debug\net5.0-windows\ProjekatSIMS.pdb
 C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
-C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\MainWindow.baml
 C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\DoctorView.baml
 C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\EditSurgeryData.baml
 C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\ScheduleSurgery.baml
@@ -172,3 +170,13 @@ C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\Man
 C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\ManagerView\Delete.baml
 C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\Delete.g.cs
 C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\Delete.baml
+C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\MainWindow.baml
+C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\LogInDoctor.g.cs
+C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\ManagerView\LogInManager.g.cs
+C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\LogInPatient.g.cs
+C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\LogInSecretary.g.cs
+C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\LogInDoctor.baml
+C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\ManagerView\LogInManager.baml
+C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\LogInPatient.baml
+C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\LogInSecretary.baml

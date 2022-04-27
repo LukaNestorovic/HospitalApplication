@@ -13,7 +13,13 @@
     <Compile Update="View\DoctorView\DoctorView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\DoctorView\LogInDoctor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\ManagerView\Delete.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ManagerView\LogInManager.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\ManagerView\ManagerView.xaml.cs">
@@ -23,6 +29,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\PatientView\Edit.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PatientView\LogInPatient.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\PatientView\PatientView.xaml.cs">
@@ -35,6 +44,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\SecretaryView\EditPatient.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\SecretaryView\LogInSecretary.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\SecretaryView\ShowPatient.xaml.cs">
@@ -51,7 +63,13 @@
     <Page Update="View\DoctorView\DoctorView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\DoctorView\LogInDoctor.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\ManagerView\Delete.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ManagerView\LogInManager.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\ManagerView\ManagerView.xaml">
@@ -61,6 +79,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\PatientView\Edit.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PatientView\LogInPatient.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\PatientView\PatientView.xaml">
@@ -73,6 +94,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\SecretaryView\EditPatient.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\SecretaryView\LogInSecretary.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\SecretaryView\ShowPatient.xaml">
