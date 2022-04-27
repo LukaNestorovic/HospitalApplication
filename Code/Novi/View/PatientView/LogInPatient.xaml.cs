@@ -33,7 +33,8 @@ namespace ProjekatSIMS.View.PatientView
             patient = patientController.ReadPatientByEmail(TBEmail.Text);
             if(patient.Jmbg == TBPass.Text && patient != null)
             {
-                var s = new PatientView();
+                int id = patient.Id;
+                var s = new PatientView(id);
                 s.Show();
                 Close();
             }
