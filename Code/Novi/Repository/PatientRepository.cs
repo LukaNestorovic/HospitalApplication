@@ -31,7 +31,22 @@ namespace Repository
 			}
 			return a;
 		}
-		
+
+		public Patient FindByEmail(String email)
+		{
+			List<Patient> all = serializer.fromJSON(FileName);
+			Patient a = null;
+			foreach (Patient i in all)
+			{
+				if (i.Email == email)
+				{
+					a = i;
+					break;
+				}
+			}
+			return a;
+		}
+
 		public Boolean Save(Patient patient)
 		{
 			List<Patient> all = serializer.fromJSON(FileName);

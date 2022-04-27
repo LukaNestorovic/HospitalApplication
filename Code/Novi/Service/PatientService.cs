@@ -52,6 +52,11 @@ namespace Service
 			return patientRepository.FindByID(id);
 		}
 
+		public Patient ReadPatientByEmail(String email)
+		{
+			return patientRepository.FindByEmail(email);
+		}
+
 		public List<Patient> ReadAll()
 		{
 			return patientRepository.FindAll();

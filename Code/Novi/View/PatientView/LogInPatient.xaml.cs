@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Controller;
+using Model;
 
 namespace ProjekatSIMS.View.PatientView
 {
@@ -19,6 +21,8 @@ namespace ProjekatSIMS.View.PatientView
     /// </summary>
     public partial class LogInPatient : Window
     {
+        public PatientController patientController = new PatientController();
+        public Patient patient = new Patient();
         public LogInPatient()
         {
             InitializeComponent();
@@ -26,9 +30,14 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var s = new PatientView();
-            s.Show();
-            Close();
+            patient = patientController.ReadPatientByEmail(TBEmail.Text);
+            if(patient.Jmbg == TBPass.Text && patient != null)
+            {
+                var s = new PatientView();
+                s.Show();
+                Close();
+            }
+           
         }
     }
 }

@@ -45,6 +45,12 @@ namespace Controller
             return patient;
       }
 
+        public Patient ReadPatientByEmail(String email)
+        {
+            Patient patient = patientService.ReadPatientByEmail(email);
+            return patient;
+        }
+
         public List<Patient> ReadAll()
         {
             List<Patient> patients = patientService.ReadAll();
