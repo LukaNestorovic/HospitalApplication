@@ -25,19 +25,21 @@ namespace ProjekatSIMS.View.PatientView
         
         public AppointmentController appointmentController = new AppointmentController();
         public ObservableCollection<Appointment> appointments;
+        private int id;
 
-        public PatientView()
+        public PatientView(int id)
         {
             InitializeComponent();
             appointments = new ObservableCollection<Appointment>(appointmentController.ReadAll());
             PatientAppointments.ItemsSource = appointments;
+            this.id = id;
         }
 
        
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var s = new Delete();
+            var s = new Delete(id);
             s.Show();
             Close();
 
@@ -45,14 +47,14 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            var s = new MakeAnAppointment(appointments);
+            var s = new MakeAnAppointment(appointments, id);
             s.Show();
             Close();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            var s = new Edit(appointments);
+            var s = new Edit(appointments, id);
             s.Show();
             Close();
         }

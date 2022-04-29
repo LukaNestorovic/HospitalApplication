@@ -26,15 +26,17 @@ namespace ProjekatSIMS.View.PatientView
         public ObservableCollection<Appointment> appointments;
 
         public AppointmentController appointmentController = new AppointmentController();
-        public Delete()
+        private int id;
+        public Delete(int id)
         {
             InitializeComponent();
+            this.id = id;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             appointmentController.DeleteApp(Int32.Parse(Id.Text));
-            var s = new PatientView();
+            var s = new PatientView(id);
             s.Show();
             Close();
         }
