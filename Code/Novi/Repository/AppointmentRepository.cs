@@ -17,6 +17,27 @@ namespace Repository
 		{
 			return serializer.fromJSON(FileName);
 		}
+
+		public List<Appointment> FindAllByPatientId(int id)
+        {
+			try
+			{
+				List<Appointment> all = serializer.fromJSON(FileName);
+				List<Appointment> ret = new List<Appointment>();
+				foreach (Appointment i in all)
+				{
+					if (i.patient.Id == id)
+					{
+						ret.Add(i);
+					}
+				}
+				return ret;
+			}
+            catch
+            {
+				return null;
+            }
+        }
 		
 		public Appointment FindByID(int id)
 		{
