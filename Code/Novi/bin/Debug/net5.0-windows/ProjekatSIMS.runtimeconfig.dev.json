@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Ryzen\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Ryzen\\.nuget\\packages"
+      "C:\\Users\\sncarcoding\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\sncarcoding\\.nuget\\packages"
     ]
   }
 }

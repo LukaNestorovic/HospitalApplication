@@ -26,7 +26,7 @@ namespace ProjekatSIMS.View.PatientView
         public AppointmentController appointmentController = new AppointmentController();
         public ObservableCollection<Appointment> appointments;
 
-        public PatientView(int id)
+        public PatientView()
         {
             InitializeComponent();
             appointments = new ObservableCollection<Appointment>(appointmentController.ReadAll());
