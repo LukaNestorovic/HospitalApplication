@@ -25,6 +25,21 @@ namespace Repository
 			return false;
 		}
 
+		public MedicalRecord FindByPatient(Patient patient)
+		{
+			List<MedicalRecord> all = serializer.fromJSON(FileName);
+			MedicalRecord a = null;
+			foreach (MedicalRecord i in all)
+			{
+				if (i.patient == patient)
+				{
+					a = i;
+					break;
+				}
+			}
+			return a;
+		}
+
 		private static String FileName = @"..\..\..\data\MedicalRecords.json";
 
 		private static Serializer<MedicalRecord> serializer = new Serializer<MedicalRecord>();
