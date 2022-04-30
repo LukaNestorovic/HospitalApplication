@@ -77,6 +77,12 @@ namespace Controller
 			return appointments;
         }
 
+		public List<Appointment> ReadAllWithoutPatient()
+		{
+			List<Appointment> appointments = appointmentService.ReadAllWithoutPatient();
+			return appointments;
+		}
+
 		public AppointmentService appointmentService = new AppointmentService();
 	
 	}

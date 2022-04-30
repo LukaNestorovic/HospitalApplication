@@ -26,6 +26,10 @@ namespace Repository
 				List<Appointment> ret = new List<Appointment>();
 				foreach (Appointment i in all)
 				{
+					if (i.Patient == null)
+					{
+						continue;
+					}
 					if (i.Patient.Id == id)
 					{
 						ret.Add(i);
@@ -37,6 +41,20 @@ namespace Repository
             {
 				return null;
             }
+        }
+
+		public List<Appointment> FindAllWithoutPatient()
+        {
+			List<Appointment> all = serializer.fromJSON(FileName);
+			List<Appointment> ret = new List<Appointment>();
+			foreach(Appointment i in all)
+            {
+				if(i.Patient == null)
+                {
+					ret.Add(i);
+                }
+            }
+			return ret;
         }
 		
 		public Appointment FindByID(int id)

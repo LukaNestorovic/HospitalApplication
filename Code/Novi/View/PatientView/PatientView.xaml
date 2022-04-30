@@ -25,6 +25,7 @@
         <Button Content="Edit Appointments" HorizontalAlignment="Left" Margin="506,57,0,0" VerticalAlignment="Top" Height="23" Width="258" Click="Button_Click_2"/>
         <Button Content="Cancel Appointments" HorizontalAlignment="Left" Margin="257,57,0,0" VerticalAlignment="Top" Height="23" Width="244" Click="Button_Click"/>
         <Button Content="Back" HorizontalAlignment="Left" Margin="37,20,0,0" VerticalAlignment="Top" Height="23" Width="42" Click="Back_Click"/>
+        <Button Content="Free appointments" HorizontalAlignment="Left" Margin="257,22,0,0" VerticalAlignment="Top" Height="23" Width="244" Click="Free_Click"/>
 
 
 

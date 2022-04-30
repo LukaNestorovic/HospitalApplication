@@ -64,6 +64,11 @@ namespace Service
 			return appointmentRepository.FindAllByPatientId(id);
         }
 
+		public List<Appointment> ReadAllWithoutPatient()
+		{
+			return appointmentRepository.FindAllWithoutPatient();
+		}
+
 		public String idFile = @"..\..\..\Data\appointmentID.txt";
 		public Repository.AppointmentRepository appointmentRepository = new Repository.AppointmentRepository();
 	}

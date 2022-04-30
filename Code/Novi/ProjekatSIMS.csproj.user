@@ -31,6 +31,9 @@
     <Compile Update="View\PatientView\Edit.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\PatientView\FreeAppointments.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\PatientView\LogInPatient.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -82,6 +85,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\PatientView\Edit.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PatientView\FreeAppointments.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\PatientView\LogInPatient.xaml">

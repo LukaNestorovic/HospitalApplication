@@ -248,3 +248,5 @@ C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\Projek
 C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\ref\ProjekatSIMS.dll
 C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\PatientHome.g.cs
 C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\PatientHome.baml
+C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\FreeAppointments.g.cs
+C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\FreeAppointments.baml
