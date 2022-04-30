@@ -10,7 +10,7 @@ namespace Service
 {
     public class MedicalRecordService
     {
-		public Boolean UpdateAlergenes(Patient patient, String allergies)
+		public Boolean UpdateAllergies(Patient patient, String allergies)
 		{
 			MedicalRecord medicalRecord = medicalRecordRepository.FindByPatient(patient);
 			medicalRecord.Allergies = allergies;
