@@ -38,9 +38,9 @@ namespace Service
 			appointment.Descripton = descripton;
 			appointment.Duration = duration;
 			appointment.Emergency = emergency;
-			appointment.patient = patient;
-			appointment.doctor = doctor;
-			appointment.room = room;
+			appointment.Patient = patient;
+			appointment.Doctor = doctor;
+			appointment.Room = room;
 			return appointmentRepository.UpdateByID(appointment);
 		}
 		

@@ -1,1 +1,46 @@
-[{"DateTime":"2022-07-12T12:00:00","Descripton":null,"Duration":20,"Emergency":false,"Id":5,"patient":null,"doctor":null,"room":null}]
+[
+  {
+    "DateTime": "2022-07-12T12:00:00",
+    "Descripton": null,
+    "Duration": 20,
+    "Emergency": false,
+    "Id": 5,
+    "patient": {
+      "InsuranceCarrier": "1",
+      "Guest": false,
+      "Name": "1",
+      "Surname": "1",
+      "Jmbg": "1",
+      "Telephone": "1",
+      "Email": "@gmail.com",
+      "BirthDate": "2022-04-12T00:00:00",
+      "Adress": "1",
+      "Id": 0,
+      "Password": "123"
+    },
+    "doctor": null,
+    "room": null
+  },
+  {
+    "DateTime": "2022-04-13T00:00:00",
+    "Descripton": "0",
+    "Duration": 0,
+    "Emergency": false,
+    "Id": 1,
+    "patient": {
+      "InsuranceCarrier": "1",
+      "Guest": false,
+      "Name": "1",
+      "Surname": "1",
+      "Jmbg": "1",
+      "Telephone": "1",
+      "Email": "@gmail.com",
+      "BirthDate": "2022-04-12T00:00:00",
+      "Adress": "1",
+      "Id": 0,
+      "Password": "123"
+    },
+    "doctor": null,
+    "room": null
+  }
+]

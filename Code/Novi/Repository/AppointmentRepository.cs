@@ -26,7 +26,7 @@ namespace Repository
 				List<Appointment> ret = new List<Appointment>();
 				foreach (Appointment i in all)
 				{
-					if (i.patient.Id == id)
+					if (i.Patient.Id == id)
 					{
 						ret.Add(i);
 					}
