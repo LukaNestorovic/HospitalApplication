@@ -34,7 +34,7 @@ namespace ProjekatSIMS.View.PatientView
             if(patient.Password == TBPass.Text && patient != null)
             {
                 int id = patient.Id;
-                var s = new PatientView(id);
+                var s = new PatientHome(id);
                 s.Show();
                 Close();
             }

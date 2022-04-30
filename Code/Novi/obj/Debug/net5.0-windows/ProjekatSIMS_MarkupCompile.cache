@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\App.xaml
-22897873820
+23-476237711
 
-6250582995
+63-1999116460
 194-98689322
-MainWindow.xaml;View\DoctorView\Delete.xaml;View\DoctorView\DoctorView.xaml;View\DoctorView\EditSurgeryData.xaml;View\DoctorView\LogInDoctor.xaml;View\DoctorView\ScheduleSurgery.xaml;View\DoctorView\ShowSurgery.xaml;View\ManagerView\AddRoomView.xaml;View\ManagerView\Delete.xaml;View\ManagerView\EditRoomView.xaml;View\ManagerView\LogInManager.xaml;View\ManagerView\ManagerView.xaml;View\PatientView\Delete.xaml;View\PatientView\Edit.xaml;View\PatientView\LogInPatient.xaml;View\PatientView\MakeAnAppointment.xaml;View\PatientView\PatientView.xaml;View\SecretaryView\CreatePatient.xaml;View\SecretaryView\Delete.xaml;View\SecretaryView\EditPatient.xaml;View\SecretaryView\LogInSecretary.xaml;View\SecretaryView\ShowPatient.xaml;
+MainWindow.xaml;View\DoctorView\Delete.xaml;View\DoctorView\DoctorView.xaml;View\DoctorView\EditSurgeryData.xaml;View\DoctorView\LogInDoctor.xaml;View\DoctorView\ScheduleSurgery.xaml;View\DoctorView\ShowSurgery.xaml;View\ManagerView\AddRoomView.xaml;View\ManagerView\Delete.xaml;View\ManagerView\EditRoomView.xaml;View\ManagerView\LogInManager.xaml;View\ManagerView\ManagerView.xaml;View\PatientView\Delete.xaml;View\PatientView\Edit.xaml;View\PatientView\LogInPatient.xaml;View\PatientView\MakeAnAppointment.xaml;View\PatientView\PatientHome.xaml;View\PatientView\PatientView.xaml;View\SecretaryView\CreatePatient.xaml;View\SecretaryView\Delete.xaml;View\SecretaryView\EditPatient.xaml;View\SecretaryView\LogInSecretary.xaml;View\SecretaryView\ShowPatient.xaml;
 
 False
 

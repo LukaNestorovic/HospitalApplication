@@ -40,5 +40,12 @@ namespace ProjekatSIMS.View.PatientView
             s.Show();
             Close();
         }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new PatientView(id);
+            s.Show();
+            Close();
+        }
     }
 }
