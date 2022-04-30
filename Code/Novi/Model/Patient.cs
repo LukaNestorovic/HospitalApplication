@@ -18,7 +18,7 @@ namespace Model
             InsuranceCarrier = insuranceCarrier;
             Guest = guest;
         }
-        public Patient(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String insuranceCarrier, Boolean guest, int id):base(name, surname, jmbg, telephone, email, birthDate, adress, id)
+        public Patient(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress,String password, String insuranceCarrier, Boolean guest, int id):base(name, surname, jmbg, telephone, email, birthDate, adress, id, password)
         {
             InsuranceCarrier = insuranceCarrier;
             Guest = guest;
