@@ -20,7 +20,11 @@ namespace Model
 		public int Id { get; set; }
 		public String Password { get; set; }
 
+<<<<<<< HEAD
+		protected User(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, int id, String password)
+=======
 		protected User(string name, string surname, string jmbg, string telephone, string email, DateTime birthDate, string adress, int id, string password)
+>>>>>>> development
 		{
 		  	Name = name;
 		  	Surname = surname;

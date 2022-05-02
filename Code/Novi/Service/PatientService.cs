@@ -22,7 +22,11 @@ namespace Service
 			}else
 				newID = 0;
 		
+<<<<<<< HEAD
 			Patient patient = new Patient(name, surname, jmbg, telephone, email, birthDate, adress, insuranceCarrier, guest, newID, password);
+=======
+			Patient patient = new Patient(name, surname, jmbg, telephone, email, birthDate, adress,password, insuranceCarrier, guest, newID);
+>>>>>>> a637d67fecab95d816341cdc97b890490b7f2c24
 
 			return patientRepository.Save(patient);
 		}
