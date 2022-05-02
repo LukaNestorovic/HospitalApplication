@@ -42,11 +42,7 @@ namespace Controller
 
         public List<Patient> ReadAll()
         {
-<<<<<<< HEAD
             List<Patient> patients = patientService.ReadAll();          
-=======
-            List<Patient> patients = patientService.ReadAll();
->>>>>>> a637d67fecab95d816341cdc97b890490b7f2c24
             return patients;
         }
 

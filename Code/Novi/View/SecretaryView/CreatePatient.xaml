@@ -19,11 +19,8 @@
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="59,135,0,0" x:Name="textBlockDaateOfBirth" Text="Email:" VerticalAlignment="Top" Width="110" />
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="59,165,0,0" x:Name="textBlockMestoRodjenja" Text="Date of birth:" VerticalAlignment="Top" Width="110" />
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="59,195,0,0" x:Name="textBlockAdresa" Text="Address:" VerticalAlignment="Top" Width="110" />
-<<<<<<< HEAD
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="59,349,0,0" x:Name="textBlockPol" Text="Gender:" VerticalAlignment="Top" Width="110" />
-=======
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="59,337,0,0" x:Name="textBlockPol" Text="Gender:" VerticalAlignment="Top" Width="110" />
->>>>>>> a637d67fecab95d816341cdc97b890490b7f2c24
+
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="59,352,0,0" x:Name="textBlockPo" Text="Gender:" VerticalAlignment="Top" Width="110" />
 
         <TextBox Height="23" HorizontalAlignment="Left" Margin="175,45,0,0" x:Name="TBName" VerticalAlignment="Top" Width="222" Grid.Column="1" >
             <TextBox.Text>
@@ -39,18 +36,8 @@
         <TextBox Height="23" HorizontalAlignment="Left" Margin="175,135,0,0" x:Name="TBEmail" VerticalAlignment="Top" Width="222" />
         <DatePicker Height="23" HorizontalAlignment="Left" Margin="175,165,0,0" x:Name="DPBirthDate" VerticalAlignment="Top" Width="222" Grid.Column="1" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="175,195,0,0" x:Name="TBAdress" VerticalAlignment="Top" Width="160" />
-<<<<<<< HEAD
         <RadioButton Height="23" Content="Male" HorizontalAlignment="Left" Margin="362,349,0,0" x:Name="radioButtonGenderM" VerticalAlignment="Top" VerticalContentAlignment="Center" IsChecked="True" Width="50" />
         <RadioButton Height="23" Content="Female" HorizontalAlignment="Left" Margin="286,349,0,0" x:Name="radioButtonGenderF" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="53"/>
-=======
-<<<<<<< HEAD
-        <RadioButton Height="23" Content="Male" HorizontalAlignment="Center" Margin="0,349,0,0" x:Name="radioButtonGenderM" VerticalAlignment="Top" VerticalContentAlignment="Center" IsChecked="True" Width="50" />
-        <RadioButton Height="23" Content="Female" HorizontalAlignment="Left" Margin="309,349,0,0" x:Name="radioButtonGenderF" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="53"/>
-=======
-        <RadioButton Height="23" Content="Male" HorizontalAlignment="Center" Margin="0,337,0,0" x:Name="radioButtonGenderM" VerticalAlignment="Top" VerticalContentAlignment="Center" IsChecked="True" Width="50" />
-        <RadioButton Height="23" Content="Female" HorizontalAlignment="Left" Margin="309,337,0,0" x:Name="radioButtonGenderF" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="53"/>
->>>>>>> a637d67fecab95d816341cdc97b890490b7f2c24
->>>>>>> 534e48b622050944184f6ea3f44299970a01fc4f
 
         <Button Content="Submit" Height="23" HorizontalAlignment="Left" Margin="175,403,0,0" x:Name="Submit" VerticalAlignment="Top" Width="70" Click="Submit_Click" />
         <Button Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="327,403,0,0" x:Name="Cancel" VerticalAlignment="Top" Width="70" Click="Cancel_Click" />
@@ -58,19 +45,10 @@
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="59,223,0,0" x:Name="textBlockAdresa_Copy" Text="Telephone:" VerticalAlignment="Top" Width="110" />
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="59,251,0,0" x:Name="textBlockAdresa_Copy1" Text="Insurance carrier:" VerticalAlignment="Top" Width="110" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="175,251,0,0" x:Name="TBInsurance" VerticalAlignment="Top" Width="222" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
-<<<<<<< HEAD
-        <CheckBox Content="Guest" HorizontalAlignment="Left" Margin="175,324,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.186,-0.457" x:Name="CBGuest"/>
-=======
-<<<<<<< HEAD
         <CheckBox Content="Guest" HorizontalAlignment="Left" Margin="185,314,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.186,-0.457" x:Name="CBGuest"/>
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="60,279,0,0" x:Name="textBlockAdresa_Copy2" Text="Password:" VerticalAlignment="Top" Width="110" />
-=======
-        <CheckBox Content="Guest" HorizontalAlignment="Left" Margin="185,317,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.186,-0.457" x:Name="CBGuest"/>
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="59,279,0,0" x:Name="textBlockAdresa_Copy2" Text="Password:" VerticalAlignment="Top" Width="110" />
->>>>>>> a637d67fecab95d816341cdc97b890490b7f2c24
->>>>>>> 534e48b622050944184f6ea3f44299970a01fc4f
         <TextBox Height="23" HorizontalAlignment="Left" Margin="175,279,0,0" x:Name="TBPassword" VerticalAlignment="Top" Width="222" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="59,278,0,0" x:Name="textBlockAdresa_Copy2" Text="Password:" VerticalAlignment="Top" Width="110" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="59,278,0,0" x:Name="textBlockAdresa_Copy3" Text="Password:" VerticalAlignment="Top" Width="110" />
 
     </Grid>
 </Window>

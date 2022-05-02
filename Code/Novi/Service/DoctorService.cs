@@ -23,11 +23,9 @@ namespace Service
 			}else
 				newID = 0;
 			
-<<<<<<< HEAD
+
 			Doctor doctor = new Doctor(name, surname, jmbg, telephone, email, birthDate, adress, speciality, grade, salary, newID, password);
-=======
-			Doctor doctor = new Doctor(name, surname, jmbg, telephone, email, birthDate, adress, speciality, grade, salary, password, newID);
->>>>>>> a637d67fecab95d816341cdc97b890490b7f2c24
+
 			return doctorRepository.Save(doctor);
 		}
 		
