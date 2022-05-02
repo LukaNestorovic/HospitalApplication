@@ -16,11 +16,11 @@ namespace Model
 		
 		public Doctor doctor { get; set; }
 		public Patient patient { get; set; }
-		public Drug drug { get; set; }
+		public System.Collections.ArrayList drug;
 		public DateTime datetime { get; set; }
 		
 
-		public Prescription(String instructions, int id, Doctor doctor, Patient patient, Drug drug, DateTime datetime)
+		public Prescription(String instructions, int id, Doctor doctor, Patient patient, ArrayList drug, DateTime datetime)
 		{
 		  	Instructions = instructions;
 		  	Id = id;
