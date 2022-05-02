@@ -1,0 +1,22 @@
+﻿<Window x:Class="ProjekatSIMS.View.DoctorView.Prescription"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatSIMS.View.DoctorView"
+        mc:Ignorable="d"
+        Title="Prescription" Height="450" Width="800">
+    <Grid>
+        <Label Content="Instructions" HorizontalAlignment="Left" Margin="108,108,0,0" VerticalAlignment="Top"/>
+        <Label Content="Drug Id" HorizontalAlignment="Left" Margin="108,139,0,0" VerticalAlignment="Top"/>
+        <Label Content="Patient Id" HorizontalAlignment="Left" Margin="108,170,0,0" VerticalAlignment="Top"/>
+        <Label Content="Doctor Id" HorizontalAlignment="Left" Margin="108,0,0,0" VerticalAlignment="Center"/>
+        <TextBox x:Name="TBInstructions" HorizontalAlignment="Left" Margin="239,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TBDrug" HorizontalAlignment="Left" Margin="239,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TBPatient" HorizontalAlignment="Left" Margin="239,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TBDoctor" HorizontalAlignment="Left" Margin="239,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Submit" HorizontalAlignment="Left" Margin="374,326,0,0" VerticalAlignment="Top" Height="49" Width="77" Click="Button_Click"/>
+        <DatePicker x:Name="DatePicker" HorizontalAlignment="Left" Margin="239,254,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

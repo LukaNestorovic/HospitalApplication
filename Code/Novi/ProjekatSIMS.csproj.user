@@ -13,7 +13,13 @@
     <Compile Update="View\DoctorView\DoctorView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\DoctorView\Drug.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\DoctorView\LogInDoctor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\DoctorView\Prescription.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\ManagerView\Delete.xaml.cs">
@@ -49,14 +55,12 @@
     <Compile Update="View\PatientView\PatientView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-
     <Compile Update="View\PatientView\PickDatePriority.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\PatientView\ScheduleAppointment.xaml.cs">
     </Compile>
     <Compile Update="View\SecretaryView\EditAllergenes.xaml.cs">
-
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\SecretaryView\CreatePatient.xaml.cs">
@@ -85,7 +89,13 @@
     <Page Update="View\DoctorView\DoctorView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\DoctorView\Drug.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\DoctorView\LogInDoctor.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\DoctorView\Prescription.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\ManagerView\Delete.xaml">
@@ -121,14 +131,12 @@
     <Page Update="View\PatientView\PatientView.xaml">
       <SubType>Designer</SubType>
     </Page>
-
     <Page Update="View\PatientView\PickDatePriority.xaml">
       <SubType>Designer</SubType>
     </Page>
-	  <Page Update="View\PatientView\ScheduleAppointment.xaml">
-	  </Page>
+    <Page Update="View\PatientView\ScheduleAppointment.xaml">
+    </Page>
     <Page Update="View\SecretaryView\EditAllergenes.xaml">
-
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\SecretaryView\CreatePatient.xaml">

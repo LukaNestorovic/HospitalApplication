@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lukaa\\Documents\\GitHub\\SIMS\\Code\\Novi\\ProjekatSIMS.csproj": {}
+    "C:\\Users\\sncarcoding\\Desktop\\SIMS\\SIMS\\Code\\Novi\\ProjekatSIMS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lukaa\\Documents\\GitHub\\SIMS\\Code\\Novi\\ProjekatSIMS.csproj": {
+    "C:\\Users\\sncarcoding\\Desktop\\SIMS\\SIMS\\Code\\Novi\\ProjekatSIMS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lukaa\\Documents\\GitHub\\SIMS\\Code\\Novi\\ProjekatSIMS.csproj",
+        "projectUniqueName": "C:\\Users\\sncarcoding\\Desktop\\SIMS\\SIMS\\Code\\Novi\\ProjekatSIMS.csproj",
         "projectName": "ProjekatSIMS",
-        "projectPath": "C:\\Users\\lukaa\\Documents\\GitHub\\SIMS\\Code\\Novi\\ProjekatSIMS.csproj",
-        "packagesPath": "C:\\Users\\lukaa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukaa\\Documents\\GitHub\\SIMS\\Code\\Novi\\obj\\",
+        "projectPath": "C:\\Users\\sncarcoding\\Desktop\\SIMS\\SIMS\\Code\\Novi\\ProjekatSIMS.csproj",
+        "packagesPath": "C:\\Users\\sncarcoding\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sncarcoding\\Desktop\\SIMS\\SIMS\\Code\\Novi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lukaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sncarcoding\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

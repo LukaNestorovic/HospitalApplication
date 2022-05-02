@@ -1,5 +1,10 @@
-﻿using System;
+﻿using Controller;
+using Model;
+using Service;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +24,8 @@ namespace ProjekatSIMS.View.DoctorView
     /// </summary>
     public partial class Prescription : Window
     {
+        public PrescriptionController prescriptionController = new PrescriptionController();
+
         public Prescription()
         {
             InitializeComponent();
@@ -26,7 +33,7 @@ namespace ProjekatSIMS.View.DoctorView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            prescriptionController.CreatePrescription(TBInstructions.Text, Int32.Parse(TBDoctor.Text), Int32.Parse(TBPatient.Text), Int32.Parse(TBDrug.Text), DatePicker.SelectedDate.GetValueOrDefault());
         }
     }
 }

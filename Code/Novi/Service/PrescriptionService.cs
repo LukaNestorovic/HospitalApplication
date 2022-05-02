@@ -10,7 +10,7 @@ namespace Service
 {
     public class PrescriptionService
     {
-		public Boolean CreatePrescription(String instructions, Doctor doctor, Patient patient, ArrayList drug, DateTime datetime)
+		public Boolean CreatePrescription(String instructions, Doctor doctor, Patient patient, Drug drug, DateTime datetime)
 		{
 			int newID;
 			if (File.Exists(idFile))

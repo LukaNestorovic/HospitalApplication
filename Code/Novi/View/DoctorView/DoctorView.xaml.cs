@@ -42,5 +42,19 @@ namespace ProjekatSIMS.View.DoctorView
             s.Show();
             Close();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new Prescription();
+            s.Show();
+            Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var s = new Drug();
+            s.Show();
+            Close();
+        }
     }
 }
