@@ -123,6 +123,21 @@ namespace Repository
 			}
 			return a;
 		}
+
+		public List<Appointment> FindByDoctor (Doctor doctor)
+        {
+			List<Appointment> all = serializer.fromJSON(FileName);
+			List<Appointment> appointments = new List<Appointment>();
+			foreach (Appointment i in all)
+			{
+				if (i.doctor == doctor)
+				{
+					appointments.Add(i);
+				}
+			}
+
+			return appointments;
+		}
 		
 		public Boolean Save(Appointment appointment)
 		{

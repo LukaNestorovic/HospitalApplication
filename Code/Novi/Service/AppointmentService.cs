@@ -69,6 +69,13 @@ namespace Service
 			return appointmentRepository.FindAll();
 		}
 
+<<<<<<< HEAD
+		public List<Appointment> ReadByDoctor (Doctor doctor)
+        {
+			return appointmentRepository.FindByDoctor(doctor);
+        }
+
+=======
 		public List<Appointment> ReadAllByPatientId(int id)
         {
 			return appointmentRepository.FindAllByPatientId(id);
@@ -79,7 +86,8 @@ namespace Service
 			return appointmentRepository.FindAllWithoutPatient();
 		}
 
+>>>>>>> development
 		public String idFile = @"..\..\..\Data\appointmentID.txt";
-		public Repository.AppointmentRepository appointmentRepository = new Repository.AppointmentRepository();
+		public AppointmentRepository appointmentRepository = new AppointmentRepository();
 	}
 }
