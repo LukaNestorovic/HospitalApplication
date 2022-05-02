@@ -68,7 +68,14 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Free_Click(object sender, RoutedEventArgs e)
         {
-            var s = new PickDate(id);
+            var s = new FreeAppointments(id);
+            s.Show();
+            Close();
+        }
+
+        private void Schedule_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new ChosePriority(id);
             s.Show();
             Close();
         }

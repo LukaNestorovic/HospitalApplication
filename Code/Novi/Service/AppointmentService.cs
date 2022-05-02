@@ -54,6 +54,11 @@ namespace Service
 			return appointmentRepository.FindByID(id);
 		}
 
+		public Appointment ReadWithPriority(DateTime date)
+        {
+			return appointmentRepository.FindWithPriority(date);
+        }
+
 		public List<Appointment> ReadAll()
 		{
 			return appointmentRepository.FindAll();
@@ -64,9 +69,9 @@ namespace Service
 			return appointmentRepository.FindAllByPatientId(id);
         }
 
-		public List<Appointment> ReadAllWithoutPatient(DateTime date)
+		public List<Appointment> ReadAllWithoutPatient()
 		{
-			return appointmentRepository.FindAllWithoutPatient(date);
+			return appointmentRepository.FindAllWithoutPatient();
 		}
 
 		public String idFile = @"..\..\..\Data\appointmentID.txt";

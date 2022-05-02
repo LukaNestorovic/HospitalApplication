@@ -25,5 +25,7 @@ FC:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\View\SecretaryView\ShowPatient
 FC:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\View\PatientView\PatientHome.xaml;;
 FC:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\View\PatientView\FreeAppointments.xaml;;
 FC:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\View\PatientView\ScheduleAppointment.xaml;;
-FC:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\View\PatientView\PickDate.xaml;;
+FC:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\View\PatientView\PickDatePriority.xaml;;
+FC:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\View\PatientView\ChosePriority.xaml;;
+FC:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\View\PatientView\DoctorPriority.xaml;;
 

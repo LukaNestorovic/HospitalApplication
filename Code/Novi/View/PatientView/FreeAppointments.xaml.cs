@@ -24,11 +24,12 @@ namespace ProjekatSIMS.View.PatientView
     {
         private int id;
         public ObservableCollection<Appointment> appointments;
+        public Appointment appointment = new Appointment();
         public AppointmentController appointmentController = new AppointmentController();
-        public FreeAppointments(int id, DateTime date)
+        public FreeAppointments(int id)
         {
             InitializeComponent();
-            appointments = new ObservableCollection<Appointment>(appointmentController.ReadAllWithoutPatient(date));
+            appointments = new ObservableCollection<Appointment>(appointmentController.ReadAllWithoutPatient());
             PatientAppointments.ItemsSource = appointments;
             this.id = id;
         }

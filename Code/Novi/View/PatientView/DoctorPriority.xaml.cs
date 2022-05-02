@@ -15,12 +15,12 @@ using System.Windows.Shapes;
 namespace ProjekatSIMS.View.PatientView
 {
     /// <summary>
-    /// Interaction logic for PickDate.xaml
+    /// Interaction logic for DoctorPriority.xaml
     /// </summary>
-    public partial class PickDate : Window
+    public partial class DoctorPriority : Window
     {
         private int id;
-        public PickDate(int id)
+        public DoctorPriority(int id)
         {
             InitializeComponent();
             this.id = id;
@@ -28,10 +28,7 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            DateTime date = DatePicker.SelectedDate.GetValueOrDefault();
-            var s = new FreeAppointments(id, date);
-            s.Show();
-            Close();
+
         }
     }
 }

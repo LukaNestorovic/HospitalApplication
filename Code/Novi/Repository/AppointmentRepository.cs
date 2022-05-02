@@ -43,7 +43,7 @@ namespace Repository
             }
         }
 
-		public List<Appointment> FindAllWithoutPatient(DateTime date)
+		public List<Appointment> FindAllWithoutPatient()
         {
 			List<Appointment> all = serializer.fromJSON(FileName);
 			List<Appointment> ret = new List<Appointment>();
@@ -56,17 +56,32 @@ namespace Repository
                 }
             }
 			ret.Sort((y, x) => y.DateTime.CompareTo(x.DateTime));
-			DateTime date1 = date.AddDays(1);
-			DateTime date2 = date.AddDays(-1);
-			foreach (Appointment i in ret)
-			{
-				if (i.DateTime <= date1 && i.DateTime >= date2)
-                {
-					retdate.Add(i);
-                }
-			}
-			return retdate;
+			return ret;
         }
+
+		public Appointment FindWithPriority(DateTime date)
+        {
+			List<Appointment> all = serializer.fromJSON(FileName);
+			List<Appointment> ret = new List<Appointment>();
+			Appointment app = new Appointment();
+			foreach (Appointment i in all)
+			{
+				if (i.Patient == null)
+				{
+					ret.Add(i);
+				}
+			}
+			ret.Sort((y, x) => y.DateTime.CompareTo(x.DateTime));
+			foreach (Appointment i in ret)
+            {
+				if(i.DateTime >= date)
+                {
+					app = i;
+					break;
+                }
+            }
+			return app;
+		}
 		
 		public Appointment FindByID(int id)
 		{
