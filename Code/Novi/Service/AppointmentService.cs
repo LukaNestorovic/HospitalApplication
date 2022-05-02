@@ -59,7 +59,12 @@ namespace Service
 			return appointmentRepository.FindAll();
 		}
 
+		public List<Appointment> ReadByDoctor (Doctor doctor)
+        {
+			return appointmentRepository.FindByDoctor(doctor);
+        }
+
 		public String idFile = @"..\..\..\Data\appointmentID.txt";
-		public Repository.AppointmentRepository appointmentRepository = new Repository.AppointmentRepository();
+		public AppointmentRepository appointmentRepository = new AppointmentRepository();
 	}
 }
