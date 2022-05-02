@@ -11,6 +11,7 @@
             <TextBox x:Name="Id" HorizontalAlignment="Left" VerticalAlignment="Top" Width="167" Margin="328,151,0,0" Height="23"  />
             <Label Content="Id" HorizontalAlignment="Left" Margin="260,151,0,0" VerticalAlignment="Top"/>
             <Button Content="Ok" HorizontalAlignment="Center" Margin="0,233,0,0" VerticalAlignment="Top" Width="96" Height="37" Click="Button_Click"/>
+            <DatePicker x:Name="DatePicker" HorizontalAlignment="Left" VerticalAlignment="Top" Width="235" Height="24" Margin="260,106,0,0"/>
 
         </Grid>
 

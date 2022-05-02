@@ -82,6 +82,34 @@ namespace Repository
             }
 			return app;
 		}
+
+		public Appointment FindWithPriorityDoctor(int id, DateTime date)
+        {
+			List<Appointment> all = serializer.fromJSON(FileName);
+			List<Appointment> ret = new List<Appointment>();
+			Appointment app = new Appointment();
+			foreach (Appointment i in all)
+			{
+				if (i.Patient == null)
+				{
+					ret.Add(i);
+				}
+			}
+			ret.Sort((y, x) => y.DateTime.CompareTo(x.DateTime));
+			foreach (Appointment i in ret)
+			{
+				if(i.Doctor == null)
+                {
+					continue;
+                }
+				if (i.DateTime >= date && i.Doctor.Id == id)
+				{
+					app = i;
+					break;
+				}
+			}
+			return app;
+		}
 		
 		public Appointment FindByID(int id)
 		{

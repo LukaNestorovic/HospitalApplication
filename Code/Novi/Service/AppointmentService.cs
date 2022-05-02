@@ -59,6 +59,11 @@ namespace Service
 			return appointmentRepository.FindWithPriority(date);
         }
 
+		public Appointment ReadWithPriorityDoctor(int id, DateTime date)
+        {
+			return appointmentRepository.FindWithPriorityDoctor(id, date);
+        }
+
 		public List<Appointment> ReadAll()
 		{
 			return appointmentRepository.FindAll();

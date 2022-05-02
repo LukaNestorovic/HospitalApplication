@@ -31,17 +31,6 @@ namespace Controller
       public Patient ReadPatient(int id)
       {
             Patient patient = patientService.ReadPatient(id);
-//            String[] patientDTO = new String[10];
-//            patientDTO[0] = patient.Name;
-//            patientDTO[1] = patient.Surname;
-//            patientDTO[2] = patient.Jmbg;
-//            patientDTO[3] = patient.Telephone;
-//            patientDTO[4] = patient.Email;
-//            patientDTO[5] = patient.BirthDate.ToString();
-//            patientDTO[6] = patient.Adress;
-//            patientDTO[7] = patient.InsuranceCarrier;
-//            patientDTO[8] = patient.Guest.ToString();
-//            patientDTO[9] = patient.Id.ToString();
             return patient;
       }
 
@@ -53,22 +42,7 @@ namespace Controller
 
         public List<Patient> ReadAll()
         {
-            List<Patient> patients = patientService.ReadAll();
-//            List<String[]> patientDTOs = new List<String[]>();
-//            foreach (Patient patient in patients)
-//            {
-//                String[] patientDTO = new String[10];
-//                patientDTO[0] = patient.Name;
-//                patientDTO[1] = patient.Surname;
-//                patientDTO[2] = patient.Jmbg;
-//                patientDTO[3] = patient.Telephone;
-//                patientDTO[4] = patient.Email;
-//                patientDTO[5] = patient.BirthDate.ToString();
-//                patientDTO[6] = patient.Adress;
-//                patientDTO[7] = patient.InsuranceCarrier;
-//                patientDTO[8] = patient.Guest.ToString();
-//                patientDTO[9] = patient.Id.ToString();
-//            }
+            List<Patient> patients = patientService.ReadAll();          
             return patients;
         }
 

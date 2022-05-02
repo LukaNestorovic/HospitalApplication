@@ -28,6 +28,9 @@
     <Compile Update="View\PatientView\Delete.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\PatientView\Doctor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\PatientView\DoctorPriority.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -91,6 +94,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\PatientView\Delete.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PatientView\Doctor.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\PatientView\DoctorPriority.xaml">
