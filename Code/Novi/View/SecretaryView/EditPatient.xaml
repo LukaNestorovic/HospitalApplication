@@ -32,9 +32,11 @@
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="59,223,0,0" x:Name="textBlockAdresa_Copy" Text="Telephone:" VerticalAlignment="Top" Width="110" />
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="59,251,0,0" x:Name="textBlockAdresa_Copy1" Text="Insurance carrier:" VerticalAlignment="Top" Width="110" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="175,251,0,0" x:Name="TBInsurance" VerticalAlignment="Top" Width="222" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
-        <CheckBox Content="Guest" HorizontalAlignment="Left" Margin="184,283,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.186,-0.457" x:Name="CBGuest"/>
+        <CheckBox Content="Guest" HorizontalAlignment="Left" Margin="175,381,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.186,-0.457" x:Name="CBGuest"/>
         <TextBox Height="23" HorizontalAlignment="Left" Margin="175,353,0,0" x:Name="TBId" VerticalAlignment="Top" Width="222" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
         <TextBlock Height="23" HorizontalAlignment="Left" Margin="65,353,0,0" x:Name="textBlockAdresa_Copy2" VerticalAlignment="Top" Width="110" ><Run Text="Id"/><LineBreak/><Run/></TextBlock>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="175,279,0,0" x:Name="TBPassword" VerticalAlignment="Top" Width="222" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="59,279,0,0" x:Name="textBlockAdresa_Copy3" Text="Password:" VerticalAlignment="Top" Width="110" />
 
     </Grid>
 </Window>
