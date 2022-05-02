@@ -1,5 +1,6 @@
 ﻿
 
+<<<<<<< HEAD
 FC:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\MainWindow.xaml;;
 FC:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\View\DoctorView\Delete.xaml;;
 FC:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\View\DoctorView\DoctorView.xaml;;
@@ -29,4 +30,29 @@ FC:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\View\PatientView\PickDatePrior
 FC:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\View\PatientView\ChosePriority.xaml;;
 FC:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\View\PatientView\DoctorPriority.xaml;;
 FC:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\View\PatientView\Doctor.xaml;;
+=======
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\MainWindow.xaml;;
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\View\DoctorView\Delete.xaml;;
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\View\DoctorView\DoctorView.xaml;;
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\View\DoctorView\EditSurgeryData.xaml;;
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\View\DoctorView\LogInDoctor.xaml;;
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\View\DoctorView\ScheduleSurgery.xaml;;
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\View\DoctorView\ShowSurgery.xaml;;
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\View\ManagerView\AddRoomView.xaml;;
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\View\ManagerView\Delete.xaml;;
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\View\ManagerView\EditRoomView.xaml;;
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\View\ManagerView\LogInManager.xaml;;
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\View\ManagerView\ManagerView.xaml;;
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\View\PatientView\Delete.xaml;;
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\View\PatientView\Edit.xaml;;
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\View\PatientView\LogInPatient.xaml;;
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\View\PatientView\MakeAnAppointment.xaml;;
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\View\PatientView\PatientView.xaml;;
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\View\SecretaryView\CreatePatient.xaml;;
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\View\SecretaryView\Delete.xaml;;
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\View\SecretaryView\EditAllergenes.xaml;;
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\View\SecretaryView\EditPatient.xaml;;
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\View\SecretaryView\LogInSecretary.xaml;;
+FC:\Users\salip\Documents\GitHub\SIMS\Code\Novi\View\SecretaryView\ShowPatient.xaml;;
+>>>>>>> a637d67fecab95d816341cdc97b890490b7f2c24
 
