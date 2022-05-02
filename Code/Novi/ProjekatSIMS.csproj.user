@@ -43,6 +43,12 @@
     <Compile Update="View\PatientView\PatientView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\PatientView\PickDate.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PatientView\ScheduleAppointment.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\SecretaryView\CreatePatient.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -97,6 +103,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\PatientView\PatientView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PatientView\PickDate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PatientView\ScheduleAppointment.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\SecretaryView\CreatePatient.xaml">

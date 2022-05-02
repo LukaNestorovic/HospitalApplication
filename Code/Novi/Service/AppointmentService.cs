@@ -64,9 +64,9 @@ namespace Service
 			return appointmentRepository.FindAllByPatientId(id);
         }
 
-		public List<Appointment> ReadAllWithoutPatient()
+		public List<Appointment> ReadAllWithoutPatient(DateTime date)
 		{
-			return appointmentRepository.FindAllWithoutPatient();
+			return appointmentRepository.FindAllWithoutPatient(date);
 		}
 
 		public String idFile = @"..\..\..\Data\appointmentID.txt";

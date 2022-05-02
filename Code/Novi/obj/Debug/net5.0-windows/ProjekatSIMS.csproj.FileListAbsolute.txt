@@ -250,3 +250,7 @@ C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\P
 C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\PatientHome.baml
 C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\FreeAppointments.g.cs
 C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\FreeAppointments.baml
+C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\ScheduleAppointment.g.cs
+C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\ScheduleAppointment.baml
+C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\PickDate.g.cs
+C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\PickDate.baml

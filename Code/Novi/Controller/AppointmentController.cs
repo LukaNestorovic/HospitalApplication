@@ -77,9 +77,9 @@ namespace Controller
 			return appointments;
         }
 
-		public List<Appointment> ReadAllWithoutPatient()
+		public List<Appointment> ReadAllWithoutPatient(DateTime date)
 		{
-			List<Appointment> appointments = appointmentService.ReadAllWithoutPatient();
+			List<Appointment> appointments = appointmentService.ReadAllWithoutPatient(date);
 			return appointments;
 		}
 

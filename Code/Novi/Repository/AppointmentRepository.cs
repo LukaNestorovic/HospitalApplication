@@ -43,18 +43,29 @@ namespace Repository
             }
         }
 
-		public List<Appointment> FindAllWithoutPatient()
+		public List<Appointment> FindAllWithoutPatient(DateTime date)
         {
 			List<Appointment> all = serializer.fromJSON(FileName);
 			List<Appointment> ret = new List<Appointment>();
-			foreach(Appointment i in all)
+			List<Appointment> retdate = new List<Appointment>();
+			foreach (Appointment i in all)
             {
 				if(i.Patient == null)
                 {
 					ret.Add(i);
                 }
             }
-			return ret;
+			ret.Sort((y, x) => y.DateTime.CompareTo(x.DateTime));
+			DateTime date1 = date.AddDays(1);
+			DateTime date2 = date.AddDays(-1);
+			foreach (Appointment i in ret)
+			{
+				if (i.DateTime <= date1 && i.DateTime >= date2)
+                {
+					retdate.Add(i);
+                }
+			}
+			return retdate;
         }
 		
 		public Appointment FindByID(int id)

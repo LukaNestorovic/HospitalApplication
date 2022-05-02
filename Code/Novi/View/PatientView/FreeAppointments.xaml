@@ -19,6 +19,7 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Back" HorizontalAlignment="Left" Margin="37,41,0,0" VerticalAlignment="Top" Width="50" Height="25" Click="Back_Click"/>
+        <Button Content="Schedule Appointment" HorizontalAlignment="Center" Margin="0,41,0,0" VerticalAlignment="Top" Width="234" Height="25" Click="Button_Click"/>
 
     </Grid>
 </Window>
