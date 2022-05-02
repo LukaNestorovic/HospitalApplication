@@ -14,7 +14,7 @@ namespace Service
 {
 	public class DoctorService
 	{
-		public Boolean CreateDoctor(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String speciality, float grade, int salary)
+		public Boolean CreateDoctor(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String speciality, float grade, int salary, String password)
 		{
 			int newID;
 			if(File.Exists(idFile)){
@@ -23,7 +23,7 @@ namespace Service
 			}else
 				newID = 0;
 			
-			Doctor doctor = new Doctor(name, surname, jmbg, telephone, email, birthDate, adress, speciality, grade, salary, newID);
+			Doctor doctor = new Doctor(name, surname, jmbg, telephone, email, birthDate, adress, speciality, grade, salary, password, newID);
 			return doctorRepository.Save(doctor);
 		}
 		

@@ -26,8 +26,8 @@
                 <DataGridTextColumn Header="Guest" Width="*" Binding="{Binding Guest}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <DockPanel HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Button x:Name="CreateAccount" Content="Create account" Height="35" Width="101" Margin="0,0,0,10" Click="CreateAccount_Click"/>
+        <DockPanel HorizontalAlignment="Center" VerticalAlignment="Top" Width="407">
+            <Button x:Name="CreateAccount" Content="Create account" Height="35" Width="107" Margin="0,0,0,10" Click="CreateAccount_Click"/>
             <Button x:Name="ShowAccount" Content="Show account" Height="35" Width="101" Margin="0,0,0,10" Click="ShowAccount_Click"/>
             <Button x:Name="EditAccount" Content="Edit account" Height="35" Width="101" Margin="0,0,0,10" Click="EditAccount_Click"/>
             <Button x:Name="DeleteAccount" Content="Delete account" Height="35" Width="101" Margin="0,0,0,10" Click="DeleteAccount_Click"/>
