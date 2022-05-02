@@ -58,8 +58,7 @@ namespace Controller
 		public List<Appointment> ReadAll()
 		{
 			List<Appointment> appointments = appointmentService.ReadAll();
-<<<<<<< HEAD
-=======
+
 			return appointments;
 		}
 
@@ -72,7 +71,7 @@ namespace Controller
 		public List<Appointment> ReadAllWithoutPatient()
 		{
 			List<Appointment> appointments = appointmentService.ReadAllWithoutPatient();
->>>>>>> development
+
 			return appointments;
 		}
 

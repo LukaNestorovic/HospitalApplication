@@ -130,7 +130,7 @@ namespace Repository
 			List<Appointment> appointments = new List<Appointment>();
 			foreach (Appointment i in all)
 			{
-				if (i.doctor == doctor)
+				if (i.Doctor == doctor)
 				{
 					appointments.Add(i);
 				}
