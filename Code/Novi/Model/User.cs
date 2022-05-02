@@ -18,8 +18,9 @@ namespace Model
 		public DateTime BirthDate { get; set; }
 		public String Adress { get; set; }
 		public int Id { get; set; }
+		public String Password { get; set; }
 
-		protected User(string name, string surname, string jmbg, string telephone, string email, DateTime birthDate, string adress, int id)
+		protected User(string name, string surname, string jmbg, string telephone, string email, DateTime birthDate, string adress, int id, string password)
 		{
 		  	Name = name;
 		  	Surname = surname;
@@ -29,6 +30,7 @@ namespace Model
 		  	BirthDate = birthDate;
 		  	Adress = adress;
 		  	Id = id;
+			Password = password;
 		}
 
 		protected User()

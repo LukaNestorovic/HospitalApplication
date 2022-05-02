@@ -43,7 +43,7 @@ namespace ProjekatSIMS.View.SecretaryView
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            patientController.CreatePatient(TBName.Text, TBSurname.Text, TBJmbg.Text, TBTelephone.Text, TBEmail.Text, DPBirthDate.SelectedDate.GetValueOrDefault(), TBAdress.Text, TBInsurance.Text, (Boolean)CBGuest.IsChecked);
+            patientController.CreatePatient(TBName.Text, TBSurname.Text, TBJmbg.Text, TBTelephone.Text, TBEmail.Text, DPBirthDate.SelectedDate.GetValueOrDefault(), TBAdress.Text, TBInsurance.Text, (Boolean)CBGuest.IsChecked, TBPassword.Text);
             var s = new ShowPatient();
             s.Show();
             Close();

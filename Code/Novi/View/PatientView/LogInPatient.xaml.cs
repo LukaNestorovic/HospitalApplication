@@ -31,14 +31,21 @@ namespace ProjekatSIMS.View.PatientView
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             patient = patientController.ReadPatientByEmail(TBEmail.Text);
-            if(patient.Jmbg == TBPass.Text && patient != null)
+            if(patient.Password == TBPass.Text && patient != null)
             {
                 int id = patient.Id;
-                var s = new PatientView();
+                var s = new PatientHome(id);
                 s.Show();
                 Close();
             }
            
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var s = new Doctor();
+            s.Show();
+            Close();
         }
     }
 }

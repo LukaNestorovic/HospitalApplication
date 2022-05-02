@@ -16,9 +16,9 @@ namespace Model
 		public Boolean Emergency { get; set; }
 		public int Id { get; set; }
 		
-		public Patient patient { get; set; }
-		public Doctor doctor { get; set; }
-		public Room room { get; set; }
+		public Patient Patient { get; set; }
+		public Doctor Doctor { get; set; }
+		public Room Room { get; set; }
 
 		  public Appointment(DateTime dateTime, string descripton, int duration, bool emergency, int id, Patient patient, Doctor doctor, Room room)
 		  {
@@ -27,9 +27,9 @@ namespace Model
 				Duration = duration;
 				Emergency = emergency;
 				Id = id;
-				this.patient = patient;
-				this.doctor = doctor;
-				this.room = room;
+				this.Patient = patient;
+				this.Doctor = doctor;
+				this.Room = room;
 		  }
 
 		  public Appointment()
