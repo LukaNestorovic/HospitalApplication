@@ -17,15 +17,17 @@ namespace Model
 		public Doctor doctor { get; set; }
 		public Patient patient { get; set; }
 		public System.Collections.ArrayList drug;
+		public DateTime datetime { get; set; }
 		
 
-		public Prescription(string instructions, int id, Doctor doctor, Patient patient, ArrayList drug)
+		public Prescription(String instructions, int id, Doctor doctor, Patient patient, ArrayList drug, DateTime datetime)
 		{
 		  	Instructions = instructions;
 		  	Id = id;
 		  	this.doctor = doctor;
 		  	this.patient = patient;
 		  	this.drug = drug;
+			this.datetime = datetime;
 		}
 
 		public Prescription()

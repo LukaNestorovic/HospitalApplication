@@ -17,6 +17,99 @@ namespace Repository
 		{
 			return serializer.fromJSON(FileName);
 		}
+
+		public List<Appointment> FindAllByPatientId(int id)
+        {
+			try
+			{
+				List<Appointment> all = serializer.fromJSON(FileName);
+				List<Appointment> ret = new List<Appointment>();
+				foreach (Appointment i in all)
+				{
+					if (i.Patient == null)
+					{
+						continue;
+					}
+					if (i.Patient.Id == id)
+					{
+						ret.Add(i);
+					}
+				}
+				return ret;
+			}
+            catch
+            {
+				return null;
+            }
+        }
+
+		public List<Appointment> FindAllWithoutPatient()
+        {
+			List<Appointment> all = serializer.fromJSON(FileName);
+			List<Appointment> ret = new List<Appointment>();
+			List<Appointment> retdate = new List<Appointment>();
+			foreach (Appointment i in all)
+            {
+				if(i.Patient == null)
+                {
+					ret.Add(i);
+                }
+            }
+			ret.Sort((y, x) => y.DateTime.CompareTo(x.DateTime));
+			return ret;
+        }
+
+		public Appointment FindWithPriority(DateTime date)
+        {
+			List<Appointment> all = serializer.fromJSON(FileName);
+			List<Appointment> ret = new List<Appointment>();
+			Appointment app = new Appointment();
+			foreach (Appointment i in all)
+			{
+				if (i.Patient == null)
+				{
+					ret.Add(i);
+				}
+			}
+			ret.Sort((y, x) => y.DateTime.CompareTo(x.DateTime));
+			foreach (Appointment i in ret)
+            {
+				if(i.DateTime >= date)
+                {
+					app = i;
+					break;
+                }
+            }
+			return app;
+		}
+
+		public Appointment FindWithPriorityDoctor(int id, DateTime date)
+        {
+			List<Appointment> all = serializer.fromJSON(FileName);
+			List<Appointment> ret = new List<Appointment>();
+			Appointment app = new Appointment();
+			foreach (Appointment i in all)
+			{
+				if (i.Patient == null)
+				{
+					ret.Add(i);
+				}
+			}
+			ret.Sort((y, x) => y.DateTime.CompareTo(x.DateTime));
+			foreach (Appointment i in ret)
+			{
+				if(i.Doctor == null)
+                {
+					continue;
+                }
+				if (i.DateTime >= date && i.Doctor.Id == id)
+				{
+					app = i;
+					break;
+				}
+			}
+			return app;
+		}
 		
 		public Appointment FindByID(int id)
 		{
@@ -29,6 +122,21 @@ namespace Repository
 				}
 			}
 			return a;
+		}
+
+		public List<Appointment> FindByDoctor (Doctor doctor)
+        {
+			List<Appointment> all = serializer.fromJSON(FileName);
+			List<Appointment> appointments = new List<Appointment>();
+			foreach (Appointment i in all)
+			{
+				if (i.Doctor == doctor)
+				{
+					appointments.Add(i);
+				}
+			}
+
+			return appointments;
 		}
 		
 		public Boolean Save(Appointment appointment)

@@ -1,0 +1,15 @@
+﻿<Window x:Class="ProjekatSIMS.View.PatientView.ChosePriority"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatSIMS.View.PatientView"
+        mc:Ignorable="d"
+        Title="ChosePriority" Height="450" Width="800">
+    <Grid>
+        <Button Content="Doctor" HorizontalAlignment="Center" Margin="0,129,0,0" VerticalAlignment="Top" Width="138" Height="58" Click="Doctor_click"/>
+        <Button Content="Time" HorizontalAlignment="Center" Margin="0,248,0,0" VerticalAlignment="Top" Width="138" Height="58" Click="Time_click"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="35,31,0,0" VerticalAlignment="Top" Height="27" Width="64" Click="Cancel_click"/>
+
+    </Grid>
+</Window>

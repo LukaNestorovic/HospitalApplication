@@ -40,36 +40,46 @@ namespace Controller
 		public Appointment ReadApp(int id)
 		{
 			Appointment appointment = appointmentService.ReadApp(id);
-//			String[] appointmentDTO = new String[8];
-//			appointmentDTO[0] = appointment.DateTime.ToString();
-//			appointmentDTO[1] = appointment.Descripton;
-//			appointmentDTO[2] = appointment.Duration.ToString();
-//			appointmentDTO[3] = appointment.Emergency.ToString();
-//			appointmentDTO[4] = appointment.patient.Id.ToString();
-//			appointmentDTO[5] = appointment.doctor.Id.ToString();
-//			appointmentDTO[6] = appointment.room.Id.ToString();
-//			appointmentDTO[7] = appointment.Id.ToString();
 			return appointment;
 		}
+
+		public Appointment ReadWithPriority(DateTime date)
+        {
+			Appointment appointment = appointmentService.ReadWithPriority(date);
+			return appointment;
+        }
+
+		public Appointment ReadWithPriorityDoctor(int id, DateTime date)
+        {
+			Appointment appointment = appointmentService.ReadWithPriorityDoctor(id, date);
+			return appointment;
+        }
 
 		public List<Appointment> ReadAll()
 		{
 			List<Appointment> appointments = appointmentService.ReadAll();
-//			List<String[]> appointmentDTOs = new List<String[]>();
-//			foreach (Appointment appointment in appointments)
-//			{
-//				String[] appointmentDTO = new String[8];
-//				appointmentDTO[0] = appointment.DateTime.ToString();
-//				appointmentDTO[1] = appointment.Descripton;
-//				appointmentDTO[2] = appointment.Duration.ToString();
-//				appointmentDTO[3] = appointment.Emergency.ToString();
-//				appointmentDTO[4] = appointment.patient.Id.ToString();
-//				appointmentDTO[5] = appointment.doctor.Id.ToString();
-//				appointmentDTO[6] = appointment.room.Id.ToString();
-//				appointmentDTO[7] = appointment.Id.ToString();
-//			}
+
 			return appointments;
 		}
+
+		public List<Appointment> ReadAllByPatientId(int id)
+        {
+			List<Appointment> appointments = appointmentService.ReadAllByPatientId(id);
+			return appointments;
+        }
+
+		public List<Appointment> ReadAllWithoutPatient()
+		{
+			List<Appointment> appointments = appointmentService.ReadAllWithoutPatient();
+
+			return appointments;
+		}
+
+		public List<Appointment> ReadByDoctor(int doctorId)
+        {
+			Doctor doctor = doctorService.ReadDoctor(doctorId);
+			return appointmentService.ReadByDoctor(doctor);
+        }
 
 		public AppointmentService appointmentService = new AppointmentService();
 	

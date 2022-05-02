@@ -28,13 +28,31 @@
     <Compile Update="View\PatientView\Delete.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\PatientView\Doctor.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PatientView\DoctorPriority.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\PatientView\Edit.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PatientView\FreeAppointments.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\PatientView\LogInPatient.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\PatientView\PatientHome.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\PatientView\PatientView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PatientView\PickDatePriority.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PatientView\ScheduleAppointment.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\SecretaryView\CreatePatient.xaml.cs">
@@ -78,13 +96,31 @@
     <Page Update="View\PatientView\Delete.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\PatientView\Doctor.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PatientView\DoctorPriority.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\PatientView\Edit.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PatientView\FreeAppointments.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\PatientView\LogInPatient.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\PatientView\PatientHome.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\PatientView\PatientView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PatientView\PickDatePriority.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PatientView\ScheduleAppointment.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\SecretaryView\CreatePatient.xaml">
