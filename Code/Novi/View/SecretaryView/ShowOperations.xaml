@@ -17,7 +17,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn IsReadOnly="True" x:Name="TBId" Header="Id" Width="25" Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="Type" x:Name="TBType" Width="*" Binding="{Binding Type}"/>
-                <DataGridTextColumn Header="Duration" x:Name="TBDuration" Width="*" Binding="{Binding Duration}"/>
+                <DataGridTextColumn Header="Duration" x:Name="TBDuration" Width="75" Binding="{Binding Duration}"/>
                 <DataGridTextColumn Header="Date of operation" x:Name="TBDate" Width="120" Binding="{Binding DateTime, StringFormat={}{0:dd.MM.yyyy.}}"/>
                 <DataGridTextColumn  x:Name="TBDocId" Header="Doctor" Width="*" Binding="{Binding doctor.Id}"/>
                 <DataGridTextColumn IsReadOnly="True" x:Name="TBPatientId" Header="Patient" Width="*" Binding="{Binding patient.Id}"/>
