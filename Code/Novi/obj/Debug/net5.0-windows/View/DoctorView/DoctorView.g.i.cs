@@ -69,7 +69,7 @@ namespace ProjekatSIMS.View.DoctorView {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ProjekatSIMS;component/view/doctorview/doctorview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ProjekatSIMS;V1.0.0.0;component/view/doctorview/doctorview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\View\DoctorView\DoctorView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -61,7 +61,7 @@ namespace ProjekatSIMS.View.ManagerView {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ProjekatSIMS;component/view/managerview/delete.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ProjekatSIMS;V1.0.0.0;component/view/managerview/delete.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\View\ManagerView\Delete.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
