@@ -63,9 +63,6 @@
     </Compile>
     <Compile Update="View\PatientView\ScheduleAppointment.xaml.cs">
     </Compile>
-    <Compile Update="View\SecretaryView\CreateMR.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="View\SecretaryView\EditAllergenes.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -144,9 +141,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\PatientView\ScheduleAppointment.xaml">
-    </Page>
-    <Page Update="View\SecretaryView\CreateMR.xaml">
-      <SubType>Designer</SubType>
     </Page>
     <Page Update="View\SecretaryView\EditAllergenes.xaml">
       <SubType>Designer</SubType>

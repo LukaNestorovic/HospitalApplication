@@ -81,9 +81,7 @@ namespace ProjekatSIMS.View.SecretaryView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var s = new CreateMR(medicicalRecords);
-            s.Show();
-            Close();
+            
         }
     }
 }
