@@ -69,7 +69,7 @@ namespace ProjekatSIMS.View.ManagerView {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ProjekatSIMS;component/view/managerview/addroomview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ProjekatSIMS;V1.0.0.0;component/view/managerview/addroomview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\View\ManagerView\AddRoomView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

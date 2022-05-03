@@ -53,7 +53,7 @@ namespace ProjekatSIMS.View.PatientView {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ProjekatSIMS;component/view/patientview/patienthome.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ProjekatSIMS;V1.0.0.0;component/view/patientview/patienthome.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\View\PatientView\PatientHome.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
