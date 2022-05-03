@@ -7,10 +7,30 @@
         mc:Ignorable="d"
         Title="DoctorView" Height="450" Width="800">
     <Grid Background="LightGray" RenderTransformOrigin="0.508,0.682">
-        <Button x:Name ="ShowSurgery" Click="ShowSurgery_Click"  Content="Show Surgery" Background="White" HorizontalAlignment="Center" Height="62" Margin="0,205,0,0" VerticalAlignment="Top" Width="224">
+        <Button x:Name ="ShowSurgery" Click="ShowSurgery_Click"  Content="Show Surgery" Background="White" HorizontalAlignment="Center" Height="62" Margin="0,205,0,0" VerticalAlignment="Top" Width="224" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI Variable Small Semibold">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFCD1616" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
         </Button>
         <Button x:Name ="Back" Click="Back_Click" Content="Back" Background="White" HorizontalAlignment="Left" Margin="39,39,0,0" VerticalAlignment="Top" Height="30" Width="60"/>
-        <Button Content="Prescription" HorizontalAlignment="Left" Margin="364,150,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <Button Content="Drug" HorizontalAlignment="Left" Height="21" Margin="404,342,0,0" VerticalAlignment="Top" Width="44" Click="Button_Click_1"/>
+        <Button Content="Prescription" HorizontalAlignment="Left" Margin="288,304,0,0" VerticalAlignment="Top" Click="Button_Click" Height="28" Width="75">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+        <Button Content="Drug" HorizontalAlignment="Left" Height="28" Margin="436,304,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_1">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
     </Grid>
 </Window>

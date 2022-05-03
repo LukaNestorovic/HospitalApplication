@@ -17,6 +17,6 @@
         <TextBox x:Name="TBDoctor" HorizontalAlignment="Left" Margin="239,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="Submit" HorizontalAlignment="Left" Margin="374,326,0,0" VerticalAlignment="Top" Height="49" Width="77" Click="Button_Click"/>
         <DatePicker x:Name="DatePicker" HorizontalAlignment="Left" Margin="239,254,0,0" VerticalAlignment="Top"/>
-
+        <Button x:Name="Back" Click="Back_Click" Content="Back" Background="White" HorizontalAlignment="Left" Height="30" Margin="25,31,0,0" VerticalAlignment="Top" Width="64"/>
     </Grid>
 </Window>

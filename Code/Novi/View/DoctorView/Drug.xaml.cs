@@ -21,6 +21,8 @@ namespace ProjekatSIMS.View.DoctorView
     public partial class Drug : Window
     {
         public DrugController drugController = new DrugController();
+        private int id;
+
         public Drug()
         {
             InitializeComponent();
@@ -29,6 +31,13 @@ namespace ProjekatSIMS.View.DoctorView
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             drugController.CreateDrug(TBName.Text, TBIngridients.Text, (Boolean)CB.IsChecked, Int32.Parse(TBDrugnum.Text));
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new DoctorView(id);
+            s.Show();
+            Close();
         }
     }
 }

@@ -535,3 +535,11 @@ C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\ProjekatSIMS.genr
 C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\ref\ProjekatSIMS.dll
 C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\CreateMR.g.cs
 C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\CreateMR.baml
+C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\Drug.g.cs
+C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\Prescription.g.cs
+C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\Medicine.g.cs
+C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\ShowOperations.g.cs
+C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\Drug.baml
+C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\Prescription.baml
+C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\Medicine.baml
+C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\ShowOperations.baml

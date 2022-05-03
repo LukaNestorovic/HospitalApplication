@@ -78,9 +78,6 @@ namespace ProjekatSIMS.View.SecretaryView
             var s = new Allergenes(medicicalRecords);
             s.Show();
             Close();
-
         }
-
-       
     }
 }

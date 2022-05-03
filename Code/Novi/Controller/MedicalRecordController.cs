@@ -18,10 +18,10 @@ namespace Controller
            // Patient patient = patientService.ReadPatient (patientId);
             return medicalRecordService.UpdateAllergies (patientId, allergies);
         }
-         public Boolean createMR (String allergies, int patientId)
+        public Boolean createMR(String allergies, int patientId)
         {
             Patient patient = patientService.ReadPatient(patientId);
-            return medicalRecordService.CreateMR (allergies, patient);
+            return medicalRecordService.CreateMR(allergies, patient);
         }
     }
 }
