@@ -63,6 +63,9 @@
     </Compile>
     <Compile Update="View\PatientView\ScheduleAppointment.xaml.cs">
     </Compile>
+    <Compile Update="View\SecretaryView\CreateAppointment.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\SecretaryView\EditAllergenes.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -76,6 +79,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\SecretaryView\LogInSecretary.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\SecretaryView\ShowAppointments.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\SecretaryView\ShowPatient.xaml.cs">
@@ -142,6 +148,9 @@
     </Page>
     <Page Update="View\PatientView\ScheduleAppointment.xaml">
     </Page>
+    <Page Update="View\SecretaryView\CreateAppointment.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\SecretaryView\EditAllergenes.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -155,6 +164,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\SecretaryView\LogInSecretary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\SecretaryView\ShowAppointments.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\SecretaryView\ShowPatient.xaml">

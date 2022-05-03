@@ -1,13 +1,13 @@
-﻿<Window x:Class="ProjekatSIMS.View.SecretaryView.ShowOperations"
+﻿<Window x:Class="ProjekatSIMS.View.SecretaryView.ShowAppointments"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS.View.SecretaryView"
         mc:Ignorable="d"
-        Title="ShowOperations" Height="450" Width="800">
+        Title="ShowAppointments" Height="450" Width="800">
     <Grid>
-        <DataGrid HorizontalAlignment="Center" Name="OperationsGrid" AutoGenerateColumns="False" Margin="0,86,0,28" HorizontalContentAlignment="Right" VerticalContentAlignment="Stretch" FontWeight="Bold" Width="553">
+        <DataGrid HorizontalAlignment="Center" Name="AppointmentsGrid" AutoGenerateColumns="False" Margin="0,86,0,28" HorizontalContentAlignment="Right" VerticalContentAlignment="Stretch" FontWeight="Bold" Width="700">
             <DataGrid.Resources>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
                     <Setter Property="HorizontalAlignment" Value="Stretch"/>
@@ -16,12 +16,13 @@
             </DataGrid.Resources>
             <DataGrid.Columns>
                 <DataGridTextColumn IsReadOnly="True" x:Name="TBId" Header="Id" Width="25" Binding="{Binding Id}"/>
-                <DataGridTextColumn Header="Type" x:Name="TBType" Width="*" Binding="{Binding Type}"/>
+                <DataGridTextColumn Header="Description" x:Name="TBDescription" Width="75" Binding="{Binding Description}"/>
                 <DataGridTextColumn Header="Duration" x:Name="TBDuration" Width="75" Binding="{Binding Duration}"/>
-                <DataGridTextColumn Header="Date of operation" x:Name="TBDate" Width="120" Binding="{Binding DateTime, StringFormat={}{0:dd.MM.yyyy.}}"/>
-                <DataGridTextColumn  x:Name="TBDocId" Header="Doctor" Width="*" Binding="{Binding doctor.Id}"/>
-                <DataGridTextColumn IsReadOnly="True" x:Name="TBPatientId" Header="Patient" Width="*" Binding="{Binding patient.Id}"/>
-                <DataGridTextColumn IsReadOnly="True" Header="Room" x:Name="TBRoomId" Width="*" Binding="{Binding room.Id}"/>
+                <DataGridTextColumn Header="Date of appointment" x:Name="TBDate" Width="150" Binding="{Binding DateTime, StringFormat={}{0:dd.MM.yyyy.}}"/>
+                <DataGridTextColumn Header="Emergency" Width="*" Binding="{Binding Emergency}"/>
+                <DataGridTextColumn  x:Name="TBDocId" Header="Doctor" Width="*" Binding="{Binding Doctor.Id}"/>
+                <DataGridTextColumn IsReadOnly="True" x:Name="TBPatientId" Header="Patient" Width="*" Binding="{Binding Patient.Id}"/>
+                <DataGridTextColumn IsReadOnly="True" Header="Room" x:Name="TBRoomId" Width="*" Binding="{Binding Room.Id}"/>
                 <DataGridTemplateColumn Width="*" Header="Update">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -42,8 +43,7 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="CreateOperation" Content="Create operation" HorizontalAlignment="Left" Margin="41,24,0,0" VerticalAlignment="Top" Height="39" Width="105" Click="CreateOperation_Click"/>
-        <Button x:Name="Close" Content="Close" HorizontalAlignment="Left" Margin="688,24,0,0" VerticalAlignment="Top" Height="39" Width="74" Click="Close_Click"/>
-
+        <Button x:Name="CreateAppointment" Content="Create appointment" HorizontalAlignment="Left" Margin="41,24,0,0" VerticalAlignment="Top" Height="39" Width="133" Click="CreateAppointment_Click"/>
+        <Button x:Name="Close" Content="Close" HorizontalAlignment="Left" Margin="668,24,0,0" VerticalAlignment="Top" Height="39" Width="82" Click="Close_Click"/>
     </Grid>
 </Window>

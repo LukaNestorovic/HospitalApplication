@@ -1,0 +1,27 @@
+﻿<Window x:Class="ProjekatSIMS.View.SecretaryView.CreateOperation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatSIMS.View.SecretaryView"
+        mc:Ignorable="d"
+        Title="CreateOperation" Height="450" Width="800">
+    <Grid>
+        <Label Content="Time" HorizontalAlignment="Left" Height="25" Margin="235,90,0,0" VerticalAlignment="Top" Width="122"/>
+        <Label Content="Patient" HorizontalAlignment="Left" Height="25" Margin="235,140,0,0" VerticalAlignment="Top" Width="122"/>
+        <Label Content="Doctor" HorizontalAlignment="Left" Height="25" Margin="235,231,0,0" VerticalAlignment="Top" Width="122"/>
+        <Label Content="Room" HorizontalAlignment="Left" Height="25" Margin="234,271,0,0" VerticalAlignment="Top" Width="122"/>
+        <Label Content="Surgery Type" HorizontalAlignment="Left" Height="25" Margin="234,305,0,0" VerticalAlignment="Top" Width="122"/>
+
+        <Button Name="Potvrdi" Click="Potvrdi_Click" Content="Confirm" HorizontalAlignment="Left" Height="40" Margin="217,363,0,0" VerticalAlignment="Top" Width="140"/>
+        <Button Name="Odustani" Click="Odustani_Click" Content="Cancel" HorizontalAlignment="Left" Height="40" Margin="466,363,0,0" VerticalAlignment="Top" Width="140"/>
+        <DatePicker x:Name="DPTime" HorizontalAlignment="Left" Margin="382,89,0,0" VerticalAlignment="Top" Width="167" Height="26" />
+        <TextBox x:Name="TBPatient" HorizontalAlignment="Left" Margin="382,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Height="26"  />
+        <TextBox x:Name="TBType" HorizontalAlignment="Left" Margin="382,305,0,0" VerticalAlignment="Top" Width="167" Height="25"/>
+        <Label Content="Duration" HorizontalAlignment="Left" Height="25" Margin="235,187,0,0" VerticalAlignment="Top" Width="122"/>
+        <TextBox x:Name="TBDuration" HorizontalAlignment="Left" Margin="382,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Height="26"  />
+        <TextBox x:Name="TBDoctor" HorizontalAlignment="Left" Margin="382,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Height="26"  />
+        <TextBox x:Name="TBRoom" HorizontalAlignment="Left" Margin="382,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167" Height="26"  />
+
+    </Grid>
+</Window>
