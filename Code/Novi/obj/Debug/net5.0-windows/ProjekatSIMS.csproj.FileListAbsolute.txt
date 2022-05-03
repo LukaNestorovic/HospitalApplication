@@ -539,3 +539,7 @@ C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryVie
 C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\ShowOperations.baml
 C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\CreateOperation.g.cs
 C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\CreateOperation.baml
+C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\CreateAppointment.g.cs
+C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\ShowAppointments.g.cs
+C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\CreateAppointment.baml
+C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\ShowAppointments.baml

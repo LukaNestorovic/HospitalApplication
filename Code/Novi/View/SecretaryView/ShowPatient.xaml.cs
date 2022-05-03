@@ -83,9 +83,11 @@ namespace ProjekatSIMS.View.SecretaryView
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void LogOut_Click(object sender, RoutedEventArgs e)
         {
-            
+            var s = new LogInSecretary();
+            s.Show ();
+            Close();
         }
     }
 }

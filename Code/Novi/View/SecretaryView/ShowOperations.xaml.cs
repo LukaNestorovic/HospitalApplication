@@ -63,5 +63,12 @@ namespace ProjekatSIMS.View.SecretaryView
             s.Show();
             Close();
         }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new ShowPatient();
+            s.Show();
+            Close();
+        }
     }
 }

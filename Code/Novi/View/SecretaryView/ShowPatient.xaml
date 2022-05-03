@@ -38,6 +38,7 @@
 
 
         </DockPanel>
+        <Button x:Name="LogOut" Content="Log Out" HorizontalAlignment="Left" Margin="50,168,0,0" VerticalAlignment="Top" Click="LogOut_Click"/>
 
     </Grid>
 </Window>

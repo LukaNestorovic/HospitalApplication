@@ -43,6 +43,7 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="CreateOperation" Content="Create operation" HorizontalAlignment="Left" Margin="41,24,0,0" VerticalAlignment="Top" Height="39" Width="105" Click="CreateOperation_Click"/>
+        <Button x:Name="Close" Content="Close" HorizontalAlignment="Left" Margin="688,24,0,0" VerticalAlignment="Top" Height="39" Width="74" Click="Close_Click"/>
 
     </Grid>
 </Window>
