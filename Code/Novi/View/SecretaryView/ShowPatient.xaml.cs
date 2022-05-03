@@ -70,7 +70,9 @@ namespace ProjekatSIMS.View.SecretaryView
 
         private void Appointments_Click(object sender, RoutedEventArgs e)
         {
-
+            var s = new ShowAppointments();
+            s.Show();
+            Close();
         }
 
         private void EditAllergens_Click(object sender, RoutedEventArgs e)
@@ -82,7 +84,9 @@ namespace ProjekatSIMS.View.SecretaryView
 
         private void LogOut_Click(object sender, RoutedEventArgs e)
         {
-
+            var s = new LogInSecretary();
+            s.Show();
+            Close();
         }
     }
 }
