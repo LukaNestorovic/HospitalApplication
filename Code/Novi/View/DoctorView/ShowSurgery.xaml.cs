@@ -25,38 +25,39 @@ namespace ProjekatSIMS.View.DoctorView
     {
         public ObservableCollection<Operation> operations;
         public OperationController operationController = new OperationController();
-
-        public ShowSurgery()
+        private int id;
+        public ShowSurgery(int id)
         {
             InitializeComponent();
             operations = new ObservableCollection<Operation>(operationController.ReadAll());
             dgSurgery.ItemsSource = operations;
+            this.id = id;
         }
 
         private void ScheduleSurgery_Click(object sender, RoutedEventArgs e)
         {
-            var s = new ScheduleSurgery(operations);
+            var s = new ScheduleSurgery(operations, id);
             s.Show();
             Close();
         }
 
         private void EditSugery_Click(object sender, RoutedEventArgs e)
         {
-            var s = new EditSurgeryData(operations);
+            var s = new EditSurgeryData(operations, id);
             s.Show();
             Close();
         }
 
         private void CancelSurgery_Click(object sender, RoutedEventArgs e)
         {
-            var s = new Delete(operations);
+            var s = new Delete(operations, id);
             s.Show();
             Close();
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            var s = new DoctorView();
+            var s = new DoctorView(id);
             s.Show();
             Close();
         }

@@ -81,6 +81,11 @@ namespace Service
 			return appointmentRepository.FindAllByPatientId(id);
         }
 
+		public List<Appointment> ReadAllByDoctorId(int id)
+		{
+			return appointmentRepository.FindAllByDoctorId(id);
+		}
+
 		public List<Appointment> ReadAllWithoutPatient()
 		{
 			return appointmentRepository.FindAllWithoutPatient();
