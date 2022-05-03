@@ -53,5 +53,15 @@ namespace ProjekatSIMS.View.SecretaryView
             s.Show();
             Close();
         }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            Operation operation = OperationsGrid.SelectedItem as Operation;
+            int operationId = operation.Id;
+            operationController.DeleteOperation(operationId);
+            var s = new ShowOperations();
+            s.Show();
+            Close();
+        }
     }
 }
