@@ -2,7 +2,7 @@
 using System;
 using Service;
 using Model;
-using System.Collections;
+using System.Collections.Generic;
 
 namespace Controller
 {
@@ -20,6 +20,12 @@ namespace Controller
             
         
             return prescriptionService.CreatePrescription(instructions, doctor, patient, drug, datetime);
+        }
+
+        public List<Prescription> ReadAllByPatientId(int id)
+        {
+            List<Prescription> prescriptions = prescriptionService.ReadAllByPatientId(id);
+            return prescriptions;
         }
     }
 }

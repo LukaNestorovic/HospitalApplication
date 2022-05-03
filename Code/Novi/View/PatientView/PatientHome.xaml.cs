@@ -35,7 +35,9 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Medicine_Click(object sender, RoutedEventArgs e)
         {
-
+            var s = new Medicine(id);
+            s.Show();
+            Close();
         }
 
         private void LogOff_Click(object sender, RoutedEventArgs e)

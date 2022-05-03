@@ -419,3 +419,5 @@ C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\D
 C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\Prescription.baml
 C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\Drug.g.cs
 C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\Drug.baml
+C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\Medicine.g.cs
+C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\Medicine.baml

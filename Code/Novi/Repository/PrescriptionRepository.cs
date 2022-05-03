@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Model;
 using Serialization;
+using System.Windows;
 
 namespace Repository
 {
@@ -14,6 +15,33 @@ namespace Repository
             all.Add(newPrescription);
             serializer.toJSON(FileName, all);
             return true;
+        }
+
+        public List<Prescription> FindAllByPatientId(int id)
+        {
+            List<Prescription> all = serializer.fromJSON(FileName);
+            List<Prescription> ret = new List<Prescription>();
+            foreach (Prescription i in all)
+            {
+                if (i.patient == null)
+                {
+                    continue;
+                }
+                if (i.patient.Id == id)
+                {
+                    ret.Add(i);
+                }
+            }
+            foreach(Prescription i in ret)
+            {
+                DateTime now = DateTime.Now;
+                TimeSpan value = i.datetime.Subtract(now);
+                if(value.TotalMinutes < 15)
+                {
+                    MessageBox.Show("Za 15 minuta treba da popijete lek", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
+            return ret;
         }
 
         

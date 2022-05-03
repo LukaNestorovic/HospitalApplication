@@ -30,6 +30,11 @@ namespace Service
 			
 		}
 
+		public List<Prescription> ReadAllByPatientId(int id)
+		{
+			return prescriptionRepository.FindAllByPatientId(id);
+		}
+
 
 		public String idFile = @"..\..\..\Data\prescriptionID.txt";
 		public PrescriptionRepository prescriptionRepository = new PrescriptionRepository();
