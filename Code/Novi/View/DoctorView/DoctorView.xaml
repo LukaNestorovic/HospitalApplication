@@ -33,6 +33,7 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        
+        <Button x:Name="ShowAnamnesis" Content="Show anamnesis" HorizontalAlignment="Center" Height="44" Margin="0,54,0,0" VerticalAlignment="Top" Width="148" Click="ShowAnamnesis_Click"/>
+
     </Grid>
 </Window>

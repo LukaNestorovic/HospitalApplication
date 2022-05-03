@@ -69,5 +69,12 @@ namespace ProjekatSIMS.View.DoctorView
                 Close();
             
         }
+
+        private void ShowAnamnesis_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new ShowAnamnezis();
+            s.Show();
+            Close();
+        }
     }
 }

@@ -25,10 +25,15 @@ namespace Controller
             return medicalRecordService.UpdateAnamnesis(patientId, anamnesis);
         }
 
-        public Boolean createMR(String allergies, int patientId, String anamnesis)
+        public Boolean createAnamnesis(String allergies, int patientId, String anamnesis)
         {
             Patient patient = patientService.ReadPatient(patientId);
-            return medicalRecordService.CreateMR(allergies, patient, anamnesis);
+            return medicalRecordService.CreateAnamnesis(patient, anamnesis, allergies);
+        }
+
+        public List<MedicalRecord> readAll()
+        {
+            return medicalRecordService.ReadAll();
         }
     }
 }

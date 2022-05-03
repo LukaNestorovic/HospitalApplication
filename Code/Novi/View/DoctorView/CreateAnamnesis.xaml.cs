@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Model;
+using Controller;
 
 namespace ProjekatSIMS.View.DoctorView
 {
@@ -19,9 +21,18 @@ namespace ProjekatSIMS.View.DoctorView
     /// </summary>
     public partial class CreateAnamnesis : Window
     {
+        public MedicalRecordController medicalRecordController = new MedicalRecordController();
         public CreateAnamnesis()
         {
             InitializeComponent();
+        }
+
+        private void CreateAnamnesis1_Click(object sender, RoutedEventArgs e)
+        {
+            medicalRecordController.createAnamnesis(TBAllergies.Text, Int32.Parse(TBPatientId.Text), TBAnamnesis.Text);
+            var s = new ShowAnamnezis();
+            s.Show();
+            Close();
         }
     }
 }

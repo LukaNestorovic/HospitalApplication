@@ -48,6 +48,11 @@ namespace Repository
 			return true;
 		}
 
+		public List<MedicalRecord> FindAll()
+		{
+			return serializer.fromJSON(FileName);
+		}
+
 		private static String FileName = @"..\..\..\Data\MedicalRecords.json";
 
 		private static Serializer<MedicalRecord> serializer = new Serializer<MedicalRecord>();

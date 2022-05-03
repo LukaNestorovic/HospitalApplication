@@ -1,0 +1,33 @@
+﻿<Window x:Class="ProjekatSIMS.View.DoctorView.ShowAnamnezis"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatSIMS.View.DoctorView"
+        mc:Ignorable="d"
+        Title="ShowAnamnezis" Height="450" Width="800">
+    <Grid>
+        <DataGrid HorizontalAlignment="Center" Name="AnamnesisGrid" AutoGenerateColumns="False" Margin="0,86,0,28" HorizontalContentAlignment="Right" VerticalContentAlignment="Stretch" FontWeight="Bold" Width="553">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn IsReadOnly="True" x:Name="TBPatientId" Header="ID" Width="28" Binding="{Binding patient.Id}"/>
+                <DataGridTextColumn  Header="Anamnesis" x:Name="TBAnamnesis" Width="400" Binding="{Binding Anamnesis}"/>
+                <DataGridTemplateColumn Width="*" Header="Update">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="Update_Click">Update</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="WriteAnamnesis" Content="Write Anamnesis" HorizontalAlignment="Left" Margin="34,40,0,0" VerticalAlignment="Top" Height="41" Width="94" Click="WriteAnamnesis_Click"/>
+        <Button x:Name="Back" Content="Back" HorizontalAlignment="Left" Height="41" Margin="701,40,0,0" VerticalAlignment="Top" Width="65" Click="Back_Click"/>
+    </Grid>
+</Window>

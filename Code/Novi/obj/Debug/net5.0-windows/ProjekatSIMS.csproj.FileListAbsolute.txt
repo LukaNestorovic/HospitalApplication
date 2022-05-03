@@ -549,3 +549,15 @@ C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\Sec
 C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\CreateAppointment.baml
 C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\CreateOperation.baml
 C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\ShowAppointments.baml
+C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\CreateAnamnesis.g.cs
+C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\CreateAppointment.g.cs
+C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\CreateOperation.g.cs
+C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\ShowAppointments.g.cs
+C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\ShowOperations.g.cs
+C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\ShowAnamnezis.g.cs
+C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\CreateAnamnesis.baml
+C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\ShowAnamnezis.baml
+C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\CreateAppointment.baml
+C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\CreateOperation.baml
+C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\ShowAppointments.baml
+C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\ShowOperations.baml
