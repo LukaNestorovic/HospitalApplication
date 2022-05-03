@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\salip\\Desktop\\SIMS\\Code\\Novi\\ProjekatSIMS.csproj": {}
+    "C:\\Users\\sncarcoding\\Desktop\\SIMS\\SIMS\\Code\\Novi\\ProjekatSIMS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\salip\\Desktop\\SIMS\\Code\\Novi\\ProjekatSIMS.csproj": {
+    "C:\\Users\\sncarcoding\\Desktop\\SIMS\\SIMS\\Code\\Novi\\ProjekatSIMS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\salip\\Desktop\\SIMS\\Code\\Novi\\ProjekatSIMS.csproj",
+        "projectUniqueName": "C:\\Users\\sncarcoding\\Desktop\\SIMS\\SIMS\\Code\\Novi\\ProjekatSIMS.csproj",
         "projectName": "ProjekatSIMS",
-        "projectPath": "C:\\Users\\salip\\Desktop\\SIMS\\Code\\Novi\\ProjekatSIMS.csproj",
-        "packagesPath": "C:\\Users\\salip\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\salip\\Desktop\\SIMS\\Code\\Novi\\obj\\",
+        "projectPath": "C:\\Users\\sncarcoding\\Desktop\\SIMS\\SIMS\\Code\\Novi\\ProjekatSIMS.csproj",
+        "packagesPath": "C:\\Users\\sncarcoding\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sncarcoding\\Desktop\\SIMS\\SIMS\\Code\\Novi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\salip\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sncarcoding\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

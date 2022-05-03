@@ -12,7 +12,6 @@
         <Label Content="Password:" HorizontalAlignment="Left" Margin="199,199,0,0" VerticalAlignment="Top" Height="27"/>
         <TextBox x:Name="TBPass" HorizontalAlignment="Left" VerticalAlignment="Top" Width="292" Margin="285,201,0,0" Height="23"  />
         <Button Content="Log In" HorizontalAlignment="Center" Margin="0,316,0,0" VerticalAlignment="Top" Width="124" Height="58" RenderTransformOrigin="0.675,0.509" Click="Button_Click"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="123,79,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
 
     </Grid>
 </Window>
