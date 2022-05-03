@@ -11,9 +11,9 @@ namespace Service
 {
     public class MedicalRecordService
     {
-		public Boolean UpdateAllergies(Patient patient, String allergies)
-		{
-			MedicalRecord medicalRecord = medicalRecordRepository.FindByPatient(patient);
+		public Boolean UpdateAllergies(int patientid, String allergies)
+		{		
+			MedicalRecord medicalRecord = medicalRecordRepository.FindByPatient(patientid);
 			medicalRecord.Allergies = allergies;
 			return medicalRecordRepository.UpdateByPatient(medicalRecord);
 		}
@@ -34,5 +34,6 @@ namespace Service
 
 		public String idFile = @"..\..\..\Data\medicalRecordID.txt";
 		public MedicalRecordRepository medicalRecordRepository = new MedicalRecordRepository();
+		public PatientRepository patientRepository = new PatientRepository();
 	}
 }

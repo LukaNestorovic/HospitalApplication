@@ -15,7 +15,7 @@ namespace Repository
 			List<MedicalRecord> all = serializer.fromJSON(FileName);
 			for (int i = 0; i < all.Count; i++)
 			{
-				if (all[i].patient == medicalRecord.patient)
+				if (all[i].patient.Id == medicalRecord.patient.Id)
 				{
 					all[i] = medicalRecord;
 					break;
@@ -25,13 +25,13 @@ namespace Repository
 			return false;
 		}
 
-		public MedicalRecord FindByPatient(Patient patient)
+		public MedicalRecord FindByPatient(int patientid)
 		{
 			List<MedicalRecord> all = serializer.fromJSON(FileName);
 			MedicalRecord a = null;
 			foreach (MedicalRecord i in all)
 			{
-				if (i.patient == patient)
+				if (i.patient.Id == patientid)
 				{
 					a = i;
 					break;
