@@ -68,6 +68,12 @@ namespace Controller
 			return appointments;
         }
 
+		public List<Appointment> ReadAllByDoctorId(int id)
+		{
+			List<Appointment> appointments = appointmentService.ReadAllByDoctorId(id);
+			return appointments;
+		}
+
 		public List<Appointment> ReadAllWithoutPatient()
 		{
 			List<Appointment> appointments = appointmentService.ReadAllWithoutPatient();
