@@ -31,6 +31,7 @@ namespace ProjekatSIMS.View.SecretaryView
             this.medicalRecords = medicalRecords;
         }
 
+   
         public void Submit_Click(object sender, RoutedEventArgs e)
         {
             Patient patient = patientController.ReadPatientByEmail(TBEmail.Text);

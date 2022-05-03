@@ -14,10 +14,13 @@ namespace Model
 		
 		public Patient patient { get; set; }
 
-		public MedicalRecord(string allergies, Patient patient)
+		public int Id { get; set; }
+
+		public MedicalRecord(String allergies, Patient patient, int id)
 		{
 		  	Allergies = allergies;
 		  	this.patient = patient;
+			Id = id;
 		}
 
 		public MedicalRecord()

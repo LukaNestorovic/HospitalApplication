@@ -40,7 +40,15 @@ namespace Repository
 			return a;
 		}
 
-		private static String FileName = @"..\..\..\data\MedicalRecords.json";
+		public Boolean Save(MedicalRecord medicalRecord)
+		{
+			List<MedicalRecord> all = serializer.fromJSON(FileName);
+			all.Add(medicalRecord);
+			serializer.toJSON(FileName, all);
+			return true;
+		}
+
+		private static String FileName = @"..\..\..\Data\MedicalRecords.json";
 
 		private static Serializer<MedicalRecord> serializer = new Serializer<MedicalRecord>();
 	}
