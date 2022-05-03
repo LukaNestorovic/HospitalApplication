@@ -34,8 +34,9 @@ namespace ProjekatSIMS.View.SecretaryView
    
         public void Submit_Click(object sender, RoutedEventArgs e)
         {
-           
-            medicalRecordController.updateAllergies(Int32.Parse(TBEmail.Text), TBAllergenes.Text);
+            Patient patient = patientController.ReadPatientByEmail(TBEmail.Text);
+            int patientID = patient.Id;
+            medicalRecordController.updateAllergies(patientID, TBAllergenes.Text);
             var s = new ShowPatient();
             s.Show();
             Close();
