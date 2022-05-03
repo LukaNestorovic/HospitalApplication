@@ -38,7 +38,6 @@
 
 
         </DockPanel>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="28,149,0,0" VerticalAlignment="Top" Height="43" Width="67" Click="Button_Click"/>
 
     </Grid>
 </Window>
