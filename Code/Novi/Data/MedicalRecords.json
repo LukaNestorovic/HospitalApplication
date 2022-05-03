@@ -1,1 +1,56 @@
-[{"Allergies":"polen","patient":{"InsuranceCarrier":"1","Guest":false,"Name":"1","Surname":"1","Jmbg":"1","Telephone":"1","Email":"@gmail.com","BirthDate":"2022-04-12T00:00:00","Adress":"1","Id":0,"Password":"123"},"Id":0,"Anamnesis":"Mnogo mu je bolje, neka pije cajeve"},{"Allergies":null,"patient":{"InsuranceCarrier":"1","Guest":false,"Name":"1","Surname":"1","Jmbg":"1","Telephone":"1","Email":"@gmail.com","BirthDate":"2022-04-12T00:00:00","Adress":"1","Id":0,"Password":"123"},"Id":0,"Anamnesis":"Pacijent se ne oseca najbolje."},{"Allergies":null,"patient":{"InsuranceCarrier":"1","Guest":false,"Name":"1","Surname":"1","Jmbg":"1","Telephone":"1","Email":"@gmail.com","BirthDate":"2022-04-12T00:00:00","Adress":"1","Id":0,"Password":"123"},"Id":0,"Anamnesis":"Mnogo mu je bolje"}]
+[
+  {
+    "Allergies": "polen",
+    "patient": {
+      "InsuranceCarrier": "1",
+      "Guest": false,
+      "Name": "1",
+      "Surname": "1",
+      "Jmbg": "1",
+      "Telephone": "1",
+      "Email": "@gmail.com",
+      "BirthDate": "2022-04-12T00:00:00",
+      "Adress": "1",
+      "Id": 0,
+      "Password": "123"
+    },
+    "Id": 0,
+    "Anamnesis": "Pacijentu je lose."
+  },
+  {
+    "Allergies": null,
+    "patient": {
+      "InsuranceCarrier": "1",
+      "Guest": false,
+      "Name": "1",
+      "Surname": "1",
+      "Jmbg": "1",
+      "Telephone": "1",
+      "Email": "@gmail.com",
+      "BirthDate": "2022-04-12T00:00:00",
+      "Adress": "1",
+      "Id": 0,
+      "Password": "123"
+    },
+    "Id": 0,
+    "Anamnesis": "Pacijent se ne oseca najbolje."
+  },
+  {
+    "Allergies": null,
+    "Anamnesis": "Mnogo mu je bolje",
+    "Id": 0,
+    "patient": {
+      "InsuranceCarrier": "1",
+      "Guest": false,
+      "Name": "1",
+      "Surname": "1",
+      "Jmbg": "1",
+      "Telephone": "1",
+      "Email": "@gmail.com",
+      "BirthDate": "2022-04-12T00:00:00",
+      "Adress": "1",
+      "Id": 0,
+      "Password": "123"
+    }
+  }
+]

@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="View\DoctorView\CreateAnamnesis.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\DoctorView\Delete.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -20,9 +23,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\DoctorView\Prescription.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\DoctorView\ShowAnamnezis.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\ManagerView\Delete.xaml.cs">
@@ -95,6 +95,9 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\DoctorView\CreateAnamnesis.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\DoctorView\Delete.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -108,9 +111,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\DoctorView\Prescription.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\DoctorView\ShowAnamnezis.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\ManagerView\Delete.xaml">
