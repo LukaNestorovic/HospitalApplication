@@ -6,8 +6,8 @@
       "version": "5.0.0"
     },
     "additionalProbingPaths": [
-      "C:\\Users\\sncarcoding\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\sncarcoding\\.nuget\\packages"
+      "C:\\Users\\salip\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\salip\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
