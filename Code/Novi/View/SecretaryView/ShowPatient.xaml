@@ -26,11 +26,14 @@
                 <DataGridTextColumn Header="Guest" Width="*" Binding="{Binding Guest}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <DockPanel HorizontalAlignment="Center" VerticalAlignment="Top" Width="407">
-            <Button x:Name="CreateAccount" Content="Create account" Height="35" Width="107" Margin="0,0,0,10" Click="CreateAccount_Click"/>
-            <Button x:Name="ShowAccount" Content="Show account" Height="35" Width="101" Margin="0,0,0,10" Click="ShowAccount_Click"/>
-            <Button x:Name="EditAccount" Content="Edit account" Height="35" Width="101" Margin="0,0,0,10" Click="EditAccount_Click"/>
-            <Button x:Name="DeleteAccount" Content="Delete account" Height="35" Width="101" Margin="0,0,0,10" Click="DeleteAccount_Click"/>
+        <DockPanel HorizontalAlignment="Center" VerticalAlignment="Top" Width="700">
+            <Button x:Name="CreateAccount" Content="Create account" Height="35" Width="100" Margin="0,0,0,10" Click="CreateAccount_Click"/>
+            <Button x:Name="ShowAccount" Content="Show account" Height="35" Width="100" Margin="0,0,0,10" Click="ShowAccount_Click"/>
+            <Button x:Name="EditAccount" Content="Edit account" Height="35" Width="100" Margin="0,0,0,10" Click="EditAccount_Click"/>
+            <Button x:Name="DeleteAccount" Content="Delete account" Height="35" Width="100" Margin="0,0,0,10" Click="DeleteAccount_Click"/>
+            <Button x:Name="Operations" Content="Operations" Height="35" Width="100" Margin="0,0,0,10" Click="Operations_Click"/>
+            <Button x:Name="Appointments" Content="Appointments" Height="35" Width="100" Margin="0,0,0,10" Click="Appointments_Click"/>
+            <Button x:Name="EditAllergens" Content="Edit allergens" Height="35" Width="100" Margin="0,0,0,10" Click="EditAllergens_Click"/>
 
 
 

@@ -56,5 +56,20 @@ namespace ProjekatSIMS.View.SecretaryView
             s.Show();
             
         }
+
+        private void Operations_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Appointments_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EditAllergens_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
