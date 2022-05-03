@@ -25,25 +25,27 @@ namespace ProjekatSIMS.View.SecretaryView
         public ObservableCollection<MedicalRecord> medicalRecords;
         public MedicalRecordController medicalRecordController = new MedicalRecordController();
         public PatientController patientController = new PatientController();
-        public Allergenes(ObservableCollection<MedicalRecord> medicalRecords)
+        public Allergenes()
         {
             InitializeComponent();
-            this.medicalRecords = medicalRecords;
+            medicalRecords = new ObservableCollection<MedicalRecord>(medicalRecordController.readAll());
+            AllergiesGrid.ItemsSource = medicalRecords;
         }
 
    
         public void Submit_Click(object sender, RoutedEventArgs e)
         {
-            Patient patient = patientController.ReadPatientByEmail(TBEmail.Text);
-            int patientID = patient.Id;
-            medicalRecordController.updateAllergies(patientID, TBAllergenes.Text);
-            var s = new ShowPatient();
+            MedicalRecord medicalRecord = AllergiesGrid.SelectedItem as MedicalRecord;
+            int patientId = medicalRecord.patient.Id;
+            String allergies = medicalRecord.Allergies;
+            medicalRecordController.updateAllergies(patientId, allergies);
+            var s = new Allergenes();
             s.Show();
             Close();
 
         }
 
-        private void Cancel_Click(object sender, RoutedEventArgs e)
+        private void Back_Click(object sender, RoutedEventArgs e)
         {
             var s = new ShowPatient();
             s.Show();

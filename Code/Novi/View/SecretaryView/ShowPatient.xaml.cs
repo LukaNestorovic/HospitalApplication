@@ -77,7 +77,7 @@ namespace ProjekatSIMS.View.SecretaryView
 
         private void EditAllergens_Click(object sender, RoutedEventArgs e)
         {
-            var s = new Allergenes(medicicalRecords);
+            var s = new Allergenes();
             s.Show();
             Close();
         }
