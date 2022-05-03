@@ -441,3 +441,9 @@ C:\Users\salip\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\Pat
 C:\Users\salip\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\PatientHome.baml
 C:\Users\salip\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\PickDatePriority.baml
 C:\Users\salip\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\ScheduleAppointment.baml
+C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\Drug.g.cs
+C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\Prescription.g.cs
+C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\Medicine.g.cs
+C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\Drug.baml
+C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\Prescription.baml
+C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\Medicine.baml

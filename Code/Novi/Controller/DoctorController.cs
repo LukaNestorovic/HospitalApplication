@@ -33,6 +33,12 @@ namespace Controller
             return doctor;
         }
 
+        public Doctor ReadDoctorByEmail(String email)
+        {
+            Doctor doctor = doctorService.ReadDoctorByEmail(email);
+            return doctor;
+        }
+
         public List<Doctor> ReadAll()
         {
             List<Doctor> doctors = doctorService.ReadAll();

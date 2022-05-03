@@ -19,9 +19,12 @@ namespace ProjekatSIMS.View.DoctorView
     /// </summary>
     public partial class DoctorView : Window
     {
-        public DoctorView()
+        private int id;
+
+        public DoctorView(int id)
         {
             InitializeComponent();
+            this.id = id;
         }
 
         private void SurgeryList_PreviewKeyDown(object sender, KeyEventArgs e)

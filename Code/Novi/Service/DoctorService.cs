@@ -50,7 +50,12 @@ namespace Service
 		{
 			return doctorRepository.DeleteByID(id);
 		}
-		
+
+		public Doctor ReadDoctorByEmail(String email)
+		{
+			return doctorRepository.FindByEmail(email);
+		}
+
 		public Doctor ReadDoctor(int id)
 		{
 			return doctorRepository.FindByID(id);

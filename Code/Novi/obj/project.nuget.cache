@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "echXIc0x1cEQaH/dzhqzTGDVpU9XZD5RUBTvX6RveHCY62GSFz4zy3yKTPU/+NeVLz+dw3WwEusU4VvRJzPyvA==",
+  "dgSpecHash": "mJ+iicrv4UxsM+Nty7B2OaR+8pvMdjoAMNZV8ag20pRaSs8mdpcZrO0MMl4aqhimboDsrtbqDGQaudfq78KnXg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\salip\\Documents\\GitHub\\SIMS\\Code\\Novi\\ProjekatSIMS.csproj",
+  "projectFilePath": "C:\\Users\\lukaa\\Documents\\GitHub\\SIMS\\Code\\Novi\\ProjekatSIMS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\salip\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\lukaa\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

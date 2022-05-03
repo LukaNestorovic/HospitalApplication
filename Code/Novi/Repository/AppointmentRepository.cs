@@ -18,7 +18,7 @@ namespace Repository
 			return serializer.fromJSON(FileName);
 		}
 
-		public List<Appointment> FindAllByPatientId(int id)
+		public List<Appointment> FindAllByDoctorId(int id)
         {
 			try
 			{
@@ -42,6 +42,31 @@ namespace Repository
 				return null;
             }
         }
+
+		public List<Appointment> FindAllByPatientId(int id)
+		{
+			try
+			{
+				List<Appointment> all = serializer.fromJSON(FileName);
+				List<Appointment> ret = new List<Appointment>();
+				foreach (Appointment i in all)
+				{
+					if (i.Patient == null)
+					{
+						continue;
+					}
+					if (i.Patient.Id == id)
+					{
+						ret.Add(i);
+					}
+				}
+				return ret;
+			}
+			catch
+			{
+				return null;
+			}
+		}
 
 		public List<Appointment> FindAllWithoutPatient()
         {
