@@ -47,6 +47,5 @@ namespace Controller
         }
 
         public PatientService patientService = new PatientService();
-   
    }
 }

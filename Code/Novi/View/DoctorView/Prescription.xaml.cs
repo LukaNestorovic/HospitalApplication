@@ -25,6 +25,7 @@ namespace ProjekatSIMS.View.DoctorView
     public partial class Prescription : Window
     {
         public PrescriptionController prescriptionController = new PrescriptionController();
+        private int id;
 
         public Prescription()
         {
@@ -34,6 +35,12 @@ namespace ProjekatSIMS.View.DoctorView
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             prescriptionController.CreatePrescription(TBInstructions.Text, Int32.Parse(TBDoctor.Text), Int32.Parse(TBPatient.Text), Int32.Parse(TBDrug.Text), DatePicker.SelectedDate.GetValueOrDefault());
+        }
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new DoctorView(id);
+            s.Show();
+            Close();
         }
     }
 }
