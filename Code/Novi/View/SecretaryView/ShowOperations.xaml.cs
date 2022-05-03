@@ -11,6 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
+using Controller;
+using Model;
 
 namespace ProjekatSIMS.View.SecretaryView
 {
@@ -19,9 +22,36 @@ namespace ProjekatSIMS.View.SecretaryView
     /// </summary>
     public partial class ShowOperations : Window
     {
+        public OperationController operationController = new OperationController();
+        public ObservableCollection<Operation> operations;
         public ShowOperations()
         {
             InitializeComponent();
+            operations = new ObservableCollection<Operation>(operationController.ReadAll());
+            OperationsGrid.ItemsSource = operations;
+        }
+
+        private void Update_Click(object sender, RoutedEventArgs e)
+        {
+            Operation operation = OperationsGrid.SelectedItem as Operation;
+            int operationId = operation.Id;
+            String type = operation.Type;
+            int duration = operation.Duration;
+            DateTime dateTime = operation.DateTime;
+            int doctorId = operation.doctor.Id;
+            int patientId = operation.patient.Id;
+            int roomId = operation.room.Id;
+            operationController.UpdateOperation(dateTime, duration, type, patientId, doctorId, roomId, operationId);
+            var s = new ShowOperations();
+            s.Show();
+            Close();
+        }
+
+        private void CreateOperation_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new CreateOperation(operations);
+            s.Show();
+            Close();
         }
     }
 }
