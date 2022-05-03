@@ -43,6 +43,11 @@ namespace Controller
 			return appointment;
 		}
 
+		public List<Patient> ReadAllPatientsByDoctor()
+        {
+			return appointmentService.ReadAllPatientsByDoctor();
+        }
+
 		public Appointment ReadWithPriority(DateTime date)
         {
 			Appointment appointment = appointmentService.ReadWithPriority(date);

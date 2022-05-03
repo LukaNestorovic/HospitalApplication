@@ -18,6 +18,8 @@ namespace Repository
 			return serializer.fromJSON(FileName);
 		}
 
+		private List<Appointment> ret = new List<Appointment>();
+
 		public List<Appointment> FindAllByDoctorId(int id)
         {
 			try
@@ -35,12 +37,28 @@ namespace Repository
 						ret.Add(i);
 					}
 				}
+				this.ret = ret;
 				return ret;
 			}
             catch
             {
 				return null;
             }
+        }
+
+		public List<Patient> FindAllPatientsByDoctor()
+        {
+			List<Patient> patients = new List<Patient>();
+			foreach(Appointment i in ret)
+            {
+				if (i.Patient == null)
+                {
+					continue;
+                }
+				patients.Add(i.Patient);
+
+            }
+            return patients;
         }
 
 		public List<Appointment> FindAllByPatientId(int id)
