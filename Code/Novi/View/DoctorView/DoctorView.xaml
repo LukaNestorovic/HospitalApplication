@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="DoctorView" Height="450" Width="800">
     <Grid Background="LightGray" RenderTransformOrigin="0.508,0.682">
-        <Button x:Name ="ShowSurgery" Click="ShowSurgery_Click"  Content="Show Surgery" Background="White" HorizontalAlignment="Center" Height="62" Margin="0,205,0,0" VerticalAlignment="Top" Width="224" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI Variable Small Semibold">
+        <Button x:Name ="ShowSurgery" Click="ShowSurgery_Click"  Content="Show Surgery" Background="White" HorizontalAlignment="Center" Height="62" Margin="0,155,0,0" VerticalAlignment="Top" Width="224" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI Variable Small Semibold">
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="#FFCD1616" Offset="1"/>
+                    <GradientStop Color="Black" Offset="0.303"/>
+                    <GradientStop Color="#FF1058E6" Offset="1"/>
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
@@ -25,7 +25,7 @@
             </Button.BorderBrush>
         </Button>
         <Button Content="LogOff" HorizontalAlignment="Left" Margin="694,10,0,0" VerticalAlignment="Top" Height="36" Width="85" Click="LogOff_Click"/>
-        <Button Content="Drug" HorizontalAlignment="Left" Height="28" Margin="436,304,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click_1">
+        <Button Content="Drug" HorizontalAlignment="Left" Height="28" Margin="437,304,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1">
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -33,7 +33,14 @@
                 </LinearGradientBrush>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="ShowAnamnesis" Content="Show anamnesis" HorizontalAlignment="Center" Height="44" Margin="0,54,0,0" VerticalAlignment="Top" Width="148" Click="ShowAnamnesis_Click"/>
+        <Button x:Name="ShowAnamnesis" Content="Show anamnesis" HorizontalAlignment="Center" Height="44" Margin="0,237,0,0" VerticalAlignment="Top" Width="148" Click="ShowAnamnesis_Click">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
 
     </Grid>
 </Window>

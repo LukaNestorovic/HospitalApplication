@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="ShowAnamnezis" Height="450" Width="800">
     <Grid>
-        <DataGrid HorizontalAlignment="Center" Name="AnamnesisGrid" AutoGenerateColumns="False" Margin="0,86,0,28" HorizontalContentAlignment="Right" VerticalContentAlignment="Stretch" FontWeight="Bold" Width="553">
+        <DataGrid HorizontalAlignment="Center" Name="AnamnesisGrid" AutoGenerateColumns="False" Margin="0,98,0,28" HorizontalContentAlignment="Right" VerticalContentAlignment="Stretch" FontWeight="Bold" Width="604">
             <DataGrid.Resources>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
                     <Setter Property="HorizontalAlignment" Value="Stretch"/>
@@ -27,7 +27,7 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="WriteAnamnesis" Content="Write Anamnesis" HorizontalAlignment="Left" Margin="34,40,0,0" VerticalAlignment="Top" Height="41" Width="94" Click="WriteAnamnesis_Click"/>
-        <Button x:Name="Back" Content="Back" HorizontalAlignment="Left" Height="41" Margin="701,40,0,0" VerticalAlignment="Top" Width="65" Click="Back_Click"/>
+        <Button x:Name="WriteAnamnesis" Content="Write Anamnesis" HorizontalAlignment="Left" Margin="35,35,0,0" VerticalAlignment="Top" Height="36" Width="107" Click="WriteAnamnesis_Click"/>
+        <Button x:Name="Back" Content="Back" HorizontalAlignment="Left" Height="36" Margin="659,35,0,0" VerticalAlignment="Top" Width="107" Click="Back_Click"/>
     </Grid>
 </Window>

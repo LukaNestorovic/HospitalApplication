@@ -7,13 +7,20 @@
         mc:Ignorable="d"
         Title="CreateAnamnesis" Height="450" Width="800">
     <Grid>
-        <Label Content="Patient Id" HorizontalAlignment="Left" Height="30" Margin="113,51,0,0" VerticalAlignment="Top" Width="88"/>
-        <Label Content="Anamneza" HorizontalAlignment="Left" Height="30" Margin="113,276,0,0" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.646,-2.871"/>
+        <Label Content="Patient Id" HorizontalAlignment="Left" Height="30" Margin="113,86,0,0" VerticalAlignment="Top" Width="88"/>
+        <Label Content="Anamneza" HorizontalAlignment="Left" Height="30" Margin="113,201,0,0" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.646,-2.871"/>
         <Label Content="Alergije" HorizontalAlignment="Left" Height="30" Margin="113,121,0,0" VerticalAlignment="Top" Width="88"/>
-        <TextBox x:Name="TBPatientId" HorizontalAlignment="Left" Margin="400,66,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="TBAllergies" HorizontalAlignment="Left" Margin="400,127,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="TBAnamnesis" HorizontalAlignment="Left" Margin="400,201,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Height="155"/>
-        <Button x:Name="CreateAnamnesis1" Content="Create" HorizontalAlignment="Left" Margin="326,374,0,0" VerticalAlignment="Top" Width="106" Height="50" Click="CreateAnamnesis1_Click"/>
+        <TextBox x:Name="TBPatientId" HorizontalAlignment="Left" Margin="280,92,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TBAllergies" HorizontalAlignment="Left" Margin="280,133,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TBAnamnesis" HorizontalAlignment="Left" Margin="280,201,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Height="155" BorderBrush="#FF889EE0" Background="White"/>
+        <Button x:Name="CreateAnamnesis1" Content="Create" HorizontalAlignment="Left" Margin="479,320,0,0" VerticalAlignment="Top" Width="105" Height="36" Click="CreateAnamnesis1_Click">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0.482"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
 
     </Grid>
 </Window>
