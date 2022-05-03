@@ -15,13 +15,20 @@ namespace Controller
 
         public Boolean updateAllergies (int patientId, String allergies)
         {
-           // Patient patient = patientService.ReadPatient (patientId);
+           
             return medicalRecordService.UpdateAllergies (patientId, allergies);
         }
-        public Boolean createMR(String allergies, int patientId)
+
+        public Boolean updateAnamnesis(int patientId, String anamnesis)
+        {
+
+            return medicalRecordService.UpdateAnamnesis(patientId, anamnesis);
+        }
+
+        public Boolean createMR(String allergies, int patientId, String anamnesis)
         {
             Patient patient = patientService.ReadPatient(patientId);
-            return medicalRecordService.CreateMR(allergies, patient);
+            return medicalRecordService.CreateMR(allergies, patient, anamnesis);
         }
     }
 }

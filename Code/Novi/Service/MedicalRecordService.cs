@@ -18,7 +18,14 @@ namespace Service
 			return medicalRecordRepository.UpdateByPatient(medicalRecord);
 		}
 
-		public Boolean CreateMR (String allergies, Patient patient)
+		public Boolean UpdateAnamnesis(int patientid, String anamnesis)
+		{
+			MedicalRecord medicalRecord = medicalRecordRepository.FindByPatient(patientid);
+			medicalRecord.Anamnesis = anamnesis;
+			return medicalRecordRepository.UpdateByPatient(medicalRecord);
+		}
+
+		public Boolean CreateMR (String allergies, Patient patient, String anamnesis)
         {
 			int newID;
 			if (File.Exists(idFile))
@@ -28,7 +35,7 @@ namespace Service
 			}
 			else
 				newID = 0;
-			MedicalRecord medicalRecord = new MedicalRecord(allergies, patient, newID);
+			MedicalRecord medicalRecord = new MedicalRecord(allergies, patient, newID, anamnesis);
 			return medicalRecordRepository.Save(medicalRecord);
         }
 

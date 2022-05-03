@@ -19,15 +19,7 @@ namespace Model
 
         public String Anamnesis { get; set; }
 
-		public MedicalRecord(String allergies, Patient patient, int id)
-		{
-		  	Allergies = allergies;
-		  	this.patient = patient;
-			Id = id;
-            
-		}
-
-
+		
 		public MedicalRecord(String allergies, Patient patient, int id, String anamnesis)
 		{
 			Allergies = allergies;
