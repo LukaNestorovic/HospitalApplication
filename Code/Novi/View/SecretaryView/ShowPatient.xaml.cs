@@ -79,5 +79,10 @@ namespace ProjekatSIMS.View.SecretaryView
             s.Show();
             Close();
         }
+
+        private void LogOut_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

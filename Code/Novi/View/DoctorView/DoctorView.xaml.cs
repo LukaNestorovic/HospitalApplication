@@ -59,5 +59,15 @@ namespace ProjekatSIMS.View.DoctorView
             s.Show();
             Close();
         }
+
+        private void LogOff_Click(object sender, RoutedEventArgs e)
+        {
+            
+            
+                var s = new LogInDoctor();
+                s.Show();
+                Close();
+            
+        }
     }
 }

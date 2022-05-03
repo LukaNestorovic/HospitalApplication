@@ -543,3 +543,9 @@ C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\Doc
 C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\Prescription.baml
 C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\Medicine.baml
 C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\ShowOperations.baml
+C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\CreateAppointment.g.cs
+C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\CreateOperation.g.cs
+C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\ShowAppointments.g.cs
+C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\CreateAppointment.baml
+C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\CreateOperation.baml
+C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\ShowAppointments.baml

@@ -1,1 +1,62 @@
-[{"Instructions":"1","Id":0,"doctor":{"Specialty":"1","Grade":1,"Salary":1,"Name":"1","Surname":"1","Jmbg":"1","Telephone":"1","Email":"1","BirthDate":"2022-05-18T00:00:00","Adress":"1","Id":1,"Password":"1"},"patient":null,"drug":null,"datetime":"2022-04-26T00:00:00"},{"Instructions":"1","Id":1,"doctor":{"Specialty":"1","Grade":1,"Salary":1,"Name":"1","Surname":"1","Jmbg":"1","Telephone":"1","Email":"1","BirthDate":"2022-05-18T00:00:00","Adress":"1","Id":1,"Password":"1"},"patient":{"InsuranceCarrier":"1","Guest":false,"Name":"1","Surname":"1","Jmbg":"1","Telephone":"1","Email":"@gmail.com","BirthDate":"2022-04-12T00:00:00","Adress":"1","Id":0,"Password":"123"},"drug":{"Name":"1","Ingredients":"1","Approved":true,"Id":1,"Drugnum":1},"datetime":"2022-05-03T16:15:00"}]
+[
+  {
+    "Instructions": "1",
+    "Id": 0,
+    "doctor": {
+      "Specialty": "1",
+      "Grade": 1,
+      "Salary": 1,
+      "Name": "1",
+      "Surname": "1",
+      "Jmbg": "1",
+      "Telephone": "1",
+      "Email": "1",
+      "BirthDate": "2022-05-18T00:00:00",
+      "Adress": "1",
+      "Id": 1,
+      "Password": "1"
+    },
+    "patient": null,
+    "drug": null,
+    "datetime": "2022-04-26T00:00:00"
+  },
+  {
+    "datetime": "2022-05-03T22:05:00",
+    "doctor": {
+      "Specialty": "1",
+      "Grade": 1,
+      "Salary": 1,
+      "Name": "1",
+      "Surname": "1",
+      "Jmbg": "1",
+      "Telephone": "1",
+      "Email": "1",
+      "BirthDate": "2022-05-18T00:00:00",
+      "Adress": "1",
+      "Id": 1,
+      "Password": "1"
+    },
+    "drug": {
+      "Name": "1",
+      "Ingredients": "1",
+      "Approved": true,
+      "Id": 1,
+      "Drugnum": 1
+    },
+    "Id": 1,
+    "Instructions": "1",
+    "patient": {
+      "InsuranceCarrier": "1",
+      "Guest": false,
+      "Name": "1",
+      "Surname": "1",
+      "Jmbg": "1",
+      "Telephone": "1",
+      "Email": "@gmail.com",
+      "BirthDate": "2022-04-12T00:00:00",
+      "Adress": "1",
+      "Id": 0,
+      "Password": "123"
+    }
+  }
+]
