@@ -443,3 +443,5 @@ C:\Users\salip\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\Pat
 C:\Users\salip\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\PatientView\ScheduleAppointment.baml
 C:\Users\salip\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\CreateMR.g.cs
 C:\Users\salip\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\CreateMR.baml
+C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\CreateMR.g.cs
+C:\Users\sncarcoding\Desktop\SIMS\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\SecretaryView\CreateMR.baml
