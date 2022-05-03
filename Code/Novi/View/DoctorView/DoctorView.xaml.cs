@@ -34,7 +34,7 @@ namespace ProjekatSIMS.View.DoctorView
 
         private void ShowSurgery_Click(object sender, RoutedEventArgs e)
         {
-            var s = new ShowSurgery();
+            var s = new ShowSurgery(id);
             s.Show();
             Close();
         }

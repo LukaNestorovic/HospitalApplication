@@ -25,16 +25,18 @@ namespace ProjekatSIMS.View.DoctorView
     {
         public ObservableCollection<Operation> operations;
         public OperationController operationController = new OperationController();
-        public Delete(ObservableCollection<Operation> operation)
+        private int id;
+        public Delete(ObservableCollection<Operation> operation, int id)
         {
             InitializeComponent();
             this.operations = operation;
+            this.id = id;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             operationController.DeleteOperation(Int32.Parse(Id.Text));
-            var s = new ShowSurgery();
+            var s = new ShowSurgery(id);
             s.Show();
             Close();
         }
