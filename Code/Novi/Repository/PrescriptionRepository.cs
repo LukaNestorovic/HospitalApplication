@@ -36,9 +36,9 @@ namespace Repository
             {
                 DateTime now = DateTime.Now;
                 TimeSpan value = i.datetime.Subtract(now);
-                if(value.TotalMinutes < 15)
+                if(value.TotalMinutes < 15 && value.TotalMinutes > 0)
                 {
-                    MessageBox.Show("Za 15 minuta treba da popijete lek", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Za 15 minuta treba da popijete lek " + i.drug.Name, "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             return ret;
