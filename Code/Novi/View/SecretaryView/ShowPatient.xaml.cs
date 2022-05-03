@@ -63,12 +63,16 @@ namespace ProjekatSIMS.View.SecretaryView
 
         private void Operations_Click(object sender, RoutedEventArgs e)
         {
-
+            var s = new ShowOperations();
+            s.Show();
+            Close();
         }
 
         private void Appointments_Click(object sender, RoutedEventArgs e)
         {
-
+            var s = new ShowAppointments();
+            s.Show();
+            Close ();
         }
 
         private void EditAllergens_Click(object sender, RoutedEventArgs e)
