@@ -1,15 +1,1 @@
-[
-  {
-    "Adress": "1",
-    "BirthDate": "2022-04-12T00:00:00",
-    "Email": "@gmail.com",
-    "Guest": false,
-    "Id": 0,
-    "InsuranceCarrier": "1",
-    "Jmbg": "1",
-    "Name": "1",
-    "Password": "123",
-    "Surname": "1",
-    "Telephone": "1"
-  }
-]
+[{"InsuranceCarrier":"1","Guest":false,"Name":"1","Surname":"1","Jmbg":"1","Telephone":"1","Email":"@gmail.com","BirthDate":"2022-04-12T00:00:00","Adress":"1","Id":0,"Password":"123"},{"InsuranceCarrier":"fjhjghjhfm","Guest":false,"Name":"sda","Surname":"df","Jmbg":"34245","Telephone":"3454675","Email":"fds@gmail.com","BirthDate":"2021-02-03T00:00:00","Adress":"frgrg","Id":1,"Password":"1234"}]
