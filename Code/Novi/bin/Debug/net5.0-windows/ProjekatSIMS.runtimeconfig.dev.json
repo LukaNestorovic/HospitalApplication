@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\sncarcoding\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\sncarcoding\\.nuget\\packages"
+      "C:\\Users\\lukaa\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\lukaa\\.nuget\\packages"
     ]
   }
 }
