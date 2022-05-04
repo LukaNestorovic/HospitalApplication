@@ -32,7 +32,13 @@ namespace ProjekatSIMS.View.SecretaryView
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             secretary = secretaryController.ReadSecretaryByEmail(TBEmail.Text);
-            if (secretary.Password == TBPass.Text && secretary != null)
+            if (secretary == null)
+            {
+                var s = new LogInSecretary();
+                s.Show();
+                Close();
+            }
+            else if (secretary.Password == TBPass.Text && secretary != null)
             {
                 int id = secretary.Id;
                 var s = new ShowPatient();
