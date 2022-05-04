@@ -1,0 +1,28 @@
+﻿<Window x:Class="ProjekatSIMS.View.DoctorView.Drug"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatSIMS.View.DoctorView"
+        mc:Ignorable="d"
+        Title="Drug" Height="450" Width="800">
+    <Grid>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="108,108,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ingredients" HorizontalAlignment="Left" Margin="108,139,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.524,0.283"/>
+        <Label Content="Approved" HorizontalAlignment="Left" Margin="108,203,0,0" VerticalAlignment="Top"/>
+        <Label Content="DrugNum" HorizontalAlignment="Left" Margin="108,174,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TBName" HorizontalAlignment="Left" Margin="239,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161"/>
+        <TextBox x:Name="TBIngridients" HorizontalAlignment="Left" Margin="239,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161"/>
+        <TextBox x:Name="TBDrugnum" HorizontalAlignment="Left" Margin="239,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161"/>
+        <Button Content="Submit" HorizontalAlignment="Left" Margin="300,267,0,0" VerticalAlignment="Top" Height="28" Width="100" Click="Button_Click" RenderTransformOrigin="0.491,0.573" FontSize="14" FontStyle="Normal">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+        <CheckBox x:Name="CB" HorizontalAlignment="Left" Margin="239,208,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Back" Click="Back_Click" Content="Back" Background="White" HorizontalAlignment="Left" Height="30" Margin="25,31,0,0" VerticalAlignment="Top" Width="64"/>
+    </Grid>
+</Window>

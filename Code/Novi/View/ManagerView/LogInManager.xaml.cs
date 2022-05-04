@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Controller;
+using Model;
 
 namespace ProjekatSIMS.View.ManagerView
 {
@@ -19,6 +21,8 @@ namespace ProjekatSIMS.View.ManagerView
     /// </summary>
     public partial class LogInManager : Window
     {
+        public DeanController deanController = new DeanController();
+        public Dean dean = new Dean();
         public LogInManager()
         {
             InitializeComponent();
@@ -26,9 +30,14 @@ namespace ProjekatSIMS.View.ManagerView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var s = new ManagerView();
-            s.Show();
-            Close();
+            dean = deanController.ReadDeanByEmail(TBEmail.Text);
+            if (dean.Password == TBPass.Text && dean != null)
+            {
+                int id = dean.Id;
+                var s = new ManagerView();
+                s.Show();
+                Close();
+            }
         }
     }
 }

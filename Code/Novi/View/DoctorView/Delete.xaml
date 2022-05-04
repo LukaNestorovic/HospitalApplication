@@ -9,7 +9,14 @@
     <Grid>
         <TextBox x:Name="Id" HorizontalAlignment="Left" VerticalAlignment="Top" Width="167" Margin="328,151,0,0" Height="23"  />
         <Label Content="Id" HorizontalAlignment="Left" Margin="260,151,0,0" VerticalAlignment="Top"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="347,267,0,0" VerticalAlignment="Top" Width="96" Height="37" Click="Button_Click"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="364,229,0,0" VerticalAlignment="Top" Width="96" Height="35" Click="Button_Click">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
 
     </Grid>
 </Window>

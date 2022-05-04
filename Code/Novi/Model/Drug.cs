@@ -15,12 +15,15 @@ namespace Model
 		public Boolean Approved { get; set; }
 		public int Id { get; set; }
 
-		public Drug(string name, string ingredients, bool approved, int id)
+		public int Drugnum { get; set; }
+
+		public Drug(string name, string ingredients, bool approved, int id, int drugnum)
 		{
 		  	Name = name;
 		  	Ingredients = ingredients;
 		  	Approved = approved;
 		  	Id = id;
+			Drugnum = drugnum;
 		}
 
 		public Drug()

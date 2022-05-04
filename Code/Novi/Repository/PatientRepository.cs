@@ -13,8 +13,8 @@ namespace Repository
 {
 	public class PatientRepository
 	{
-	
-		public List<Patient> FindAll()
+
+        public List<Patient> FindAll()
 		{
 			return serializer.fromJSON(FileName);
 		}
@@ -67,7 +67,7 @@ namespace Repository
 			serializer.toJSON(FileName, all);
 			return true;
 		}
-		
+
 		public Boolean UpdateByID(Patient patient)
 		{
 			List<Patient> all = serializer.fromJSON(FileName);
