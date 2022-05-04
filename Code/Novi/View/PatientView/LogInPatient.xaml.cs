@@ -31,12 +31,20 @@ namespace ProjekatSIMS.View.PatientView
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             patient = patientController.ReadPatientByEmail(TBEmail.Text);
+            if(patient == null)
+            {
+                MessageBox.Show("Pogresan mail ili sifra", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
             if(patient.Password == TBPass.Text && patient != null)
             {
                 int id = patient.Id;
                 var s = new PatientHome(id);
                 s.Show();
                 Close();
+            }
+            else
+            {
+                MessageBox.Show("Pogresan mail ili sifra", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
             }
            
         }
