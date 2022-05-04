@@ -26,16 +26,17 @@ namespace ProjekatSIMS.View.PatientView
     {
         public AppointmentController appointmentController = new AppointmentController();
         public ObservableCollection<Appointment> appointments;
-        public MakeAnAppointment(ObservableCollection<Appointment> appointments)
+        private int id;
+        public MakeAnAppointment(ObservableCollection<Appointment> appointments, int id)
         {
             InitializeComponent();
             this.appointments = appointments;
-
+            this.id = id;
         }
       
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            var s = new PatientView();
+            var s = new PatientView(id);
             s.Show();
             Close();
 
@@ -45,7 +46,7 @@ namespace ProjekatSIMS.View.PatientView
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
             appointmentController.CreateApp(DatePicker.SelectedDate.GetValueOrDefault(), TBDescription.Text, Int32.Parse(TBDuration.Text), (Boolean)CBEmergency.IsChecked, Int32.Parse(TBPatient.Text), Int32.Parse(TBDoctor.Text), Int32.Parse(TBRoom.Text));
-            var s = new PatientView();
+            var s = new PatientView(id);
             s.Show();
             Close();
         }

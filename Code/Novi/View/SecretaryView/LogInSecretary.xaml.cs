@@ -11,6 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Controller;
+using Model;
+
 
 namespace ProjekatSIMS.View.SecretaryView
 {
@@ -19,6 +22,8 @@ namespace ProjekatSIMS.View.SecretaryView
     /// </summary>
     public partial class LogInSecretary : Window
     {
+        public SecretaryController secretaryController = new SecretaryController();
+        public Secretary secretary = new Secretary();
         public LogInSecretary()
         {
             InitializeComponent();
@@ -26,9 +31,20 @@ namespace ProjekatSIMS.View.SecretaryView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var s = new ShowPatient();
-            s.Show();
-            Close();
+            secretary = secretaryController.ReadSecretaryByEmail(TBEmail.Text);
+            if (secretary == null)
+            {
+                var s = new LogInSecretary();
+                s.Show();
+                Close();
+            }
+            else if (secretary.Password == TBPass.Text && secretary != null)
+            {
+                int id = secretary.Id;
+                var s = new ShowPatient();
+                s.Show();
+                Close();
+            }
         }
     }
 }

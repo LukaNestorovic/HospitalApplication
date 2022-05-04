@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Controller;
+using Model;
 
 namespace ProjekatSIMS.View.DoctorView
 {
@@ -19,6 +22,8 @@ namespace ProjekatSIMS.View.DoctorView
     /// </summary>
     public partial class LogInDoctor : Window
     {
+        public DoctorController doctorController = new DoctorController();
+        public Doctor doctor = new Doctor();
         public LogInDoctor()
         {
             InitializeComponent();
@@ -26,9 +31,21 @@ namespace ProjekatSIMS.View.DoctorView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var s = new DoctorView();
-            s.Show();
-            Close();
+            
+            doctor = doctorController.ReadDoctorByEmail(TBEmail.Text);
+            if (doctor == null)
+            {
+                var s = new LogInDoctor();
+                s.Show();
+                Close();
+            }
+            else if(doctor.Password == TBPass.Text && doctor != null)
+            {
+                int id = doctor.Id;
+                var s = new DoctorView(id);
+                s.Show();
+                Close();
+            }
         }
     }
 }

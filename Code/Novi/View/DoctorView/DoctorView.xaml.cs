@@ -19,10 +19,14 @@ namespace ProjekatSIMS.View.DoctorView
     /// </summary>
     public partial class DoctorView : Window
     {
-        public DoctorView()
+        private int id;
+
+        public DoctorView(int id)
         {
             InitializeComponent();
+            this.id = id;
         }
+
 
         private void SurgeryList_PreviewKeyDown(object sender, KeyEventArgs e)
         {
@@ -31,7 +35,7 @@ namespace ProjekatSIMS.View.DoctorView
 
         private void ShowSurgery_Click(object sender, RoutedEventArgs e)
         {
-            var s = new ShowSurgery();
+            var s = new ShowSurgery(id);
             s.Show();
             Close();
         }
@@ -39,6 +43,37 @@ namespace ProjekatSIMS.View.DoctorView
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             var s = new MainWindow();
+            s.Show();
+            Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new PatientList(id);
+            s.Show();
+            Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var s = new Drug();
+            s.Show();
+            Close();
+        }
+
+        private void LogOff_Click(object sender, RoutedEventArgs e)
+        {
+            
+            
+                var s = new LogInDoctor();
+                s.Show();
+                Close();
+            
+        }
+
+        private void ShowAnamnesis_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new ShowAnamnezis();
             s.Show();
             Close();
         }

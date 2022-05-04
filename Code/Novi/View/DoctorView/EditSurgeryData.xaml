@@ -12,8 +12,22 @@
         <Label Content="Room" HorizontalAlignment="Left" Height="25" Margin="212,250,0,0" VerticalAlignment="Top" Width="122"/>
         <Label Content="Surgery Type" HorizontalAlignment="Left" Height="25" Margin="212,298,0,0" VerticalAlignment="Top" Width="122"/>
 
-        <Button Name="Potvrdi" Click="Potvrdi_Click" Content="Potvrdi" HorizontalAlignment="Left" Height="40" Margin="387,356,0,0" VerticalAlignment="Top" Width="140"/>
-        <Button Name="Odustani" Click="Odustani_Click" Content="Odustani" HorizontalAlignment="Left" Height="40" Margin="213,356,0,0" VerticalAlignment="Top" Width="140"/>
+        <Button Name="Potvrdi" Click="Potvrdi_Click" Content="Potvrdi" HorizontalAlignment="Left" Height="40" Margin="387,351,0,0" VerticalAlignment="Top" Width="140">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+        <Button Name="Odustani" Click="Odustani_Click" Content="Odustani" HorizontalAlignment="Left" Height="40" Margin="213,351,0,0" VerticalAlignment="Top" Width="140">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
         <TextBox x:Name="Room" HorizontalAlignment="Left" VerticalAlignment="Top" Width="167" Margin="360,252,0,0" Height="23" TextChanged="Room_TextChanged" />
         <TextBox x:Name="Type" HorizontalAlignment="Left" Margin="360,298,0,0" VerticalAlignment="Top" Width="167" Height="25" TextChanged="Type_TextChanged"/>
         <TextBox x:Name="Id" HorizontalAlignment="Left" Margin="360,16,0,0" VerticalAlignment="Top" Width="167" Height="24" TextChanged="Doctor_TextChanged"/>
