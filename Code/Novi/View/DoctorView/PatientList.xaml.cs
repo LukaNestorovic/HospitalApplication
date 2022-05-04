@@ -11,6 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
+using Controller;
+using Model;
 
 namespace ProjekatSIMS.View.DoctorView
 {
@@ -19,10 +22,14 @@ namespace ProjekatSIMS.View.DoctorView
     /// </summary>
     public partial class PatientList : Window
     {
-
+        public ObservableCollection<Patient> patients;
+        public PatientController patientController = new PatientController();
+        
         public PatientList()
         {
             InitializeComponent();
+            patients = new ObservableCollection<Patient>(patientController.ReadAll());
+            dgDataBinding.ItemsSource = patients;
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -30,6 +37,11 @@ namespace ProjekatSIMS.View.DoctorView
             var s = new MainWindow();
             s.Show();
             Close();
+        }
+
+        private void dgDataBinding_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

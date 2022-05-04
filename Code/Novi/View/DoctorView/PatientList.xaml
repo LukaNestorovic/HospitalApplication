@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="PatientList" Height="450" Width="800">
     <Grid>
-        <DataGrid HorizontalAlignment="Center" Name="dgDataBinding" AutoGenerateColumns="False" Margin="0,86,0,28" HorizontalContentAlignment="Right" VerticalContentAlignment="Stretch" FontWeight="Bold" IsReadOnly="True" Width="553">
+        <DataGrid HorizontalAlignment="Center" Name="dgDataBinding" AutoGenerateColumns="False" Margin="0,86,0,28" HorizontalContentAlignment="Right" VerticalContentAlignment="Stretch" FontWeight="Bold" IsReadOnly="True" Width="553" SelectionChanged="dgDataBinding_SelectionChanged">
             <DataGrid.Resources>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
                     <Setter Property="HorizontalAlignment" Value="Stretch"/>
