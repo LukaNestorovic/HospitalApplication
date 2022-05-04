@@ -31,8 +31,15 @@ namespace ProjekatSIMS.View.DoctorView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
             doctor = doctorController.ReadDoctorByEmail(TBEmail.Text);
-            if (doctor.Password == TBPass.Text && doctor != null)
+            if (doctor == null)
+            {
+                var s = new LogInDoctor();
+                s.Show();
+                Close();
+            }
+            else if(doctor.Password == TBPass.Text && doctor != null)
             {
                 int id = doctor.Id;
                 var s = new DoctorView(id);

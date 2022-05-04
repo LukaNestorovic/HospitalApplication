@@ -49,7 +49,7 @@ namespace ProjekatSIMS.View.DoctorView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var s = new PatientList();
+            var s = new PatientList(id);
             s.Show();
             Close();
         }

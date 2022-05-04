@@ -24,17 +24,19 @@ namespace ProjekatSIMS.View.DoctorView
     {
         public ObservableCollection<Patient> patients;
         public PatientController patientController = new PatientController();
-        
-        public PatientList()
+
+        private int id;
+        public PatientList(int id)
         {
             InitializeComponent();
             patients = new ObservableCollection<Patient>(patientController.ReadAll());
             dgDataBinding.ItemsSource = patients;
+            this.id = id;
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            var s = new MainWindow();
+            var s = new DoctorView(id);
             s.Show();
             Close();
         }
