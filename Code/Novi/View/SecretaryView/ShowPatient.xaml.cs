@@ -25,6 +25,7 @@ namespace ProjekatSIMS.View.SecretaryView
        
         public PatientController patientController = new PatientController();
         public ObservableCollection<Patient> patients;
+        public ObservableCollection<MedicalRecord> medicicalRecords;
 
         public ShowPatient()
         {
@@ -37,17 +38,20 @@ namespace ProjekatSIMS.View.SecretaryView
         {
             var s = new CreatePatient(patients);
             s.Show();
+            Close();
         }
 
         private void ShowAccount_Click(object sender, RoutedEventArgs e)
         {
             var s = new ShowPatient();
             s.Show();
+            Close();
         }
         private void EditAccount_Click(object sender, RoutedEventArgs e)
         {
             var s = new EditPatient(patients);
             s.Show();
+            Close();
         }
 
         private void DeleteAccount_Click(object sender, RoutedEventArgs e)
@@ -55,6 +59,39 @@ namespace ProjekatSIMS.View.SecretaryView
             var s = new Delete();
             s.Show();
             
+        }
+
+        private void Operations_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new ShowOperations();
+            s.Show();
+            Close();
+        }
+
+        private void Appointments_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new ShowAppointments();
+            s.Show();
+            Close();
+        }
+
+        private void EditAllergens_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new Allergenes();
+            s.Show();
+            Close();
+        }
+
+        private void LogOut_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new LogInSecretary();
+            s.Show();
+            Close();
+        }
+
+        private void dgDataBinding_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

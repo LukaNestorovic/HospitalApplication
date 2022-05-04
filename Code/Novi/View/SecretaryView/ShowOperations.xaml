@@ -1,0 +1,49 @@
+﻿<Window x:Class="ProjekatSIMS.View.SecretaryView.ShowOperations"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatSIMS.View.SecretaryView"
+        mc:Ignorable="d"
+        Title="ShowOperations" Height="450" Width="800">
+    <Grid>
+        <DataGrid HorizontalAlignment="Center" Name="OperationsGrid" AutoGenerateColumns="False" Margin="0,86,0,28" HorizontalContentAlignment="Right" VerticalContentAlignment="Stretch" FontWeight="Bold" Width="553">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn IsReadOnly="True" x:Name="TBId" Header="Id" Width="25" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Type" x:Name="TBType" Width="*" Binding="{Binding Type}"/>
+                <DataGridTextColumn Header="Duration" x:Name="TBDuration" Width="75" Binding="{Binding Duration}"/>
+                <DataGridTextColumn Header="Date of operation" x:Name="TBDate" Width="120" Binding="{Binding DateTime, StringFormat={}{0:dd.MM.yyyy.}}"/>
+                <DataGridTextColumn  x:Name="TBDocId" Header="Doctor" Width="*" Binding="{Binding doctor.Id}"/>
+                <DataGridTextColumn IsReadOnly="True" x:Name="TBPatientId" Header="Patient" Width="*" Binding="{Binding patient.Id}"/>
+                <DataGridTextColumn IsReadOnly="True" Header="Room" x:Name="TBRoomId" Width="*" Binding="{Binding room.Id}"/>
+                <DataGridTemplateColumn Width="*" Header="Update">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="Update_Click">Update</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Width="*" Header="Delete">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="Delete_Click">Delete</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="CreateOperation" Content="Create operation" HorizontalAlignment="Left" Margin="41,24,0,0" VerticalAlignment="Top" Height="39" Width="105" Click="CreateOperation_Click"/>
+        <Button x:Name="Close" Content="Close" HorizontalAlignment="Left" Margin="688,24,0,0" VerticalAlignment="Top" Height="39" Width="74" Click="Close_Click"/>
+
+    </Grid>
+</Window>

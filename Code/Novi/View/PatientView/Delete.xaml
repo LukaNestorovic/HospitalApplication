@@ -9,7 +9,8 @@
     <Grid>
         <TextBox x:Name="Id" HorizontalAlignment="Left" VerticalAlignment="Top" Width="167" Margin="328,151,0,0" Height="23"  />
         <Label Content="Id" HorizontalAlignment="Left" Margin="260,151,0,0" VerticalAlignment="Top"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="347,267,0,0" VerticalAlignment="Top" Width="96" Height="37" Click="Button_Click"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="399,268,0,0" VerticalAlignment="Top" Width="96" Height="37" Click="Button_Click"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="260,268,0,0" VerticalAlignment="Top" Width="96" Height="37" Click="Cancel_Click"/>
 
     </Grid>
 </Window>

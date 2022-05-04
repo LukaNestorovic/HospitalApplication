@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ProjekatSIMS.View.DoctorView"
         mc:Ignorable="d"
         Title="ShowSurgery" Height="450" Width="800">
-    
+
     <Grid Background="LightGray" RenderTransformOrigin="0.508,0.682" >
         <DataGrid x:Name="dgSurgery" GridLinesVisibility="None" Margin="40,128,56,112" HorizontalContentAlignment="Right" VerticalContentAlignment="Stretch" FontStyle="Normal" FontWeight="Bold" Opacity="0.99" IsSynchronizedWithCurrentItem="False" RenderTransformOrigin="0.487,0.503" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding dataSale}">
             <DataGrid.Resources>
@@ -24,15 +24,33 @@
                 <DataGridTextColumn Header="Patient" Binding="{Binding Patient}" Width="*"/>
                 <DataGridTextColumn Header="Duration" Binding="{Binding Duration}" Width="*"/>
                 <DataGridTextColumn Header="Room" Binding="{Binding Room}" Width="*"/>
-                
+
             </DataGrid.Columns>
         </DataGrid>
 
         <Button x:Name ="ScheduleSurgery"  Click="ScheduleSurgery_Click"  Content="Schedule new Surgery" Background="White" HorizontalAlignment="Left" Height="26" Margin="40,373,0,0" VerticalAlignment="Top" Width="138">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
         </Button>
-        <Button x:Name ="EditSugery"  Click="EditSugery_Click" Content="Edit Surgery" Background="White" HorizontalAlignment="Center" Height="26" Margin="0,373,0,0" VerticalAlignment="Top" Width="98">
+        <Button x:Name ="EditSugery"  Click="EditSugery_Click" Content="Edit Surgery" Background="White" HorizontalAlignment="Center" Height="26" Margin="0,373,0,0" VerticalAlignment="Top" Width="120">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
         </Button>
-        <Button x:Name ="CancelSurgery" Click="CancelSurgery_Click"  Content="Cancel Surgery" Background="White" HorizontalAlignment="Left" Height="26" Margin="646,373,0,0" VerticalAlignment="Top" Width="98">
+        <Button x:Name ="CancelSurgery" Click="CancelSurgery_Click"  Content="Cancel Surgery" Background="White" HorizontalAlignment="Left" Height="26" Margin="607,373,0,0" VerticalAlignment="Top" Width="137">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
         </Button>
 
 
@@ -41,7 +59,7 @@
         <Label Content="Surgeries" HorizontalAlignment="Center" Height="56" Margin="0,33,0,0" VerticalAlignment="Top" Width="120" FontSize="26"/>
         <Label HorizontalAlignment="Left" BorderBrush="{x:Null}" Height="36" Margin="1013,150,0,0" VerticalAlignment="Top" Width="41">
         </Label>
-        <Button x:Name="Back" Click="Back_Click" Content="Back" Background="White" HorizontalAlignment="Left" Height="30" Margin="25,31,0,0" VerticalAlignment="Top" Width="64"/>
+        <Button x:Name="Back" Click="Back_Click" Content="Back" Background="White" HorizontalAlignment="Left" Height="30" Margin="40,31,0,0" VerticalAlignment="Top" Width="64"/>
 
     </Grid>
 </Window>

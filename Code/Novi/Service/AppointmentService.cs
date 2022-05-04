@@ -38,9 +38,9 @@ namespace Service
 			appointment.Descripton = descripton;
 			appointment.Duration = duration;
 			appointment.Emergency = emergency;
-			appointment.patient = patient;
-			appointment.doctor = doctor;
-			appointment.room = room;
+			appointment.Patient = patient;
+			appointment.Doctor = doctor;
+			appointment.Room = room;
 			return appointmentRepository.UpdateByID(appointment);
 		}
 		
@@ -54,12 +54,50 @@ namespace Service
 			return appointmentRepository.FindByID(id);
 		}
 
+		public List<Patient> ReadAllPatientsByDoctor()
+        {
+			return appointmentRepository.FindAllPatientsByDoctor();
+        }
+
+		public Appointment ReadWithPriority(DateTime date)
+        {
+			return appointmentRepository.FindWithPriority(date);
+        }
+
+		public Appointment ReadWithPriorityDoctor(int id, DateTime date)
+        {
+			return appointmentRepository.FindWithPriorityDoctor(id, date);
+        }
+
 		public List<Appointment> ReadAll()
 		{
 			return appointmentRepository.FindAll();
 		}
 
+
+		public List<Appointment> ReadByDoctor (Doctor doctor)
+        {
+			return appointmentRepository.FindByDoctor(doctor);
+        }
+
+
+		public List<Appointment> ReadAllByPatientId(int id)
+        {
+			return appointmentRepository.FindAllByPatientId(id);
+        }
+
+		public List<Appointment> ReadAllByDoctorId(int id)
+		{
+			return appointmentRepository.FindAllByDoctorId(id);
+		}
+
+		public List<Appointment> ReadAllWithoutPatient()
+		{
+			return appointmentRepository.FindAllWithoutPatient();
+		}
+
+
 		public String idFile = @"..\..\..\Data\appointmentID.txt";
-		public Repository.AppointmentRepository appointmentRepository = new Repository.AppointmentRepository();
+		public AppointmentRepository appointmentRepository = new AppointmentRepository();
 	}
 }

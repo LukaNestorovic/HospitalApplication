@@ -14,7 +14,7 @@ namespace Service
 {
 	public class DoctorService
 	{
-		public Boolean CreateDoctor(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String speciality, float grade, int salary)
+		public Boolean CreateDoctor(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String speciality, float grade, int salary, String password)
 		{
 			int newID;
 			if(File.Exists(idFile)){
@@ -23,11 +23,13 @@ namespace Service
 			}else
 				newID = 0;
 			
-			Doctor doctor = new Doctor(name, surname, jmbg, telephone, email, birthDate, adress, speciality, grade, salary, newID);
+
+			Doctor doctor = new Doctor(name, surname, jmbg, telephone, email, birthDate, adress, speciality, grade, salary, newID, password);
+
 			return doctorRepository.Save(doctor);
 		}
 		
-		public Boolean UpdateDoctor(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String speciality, float grade, int salary, int id)
+		public Boolean UpdateDoctor(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String speciality, float grade, int salary, int id, String password)
 		{
 			Doctor doctor = doctorRepository.FindByID(id);
 			doctor.Name = name;
@@ -40,6 +42,7 @@ namespace Service
 			doctor.Specialty = speciality;
 			doctor.Grade = grade;
 			doctor.Salary = salary;
+			doctor.Password = password;
 			return doctorRepository.UpdateByID(doctor);
 		}
 		
@@ -47,7 +50,12 @@ namespace Service
 		{
 			return doctorRepository.DeleteByID(id);
 		}
-		
+
+		public Doctor ReadDoctorByEmail(String email)
+		{
+			return doctorRepository.FindByEmail(email);
+		}
+
 		public Doctor ReadDoctor(int id)
 		{
 			return doctorRepository.FindByID(id);

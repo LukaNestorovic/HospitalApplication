@@ -26,16 +26,18 @@ namespace ProjekatSIMS.View.DoctorView
     {
         public OperationController operationController = new OperationController();
         public ObservableCollection<Operation> operations;
-        public EditSurgeryData(ObservableCollection<Operation> operation)
+        private int id;
+        public EditSurgeryData(ObservableCollection<Operation> operation, int id)
         {
             InitializeComponent();
             this.operations = operation;
+            this.id = id;
         }
 
         private void Odustani_Click(object sender, RoutedEventArgs e)
         {
             
-            var s = new ShowSurgery();
+            var s = new ShowSurgery(id);
             s.Show();
             Close();
         }
@@ -43,7 +45,7 @@ namespace ProjekatSIMS.View.DoctorView
         private void Potvrdi_Click(object sender, RoutedEventArgs e)
         {
             operationController.UpdateOperation(DPTime.SelectedDate.GetValueOrDefault(), Int32.Parse(Duration.Text), Type.Text, Int32.Parse(Patient.Text), Int32.Parse(Doctor.Text), Int32.Parse(Room.Text), Int32.Parse(Id.Text));
-            var s = new ShowSurgery();
+            var s = new ShowSurgery(id);
             s.Show();
             Close();
         }

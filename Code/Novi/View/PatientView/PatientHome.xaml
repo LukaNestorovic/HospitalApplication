@@ -1,0 +1,15 @@
+﻿<Window x:Class="ProjekatSIMS.View.PatientView.PatientHome"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatSIMS.View.PatientView"
+        mc:Ignorable="d"
+        Title="PatientHome" Height="450" Width="800">
+    <Grid>
+        <Button Content="Appointments" HorizontalAlignment="Center" Margin="0,142,0,0" VerticalAlignment="Top" Height="48" Width="110" Click="Appointments_Click"/>
+        <Button Content="Medicine" HorizontalAlignment="Center" Margin="0,240,0,0" VerticalAlignment="Top" Height="48" Width="110" Click="Medicine_Click"/>
+        <Button Content="LogOff" HorizontalAlignment="Left" Margin="694,10,0,0" VerticalAlignment="Top" Height="36" Width="85" Click="LogOff_Click"/>
+
+    </Grid>
+</Window>

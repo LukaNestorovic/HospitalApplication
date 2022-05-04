@@ -1,0 +1,38 @@
+﻿<Window x:Class="ProjekatSIMS.View.PatientView.Doctor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatSIMS.View.PatientView"
+        mc:Ignorable="d"
+        Title="Doctor" Height="450" Width="800">
+    <Grid>
+        <Label HorizontalAlignment="Left" Margin="59,10,0,0" Content="Registration:" VerticalAlignment="Top" Height="26"/>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="59,45,0,0" x:Name="textBlockName" Text="Name:" VerticalAlignment="Top" Width="110" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="59,75,0,0" x:Name="textBlockSurname" Text="Surname:" VerticalAlignment="Top" Width="110" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="59,105,0,0" x:Name="textBlockJmbg" Text="Jmbg:" VerticalAlignment="Top" Width="110" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="59,135,0,0" x:Name="textBlockDaateOfBirth" Text="Email:" VerticalAlignment="Top" Width="110" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="59,165,0,0" x:Name="textBlockMestoRodjenja" Text="Date of birth:" VerticalAlignment="Top" Width="110" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="59,195,0,0" x:Name="textBlockAdresa" Text="Address:" VerticalAlignment="Top" Width="110" />
+
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="175,45,0,0" x:Name="TBName" VerticalAlignment="Top" Width="222" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
+
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="175,75,0,0" x:Name="TBSurname" VerticalAlignment="Top" Width="222" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="175,105,0,0" x:Name="TBJmbg" VerticalAlignment="Top" Width="222" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="175,135,0,0" x:Name="TBEmail" VerticalAlignment="Top" Width="222" />
+        <DatePicker Height="23" HorizontalAlignment="Left" Margin="175,165,0,0" x:Name="DPBirthDate" VerticalAlignment="Top" Width="222" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="175,195,0,0" x:Name="TBAdress" VerticalAlignment="Top" Width="160" />
+
+        <Button Content="Submit" Height="23" HorizontalAlignment="Left" Margin="175,403,0,0" x:Name="Submit" VerticalAlignment="Top" Width="70" Click="Submit_Click" />
+        <Button Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="327,403,0,0" x:Name="Cancel" VerticalAlignment="Top" Width="70" Click="Cancel_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="175,223,0,0" x:Name="TBTelephone" VerticalAlignment="Top" Width="222" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="59,223,0,0" x:Name="textBlockAdresa_Copy" Text="Telephone:" VerticalAlignment="Top" Width="110" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="59,251,0,0" x:Name="textBlockAdresa_Copy1" Text="Insurance carrier:" VerticalAlignment="Top" Width="110" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="175,251,0,0" x:Name="TBSpecialty" VerticalAlignment="Top" Width="222" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="60,279,0,0" x:Name="textBlockAdresa_Copy2" Text="Password:" VerticalAlignment="Top" Width="110" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="175,279,0,0" x:Name="TBPassword" VerticalAlignment="Top" Width="222" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="175,307,0,0" x:Name="TBSalary" VerticalAlignment="Top" Width="222" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="175,335,0,0" x:Name="TBGrade" VerticalAlignment="Top" Width="222" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
+
+    </Grid>
+</Window>

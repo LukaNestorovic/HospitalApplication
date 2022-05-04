@@ -33,6 +33,21 @@ namespace Repository
 			return a;
 		}
 
+		public Doctor FindByEmail(String email)
+		{
+			List<Doctor> all = serializer.fromJSON(FileName);
+			Doctor a = null;
+			foreach (Doctor i in all)
+			{
+				if (i.Email == email)
+				{
+					a = i;
+					break;
+				}
+			}
+			return a;
+		}
+
 		public Boolean Save(Doctor doctor)
 		{
 			List<Doctor> all = serializer.fromJSON(FileName);
@@ -71,7 +86,7 @@ namespace Repository
 			return false;
 		}
 
-		private static String FileName = "Doctors.json";
+		private static String FileName = @"..\..\..\data\Doctors.json";
 
 		private static Serializer<Doctor> serializer = new Serializer<Doctor>();
 
