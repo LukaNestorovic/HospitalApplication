@@ -133,7 +133,7 @@ namespace ProjekatSIMS.View.SecretaryView {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ProjekatSIMS;V1.0.0.0;component/view/secretaryview/showappointments.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ProjekatSIMS;component/view/secretaryview/showappointments.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\View\SecretaryView\ShowAppointments.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
