@@ -11,5 +11,18 @@
     "Password": "123",
     "Surname": "1",
     "Telephone": "1"
+  },
+  {
+    "InsuranceCarrier": "fjhjghjhfm",
+    "Guest": false,
+    "Name": "sda",
+    "Surname": "df",
+    "Jmbg": "34245",
+    "Telephone": "3454675",
+    "Email": "fds@gmail.com",
+    "BirthDate": "2021-02-03T00:00:00",
+    "Adress": "frgrg",
+    "Id": 1,
+    "Password": "1234"
   }
 ]

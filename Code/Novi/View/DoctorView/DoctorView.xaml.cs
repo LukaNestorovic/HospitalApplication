@@ -27,6 +27,7 @@ namespace ProjekatSIMS.View.DoctorView
             this.id = id;
         }
 
+
         private void SurgeryList_PreviewKeyDown(object sender, KeyEventArgs e)
         {
 
@@ -48,7 +49,7 @@ namespace ProjekatSIMS.View.DoctorView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var s = new Prescription();
+            var s = new PatientList(id);
             s.Show();
             Close();
         }

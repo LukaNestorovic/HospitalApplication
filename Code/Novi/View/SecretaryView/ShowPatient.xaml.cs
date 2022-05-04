@@ -88,5 +88,10 @@ namespace ProjekatSIMS.View.SecretaryView
             s.Show();
             Close();
         }
+
+        private void dgDataBinding_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
