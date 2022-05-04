@@ -38,7 +38,7 @@ namespace Repository
                 TimeSpan value = i.datetime.Subtract(now);
                 if(value.TotalMinutes < 15 && value.TotalMinutes > 0)
                 {
-                    MessageBox.Show("Za 15 minuta treba da popijete lek " + i.drug.Name, "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Za manje od 15 minuta treba da popijete lek " + i.drug.Name, "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             return ret;
