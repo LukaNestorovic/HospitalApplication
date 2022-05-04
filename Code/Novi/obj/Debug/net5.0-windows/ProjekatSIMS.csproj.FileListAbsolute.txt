@@ -567,3 +567,5 @@ C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\Doc
 C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\ShowAnamnezis.baml
 C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\PatientList.g.cs
 C:\Users\lukaa\Documents\GitHub\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\PatientList.baml
+C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\PatientList.g.cs
+C:\Users\salip\Desktop\SIMS\Code\Novi\obj\Debug\net5.0-windows\View\DoctorView\PatientList.baml
