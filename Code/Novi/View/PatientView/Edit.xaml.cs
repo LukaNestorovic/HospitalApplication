@@ -28,10 +28,10 @@ namespace ProjekatSIMS.View.PatientView
         public ObservableCollection<Appointment> appointments;
         private int id;
         public Appointment appointment = new Appointment();
-        public Edit(ObservableCollection<Appointment> appointments, int id)
+        public Edit(Appointment appointment, int id)
         {
             InitializeComponent();
-            this.appointments = appointments;
+            this.appointment = appointment;
             this.id = id;
         }
 
@@ -40,10 +40,9 @@ namespace ProjekatSIMS.View.PatientView
             DateTime today = DateTime.Now;
             DateTime today2 = today.AddDays(2);
            
-            appointment = appointmentController.ReadApp(Int32.Parse(TBId.Text));
             if (today2 <= appointment.DateTime)
             {
-                appointmentController.UpdateApp(DatePicker.SelectedDate.GetValueOrDefault(), TBDescription.Text, Int32.Parse(TBDuration.Text), (Boolean)CBEmergency.IsChecked, Int32.Parse(TBPatient.Text), Int32.Parse(TBDoctor.Text), Int32.Parse(TBRoom.Text), Int32.Parse(TBId.Text));
+                appointmentController.UpdateApp(DatePicker.SelectedDate.GetValueOrDefault(), TBDescription.Text, appointment.Duration, appointment.Emergency, appointment.Patient.Id, Int32.Parse(TBDoctor.Text), appointment.Room.Id, appointment.Id);
                 var s = new PatientView(id);
                 s.Show();
                 Close();
@@ -61,6 +60,13 @@ namespace ProjekatSIMS.View.PatientView
             Close();
 
 
+        }
+
+        private void LogOff_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new LogInPatient();
+            s.Show();
+            Close();
         }
     }
 }

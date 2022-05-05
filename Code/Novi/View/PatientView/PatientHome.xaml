@@ -5,11 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS.View.PatientView"
         mc:Ignorable="d"
-        Title="PatientHome" Height="450" Width="800">
+        Title="PatientHome" Height="768" Width="1024">
     <Grid>
-        <Button Content="Appointments" HorizontalAlignment="Center" Margin="0,142,0,0" VerticalAlignment="Top" Height="48" Width="110" Click="Appointments_Click"/>
-        <Button Content="Medicine" HorizontalAlignment="Center" Margin="0,240,0,0" VerticalAlignment="Top" Height="48" Width="110" Click="Medicine_Click"/>
-        <Button Content="LogOff" HorizontalAlignment="Left" Margin="694,10,0,0" VerticalAlignment="Top" Height="36" Width="85" Click="LogOff_Click"/>
+        <Rectangle HorizontalAlignment="Center" Height="61" Stroke="Black" VerticalAlignment="Top" Width="1024" Fill="#003B46"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="691" Margin="0,61,0,0" VerticalAlignment="Top" Width="1024" Background="#C4DFE6"/>
+        <Button Content="Appointments" HorizontalAlignment="Center" Margin="0,249,0,0" VerticalAlignment="Top" Height="98" Width="179" Click="Appointments_Click" Background="#66A5AD" FontSize="26"/>
+        <Button Content="Medicine" HorizontalAlignment="Center" Margin="0,525,0,0" VerticalAlignment="Top" Height="98" Width="180" Click="Medicine_Click" Background="#66A5AD" FontSize="26"/>
+        <Button Content="LogOff" HorizontalAlignment="Left" Margin="861,3,0,0" VerticalAlignment="Top" Height="55" Width="153" Click="LogOff_Click" FontSize="18" Background="#66A5AD" Foreground="Black"/>
+        <Label Content="Home" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Height="48" Width="84" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
 
     </Grid>
 </Window>

@@ -5,26 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS.View.PatientView"
         mc:Ignorable="d"
-        Title="Edit" Height="450" Width="800">
+        Title="Edit" Height="768" Width="1024">
     <Grid>
-        <Button x:Name="Cancel" Content="Cancel" HorizontalAlignment="Left" Margin="55,365,0,0" VerticalAlignment="Top" Width="153" Click="Cancel_Click"/>
-        <Button  x:Name="Confirm" Content="Confirm" HorizontalAlignment="Left" Margin="581,365,0,0" VerticalAlignment="Top" Width="153" Click="Confirm_Click"/>
-        <DatePicker x:Name="DatePicker" HorizontalAlignment="Center" Margin="0,21,0,0" VerticalAlignment="Top" Width="304" Height="28"/>
-        <Label Margin="0,0,704,393"/>
-        <Label Content="Select Date:" HorizontalAlignment="Left" Margin="154,21,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.982,0.36"/>
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="248,67,0,0" x:Name="TBDescription" VerticalAlignment="Top" Width="222" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="248,105,0,0" x:Name="TBDuration" VerticalAlignment="Top" Width="222" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="248,143,0,0" x:Name="TBPatient" VerticalAlignment="Top" Width="222" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="248,181,0,0" x:Name="TBDoctor" VerticalAlignment="Top" Width="222" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="248,217,0,0" x:Name="TBRoom" VerticalAlignment="Top" Width="222" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
-        <CheckBox Content="Emergency" HorizontalAlignment="Left" Margin="248,306,0,0" VerticalAlignment="Top" x:Name="CBEmergency"/>
-        <Label Content="Description:" HorizontalAlignment="Left" Margin="154,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.982,0.36"/>
-        <Label Content="Patient ID:" HorizontalAlignment="Left" Margin="154,140,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.982,0.36"/>
-        <Label Content="Duration:" HorizontalAlignment="Left" Margin="154,105,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.982,0.36"/>
-        <Label Content="Doctor ID:" HorizontalAlignment="Left" Margin="154,181,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.982,0.36"/>
-        <Label Content="Room ID:" HorizontalAlignment="Left" Margin="154,216,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.982,0.36"/>
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="248,255,0,0" x:Name="TBId" VerticalAlignment="Top" Width="222" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
-        <Label Content="ID:" HorizontalAlignment="Left" Margin="154,254,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.982,0.36"/>
+        <Rectangle HorizontalAlignment="Center" Height="61" Stroke="Black" VerticalAlignment="Top" Width="1024" Fill="#003B46"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="691" Margin="0,61,0,0" VerticalAlignment="Top" Width="1024" Background="#C4DFE6"/>
+        <Button x:Name="Cancel" Content="Back" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="153" Click="Cancel_Click" Height="55" FontSize="18" Background="#66A5AD" Foreground="Black"/>
+        <Button  x:Name="Confirm" Content="Confirm" HorizontalAlignment="Center" Margin="0,583,0,0" VerticalAlignment="Top" Width="208" Click="Confirm_Click" Background="#66A5AD" Height="50" FontSize="25"/>
+        <DatePicker x:Name="DatePicker" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" Width="304" Height="42" FontSize="25"/>
+        <Label Content="Select Date:" HorizontalAlignment="Left" Margin="190,172,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.982,0.36 " Height="57" FontSize="25"/>
+        <TextBox Height="57" HorizontalAlignment="Center" Margin="0,283,0,0" x:Name="TBDescription" VerticalAlignment="Top" Width="304" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
+        <TextBox Height="57" HorizontalAlignment="Center" Margin="0,397,0,0" x:Name="TBDoctor" VerticalAlignment="Top" Width="304" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" />
+        <Label Content="Description:" HorizontalAlignment="Left" Margin="189,283,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.982,0.36" Height="57" FontSize="25"/>
+        <Label Content="Doctor ID:" HorizontalAlignment="Left" Margin="198,400,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.982,0.36" Height="57" FontSize="25"/>
+        <Label Content="Appointment edit" HorizontalAlignment="Left" Margin="372,6,0,0" VerticalAlignment="Top" Height="48" Width="244" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
+        <Button Content="LogOff" HorizontalAlignment="Left" Margin="861,3,0,0" VerticalAlignment="Top" Height="55" Width="153" Click="LogOff_Click" FontSize="18" Background="#66A5AD" Foreground="Black"/>
 
     </Grid>
 </Window>

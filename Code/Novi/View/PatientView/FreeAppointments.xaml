@@ -14,6 +14,8 @@
 
                 <DataGridTextColumn Header="Examination id" Binding="{Binding Id}"    Width="*"/>
                 <DataGridTextColumn Header="Start time" Binding="{Binding DateTime}"   Width="*"/>
+                <DataGridTextColumn Header="Duration"  Binding="{Binding Duration}" Width="*"/>
+                <DataGridTextColumn Header="Doctor"  Binding="{Binding Doctor}" Width="*"/>
                 <DataGridTextColumn Header="Room"  Binding="{Binding Room}" Width="*"/>
 
             </DataGrid.Columns>

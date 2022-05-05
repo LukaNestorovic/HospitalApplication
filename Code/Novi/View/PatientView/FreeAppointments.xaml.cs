@@ -43,7 +43,16 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var s = new ScheduleAppointment(id);
+            appointment = (Appointment)PatientAppointments.SelectedItem;
+            if (appointment.Doctor != null && appointment.Room != null)
+            {
+                appointmentController.UpdateApp(appointment.DateTime, appointment.Descripton, appointment.Duration, appointment.Emergency, id, appointment.Doctor.Id, appointment.Room.Id, appointment.Id);
+            }
+            else
+            {
+                appointmentController.UpdateApp(appointment.DateTime, appointment.Descripton, appointment.Duration, appointment.Emergency, id, 1, 1, appointment.Id);
+            }
+            var s = new PatientView(id);
             s.Show();
             Close();
         }

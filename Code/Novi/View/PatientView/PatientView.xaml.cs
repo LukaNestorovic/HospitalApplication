@@ -24,6 +24,7 @@ namespace ProjekatSIMS.View.PatientView
     {
         
         public AppointmentController appointmentController = new AppointmentController();
+        public Appointment appointment = new Appointment();
         public ObservableCollection<Appointment> appointments;
         private int id;
 
@@ -39,7 +40,9 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var s = new Delete(id);
+            appointment = (Appointment)PatientAppointments.SelectedItem;
+            appointmentController.DeleteApp(appointment.Id);
+            var s = new PatientView(id);
             s.Show();
             Close();
 
@@ -54,7 +57,10 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            var s = new Edit(appointments, id);
+            Appointment appointment1 = new Appointment();
+            appointment = (Appointment)PatientAppointments.SelectedItem;
+            appointment1 = appointmentController.ReadApp(appointment.Id);
+            var s = new Edit(appointment1, id);
             s.Show();
             Close();
         }
@@ -76,6 +82,13 @@ namespace ProjekatSIMS.View.PatientView
         private void Schedule_Click(object sender, RoutedEventArgs e)
         {
             var s = new ChosePriority(id);
+            s.Show();
+            Close();
+        }
+
+        private void LogOff_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new LogInPatient();
             s.Show();
             Close();
         }
