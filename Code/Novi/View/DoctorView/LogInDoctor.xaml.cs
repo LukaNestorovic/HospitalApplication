@@ -23,7 +23,7 @@ namespace ProjekatSIMS.View.DoctorView
     public partial class LogInDoctor : Window
     {
         public DoctorController doctorController = new DoctorController();
-        public Doctor doctor = new Doctor();
+        public Model.Doctor doctor = new Model.Doctor();
         public LogInDoctor()
         {
             InitializeComponent();

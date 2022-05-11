@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="LogIn.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\DoctorView\CreateAnamnesis.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -95,6 +98,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="LogIn.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
