@@ -52,7 +52,7 @@ namespace ProjekatSIMS.View.DoctorView
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            var s = new LogInDoctor();
+            var s = new LogIn();
             s.Show();
             Close();
         }

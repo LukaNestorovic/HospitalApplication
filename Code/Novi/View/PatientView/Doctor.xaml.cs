@@ -35,7 +35,7 @@ namespace ProjekatSIMS.View.PatientView
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
             doctorController.CreateDoctor(TBName.Text, TBSurname.Text, TBJmbg.Text, TBTelephone.Text, TBEmail.Text, DPBirthDate.SelectedDate.GetValueOrDefault(), TBAdress.Text, TBSpecialty.Text, float.Parse(TBGrade.Text), Int32.Parse(TBSalary.Text),TBPassword.Text);
-            var s = new LogInPatient();
+            var s = new LogIn();
             s.Show();
             Close();
         }

@@ -7,7 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="LogIn.xaml.cs">
+    <Compile Update="MainWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\DoctorView\CreateAnamnesis.xaml.cs">
@@ -22,9 +22,6 @@
     <Compile Update="View\DoctorView\Drug.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\DoctorView\LogInDoctor.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="View\DoctorView\PatientList.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -32,9 +29,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\ManagerView\Delete.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\ManagerView\LogInManager.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\ManagerView\ManagerView.xaml.cs">
@@ -53,9 +47,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\PatientView\FreeAppointments.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\PatientView\LogInPatient.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\PatientView\Medicine.xaml.cs">
@@ -87,9 +78,6 @@
     <Compile Update="View\SecretaryView\EditPatient.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\SecretaryView\LogInSecretary.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="View\SecretaryView\ShowAppointments.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -98,9 +86,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="LogIn.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -116,9 +101,6 @@
     <Page Update="View\DoctorView\Drug.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\DoctorView\LogInDoctor.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="View\DoctorView\PatientList.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -126,9 +108,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\ManagerView\Delete.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\ManagerView\LogInManager.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\ManagerView\ManagerView.xaml">
@@ -147,9 +126,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\PatientView\FreeAppointments.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\PatientView\LogInPatient.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\PatientView\Medicine.xaml">
@@ -179,9 +155,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\SecretaryView\EditPatient.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\SecretaryView\LogInSecretary.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\SecretaryView\ShowAppointments.xaml">

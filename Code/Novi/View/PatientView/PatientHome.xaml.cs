@@ -42,7 +42,7 @@ namespace ProjekatSIMS.View.PatientView
 
         private void LogOff_Click(object sender, RoutedEventArgs e)
         {
-            var s = new LogInPatient();
+            var s = new LogIn();
             s.Show();
             Close();
         }
