@@ -5,23 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS.View.PatientView"
         mc:Ignorable="d"
-        Title="Medicine" Height="450" Width="800">
+        Title="Medicine" Height="768" Width="1024">
     <Grid>
-        <DataGrid x:Name="PatientAppointments" Margin="37,103,36,31" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding pregledi}">
-
+        <Rectangle HorizontalAlignment="Center" Height="61" Stroke="Black" VerticalAlignment="Top" Width="1024" Fill="#003B46"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="691" Margin="0,61,0,0" VerticalAlignment="Top" Width="1024" Background="#C4DFE6"/>
+        <DataGrid x:Name="PatientAppointments" Margin="37,154,36,31" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding pregledi}">
             <DataGrid.Columns>
-
-
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}"    Width="25"/>
-                <DataGridTextColumn Header="Instructions" Binding="{Binding Instructions}"   Width="*"/>
-                <DataGridTextColumn Header="Doctor"  Binding="{Binding doctor}" Width="*"/>
-                <DataGridTextColumn Header="Patient"  Binding="{Binding patient}" Width="*"/>
-                <DataGridTextColumn Header="Drug"  Binding="{Binding drug}" Width="*"/>
+                <DataGridTextColumn Header="Instructions" Binding="{Binding Instructions}" Width="*"/>
+                <DataGridTextColumn Header="Doctor"  Binding="{Binding doctor.Name}" Width="*"/>
+                <DataGridTextColumn Header="Drug"  Binding="{Binding drug.Name}" Width="*"/>
                 <DataGridTextColumn Header="Start"  Binding="{Binding datetime}" Width="*"/>
-
+                <DataGridTextColumn Header="Interval"  Binding="{Binding drug.Drugnum}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Back" HorizontalAlignment="Left" Margin="37,37,0,0" VerticalAlignment="Top" Width="40" Height="25" Click="Button_Click"/>
+        <Button x:Name="Cancel" Content="Back" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="153" Click="Button_Click" Height="55" FontSize="18" Background="#66A5AD" Foreground="Black"/>
+        <Button Content="LogOff" HorizontalAlignment="Left" Margin="861,3,0,0" VerticalAlignment="Top" Height="55" Width="153" Click="LogOff_Click" FontSize="18" Background="#66A5AD" Foreground="Black"/>
+        <Label Content="Medicine" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Height="48" Width="123" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
 
     </Grid>
 </Window>

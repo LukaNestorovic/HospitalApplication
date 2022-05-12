@@ -16,10 +16,16 @@
             </ComboBox>
         </StackPanel>
         <TextBox x:Name="TBEmail" HorizontalAlignment="Left" Margin="324,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Height="28"/>
-        <TextBox x:Name="TBPass" HorizontalAlignment="Left" Margin="324,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Height="28"/>
+        <PasswordBox x:Name="TBPass" HorizontalAlignment="Left" Margin="324,231,0,0"  VerticalAlignment="Top" Width="133" Height="28" PasswordChar="*"/>
         <Label Content="Email:" HorizontalAlignment="Left" Margin="229,175,0,0" VerticalAlignment="Top"/>
         <Label Content="Password:" HorizontalAlignment="Left" Margin="218,233,0,0" VerticalAlignment="Top"/>
         <Button Content="LogIn" HorizontalAlignment="Left" Margin="350,324,0,0" VerticalAlignment="Top" Width="82" Height="35" Click="Button_Click"/>
+        <Button Content="Appointment" HorizontalAlignment="Left" Margin="710,22,0,0" VerticalAlignment="Top" Click="Appointment_Click"/>
+        <Button Content="Doctor" HorizontalAlignment="Left" Margin="727,75,0,0" VerticalAlignment="Top" Click="Doctor_Click"/>
+        <Button Content="Room" HorizontalAlignment="Left" Margin="727,126,0,0" VerticalAlignment="Top" Click="Room_Click"/>
+        <Button Content="Drug" HorizontalAlignment="Left" Margin="729,177,0,0" VerticalAlignment="Top" Click="Drug_Click" />
+        <Button Content="Prescription" HorizontalAlignment="Left" Margin="714,225,0,0" VerticalAlignment="Top" Click="Prescription_Click"/>
+
 
     </Grid>
 </Window>

@@ -54,11 +54,6 @@ namespace Service
 			return appointmentRepository.FindByID(id);
 		}
 
-		public List<Patient> ReadAllPatientsByDoctor()
-        {
-			return appointmentRepository.FindAllPatientsByDoctor();
-        }
-
 		public Appointment ReadWithPriority(DateTime date)
         {
 			return appointmentRepository.FindWithPriority(date);

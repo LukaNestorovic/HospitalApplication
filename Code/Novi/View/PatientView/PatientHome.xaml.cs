@@ -46,5 +46,32 @@ namespace ProjekatSIMS.View.PatientView
             s.Show();
             Close();
         }
+
+        private void Schedule_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new ChosePriority(id);
+            s.Show();
+            Close();
+        }
+
+        private void MedicalRecord_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Reminder_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Rate_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Finished_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

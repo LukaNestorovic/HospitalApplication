@@ -17,6 +17,7 @@ using ProjekatSIMS.View.PatientView;
 using ProjekatSIMS.View.DoctorView;
 using ProjekatSIMS.View.ManagerView;
 using ProjekatSIMS.View.SecretaryView;
+using System.Collections.ObjectModel;
 
 namespace ProjekatSIMS
 {
@@ -33,6 +34,7 @@ namespace ProjekatSIMS
         public Dean dean = new Dean();
         public SecretaryController secretaryController = new SecretaryController();
         public Secretary secretary = new Secretary();
+        public ObservableCollection<Room> rooms;
         public LogIn()
         {
             InitializeComponent();
@@ -47,7 +49,7 @@ namespace ProjekatSIMS
                 {
                     MessageBox.Show("Pogresan mail ili sifra", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
-                if (patient.Password == TBPass.Text && patient != null)
+                if (patient.Password == TBPass.Password && patient != null)
                 {
                     int id = patient.Id;
                     var s = new PatientHome(id);
@@ -66,7 +68,7 @@ namespace ProjekatSIMS
                 {
                     MessageBox.Show("Pogresan mail ili sifra", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
-                if (doctor.Password == TBPass.Text && doctor != null)
+                if (doctor.Password == TBPass.Password && doctor != null)
                 {
                     int id = doctor.Id;
                     var s = new DoctorView(id);
@@ -85,7 +87,7 @@ namespace ProjekatSIMS
                 {
                     MessageBox.Show("Pogresan mail ili sifra", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
-                if (dean.Password == TBPass.Text && dean != null)
+                if (dean.Password == TBPass.Password && dean != null)
                 {
                     int id = dean.Id;
                     var s = new ManagerView();
@@ -104,7 +106,7 @@ namespace ProjekatSIMS
                 {
                     MessageBox.Show("Pogresan mail ili sifra", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
-                if (secretary.Password == TBPass.Text && secretary != null)
+                if (secretary.Password == TBPass.Password && secretary != null)
                 {
                     int id = secretary.Id;
                     var s = new ShowPatient();
@@ -117,6 +119,41 @@ namespace ProjekatSIMS
                 }
             }
 
+        }
+
+        private void Appointment_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new MakeAnAppointment();
+            s.Show();
+            Close();
+        }
+
+        private void Doctor_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new View.PatientView.Doctor();
+            s.Show();
+            Close();
+        }
+
+        private void Room_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new AddRoomView(rooms);
+            s.Show();
+            Close();
+        }
+
+        private void Drug_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new View.DoctorView.Drug();
+            s.Show();
+            Close();
+        }
+
+        private void Prescription_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new View.DoctorView.Prescription();
+            s.Show();
+            Close();
         }
     }
 }

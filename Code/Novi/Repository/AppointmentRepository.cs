@@ -21,7 +21,7 @@ namespace Repository
 		private List<Appointment> ret = new List<Appointment>();
 
 		public List<Appointment> FindAllByDoctorId(int id)
-        {
+		{
 			try
 			{
 				List<Appointment> all = serializer.fromJSON(FileName);
@@ -40,26 +40,11 @@ namespace Repository
 				this.ret = ret;
 				return ret;
 			}
-            catch
-            {
+			catch
+			{
 				return null;
-            }
-        }
-
-		public List<Patient> FindAllPatientsByDoctor()
-        {
-			List<Patient> patients = new List<Patient>();
-			foreach(Appointment i in ret)
-            {
-				if (i.Patient == null)
-                {
-					continue;
-                }
-				patients.Add(i.Patient);
-
-            }
-            return patients;
-        }
+			}
+		}
 
 		public List<Appointment> FindAllByPatientId(int id)
 		{
@@ -73,7 +58,7 @@ namespace Repository
 					{
 						continue;
 					}
-					if (i.Patient.Id == id)
+					if (i.Patient.Id == id && i.DateTime > DateTime.Now)
 					{
 						ret.Add(i);
 					}
@@ -93,7 +78,7 @@ namespace Repository
 			List<Appointment> retdate = new List<Appointment>();
 			foreach (Appointment i in all)
             {
-				if(i.Patient == null)
+				if(i.Patient == null && i.DateTime > DateTime.Now)
                 {
 					ret.Add(i);
                 }

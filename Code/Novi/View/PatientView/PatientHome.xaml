@@ -9,10 +9,15 @@
     <Grid>
         <Rectangle HorizontalAlignment="Center" Height="61" Stroke="Black" VerticalAlignment="Top" Width="1024" Fill="#003B46"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="691" Margin="0,61,0,0" VerticalAlignment="Top" Width="1024" Background="#C4DFE6"/>
-        <Button Content="Appointments" HorizontalAlignment="Center" Margin="0,249,0,0" VerticalAlignment="Top" Height="98" Width="179" Click="Appointments_Click" Background="#66A5AD" FontSize="26"/>
-        <Button Content="Medicine" HorizontalAlignment="Center" Margin="0,525,0,0" VerticalAlignment="Top" Height="98" Width="180" Click="Medicine_Click" Background="#66A5AD" FontSize="26"/>
+        <Button Content="Appointments" HorizontalAlignment="Left" Margin="104,158,0,0" VerticalAlignment="Top" Height="98" Width="180" Click="Appointments_Click" Background="#66A5AD" FontSize="26"/>
+        <Button Content="Rate hospital" HorizontalAlignment="Left" Margin="104,506,0,0" VerticalAlignment="Top" Height="98" Width="180" Click="Rate_Click" Background="#66A5AD" FontSize="26"/>
         <Button Content="LogOff" HorizontalAlignment="Left" Margin="861,3,0,0" VerticalAlignment="Top" Height="55" Width="153" Click="LogOff_Click" FontSize="18" Background="#66A5AD" Foreground="Black"/>
         <Label Content="Home" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Height="48" Width="84" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
+        <Button Content="Schedule with priority" HorizontalAlignment="Left" Margin="758,158,0,0" VerticalAlignment="Top" Height="98" Width="180" Click="Schedule_Click" Background="#66A5AD" FontSize="18"/>
+        <Button Content="Finished examinations" HorizontalAlignment="Left" Margin="104,336,0,0" VerticalAlignment="Top" Height="98" Width="180" Click="Finished_Click" Background="#66A5AD" FontSize="18"/>
+        <Button Content="Reminder" HorizontalAlignment="Left" Margin="758,336,0,0" VerticalAlignment="Top" Height="98" Width="180" Click="Reminder_Click" Background="#66A5AD" FontSize="26"/>
+        <Button Content="Medical Record" HorizontalAlignment="Left" Margin="758,506,0,0" VerticalAlignment="Top" Height="98" Width="180" Click="MedicalRecord_Click" Background="#66A5AD" FontSize="26"/>
+        <Button Content="Medicine" HorizontalAlignment="Center" Margin="0,336,0,0" VerticalAlignment="Top" Height="98" Width="180" Click="Medicine_Click" Background="#66A5AD" FontSize="26"/>
 
     </Grid>
 </Window>

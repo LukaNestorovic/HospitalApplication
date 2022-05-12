@@ -27,11 +27,9 @@ namespace ProjekatSIMS.View.PatientView
         public AppointmentController appointmentController = new AppointmentController();
         public ObservableCollection<Appointment> appointments;
         private int id;
-        public MakeAnAppointment(ObservableCollection<Appointment> appointments, int id)
+        public MakeAnAppointment()
         {
             InitializeComponent();
-            this.appointments = appointments;
-            this.id = id;
         }
       
         private void Cancel_Click(object sender, RoutedEventArgs e)
