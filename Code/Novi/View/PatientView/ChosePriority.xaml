@@ -5,11 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS.View.PatientView"
         mc:Ignorable="d"
-        Title="ChosePriority" Height="450" Width="800">
+        Title="ChosePriority" Height="768" Width="1024">
     <Grid>
-        <Button Content="Doctor" HorizontalAlignment="Center" Margin="0,129,0,0" VerticalAlignment="Top" Width="138" Height="58" Click="Doctor_click"/>
-        <Button Content="Time" HorizontalAlignment="Center" Margin="0,248,0,0" VerticalAlignment="Top" Width="138" Height="58" Click="Time_click"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="35,31,0,0" VerticalAlignment="Top" Height="27" Width="64" Click="Cancel_click"/>
+        <Rectangle HorizontalAlignment="Center" Height="61" Stroke="Black" VerticalAlignment="Top" Width="1024" Fill="#003B46"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="691" Margin="0,61,0,0" VerticalAlignment="Top" Width="1024" Background="#C4DFE6">
+            <Label Content="Chose priority:" HorizontalAlignment="Center" VerticalAlignment="Top" Height="48" Width="188" FontSize="28" Foreground="Black" RenderTransformOrigin="0.474,0.227" Margin="0,31,0,0"/>
+        </Border>
+        <Button Content="Doctor" HorizontalAlignment="Center" Margin="0,195,0,0" VerticalAlignment="Top" Width="212" Height="79" Click="Doctor_click" Background="#66A5AD" FontSize="18"/>
+        <Button Content="Time" HorizontalAlignment="Center" Margin="0,555,0,0" VerticalAlignment="Top" Width="212" Height="79" Click="Time_click" Background="#66A5AD" FontSize="18"/>
+        <Button x:Name="Cancel" Content="Back" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="153" Click="Cancel_click" Height="55" FontSize="18" Background="#66A5AD" Foreground="Black"/>
+        <Button Content="LogOff" HorizontalAlignment="Left" Margin="861,3,0,0" VerticalAlignment="Top" Height="55" Width="153" Click="LogOff_Click" FontSize="18" Background="#66A5AD" Foreground="Black"/>
+        <Label Content="Schedule with priority" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Height="48" Width="280" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
 
     </Grid>
 </Window>

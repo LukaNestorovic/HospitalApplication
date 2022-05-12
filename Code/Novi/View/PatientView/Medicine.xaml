@@ -9,7 +9,7 @@
     <Grid>
         <Rectangle HorizontalAlignment="Center" Height="61" Stroke="Black" VerticalAlignment="Top" Width="1024" Fill="#003B46"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="691" Margin="0,61,0,0" VerticalAlignment="Top" Width="1024" Background="#C4DFE6"/>
-        <DataGrid x:Name="PatientAppointments" Margin="37,154,36,31" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding pregledi}">
+        <DataGrid x:Name="PatientAppointments" Margin="37,99,36,31" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding pregledi}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}"    Width="25"/>
                 <DataGridTextColumn Header="Instructions" Binding="{Binding Instructions}" Width="*"/>

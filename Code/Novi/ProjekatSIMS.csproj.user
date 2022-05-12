@@ -58,8 +58,6 @@
     <Compile Update="View\PatientView\PickDatePriority.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\PatientView\ScheduleAppointment.xaml.cs">
-    </Compile>
     <Compile Update="View\SecretaryView\CreateAppointment.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -133,8 +131,6 @@
     </Page>
     <Page Update="View\PatientView\PickDatePriority.xaml">
       <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\PatientView\ScheduleAppointment.xaml">
     </Page>
     <Page Update="View\SecretaryView\CreateAppointment.xaml">
       <SubType>Designer</SubType>
