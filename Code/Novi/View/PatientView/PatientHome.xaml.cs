@@ -73,7 +73,9 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Finished_Click(object sender, RoutedEventArgs e)
         {
-
+            var s = new Finished(id);
+            s.Show();
+            Close();
         }
     }
 }

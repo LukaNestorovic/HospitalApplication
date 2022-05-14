@@ -34,7 +34,7 @@ namespace ProjekatSIMS.View.PatientView
         {
             DateTime date = DatePicker.SelectedDate.GetValueOrDefault();
             appointment = appointmentController.ReadWithPriority(date);
-            appointmentController.UpdateApp(appointment.DateTime, appointment.Descripton, appointment.Duration, appointment.Emergency, id, 1, 1, appointment.Id); //Zameniti 1 sa Doctor.Id i Room.Id
+            appointmentController.UpdateApp(appointment.DateTime, appointment.Descripton, appointment.Duration, appointment.Emergency, id, appointment.Doctor.Id, appointment.Room.Id, appointment.Id, false); //Zameniti 1 sa Doctor.Id i Room.Id
             var s = new PatientView(id);
             s.Show();
             Close();

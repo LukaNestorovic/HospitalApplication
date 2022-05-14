@@ -15,7 +15,7 @@ namespace Service
 {
 	public class AppointmentService
 	{
-		public Boolean CreateApp(DateTime dateTime, String descripton, int duration, Boolean emergency, Patient patient, Doctor doctor, Room room)
+		public Boolean CreateApp(DateTime dateTime, String descripton, int duration, Boolean emergency, Patient patient, Doctor doctor, Room room, Boolean finished)
 		{
 			int newID;
 			if (File.Exists(idFile))
@@ -25,14 +25,14 @@ namespace Service
 			}
 			else
 				newID = 0;
-			Appointment newAppointment = new Appointment(dateTime, descripton, duration, emergency, newID, patient, doctor, room);
+			Appointment newAppointment = new Appointment(dateTime, descripton, duration, emergency, newID, patient, doctor, room, finished);
 
 			File.WriteAllText(idFile, newID.ToString());
 
 			return appointmentRepository.Save(newAppointment);
 		}
 		
-		public Boolean UpdateApp(DateTime dateTime, String descripton, int duration, Boolean emergency, Patient patient, Doctor doctor, Room room, int id)
+		public Boolean UpdateApp(DateTime dateTime, String descripton, int duration, Boolean emergency, Patient patient, Doctor doctor, Room room, int id, Boolean finished)
 		{
 			Appointment appointment = appointmentRepository.FindByID(id);
 			appointment.DateTime = dateTime;
@@ -42,6 +42,7 @@ namespace Service
 			appointment.Patient = patient;
 			appointment.Doctor = doctor;
 			appointment.Room = room;
+			appointment.Finished = finished;
 			return appointmentRepository.UpdateByID(appointment);
 		}
 		
@@ -128,6 +129,20 @@ namespace Service
 			return appointments;
 		}
 
+		public List<Appointment> ReadIfFinished()
+        {
+			List<Appointment> all = serializer.fromJSON(FileName);
+			List<Appointment> appointments = new List<Appointment>();
+			foreach (Appointment i in all)
+			{
+				if (i.Finished == true)
+				{
+					appointments.Add(i);
+				}
+			}
+
+			return appointments;
+		}
 
 		public List<Appointment> ReadAllByDoctorId(int id)
         {

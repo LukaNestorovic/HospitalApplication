@@ -41,7 +41,7 @@ namespace ProjekatSIMS.View.SecretaryView
 
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
-            appointmentController.CreateApp(DatePicker.SelectedDate.GetValueOrDefault(), TBDescription.Text, Int32.Parse(TBDuration.Text), (Boolean)CBEmergency.IsChecked, Int32.Parse(TBPatient.Text), Int32.Parse(TBDoctor.Text), Int32.Parse(TBRoom.Text));
+            appointmentController.CreateApp(DatePicker.SelectedDate.GetValueOrDefault(), TBDescription.Text, Int32.Parse(TBDuration.Text), (Boolean)CBEmergency.IsChecked, Int32.Parse(TBPatient.Text), Int32.Parse(TBDoctor.Text), Int32.Parse(TBRoom.Text), false);
             var s = new ShowAppointments();
             s.Show();
             Close();
