@@ -28,7 +28,7 @@ namespace Controller
 			List<HospitalSurvey> hospitalSurvey = hospitalSurveyService.ReadAll();
 			return hospitalSurvey;
 		}
-		public Boolean UpdateRoom(int question1, int question2, int question3, Patient patient, int id)
+		public Boolean UpdateHospitalSurvey(int question1, int question2, int question3, Patient patient, int id)
 		{
 			return hospitalSurveyService.UpdateHospitalSurvey(question1,question2, question3, patient, id);
 		}
