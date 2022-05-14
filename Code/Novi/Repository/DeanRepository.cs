@@ -10,7 +10,7 @@ namespace Repository
 {
     public class DeanRepository
     {
-		public Dean FindByEmail(String email)
+/*		public Dean FindByEmail(String email)
 		{
 			List<Dean> all = serializer.fromJSON(FileName);
 			Dean a = null;
@@ -38,7 +38,7 @@ namespace Repository
 				}
 			}
 			return a;
-		}
+		}*/
 
 		private static String FileName = @"..\..\..\data\Dean.json";
 

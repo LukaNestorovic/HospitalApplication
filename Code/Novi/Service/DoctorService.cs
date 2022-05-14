@@ -9,6 +9,7 @@ using Model;
 using System.Collections.Generic;
 using System.IO;
 using Repository;
+using Serialization;
 
 namespace Service
 {
@@ -53,7 +54,17 @@ namespace Service
 
 		public Doctor ReadDoctorByEmail(String email)
 		{
-			return doctorRepository.FindByEmail(email);
+			List<Doctor> all = serializer.fromJSON(FileName);
+			Doctor a = null;
+			foreach (Doctor i in all)
+			{
+				if (i.Email == email)
+				{
+					a = i;
+					break;
+				}
+			}
+			return a;
 		}
 
 		public Doctor ReadDoctor(int id)
@@ -68,6 +79,9 @@ namespace Service
 	
 		public Repository.DoctorRepository doctorRepository = new DoctorRepository();
 		public String idFile = @"..\..\..\Data\doctorID.txt";
+		private static String FileName = @"..\..\..\data\Doctors.json";
+
+		private static Serializer<Doctor> serializer = new Serializer<Doctor>();
 
 	}
 }

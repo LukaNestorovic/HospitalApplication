@@ -32,7 +32,7 @@ namespace Repository
 			return a;
 		}
 
-		public Patient FindByEmail(String email)
+/*		public Patient FindByEmail(String email)
 		{
 			List<Patient> all = serializer.fromJSON(FileName);
 			Patient a = null;
@@ -45,7 +45,7 @@ namespace Repository
 				}
 			}
 			return a;
-		}
+		}*/
 
 		public Boolean Save(Patient patient)
 		{

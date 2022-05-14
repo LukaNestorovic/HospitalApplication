@@ -17,7 +17,7 @@ namespace Repository
             return true;
         }
 
-        public List<Prescription> FindAllByPatientId(int id)
+ /*       public List<Prescription> FindAllByPatientId(int id)
         {
             List<Prescription> all = serializer.fromJSON(FileName);
             List<Prescription> ret = new List<Prescription>();
@@ -42,7 +42,7 @@ namespace Repository
                 }
             }
             return ret;
-        }
+        }*/
 
         
 

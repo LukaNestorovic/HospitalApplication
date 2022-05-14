@@ -14,10 +14,7 @@ namespace Controller
         {
             return secretaryService.ReadSecretaryByEmail (email);
         }
-        public Secretary ReadSecretaryByPassword (String password)
-        {
-            return secretaryService.ReadSecretaryByPassword(password);
-        }
+
         public SecretaryService secretaryService = new SecretaryService();
     }
 }

@@ -20,7 +20,7 @@ namespace Repository
 
 		private List<Appointment> ret = new List<Appointment>();
 
-		public List<Appointment> FindAllByDoctorId(int id)
+/*		public List<Appointment> FindAllByDoctorId(int id)
 		{
 			try
 			{
@@ -44,9 +44,9 @@ namespace Repository
 			{
 				return null;
 			}
-		}
+		}*/
 
-		public List<Appointment> FindAllByPatientId(int id)
+/*		public List<Appointment> FindAllByPatientId(int id)
 		{
 			try
 			{
@@ -69,9 +69,9 @@ namespace Repository
 			{
 				return null;
 			}
-		}
+		}*/
 
-		public List<Appointment> FindAllWithoutPatient()
+/*		public List<Appointment> FindAllWithoutPatient()
         {
 			List<Appointment> all = serializer.fromJSON(FileName);
 			List<Appointment> ret = new List<Appointment>();
@@ -85,9 +85,9 @@ namespace Repository
             }
 			ret.Sort((y, x) => y.DateTime.CompareTo(x.DateTime));
 			return ret;
-        }
+        }*/
 
-		public Appointment FindWithPriority(DateTime date)
+/*		public Appointment FindWithPriority(DateTime date)
         {
 			List<Appointment> all = serializer.fromJSON(FileName);
 			List<Appointment> ret = new List<Appointment>();
@@ -109,9 +109,9 @@ namespace Repository
                 }
             }
 			return app;
-		}
+		}*/
 
-		public Appointment FindWithPriorityDoctor(int id, DateTime date)
+/*		public Appointment FindWithPriorityDoctor(int id, DateTime date)
         {
 			List<Appointment> all = serializer.fromJSON(FileName);
 			List<Appointment> ret = new List<Appointment>();
@@ -137,7 +137,7 @@ namespace Repository
 				}
 			}
 			return app;
-		}
+		}*/
 		
 		public Appointment FindByID(int id)
 		{
@@ -152,7 +152,7 @@ namespace Repository
 			return a;
 		}
 
-		public List<Appointment> FindByDoctor (Doctor doctor)
+/*		public List<Appointment> FindByDoctor (Doctor doctor)
         {
 			List<Appointment> all = serializer.fromJSON(FileName);
 			List<Appointment> appointments = new List<Appointment>();
@@ -165,7 +165,7 @@ namespace Repository
 			}
 
 			return appointments;
-		}
+		}*/
 		
 		public Boolean Save(Appointment appointment)
 		{

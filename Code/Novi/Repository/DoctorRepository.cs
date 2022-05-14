@@ -33,7 +33,7 @@ namespace Repository
 			return a;
 		}
 
-		public Doctor FindByEmail(String email)
+/*		public Doctor FindByEmail(String email)
 		{
 			List<Doctor> all = serializer.fromJSON(FileName);
 			Doctor a = null;
@@ -46,7 +46,7 @@ namespace Repository
 				}
 			}
 			return a;
-		}
+		}*/
 
 		public Boolean Save(Doctor doctor)
 		{
@@ -89,6 +89,7 @@ namespace Repository
 		private static String FileName = @"..\..\..\data\Doctors.json";
 
 		private static Serializer<Doctor> serializer = new Serializer<Doctor>();
+		
 
 	}
 }
