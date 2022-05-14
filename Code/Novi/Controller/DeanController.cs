@@ -14,10 +14,6 @@ namespace Controller
         {
             return deanService.ReadDeanByEmail(email);
         }
-        public Dean ReadDeanByPassword(String password)
-        {
-            return deanService.ReadDeanByPassword(password);
-        }
         public DeanService deanService = new DeanService();
     }
 }

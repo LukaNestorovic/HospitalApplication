@@ -55,7 +55,7 @@ namespace ProjekatSIMS.View.PatientView
                 {
                     MessageBox.Show("Izaberite doktora", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
-                appointmentController.UpdateApp(DP.SelectedDate.GetValueOrDefault(), TBDescription.Text, appointment.Duration, appointment.Emergency, appointment.Patient.Id, doctor.Id, appointment.Room.Id, appointment.Id);
+                appointmentController.UpdateApp(DP.SelectedDate.GetValueOrDefault(), TBDescription.Text, appointment.Duration, appointment.Emergency, appointment.Patient.Id, doctor.Id, appointment.Room.Id, appointment.Id, false);
                 var s = new PatientView(id);
                 s.Show();
                 Close();

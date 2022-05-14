@@ -66,12 +66,16 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Rate_Click(object sender, RoutedEventArgs e)
         {
-
+            var s = new HospitalSurvey(id);
+            s.Show();
+            Close();
         }
 
         private void Finished_Click(object sender, RoutedEventArgs e)
         {
-
+            var s = new Finished(id);
+            s.Show();
+            Close();
         }
     }
 }

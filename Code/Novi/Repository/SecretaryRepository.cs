@@ -25,21 +25,6 @@ namespace Repository
 			return a;
 		}
 
-		public Secretary FindByPassword(String password)
-		{
-			List<Secretary> all = serializer.fromJSON(FileName);
-			Secretary a = null;
-			foreach (Secretary i in all)
-			{
-				if (i.Password == password)
-				{
-					a = i;
-					break;
-				}
-			}
-			return a;
-		}
-
 		private static String FileName = @"..\..\..\data\Secretary.json";
 
 		private static Serializer<Secretary> serializer = new Serializer<Secretary>();

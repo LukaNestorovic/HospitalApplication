@@ -16,12 +16,12 @@ namespace Controller
 		public PatientService patientService = new PatientService();
 		public RoomService roomService = new RoomService();
 		public DoctorService doctorService = new DoctorService();
-		public Boolean CreateApp(DateTime dateTime, String description, int duration, Boolean emergency, int patientId, int doctorId, int roomId)
+		public Boolean CreateApp(DateTime dateTime, String description, int duration, Boolean emergency, int patientId, int doctorId, int roomId, Boolean finished)
 		{
 			Patient patient = patientService.ReadPatient(patientId);
 			Doctor doctor = doctorService.ReadDoctor(doctorId);
 			Room room = roomService.ReadRoom(roomId);
-			return appointmentService.CreateApp(dateTime, description, duration, emergency, patient, doctor, room);
+			return appointmentService.CreateApp(dateTime, description, duration, emergency, patient, doctor, room, finished);
 		}
 		
 		public Boolean DeleteApp(int id)
@@ -29,12 +29,12 @@ namespace Controller
 			return appointmentService.DeleteApp(id);
 		}
 		
-		public Boolean UpdateApp(DateTime dateTime, String description, int duration, Boolean emergency, int patientId, int doctorId, int roomId, int appId)
+		public Boolean UpdateApp(DateTime dateTime, String description, int duration, Boolean emergency, int patientId, int doctorId, int roomId, int appId, Boolean finished)
 		{
 			Patient patient = patientService.ReadPatient(patientId);
 			Doctor doctor = doctorService.ReadDoctor(doctorId);
 			Room room = roomService.ReadRoom(roomId);
-			return appointmentService.UpdateApp(dateTime, description, duration, emergency, patient, doctor, room, appId);
+			return appointmentService.UpdateApp(dateTime, description, duration, emergency, patient, doctor, room, appId, finished);
 		}
 		
 		public Appointment ReadApp(int id)
@@ -77,7 +77,6 @@ namespace Controller
 		public List<Appointment> ReadAllWithoutPatient()
 		{
 			List<Appointment> appointments = appointmentService.ReadAllWithoutPatient();
-
 			return appointments;
 		}
 
@@ -85,6 +84,11 @@ namespace Controller
         {
 			Doctor doctor = doctorService.ReadDoctor(doctorId);
 			return appointmentService.ReadByDoctor(doctor);
+        }
+
+		public List<Appointment> ReadIfFinished()
+        {
+			return appointmentService.ReadIfFinished();
         }
 
 		public AppointmentService appointmentService = new AppointmentService();
