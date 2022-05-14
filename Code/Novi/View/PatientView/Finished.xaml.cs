@@ -36,6 +36,9 @@ namespace ProjekatSIMS.View.PatientView
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             appointment = (Appointment)PatientAppointments.SelectedItem;
+            var s = new DoctorSurvey(id, appointment);
+            s.Show();
+            Close();
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
