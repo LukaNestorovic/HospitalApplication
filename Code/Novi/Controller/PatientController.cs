@@ -20,7 +20,7 @@ namespace Controller
       
       public Boolean UpdatePatient(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String insuranceCarrier, Boolean guest, Boolean blocked, int id, String password)
       {
-         return patientService.UpdatePatient(name, surname, jmbg, telephone, email, birthDate, adress, insuranceCarrier, guest, blocked,id, password);
+         return patientService.UpdatePatient(name, surname, jmbg, telephone, email, birthDate, adress, insuranceCarrier, guest, blocked, id, password);
       }
       
       public Boolean DeletePatient(int id)

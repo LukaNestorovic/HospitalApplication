@@ -45,7 +45,7 @@ namespace ProjekatSIMS
             if(Combo.SelectedIndex == 0)
             {
                 patient = patientController.ReadPatientByEmail(TBEmail.Text);
-                if (patient.Blcoked == false)
+                if (patient.Blocked == false)
                 {
                     if (patient == null)
                     {
