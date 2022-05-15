@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS.View.PatientView"
         mc:Ignorable="d"
-        Title="FreeAppointments" Height="450" Width="800">
+        Title="FreeAppointments" Height="768" Width="1024">
     <Grid>
-        <DataGrid x:Name="PatientAppointments" Margin="37,103,36,31" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding Path=pregledi}">
+        <Rectangle HorizontalAlignment="Center" Height="61" Stroke="Black" VerticalAlignment="Top" Width="1024" Fill="#003B46"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="691" Margin="0,61,0,0" VerticalAlignment="Top" Width="1024" Background="#C4DFE6"/>
+        <DataGrid x:Name="PatientAppointments" Margin="36,131,36,31" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding Path=pregledi}">
 
             <DataGrid.Columns>
 
@@ -20,8 +22,14 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Back" HorizontalAlignment="Left" Margin="37,41,0,0" VerticalAlignment="Top" Width="50" Height="25" Click="Back_Click"/>
-        <Button Content="Schedule Appointment" HorizontalAlignment="Center" Margin="0,41,0,0" VerticalAlignment="Top" Width="234" Height="25" Click="Button_Click"/>
+        <Button Content="Schedule Appointment" HorizontalAlignment="Center" Margin="0,83,0,0" VerticalAlignment="Top" Width="234" Height="32" Click="Button_Click" Background="#66A5AD" FontSize="20"/>
+        <Button x:Name="Cancel" Content="Back" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="153" Click="Back_Click" Height="55" FontSize="18" Background="#66A5AD" Foreground="Black"/>
+        <Button Content="LogOff" HorizontalAlignment="Left" Margin="861,3,0,0" VerticalAlignment="Top" Height="55" Width="153" Click="LogOff_Click" FontSize="18" Background="#66A5AD" Foreground="Black"/>
+        <Label Content="Schedule appointment" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Height="48" Width="291" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
+        <Button HorizontalAlignment="Left" Margin="762,13,0,0" VerticalAlignment="Top" Height="40" Click="Click">
+            <Image Source="C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\Source\Question-Mark.jpeg" Height="38">
+            </Image>
+        </Button>
 
     </Grid>
 </Window>

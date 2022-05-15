@@ -47,5 +47,31 @@ namespace ProjekatSIMS.View.PatientView
             s.Show();
             Close();
         }
+
+        private void LogOff_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new LogIn();
+            s.Show();
+            Close();
+        }
+
+        private void Note_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Prescription_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Report_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Click(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }
