@@ -34,7 +34,7 @@ namespace ProjekatSIMS.View.SecretaryView
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            patientController.UpdatePatient(TBName.Text, TBSurname.Text, TBJmbg.Text, TBTelephone.Text, TBEmail.Text, DPBirthDate.SelectedDate.GetValueOrDefault(), TBAdress.Text, TBInsurance.Text, (Boolean)CBGuest.IsChecked, Int32.Parse(TBId.Text), TBPassword.Text);
+            patientController.UpdatePatient(TBName.Text, TBSurname.Text, TBJmbg.Text, TBTelephone.Text, TBEmail.Text, DPBirthDate.SelectedDate.GetValueOrDefault(), TBAdress.Text, TBInsurance.Text, (Boolean)CBGuest.IsChecked, false,Int32.Parse(TBId.Text), TBPassword.Text);
             var s = new ShowPatient();
             s.Show();
             Close();

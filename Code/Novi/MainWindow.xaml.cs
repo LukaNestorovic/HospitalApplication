@@ -45,20 +45,27 @@ namespace ProjekatSIMS
             if(Combo.SelectedIndex == 0)
             {
                 patient = patientController.ReadPatientByEmail(TBEmail.Text);
-                if (patient == null)
+                if (patient.Blcoked == false)
                 {
-                    MessageBox.Show("Pogresan mail ili sifra", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-                if (patient.Password == TBPass.Password && patient != null)
-                {
-                    int id = patient.Id;
-                    var s = new PatientHome(id);
-                    s.Show();
-                    Close();
+                    if (patient == null)
+                    {
+                        MessageBox.Show("Pogresan mail ili sifra", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    if (patient.Password == TBPass.Password && patient != null)
+                    {
+                        int id = patient.Id;
+                        var s = new PatientHome(id);
+                        s.Show();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Pogresan mail ili sifra", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Pogresan mail ili sifra", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Blokirani ste", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             else if(Combo.SelectedIndex == 1)

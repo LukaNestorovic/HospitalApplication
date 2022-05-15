@@ -42,7 +42,7 @@ namespace ProjekatSIMS.View.PatientView
             doctor = (Model.Doctor)Combo.SelectedItem;
             appointment = appointmentController.ReadWithPriorityDoctor(doctor.Id, date);
             appointmentController.UpdateApp(appointment.DateTime, appointment.Descripton, appointment.Duration, appointment.Emergency, id, appointment.Doctor.Id, 1, appointment.Id, false);
-            var s = new PatientView(id);
+            var s = new PatientView(id, 0);
             s.Show();
             Close();
         }

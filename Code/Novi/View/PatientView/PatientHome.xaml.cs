@@ -20,6 +20,7 @@ namespace ProjekatSIMS.View.PatientView
     public partial class PatientHome : Window
     {
         private int id;
+        public int brojac = 0;
         public PatientHome(int id)
         {
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Appointments_Click(object sender, RoutedEventArgs e)
         {
-            var s = new PatientView(id);
+            var s = new PatientView(id, brojac);
             s.Show();
             Close();
         }
