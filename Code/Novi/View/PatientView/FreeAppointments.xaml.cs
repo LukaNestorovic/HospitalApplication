@@ -36,7 +36,7 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            var s = new PatientView(id);
+            var s = new PatientView(id, 0);
             s.Show();
             Close();
         }
@@ -52,7 +52,7 @@ namespace ProjekatSIMS.View.PatientView
             {
                 appointmentController.UpdateApp(appointment.DateTime, appointment.Descripton, appointment.Duration, appointment.Emergency, id, 1, 1, appointment.Id, false);
             }
-            var s = new PatientView(id);
+            var s = new PatientView(id, 0);
             s.Show();
             Close();
         }

@@ -31,7 +31,8 @@ namespace ProjekatSIMS.View.PatientView
         public Appointment appointment = new Appointment();
         public List<Model.Doctor> doctors = new List<Model.Doctor>();
         public Model.Doctor doctor = new Model.Doctor();
-        public Edit(Appointment appointment, int id)
+        private int brojac;
+        public Edit(Appointment appointment, int id, int brojac)
         {
             InitializeComponent();
             DP.SelectedDate = appointment.DateTime;
@@ -41,6 +42,7 @@ namespace ProjekatSIMS.View.PatientView
             Combo.ItemsSource = doctors;
             this.appointment = appointment;
             this.id = id;
+            this.brojac = brojac;
         }
 
         private void Confirm_Click(object sender, RoutedEventArgs e)
@@ -56,7 +58,7 @@ namespace ProjekatSIMS.View.PatientView
                     MessageBox.Show("Izaberite doktora", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 appointmentController.UpdateApp(DP.SelectedDate.GetValueOrDefault(), TBDescription.Text, appointment.Duration, appointment.Emergency, appointment.Patient.Id, doctor.Id, appointment.Room.Id, appointment.Id, false);
-                var s = new PatientView(id);
+                var s = new PatientView(id, brojac);
                 s.Show();
                 Close();
             }
@@ -68,7 +70,7 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            var s = new PatientView(id);
+            var s = new PatientView(id, brojac);
             s.Show();
             Close();
 

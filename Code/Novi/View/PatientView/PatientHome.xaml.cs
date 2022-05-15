@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Model;
+using Controller;
 
 namespace ProjekatSIMS.View.PatientView
 {
@@ -20,6 +22,9 @@ namespace ProjekatSIMS.View.PatientView
     public partial class PatientHome : Window
     {
         private int id;
+        public Patient patient = new Patient();
+        public PatientController patientController = new PatientController();
+        public int brojac = 0;
         public PatientHome(int id)
         {
             InitializeComponent();
@@ -28,7 +33,7 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Appointments_Click(object sender, RoutedEventArgs e)
         {
-            var s = new PatientView(id);
+            var s = new PatientView(id, brojac);
             s.Show();
             Close();
         }
