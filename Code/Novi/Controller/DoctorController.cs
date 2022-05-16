@@ -44,5 +44,10 @@ namespace Controller
             List<Doctor> doctors = doctorService.ReadAll();
             return doctors;
         }
+
+        public List<Doctor> ReadDoctorsBySpeciality(String speciality)
+        {
+            return doctorService.ReadDoctorsBySpeciality(speciality);
+        }
     }
 }

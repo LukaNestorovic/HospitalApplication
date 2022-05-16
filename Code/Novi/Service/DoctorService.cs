@@ -67,6 +67,20 @@ namespace Service
 			return a;
 		}
 
+		public List<Doctor> ReadDoctorsBySpeciality(String speciality)
+		{
+			List<Doctor> all = serializer.fromJSON(FileName);
+			List<Doctor> a = null;
+			foreach (Doctor i in all)
+			{
+				if (i.Specialty == speciality)
+				{
+					a.Add(i);
+				}
+			}
+			return a;
+		}
+
 		public Doctor ReadDoctor(int id)
 		{
 			return doctorRepository.FindByID(id);
