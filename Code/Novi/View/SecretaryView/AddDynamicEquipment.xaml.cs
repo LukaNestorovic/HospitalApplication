@@ -36,7 +36,14 @@ namespace ProjekatSIMS.View.SecretaryView
             DateTime dateOfOrder = DateTime.Now;
             DynamicEquipmentDTO dynamicEquipmentDTO = new DynamicEquipmentDTO(TBName.Text, Int32.Parse(TBQuantity.Text), dateOfOrder);
             dynamicEquipmentController.createDynamicEquipment(dynamicEquipmentDTO);
-            var s = new Storage();
+            var s = new ShowPatient();
+            s.Show();
+            Close();
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            var s =new ShowPatient();
             s.Show();
             Close();
         }

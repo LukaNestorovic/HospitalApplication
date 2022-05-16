@@ -101,5 +101,12 @@ namespace ProjekatSIMS.View.SecretaryView
             s.Show();
             Close();
         }
+
+        private void StorageButton_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new Storage();
+            s.Show();
+            Close();
+        }
     }
 }

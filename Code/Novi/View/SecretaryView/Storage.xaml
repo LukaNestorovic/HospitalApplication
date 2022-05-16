@@ -21,5 +21,6 @@
                 <DataGridTextColumn Header="Quantity" Width="*" Binding="{Binding Quantity}"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button x:Name="BackButton" Content="Back" HorizontalAlignment="Left" Height="41" Margin="10,29,0,0" VerticalAlignment="Top" Width="87" Click="BackButton_Click"/>
     </Grid>
 </Window>

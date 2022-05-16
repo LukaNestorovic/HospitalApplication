@@ -10,6 +10,7 @@
         <TextBox x:Name="TBName" HorizontalAlignment="Center" Height="40" Margin="0,70,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="164"/>
         <TextBox x:Name="TBQuantity" HorizontalAlignment="Center" Height="33" Margin="0,144,0,0" TextWrapping="Wrap" Text="Quantity" VerticalAlignment="Top" Width="164"/>
         <Button x:Name="AddButton" Content="Add" HorizontalAlignment="Center" Height="42" Margin="0,256,0,0" VerticalAlignment="Top" Width="92" Click="AddButton_Click"/>
+        <Button x:Name="BackButton" Content="Back" HorizontalAlignment="Left" Height="51" Margin="41,39,0,0" VerticalAlignment="Top" Width="80" Click="BackButton_Click"/>
 
     </Grid>
 </Window>

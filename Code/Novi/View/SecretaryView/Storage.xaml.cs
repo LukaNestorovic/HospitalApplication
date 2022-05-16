@@ -30,5 +30,12 @@ namespace ProjekatSIMS.View.SecretaryView
             dynamicEquipments = new ObservableCollection<DynamicEquipment>(dynamicEquipmentController.ReadAllInStorage());
             dgDataBinding.ItemsSource = dynamicEquipments;
         }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new ShowPatient();
+            s.Show();
+            Close();
+        }
     }
 }
