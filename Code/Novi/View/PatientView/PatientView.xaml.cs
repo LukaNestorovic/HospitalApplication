@@ -57,10 +57,17 @@ namespace ProjekatSIMS.View.PatientView
             else
             {
                 appointment = (Appointment)PatientAppointments.SelectedItem;
-                appointmentController.DeleteApp(appointment.Id);
-                var s = new PatientView(id, brojac);
-                s.Show();
-                Close();
+                if (appointment == null)
+                {
+                    MessageBox.Show("Choose appointment", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    appointmentController.DeleteApp(appointment.Id);
+                    var s = new PatientView(id, brojac);
+                    s.Show();
+                    Close();
+                }
             }
         }
 
@@ -87,10 +94,17 @@ namespace ProjekatSIMS.View.PatientView
             {
                 Appointment appointment1 = new Appointment();
                 appointment = (Appointment)PatientAppointments.SelectedItem;
-                appointment1 = appointmentController.ReadApp(appointment.Id);
-                var s = new Edit(appointment1, id, brojac);
-                s.Show();
-                Close();
+                if (appointment == null)
+                {
+                    MessageBox.Show("Choose appointment", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    appointment1 = appointmentController.ReadApp(appointment.Id);
+                    var s = new Edit(appointment1, id, brojac);
+                    s.Show();
+                    Close();
+                }
             }
         }
 

@@ -10,7 +10,7 @@
         <Rectangle HorizontalAlignment="Center" Height="61" Stroke="Black" VerticalAlignment="Top" Width="1024" Fill="#003B46"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="691" Margin="0,61,0,0" VerticalAlignment="Top" Width="1024" Background="#C4DFE6"/>
 
-        <DataGrid x:Name="PatientAppointments" Margin="37,154,36,31" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding Path=pregledi}">
+        <DataGrid x:Name="PatientAppointments" Margin="36,154,36,31" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding Path=pregledi}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Examination id" Binding="{Binding Id}"    Width="*"/>
                 <DataGridTextColumn Header="Start time" Binding="{Binding DateTime}"   Width="*"/>
@@ -21,7 +21,7 @@
         </DataGrid>
         <Button Content="Edit Appointment" HorizontalAlignment="Center" Margin="0,91,0,0" VerticalAlignment="Top" Height="40" Width="216" Click="Button_Click_2" Background="#66A5AD" FontSize="19" Foreground="Black"/>
         <Button Content="Cancel Appointment" FontSize="18" HorizontalAlignment="Left" Margin="772,91,0,0" VerticalAlignment="Top" Height="40" Width="216" Click="Button_Click" Background="#66A5AD"/>
-        <Button Content="Schedule appointment" HorizontalAlignment="Left" Margin="37,91,0,0" VerticalAlignment="Top" Height="40" Width="216" Click="Free_Click" Background="#66A5AD" FontSize="19"/>
+        <Button Content="Schedule appointment" HorizontalAlignment="Left" Margin="36,91,0,0" VerticalAlignment="Top" Height="40" Width="216" Click="Free_Click" Background="#66A5AD" FontSize="19"/>
         <Button x:Name="Cancel" Content="Back" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="153" Click="Back_Click" Height="55" FontSize="18" Background="#66A5AD" Foreground="Black"/>
         <Label Content="Scheduled appointments" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Height="48" Width="320" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
         <Button Content="LogOff" HorizontalAlignment="Left" Margin="861,3,0,0" VerticalAlignment="Top" Height="55" Width="153" Click="LogOff_Click" FontSize="18" Background="#66A5AD" Foreground="Black"/>

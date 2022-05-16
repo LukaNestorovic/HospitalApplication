@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS.View.PatientView"
         mc:Ignorable="d"
-        Title="DoctorSurvey" Height="450" Width="800">
+        Title="DoctorSurvey" Height="768" Width="1024">
     <Grid>
-        <Label Content="How would you rate examination" HorizontalAlignment="Left" Margin="133,100,0,0" VerticalAlignment="Top"/>
-        <Label Content="How would you rate your doctor" HorizontalAlignment="Left" Margin="143,178,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.579,0.713"/>
-        <Label Content="How would you rate doctor behavior" HorizontalAlignment="Left" Margin="114,259,0,0" VerticalAlignment="Top"/>
-        <Button Content="Confirm" HorizontalAlignment="Left" Margin="373,369,0,0" VerticalAlignment="Top" Width="83" Height="30" Click="Confirm_Click"/>
-        <Button Content="Back" HorizontalAlignment="Left" Margin="36,34,0,0" VerticalAlignment="Top" Width="41" Height="31" Click="Back_Click"/>
-        <StackPanel Margin="456,86,211,297">
-            <ComboBox x:Name="Combo1">
+        <Rectangle HorizontalAlignment="Center" Height="61" Stroke="Black" VerticalAlignment="Top" Width="1024" Fill="#003B46"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="691" Margin="0,61,0,0" VerticalAlignment="Top" Width="1024" Background="#C4DFE6"/>
+        <Label Content="How would you rate examination?" Margin="76,162,0,0" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="How would you rate your doctor?" HorizontalAlignment="Left" Margin="79,289,0,0" FontSize="25" VerticalAlignment="Top" RenderTransformOrigin="0.579,0.713"/>
+        <Label Content="How would you rate doctor behavior?" HorizontalAlignment="Left" Margin="56,410,0,0" FontSize="25" VerticalAlignment="Top"/>
+        <StackPanel Margin="570,169,97,522">
+            <ComboBox x:Name="Combo1" FontSize="19" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
                 <ComboBoxItem IsSelected="True" Content="1"/>
                 <ComboBoxItem Content="2"/>
                 <ComboBoxItem Content="3"/>
@@ -21,8 +21,8 @@
                 <ComboBoxItem Content="5"/>
             </ComboBox>
         </StackPanel>
-        <StackPanel Margin="461,178,206,205">
-            <ComboBox x:Name="Combo2">
+        <StackPanel Margin="570,289,97,398">
+            <ComboBox x:Name="Combo2" FontSize="19" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
                 <ComboBoxItem IsSelected="True" Content="1"/>
                 <ComboBoxItem Content="2"/>
                 <ComboBoxItem Content="3"/>
@@ -30,8 +30,8 @@
                 <ComboBoxItem Content="5"/>
             </ComboBox>
         </StackPanel>
-        <StackPanel Margin="456,245,211,138">
-            <ComboBox x:Name="Combo3">
+        <StackPanel Margin="570,418,97,276">
+            <ComboBox x:Name="Combo3" FontSize="19" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
                 <ComboBoxItem IsSelected="True" Content="1"/>
                 <ComboBoxItem Content="2"/>
                 <ComboBoxItem Content="3"/>
@@ -39,6 +39,13 @@
                 <ComboBoxItem Content="5"/>
             </ComboBox>
         </StackPanel>
-
+        <Button x:Name="Cancel" Content="Back" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="153" Click="Back_Click" Height="55" FontSize="18" Background="#66A5AD" Foreground="Black"/>
+        <Button  x:Name="Confirm" Content="Confirm" HorizontalAlignment="Center" Margin="0,583,0,0" VerticalAlignment="Top" Width="208" Click="Confirm_Click" Background="#66A5AD" Height="50" FontSize="25"/>
+        <Button Content="LogOff" HorizontalAlignment="Left" Margin="861,3,0,0" VerticalAlignment="Top" Height="55" Width="153" Click="LogOff_Click" FontSize="18" Background="#66A5AD" Foreground="Black"/>
+        <Label Content="Doctor survey" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Height="48" Width="182" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
+        <Button HorizontalAlignment="Left" Margin="762,13,0,0" VerticalAlignment="Top" Height="40" Click="Click">
+            <Image Source="C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\Source\Question-Mark.jpeg" Height="38">
+            </Image>
+        </Button>
     </Grid>
 </Window>

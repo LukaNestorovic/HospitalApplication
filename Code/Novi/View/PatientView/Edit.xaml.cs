@@ -53,14 +53,17 @@ namespace ProjekatSIMS.View.PatientView
             if (today2 <= appointment.DateTime)
             {
                 doctor = (Model.Doctor)Combo.SelectedItem;
-                if(doctor == null)
+                if (doctor == null)
                 {
-                    MessageBox.Show("Izaberite doktora", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Choose doctor", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
-                appointmentController.UpdateApp(DP.SelectedDate.GetValueOrDefault(), TBDescription.Text, appointment.Duration, appointment.Emergency, appointment.Patient.Id, doctor.Id, appointment.Room.Id, appointment.Id, false);
-                var s = new PatientView(id, brojac);
-                s.Show();
-                Close();
+                else
+                {
+                    appointmentController.UpdateApp(DP.SelectedDate.GetValueOrDefault(), TBDescription.Text, appointment.Duration, appointment.Emergency, appointment.Patient.Id, doctor.Id, appointment.Room.Id, appointment.Id, false);
+                    var s = new PatientView(id, brojac);
+                    s.Show();
+                    Close();
+                }
             }
             else
             {
