@@ -16,6 +16,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DTO;
 
 namespace ProjekatSIMS.View.PatientView
 {
@@ -28,6 +29,7 @@ namespace ProjekatSIMS.View.PatientView
         public HospitalSurveyController hospitalSurveyController = new HospitalSurveyController();
         public Patient patient = new Patient();
         public PatientController patientController = new PatientController();
+        public HospitalSurveyDTO hospitalSurveyDTO = new HospitalSurveyDTO();
         public HospitalSurvey(int id)
         {
             InitializeComponent();
@@ -36,41 +38,38 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
-            int question1 = new int();
-            int question2 = new int();
-            int question3 = new int();
             if (Combo1.SelectedIndex == 0)
-                question1 = 1;
+                hospitalSurveyDTO.Question1 = 1;
             else if (Combo1.SelectedIndex == 1)
-                question1 = 2;
+                hospitalSurveyDTO.Question1 = 2;
             else if (Combo1.SelectedIndex == 2)
-                question1 = 3;
+                hospitalSurveyDTO.Question1 = 3;
             else if (Combo1.SelectedIndex == 3)
-                question1 = 4;
+                hospitalSurveyDTO.Question1 = 4;
             else if (Combo1.SelectedIndex == 4)
-                question1 = 5;
+                hospitalSurveyDTO.Question1 = 5;
             if (Combo2.SelectedIndex == 0)
-                question2 = 1;
+                hospitalSurveyDTO.Question2 = 1;
             else if (Combo2.SelectedIndex == 1)
-                question2 = 2;
+                hospitalSurveyDTO.Question2 = 2;
             else if (Combo2.SelectedIndex == 2)
-                question2 = 3;
+                hospitalSurveyDTO.Question2 = 3;
             else if (Combo2.SelectedIndex == 3)
-                question2 = 4;
+                hospitalSurveyDTO.Question2 = 4;
             else if (Combo2.SelectedIndex == 4)
-                question2 = 5;
+                hospitalSurveyDTO.Question2 = 5;
             if (Combo3.SelectedIndex == 0)
-                question3 = 1;
+                hospitalSurveyDTO.Question3 = 1;
             else if (Combo3.SelectedIndex == 1)
-                question3 = 2;
+                hospitalSurveyDTO.Question3 = 2;
             else if (Combo3.SelectedIndex == 2)
-                question3 = 3;
+                hospitalSurveyDTO.Question3 = 3;
             else if (Combo3.SelectedIndex == 3)
-                question3 = 4;
+                hospitalSurveyDTO.Question3 = 4;
             else if (Combo3.SelectedIndex == 4)
-                question3 = 5;
-            patient = patientController.ReadPatient(id);
-            hospitalSurveyController.CreateHospitalSurvey(question1, question2, question3, patient);
+                hospitalSurveyDTO.Question3 = 5;
+            hospitalSurveyDTO.patient = patientController.ReadPatient(id);
+            hospitalSurveyController.CreateHospitalSurvey(hospitalSurveyDTO);
             var s = new PatientHome(id);
             s.Show();
             Close();

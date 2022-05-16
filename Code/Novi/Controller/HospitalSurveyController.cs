@@ -2,14 +2,15 @@
 using Service;
 using Model;
 using System.Collections.Generic;
+using DTO;
 
 namespace Controller
 {
     public class HospitalSurveyController
     {
-		public Boolean CreateHospitalSurvey(int question1, int question2, int question3, Patient patient)
+		public Boolean CreateHospitalSurvey(HospitalSurveyDTO hospitalSurveyDTO)
 		{
-			return hospitalSurveyService.CreateHospitalSurvey(question1, question2, question3, patient);
+			return hospitalSurveyService.CreateHospitalSurvey(hospitalSurveyDTO);
 		}
 
 		public Boolean DeleteHospitalSurvey(int id)
@@ -27,10 +28,6 @@ namespace Controller
 		{
 			List<HospitalSurvey> hospitalSurvey = hospitalSurveyService.ReadAll();
 			return hospitalSurvey;
-		}
-		public Boolean UpdateHospitalSurvey(int question1, int question2, int question3, Patient patient, int id)
-		{
-			return hospitalSurveyService.UpdateHospitalSurvey(question1,question2, question3, patient, id);
 		}
 
 		public HospitalSurveyService hospitalSurveyService = new HospitalSurveyService();

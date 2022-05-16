@@ -1,4 +1,5 @@
 [
+  
   {
     "Question1": 1,
     "Id": 0,
@@ -7,6 +8,27 @@
     "patient": {
       "InsuranceCarrier": "1",
       "Guest": false,
+      "Blocked": false,
+      "Name": "1",
+      "Surname": "1",
+      "Jmbg": "1",
+      "Telephone": "1",
+      "Email": "@gmail.com",
+      "BirthDate": "2022-04-12T00:00:00",
+      "Adress": "1",
+      "Id": 0,
+      "Password": "123"
+    }
+  },
+  {
+    "Question1": 3,
+    "Id": 1,
+    "Question2": 3,
+    "Question3": 3,
+    "patient": {
+      "InsuranceCarrier": "1",
+      "Guest": false,
+      "Blocked": false,
       "Name": "1",
       "Surname": "1",
       "Jmbg": "1",

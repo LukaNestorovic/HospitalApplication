@@ -3,12 +3,13 @@ using Model;
 using Repository;
 using System.IO;
 using System.Collections.Generic;
+using DTO;
 
 namespace Service
 {
     public class DoctorSurveyService
     {
-		public Boolean CreateDoctorSurvey(int question1, int question2, int question3, Patient patient, Doctor doctor)
+		public Boolean CreateDoctorSurvey(DoctorSurveyDTO doctorSurveyDTO)
 		{
 			int newID;
 			if (File.Exists(idFile))
@@ -18,21 +19,21 @@ namespace Service
 			}
 			else
 				newID = 0;
-			DoctorSurvey newDoctorSurvey = new DoctorSurvey(newID, question1, question2, question3, patient, doctor);
+			DoctorSurvey newDoctorSurvey = new DoctorSurvey(newID, doctorSurveyDTO.Question1, doctorSurveyDTO.Question2, doctorSurveyDTO.Question3, doctorSurveyDTO.patient, doctorSurveyDTO.doctor);
 
 			File.WriteAllText(idFile, newID.ToString());
 
 			return doctorSurveyRepository.Save(newDoctorSurvey);
 		}
 
-		public Boolean UpdateDoctorSurvey(int question1, int question2, int question3, Patient patient, Doctor doctor,int id)
+		public Boolean UpdateDoctorSurvey(DoctorSurveyDTO doctorSurveyDTO, int id)
 		{
 			DoctorSurvey doctorSurvey = doctorSurveyRepository.FindByID(id);
-			doctorSurvey.Question1 = question1;
-			doctorSurvey.Question2 = question2;
-			doctorSurvey.Question3 = question3;
-			doctorSurvey.patient = patient;
-			doctorSurvey.doctor = doctor;
+			doctorSurvey.Question1 = doctorSurveyDTO.Question1;
+			doctorSurvey.Question2 = doctorSurveyDTO.Question2;
+			doctorSurvey.Question3 = doctorSurveyDTO.Question3;
+			doctorSurvey.patient = doctorSurveyDTO.patient;
+			doctorSurvey.doctor = doctorSurveyDTO.doctor;
 			return doctorSurveyRepository.UpdateByID(doctorSurvey);
 		}
 

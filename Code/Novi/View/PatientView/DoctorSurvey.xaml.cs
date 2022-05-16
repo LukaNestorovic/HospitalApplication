@@ -16,6 +16,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DTO;
 
 namespace ProjekatSIMS.View.PatientView
 {
@@ -30,6 +31,7 @@ namespace ProjekatSIMS.View.PatientView
         public PatientController patientController = new PatientController();
         public Appointment appointment = new Appointment();
         public Model.Doctor doctor = new Model.Doctor();
+        public DoctorSurveyDTO doctorSurveyDTO = new DoctorSurveyDTO();
         public DoctorSurvey(int id, Appointment appointment)
         {
             InitializeComponent();
@@ -39,42 +41,39 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
-            int question1 = new int();
-            int question2 = new int();
-            int question3 = new int();
             if (Combo1.SelectedIndex == 0)
-                question1 = 1;
+                doctorSurveyDTO.Question1 = 1;
             else if (Combo1.SelectedIndex == 1)
-                question1 = 2;
+                doctorSurveyDTO.Question1 = 2;
             else if (Combo1.SelectedIndex == 2)
-                question1 = 3;
+                doctorSurveyDTO.Question1 = 3;
             else if (Combo1.SelectedIndex == 3)
-                question1 = 4;
+                doctorSurveyDTO.Question1 = 4;
             else if (Combo1.SelectedIndex == 4)
-                question1 = 5;
+                doctorSurveyDTO.Question1 = 5;
             if (Combo2.SelectedIndex == 0)
-                question2 = 1;
+                doctorSurveyDTO.Question2 = 1;
             else if (Combo2.SelectedIndex == 1)
-                question2 = 2;
+                doctorSurveyDTO.Question2 = 2;
             else if (Combo2.SelectedIndex == 2)
-                question2 = 3;
+                doctorSurveyDTO.Question2 = 3;
             else if (Combo2.SelectedIndex == 3)
-                question2 = 4;
+                doctorSurveyDTO.Question2 = 4;
             else if (Combo2.SelectedIndex == 4)
-                question2 = 5;
+                doctorSurveyDTO.Question2 = 5;
             if (Combo3.SelectedIndex == 0)
-                question3 = 1;
+                doctorSurveyDTO.Question3 = 1;
             else if (Combo3.SelectedIndex == 1)
-                question3 = 2;
+                doctorSurveyDTO.Question3 = 2;
             else if (Combo3.SelectedIndex == 2)
-                question3 = 3;
+                doctorSurveyDTO.Question3 = 3;
             else if (Combo3.SelectedIndex == 3)
-                question3 = 4;
+                doctorSurveyDTO.Question3 = 4;
             else if (Combo3.SelectedIndex == 4)
-                question3 = 5;
-            patient = appointment.Patient;
-            doctor = appointment.Doctor;
-            doctorSurveyController.CreateDoctorSurvey(question1, question2, question3, patient, doctor);
+                doctorSurveyDTO.Question3 = 5;
+            doctorSurveyDTO.patient = appointment.Patient;
+            doctorSurveyDTO.doctor = appointment.Doctor;
+            doctorSurveyController.CreateDoctorSurvey(doctorSurveyDTO);
             var s = new Finished(id);
             s.Show();
             Close();
