@@ -67,6 +67,9 @@
     <Compile Update="View\PatientView\PickDatePriority.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\SecretaryView\AddDynamicEquipment.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\SecretaryView\CreateAppointment.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -86,6 +89,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\SecretaryView\ShowPatient.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\SecretaryView\Storage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -150,6 +156,9 @@
     <Page Update="View\PatientView\PickDatePriority.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\SecretaryView\AddDynamicEquipment.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\SecretaryView\CreateAppointment.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -169,6 +178,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\SecretaryView\ShowPatient.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\SecretaryView\Storage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
