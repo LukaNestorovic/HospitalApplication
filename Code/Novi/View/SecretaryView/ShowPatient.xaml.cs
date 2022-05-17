@@ -26,6 +26,7 @@ namespace ProjekatSIMS.View.SecretaryView
         public PatientController patientController = new PatientController();
         public ObservableCollection<Patient> patients;
         public ObservableCollection<MedicalRecord> medicicalRecords;
+        public ObservableCollection<DynamicEquipment> dynamicEquipment;
 
         public ShowPatient()
         {
@@ -92,6 +93,20 @@ namespace ProjekatSIMS.View.SecretaryView
         private void dgDataBinding_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void AddDynamicEquipmentButton_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new AddDynamicEquipment(dynamicEquipment);
+            s.Show();
+            Close();
+        }
+
+        private void StorageButton_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new Storage();
+            s.Show();
+            Close();
         }
     }
 }

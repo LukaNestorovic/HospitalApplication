@@ -24,15 +24,19 @@ namespace ProjekatSIMS.View.PatientView
     {
         
         public AppointmentController appointmentController = new AppointmentController();
+        public PatientController patientController = new PatientController();
         public Appointment appointment = new Appointment();
         public ObservableCollection<Appointment> appointments;
+        public Patient patient = new Patient();
+        private int brojac;
         private int id;
 
-        public PatientView(int id)
+        public PatientView(int id, int brojac)
         {
             InitializeComponent();
             appointments = new ObservableCollection<Appointment>(appointmentController.ReadAllByPatientId(id));
             PatientAppointments.ItemsSource = appointments;
+            this.brojac = brojac;
             this.id = id;
         }
 
@@ -40,12 +44,31 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            appointment = (Appointment)PatientAppointments.SelectedItem;
-            appointmentController.DeleteApp(appointment.Id);
-            var s = new PatientView(id);
-            s.Show();
-            Close();
-
+            brojac++;
+            if (brojac == 5)
+            {
+                patient = patientController.ReadPatient(id);
+                patientController.UpdatePatient(patient.Name, patient.Surname, patient.Jmbg, patient.Telephone, patient.Email, patient.BirthDate, patient.Adress, patient.InsuranceCarrier, patient.Guest, true, patient.Id, patient.Password);
+                var b = new LogIn();
+                b.Show();
+                Close();
+                MessageBox.Show("Blokirani ste", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                appointment = (Appointment)PatientAppointments.SelectedItem;
+                if (appointment == null)
+                {
+                    MessageBox.Show("Choose appointment", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    appointmentController.DeleteApp(appointment.Id);
+                    var s = new PatientView(id, brojac);
+                    s.Show();
+                    Close();
+                }
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -57,12 +80,32 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            Appointment appointment1 = new Appointment();
-            appointment = (Appointment)PatientAppointments.SelectedItem;
-            appointment1 = appointmentController.ReadApp(appointment.Id);
-            var s = new Edit(appointment1, id);
-            s.Show();
-            Close();
+            brojac++;
+            if (brojac == 5)
+            {
+                patient = patientController.ReadPatient(id);
+                patientController.UpdatePatient(patient.Name, patient.Surname, patient.Jmbg, patient.Telephone, patient.Email, patient.BirthDate, patient.Adress, patient.InsuranceCarrier, patient.Guest, true, patient.Id, patient.Password);
+                var b = new LogIn();
+                b.Show();
+                Close();
+                MessageBox.Show("Blokirani ste", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                Appointment appointment1 = new Appointment();
+                appointment = (Appointment)PatientAppointments.SelectedItem;
+                if (appointment == null)
+                {
+                    MessageBox.Show("Choose appointment", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                else
+                {
+                    appointment1 = appointmentController.ReadApp(appointment.Id);
+                    var s = new Edit(appointment1, id, brojac);
+                    s.Show();
+                    Close();
+                }
+            }
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -84,6 +127,10 @@ namespace ProjekatSIMS.View.PatientView
             var s = new LogIn();
             s.Show();
             Close();
+        }
+
+        private void Click(object sender, RoutedEventArgs e)
+        {
         }
     }
 }

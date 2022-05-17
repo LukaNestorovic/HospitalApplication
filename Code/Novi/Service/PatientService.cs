@@ -9,6 +9,7 @@ using Model;
 using Repository;
 using System.IO;
 using System.Collections.Generic;
+using Serialization;
 
 namespace Service
 {
@@ -23,13 +24,13 @@ namespace Service
 				newID = 0;
 		
 
-			Patient patient = new Patient(name, surname, jmbg, telephone, email, birthDate, adress, insuranceCarrier, guest, newID, password);
+			Patient patient = new Patient(name, surname, jmbg, telephone, email, birthDate, adress, insuranceCarrier, guest, false, newID, password);
 
 
 			return patientRepository.Save(patient);
 		}
 		
-		public Boolean UpdatePatient(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String insuranceCarrier, Boolean guest, int id, String password)
+		public Boolean UpdatePatient(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String insuranceCarrier, Boolean guest, Boolean blocked, int id, String password)
 		{
 			Patient patient = patientRepository.FindByID(id);
 			patient.Name = name;
@@ -42,6 +43,7 @@ namespace Service
 			patient.InsuranceCarrier = insuranceCarrier;
 			patient.Guest = guest;
 			patient.Password = password;
+			patient.Blocked = blocked;
 			return patientRepository.UpdateByID(patient);
 		}
 		
@@ -57,7 +59,17 @@ namespace Service
 
 		public Patient ReadPatientByEmail(String email)
 		{
-			return patientRepository.FindByEmail(email);
+			List<Patient> all = serializer.fromJSON(FileName);
+			Patient a = null;
+			foreach (Patient i in all)
+			{
+				if (i.Email == email)
+				{
+					a = i;
+					break;
+				}
+			}
+			return a;
 		}
 
 		public List<Patient> ReadAll()
@@ -65,7 +77,10 @@ namespace Service
 			return patientRepository.FindAll();
 		}
 
-		public Repository.PatientRepository patientRepository = new PatientRepository();
+		public PatientRepository patientRepository = new PatientRepository();
 		public String idFile = @"..\..\..\Data\patientID.txt";
+		private static String FileName = @"..\..\..\data\Patients.json";
+
+		private static Serializer<Patient> serializer = new Serializer<Patient>();
 	}
 }

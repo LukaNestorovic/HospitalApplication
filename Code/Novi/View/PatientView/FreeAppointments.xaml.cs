@@ -36,7 +36,7 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            var s = new PatientView(id);
+            var s = new PatientView(id, 0);
             s.Show();
             Close();
         }
@@ -44,17 +44,34 @@ namespace ProjekatSIMS.View.PatientView
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             appointment = (Appointment)PatientAppointments.SelectedItem;
-            if (appointment.Doctor != null && appointment.Room != null)
+            if (appointment == null)
             {
-                appointmentController.UpdateApp(appointment.DateTime, appointment.Descripton, appointment.Duration, appointment.Emergency, id, appointment.Doctor.Id, appointment.Room.Id, appointment.Id);
+                MessageBox.Show("Choose appointment", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
-                appointmentController.UpdateApp(appointment.DateTime, appointment.Descripton, appointment.Duration, appointment.Emergency, id, 1, 1, appointment.Id);
+                if (appointment.Doctor != null && appointment.Room != null)
+                {
+                    appointmentController.UpdateApp(appointment.DateTime, appointment.Descripton, appointment.Duration, appointment.Emergency, id, appointment.Doctor.Id, appointment.Room.Id, appointment.Id, false);
+                }
+                else
+                {
+                    appointmentController.UpdateApp(appointment.DateTime, appointment.Descripton, appointment.Duration, appointment.Emergency, id, 1, 1, appointment.Id, false);
+                }
+                var s = new PatientView(id, 0);
+                s.Show();
+                Close();
             }
-            var s = new PatientView(id);
+        }
+
+        private void LogOff_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new LogIn();
             s.Show();
             Close();
+        }
+        private void Click(object sender, RoutedEventArgs e)
+        {
         }
     }
 }

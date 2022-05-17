@@ -39,6 +39,8 @@
 
         </DockPanel>
         <Button x:Name="LogOut" Content="Log Out" HorizontalAlignment="Left" Margin="50,168,0,0" VerticalAlignment="Top" Click="LogOut_Click"/>
+        <Button x:Name="AddDynamicEquipmentButton" Content="Add equipment" HorizontalAlignment="Left" Height="49" Margin="682,168,0,0" VerticalAlignment="Top" Width="108" Click="AddDynamicEquipmentButton_Click"/>
+        <Button x:Name="StorageButton" Content="Storage" HorizontalAlignment="Left" Margin="682,246,0,0" VerticalAlignment="Top" Height="55" Width="108" Click="StorageButton_Click"/>
 
     </Grid>
 </Window>

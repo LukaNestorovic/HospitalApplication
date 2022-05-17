@@ -1,0 +1,52 @@
+﻿<Window x:Class="ProjekatSIMS.View.PatientView.HospitalSurvey"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatSIMS.View.PatientView"
+        mc:Ignorable="d"
+        Title="HospitalSurvey" Height="768" Width="1024">
+    <Grid>
+        <Rectangle HorizontalAlignment="Center" Height="61" Stroke="Black" VerticalAlignment="Top" Width="1024" Fill="#003B46"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="691" Margin="0,61,0,0" VerticalAlignment="Top" Width="1024" Background="#C4DFE6"/>
+        <Label Content="How would you rate our hospital?" HorizontalAlignment="Left" Margin="96,161,0,0" VerticalAlignment="Top" FontSize="25"/>
+        <Label Content="How would you rate our staff?" HorizontalAlignment="Left" Margin="116,281,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.579,0.713" FontSize="25"/>
+        <Label Content="How would you rate hygiene of hospital?" HorizontalAlignment="Left" Margin="56,410,0,0" VerticalAlignment="Top" Height="48" FontSize="25"/>
+        <StackPanel Margin="570,169,97,522">
+            <ComboBox x:Name="Combo1" FontSize="19" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <ComboBoxItem IsSelected="True" Content="1"/>
+                <ComboBoxItem Content="2"/>
+                <ComboBoxItem Content="3"/>
+                <ComboBoxItem Content="4"/>
+                <ComboBoxItem Content="5"/>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Margin="570,289,97,398">
+            <ComboBox x:Name="Combo2" Height="28" FontSize="19" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <ComboBoxItem IsSelected="True" Content="1"/>
+                <ComboBoxItem Content="2"/>
+                <ComboBoxItem Content="3"/>
+                <ComboBoxItem Content="4"/>
+                <ComboBoxItem Content="5"/>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Margin="570,418,97,281">
+            <ComboBox x:Name="Combo3" Height="28" FontSize="19" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <ComboBoxItem IsSelected="True" Content="1" />
+                <ComboBoxItem Content="2"/>
+                <ComboBoxItem Content="3"/>
+                <ComboBoxItem Content="4"/>
+                <ComboBoxItem Content="5"/>
+            </ComboBox>
+        </StackPanel>
+        <Button x:Name="Cancel" Content="Back" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="153" Click="Back_Click" Height="55" FontSize="18" Background="#66A5AD" Foreground="Black"/>
+        <Button Content="LogOff" HorizontalAlignment="Left" Margin="861,3,0,0" VerticalAlignment="Top" Height="55" Width="153" Click="LogOff_Click" FontSize="18" Background="#66A5AD" Foreground="Black"/>
+        <Label Content="Hospital survey" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Height="48" Width="200" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
+        <Button  x:Name="Confirm" Content="Confirm" HorizontalAlignment="Center" Margin="0,583,0,0" VerticalAlignment="Top" Width="208" Click="Confirm_Click" Background="#66A5AD" Height="50" FontSize="25"/>
+        <Button HorizontalAlignment="Left" Margin="762,13,0,0" VerticalAlignment="Top" Height="40" Click="Click">
+            <Image Source="C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\Source\Question-Mark.jpeg" Height="38">
+            </Image>
+        </Button>
+
+    </Grid>
+</Window>
