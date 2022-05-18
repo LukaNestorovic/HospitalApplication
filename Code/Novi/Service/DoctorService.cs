@@ -67,18 +67,32 @@ namespace Service
 			return a;
 		}
 
-		public List<Doctor> ReadDoctorsBySpeciality(String speciality)
+		public List<Doctor> ReadDoctorsBySpecialityAndFreeAppointment(String speciality)
 		{
 			List<Doctor> all = serializer.fromJSON(FileName);
-			List<Doctor> a = null;
+			List<Doctor> specialDoctors = new List<Doctor>();
+			List<Doctor> specialDoctorsFree = new List<Doctor>();
+
 			foreach (Doctor i in all)
 			{
 				if (i.Specialty == speciality)
 				{
-					a.Add(i);
+					specialDoctors.Add(i);
 				}
 			}
-			return a;
+			foreach(Doctor i in specialDoctors)
+            {
+				List<Appointment> appointments = appointmentService.ReadAllByDoctorId(i.Id);
+				foreach (Appointment appointment in appointments)
+                {
+					if(appointment.DateTime != DateTime.Now)
+                    {
+						specialDoctorsFree.Add(i);
+						break;
+                    }
+                }
+            }
+			return specialDoctorsFree;
 		}
 
 		public Doctor ReadDoctor(int id)
@@ -94,6 +108,8 @@ namespace Service
 		public Repository.DoctorRepository doctorRepository = new DoctorRepository();
 		public String idFile = @"..\..\..\Data\doctorID.txt";
 		private static String FileName = @"..\..\..\data\Doctors.json";
+		public AppointmentService appointmentService = new AppointmentService();
+		
 
 		private static Serializer<Doctor> serializer = new Serializer<Doctor>();
 

@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="EmergencyAppointment" Height="450" Width="800">
     <Grid>
-        
+        <TextBox x:Name="TBSpeciality" HorizontalAlignment="Center" Margin="0,109,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="134" Height="30"/>
+        <TextBox x:Name="TBPatient" HorizontalAlignment="Center" Margin="0,234,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="134" Height="30"/>
+        <Label Content="Doctor speciality" HorizontalAlignment="Center" Margin="0,62,0,0" VerticalAlignment="Top" Width="104"/>
+        <Label Content="Patient ID" HorizontalAlignment="Left" Margin="363,199,0,0" VerticalAlignment="Top" Width="104"/>
+        <Button x:Name="FindButton" Content="Find appointments" HorizontalAlignment="Center" Margin="0,288,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.076,0.359" Width="104" Height="31" Click="FindButton_Click"/>
+
     </Grid>
 </Window>

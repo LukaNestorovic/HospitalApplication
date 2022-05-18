@@ -45,9 +45,9 @@ namespace Controller
             return doctors;
         }
 
-        public List<Doctor> ReadDoctorsBySpeciality(String speciality)
+        public List<Doctor> ReadDoctorsBySpecialityAndFreeAppointment(String speciality)
         {
-            return doctorService.ReadDoctorsBySpeciality(speciality);
+            return doctorService.ReadDoctorsBySpecialityAndFreeAppointment(speciality);
         }
     }
 }
