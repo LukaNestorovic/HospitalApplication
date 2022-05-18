@@ -49,5 +49,10 @@ namespace Controller
         {
             return doctorService.ReadDoctorsBySpecialityAndFreeAppointment(speciality);
         }
+
+        public List<Doctor> ReadDoctorsBySpecialityAndFreeOperation(String speciality)
+        {
+            return doctorService.ReadDoctorsBySpecialityAndFreeOperation(speciality);
+        }
     }
 }

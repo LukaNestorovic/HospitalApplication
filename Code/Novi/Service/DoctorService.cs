@@ -82,16 +82,53 @@ namespace Service
 			}
 			foreach(Doctor i in specialDoctors)
             {
-				List<Appointment> appointments = appointmentService.ReadAllByDoctorId(i.Id);
+                List<Appointment> appointments = appointmentService.ReadAllByDoctorId(i.Id);
+
+                Boolean a = new Boolean();
 				foreach (Appointment appointment in appointments)
                 {
-					if(appointment.DateTime != DateTime.Now)
+					if(!(appointment.DateTime > DateTime.Now && appointment.DateTime < DateTime.Now.AddHours(2)) == false)
                     {
-						specialDoctorsFree.Add(i);
+						a = false;
 						break;
                     }
+					a = true;
                 }
+				if (a == true)
+					specialDoctorsFree.Add(i);
             }
+			return specialDoctorsFree;
+		}
+
+		public List<Doctor> ReadDoctorsBySpecialityAndFreeOperation(String speciality)
+		{
+			List<Doctor> all = serializer.fromJSON(FileName);
+			List<Doctor> specialDoctors = new List<Doctor>();
+			List<Doctor> specialDoctorsFree = new List<Doctor>();
+
+			foreach (Doctor i in all)
+			{
+				if (i.Specialty == speciality)
+				{
+					specialDoctors.Add(i);
+				}
+			}
+			foreach (Doctor i in specialDoctors)
+			{
+				List<Operation> operations = operationRepository.ReadAllByDoctorId(i.Id);
+				Boolean a = new Boolean();
+				foreach (Operation operation in operations)
+				{
+					if (!(operation.DateTime > DateTime.Now && operation.DateTime < DateTime.Now.AddHours(2)) == false)
+					{
+						a = false;
+						break;
+					}
+					a = true;
+				}
+				if (a == true)
+					specialDoctorsFree.Add(i);
+			}
 			return specialDoctorsFree;
 		}
 
@@ -109,7 +146,7 @@ namespace Service
 		public String idFile = @"..\..\..\Data\doctorID.txt";
 		private static String FileName = @"..\..\..\data\Doctors.json";
 		public AppointmentService appointmentService = new AppointmentService();
-		
+		public OperationRepository operationRepository = new OperationRepository();
 
 		private static Serializer<Doctor> serializer = new Serializer<Doctor>();
 

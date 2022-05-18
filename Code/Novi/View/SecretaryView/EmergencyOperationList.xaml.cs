@@ -18,27 +18,27 @@ using System.Collections.ObjectModel;
 namespace ProjekatSIMS.View.SecretaryView
 {
     /// <summary>
-    /// Interaction logic for EmergencyAppointmentList.xaml
+    /// Interaction logic for EmergencyOperationList.xaml
     /// </summary>
-    public partial class EmergencyAppointmentList : Window
+    public partial class EmergencyOperationList : Window
     {
         private int patientId;
         public ObservableCollection<Doctor> freeDoctors;
-        public AppointmentController appointmentController = new AppointmentController();
-        public EmergencyAppointmentList(int patientId, ObservableCollection<Doctor> freeDoctors)
+        public OperationController operationController = new OperationController();
+        public EmergencyOperationList(int patientId, ObservableCollection<Doctor> freeDoctors)
         {
             InitializeComponent();
             this.patientId = patientId;
             this.freeDoctors = freeDoctors;
-            EmergencyAppointmentsGrid.ItemsSource = freeDoctors;
+            EmergencyOperationsGrid.ItemsSource = freeDoctors;
         }
 
         private void Schedule_Click(object sender, RoutedEventArgs e)
         {
-            Doctor doctor = EmergencyAppointmentsGrid.SelectedItem as Doctor;
+            Doctor doctor = EmergencyOperationsGrid.SelectedItem as Doctor;
             int doctorId = doctor.Id;
-            appointmentController.CreateApp(DateTime.Now.AddHours(1), "emergency", 1, true, patientId, doctorId, 1, false);
-            MessageBox.Show("Termin je uspesno zakazan");
+            operationController.CreateOperation(DateTime.Now.AddHours(1), 1, "emergency", patientId, doctorId, 1);
+            MessageBox.Show("Operacija je uspesno zakazana");
             freeDoctors.Remove(doctor);
         }
     }
