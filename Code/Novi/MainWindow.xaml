@@ -7,14 +7,6 @@
         mc:Ignorable="d"
         Title="LogIn" Height="450" Width="800">
     <Grid>
-        <StackPanel Margin="324,90,343,293">
-            <ComboBox x:Name="Combo">
-                <ComboBoxItem IsSelected="True" Content="Patient"/>
-                <ComboBoxItem Content="Doctor"/>
-                <ComboBoxItem Content="Dean"/>
-                <ComboBoxItem Content="Secretary"/>
-            </ComboBox>
-        </StackPanel>
         <TextBox x:Name="TBEmail" HorizontalAlignment="Left" Margin="324,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Height="28"/>
         <PasswordBox x:Name="TBPass" HorizontalAlignment="Left" Margin="324,231,0,0"  VerticalAlignment="Top" Width="133" Height="28" PasswordChar="*"/>
         <Label Content="Email:" HorizontalAlignment="Left" Margin="229,175,0,0" VerticalAlignment="Top"/>

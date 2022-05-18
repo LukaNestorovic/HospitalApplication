@@ -42,43 +42,13 @@ namespace ProjekatSIMS
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if(Combo.SelectedIndex == 0)
+            patient = patientController.ReadPatientByEmail(TBEmail.Text);
+            secretary = secretaryController.ReadSecretaryByEmail(TBEmail.Text);
+            if(patient != null)
             {
-                patient = patientController.ReadPatientByEmail(TBEmail.Text);
-                if (patient.Blocked == false)
+                if(patient.Password == TBPass.Password)
                 {
-                    if (patient == null)
-                    {
-                        MessageBox.Show("Pogresan mail ili sifra", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
-                    }
-                    if (patient.Password == TBPass.Password && patient != null)
-                    {
-                        int id = patient.Id;
-                        var s = new PatientHome(id);
-                        s.Show();
-                        Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Pogresan mail ili sifra", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Blokirani ste", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-            }
-            else if(Combo.SelectedIndex == 1)
-            {
-                doctor = doctorController.ReadDoctorByEmail(TBEmail.Text);
-                if (doctor == null)
-                {
-                    MessageBox.Show("Pogresan mail ili sifra", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-                if (doctor.Password == TBPass.Password && doctor != null)
-                {
-                    int id = doctor.Id;
-                    var s = new DoctorView(id);
+                    var s = new PatientHome(patient.Id);
                     s.Show();
                     Close();
                 }
@@ -87,35 +57,10 @@ namespace ProjekatSIMS
                     MessageBox.Show("Pogresan mail ili sifra", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
-            else if(Combo.SelectedIndex == 2)
+            else if(secretary != null)
             {
-                dean = deanController.ReadDeanByEmail(TBEmail.Text);
-                if (dean == null)
+                if(secretary.Password == TBPass.Password)
                 {
-                    MessageBox.Show("Pogresan mail ili sifra", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-                if (dean.Password == TBPass.Password && dean != null)
-                {
-                    int id = dean.Id;
-                    var s = new ManagerView();
-                    s.Show();
-                    Close();
-                }
-                else
-                {
-                    MessageBox.Show("Pogresan mail ili sifra", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-            }
-            else if(Combo.SelectedIndex == 3)
-            {
-                secretary = secretaryController.ReadSecretaryByEmail(TBEmail.Text);
-                if (secretary == null)
-                {
-                    MessageBox.Show("Pogresan mail ili sifra", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-                if (secretary.Password == TBPass.Password && secretary != null)
-                {
-                    int id = secretary.Id;
                     var s = new ShowPatient();
                     s.Show();
                     Close();
@@ -124,8 +69,11 @@ namespace ProjekatSIMS
                 {
                     MessageBox.Show("Pogresan mail ili sifra", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
+            }      
+            else
+            {
+                MessageBox.Show("Pogresan mail ili sifra", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-
         }
 
         private void Appointment_Click(object sender, RoutedEventArgs e)
