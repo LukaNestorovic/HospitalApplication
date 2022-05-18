@@ -85,6 +85,12 @@
     <Compile Update="View\SecretaryView\EditPatient.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\SecretaryView\EmergencyAppointmentList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\SecretaryView\EmergencyOperationList.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\SecretaryView\ShowAppointments.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -172,6 +178,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\SecretaryView\EditPatient.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\SecretaryView\EmergencyAppointmentList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\SecretaryView\EmergencyOperationList.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\SecretaryView\ShowAppointments.xaml">

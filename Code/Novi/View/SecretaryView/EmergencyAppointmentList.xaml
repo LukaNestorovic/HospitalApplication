@@ -1,0 +1,31 @@
+﻿<Window x:Class="ProjekatSIMS.View.SecretaryView.EmergencyAppointmentList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatSIMS.View.SecretaryView"
+        mc:Ignorable="d"
+        Title="EmergencyAppointmentList" Height="450" Width="800">
+    <Grid>
+        <DataGrid HorizontalAlignment="Center" Name="EmergencyAppointmentsGrid" AutoGenerateColumns="False" Margin="0,86,0,28" HorizontalContentAlignment="Right" VerticalContentAlignment="Stretch" FontWeight="Bold" Width="700">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" x:Name="TBName" Width="*" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Surname" x:Name="TBSurname" Width="*" Binding="{Binding Surname}"/>
+                <DataGridTextColumn Header="Specialty" x:Name="TBSpecialty" Width="*" Binding="{Binding Specialty}"/>
+                <DataGridTemplateColumn Width="*" Header="Schedule">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="Schedule_Click">Schedule</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
