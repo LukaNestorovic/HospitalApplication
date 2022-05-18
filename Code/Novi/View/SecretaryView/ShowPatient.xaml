@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS.View.SecretaryView"
         mc:Ignorable="d"
-        Title="ShowPatient" Height="450" Width="800">
+        Title="ShowPatient" Height="450" Width="1200">
     <Grid>
         <DataGrid HorizontalAlignment="Center" Name="dgDataBinding" AutoGenerateColumns="False" Margin="0,86,0,28" HorizontalContentAlignment="Right" VerticalContentAlignment="Stretch" FontWeight="Bold" IsReadOnly="True" Width="553" SelectionChanged="dgDataBinding_SelectionChanged">
             <DataGrid.Resources>
@@ -26,21 +26,23 @@
                 <DataGridTextColumn Header="Guest" Width="*" Binding="{Binding Guest}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <DockPanel HorizontalAlignment="Center" VerticalAlignment="Top" Width="700">
+        <DockPanel HorizontalAlignment="Center" VerticalAlignment="Top" Width="1000">
             <Button x:Name="CreateAccount" Content="Create account" Height="35" Width="100" Margin="0,0,0,10" Click="CreateAccount_Click"/>
             <Button x:Name="ShowAccount" Content="Show account" Height="35" Width="100" Margin="0,0,0,10" Click="ShowAccount_Click"/>
             <Button x:Name="EditAccount" Content="Edit account" Height="35" Width="100" Margin="0,0,0,10" Click="EditAccount_Click"/>
             <Button x:Name="DeleteAccount" Content="Delete account" Height="35" Width="100" Margin="0,0,0,10" Click="DeleteAccount_Click"/>
             <Button x:Name="Operations" Content="Operations" Height="35" Width="100" Margin="0,0,0,10" Click="Operations_Click"/>
             <Button x:Name="Appointments" Content="Appointments" Height="35" Width="100" Margin="0,0,0,10" Click="Appointments_Click"/>
+            <Button x:Name="EmergencyAppointments" Content="EmergencyAppointments" Height="35" Width="150" Margin="0,0,0,10" Click="EmergencyAppointments_Click"/>
+            <Button x:Name="EmergencyOperations" Content="Emergency Operations" Height="35" Width="150" Margin="0,0,0,10" Click="EmergencyOperations_Click"/>
             <Button x:Name="EditAllergens" Content="Edit allergens" Height="35" Width="100" Margin="0,0,0,10" Click="EditAllergens_Click"/>
 
 
 
         </DockPanel>
         <Button x:Name="LogOut" Content="Log Out" HorizontalAlignment="Left" Margin="50,168,0,0" VerticalAlignment="Top" Click="LogOut_Click"/>
-        <Button x:Name="AddDynamicEquipmentButton" Content="Add equipment" HorizontalAlignment="Left" Height="49" Margin="682,168,0,0" VerticalAlignment="Top" Width="108" Click="AddDynamicEquipmentButton_Click"/>
-        <Button x:Name="StorageButton" Content="Storage" HorizontalAlignment="Left" Margin="682,246,0,0" VerticalAlignment="Top" Height="55" Width="108" Click="StorageButton_Click"/>
+        <Button x:Name="AddDynamicEquipmentButton" Content="Add equipment" HorizontalAlignment="Left" Height="49" Margin="920,168,0,0" VerticalAlignment="Top" Width="108" Click="AddDynamicEquipmentButton_Click"/>
+        <Button x:Name="StorageButton" Content="Storage" HorizontalAlignment="Left" Margin="920,279,0,0" VerticalAlignment="Top" Height="55" Width="108" Click="StorageButton_Click"/>
 
     </Grid>
 </Window>

@@ -64,9 +64,36 @@ namespace Repository
 			serializer.toJSON(FileName, all);
 			return false;
 		}
-	
+
+		public List<Operation> ReadAllByDoctorId(int id)
+		{
+			try
+			{
+				List<Operation> all = serializer.fromJSON(FileName);
+				List<Operation> ret = new List<Operation>();
+				foreach (Operation i in all)
+				{
+					if (i.doctor == null)
+					{
+						continue;
+					}
+					if (i.doctor.Id == id)
+					{
+						ret.Add(i);
+					}
+				}
+				this.ret = ret;
+				return ret;
+			}
+			catch
+			{
+				return null;
+			}
+		}
+
 		private static String FileName = @"..\..\..\data\Operations.json";
 		
 		private static Serializer<Operation> serializer = new Serializer<Operation>();
+		private List<Operation> ret = new List<Operation>();
 	}
 }

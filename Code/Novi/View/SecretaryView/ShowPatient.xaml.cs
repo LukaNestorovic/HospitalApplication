@@ -108,5 +108,19 @@ namespace ProjekatSIMS.View.SecretaryView
             s.Show();
             Close();
         }
+
+        private void EmergencyAppointments_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new EmergencyAppointment();
+            s.Show();
+            Close();
+        }
+
+        private void EmergencyOperations_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new EmergencyOperation();
+            s.Show();
+            Close();
+        }
     }
 }
