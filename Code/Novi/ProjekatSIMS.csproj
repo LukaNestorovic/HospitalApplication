@@ -7,7 +7,52 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Source\**" />
+    <EmbeddedResource Remove="Source\**" />
+    <None Remove="Source\**" />
+    <Page Remove="Source\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="View\PatientView\Source\appointment.png" />
+    <None Remove="View\PatientView\Source\finished.png" />
+    <None Remove="View\PatientView\Source\medicine.png" />
+    <None Remove="View\PatientView\Source\Question-Mark.jpeg" />
+    <None Remove="View\PatientView\Source\rate.png" />
+    <None Remove="View\PatientView\Source\record.png" />
+    <None Remove="View\PatientView\Source\reminder.png" />
+    <None Remove="View\PatientView\Source\schedule.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="View\PatientView\Source\appointment.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\PatientView\Source\finished.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\PatientView\Source\medicine.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\PatientView\Source\Question-Mark.jpeg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\PatientView\Source\rate.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\PatientView\Source\record.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\PatientView\Source\reminder.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="View\PatientView\Source\schedule.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

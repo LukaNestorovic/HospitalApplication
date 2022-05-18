@@ -23,7 +23,7 @@
         <Button Content="LogOff" HorizontalAlignment="Left" Margin="861,3,0,0" VerticalAlignment="Top" Height="55" Width="153" Click="LogOff_Click" FontSize="18" Background="#66A5AD" Foreground="Black"/>
         <Label Content="Medicine" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Height="48" Width="123" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
         <Button HorizontalAlignment="Left" Margin="762,13,0,0" VerticalAlignment="Top" Height="40" Click="Click">
-            <Image Source="C:\Users\Ryzen\Desktop\FAX\SIMS\SIMS\Code\Novi\Source\Question-Mark.jpeg" Height="38">
+            <Image Source="Source\Question-Mark.jpeg" Height="38">
             </Image>
         </Button>
 
