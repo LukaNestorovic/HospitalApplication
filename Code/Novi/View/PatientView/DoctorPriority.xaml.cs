@@ -41,7 +41,7 @@ namespace ProjekatSIMS.View.PatientView
             DateTime date = DatePicker.SelectedDate.GetValueOrDefault();
             doctor = (Model.Doctor)Combo.SelectedItem;
             appointment = appointmentController.ReadWithPriorityDoctor(doctor.Id, date);
-            appointmentController.UpdateApp(appointment.DateTime, appointment.Descripton, appointment.Duration, appointment.Emergency, id, appointment.Doctor.Id, 1, appointment.Id, false);
+            appointmentController.UpdateAppointment(appointment.DateTime, appointment.Descripton, appointment.Duration, appointment.Emergency, id, appointment.Doctor.Id, 1, appointment.Id, false);
             var s = new PatientView(id, 0);
             s.Show();
             Close();

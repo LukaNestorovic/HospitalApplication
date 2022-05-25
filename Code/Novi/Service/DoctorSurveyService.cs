@@ -9,7 +9,7 @@ namespace Service
 {
     public class DoctorSurveyService
     {
-		public Boolean CreateDoctorSurvey(DoctorSurveyDTO doctorSurveyDTO)
+		public int createId()
 		{
 			int newID;
 			if (File.Exists(idFile))
@@ -19,6 +19,14 @@ namespace Service
 			}
 			else
 				newID = 0;
+			File.Create(idFile).Close();
+			File.WriteAllText(idFile, newID.ToString());
+			id = newID;
+			return newID;
+		}
+		public Boolean CreateDoctorSurvey(DoctorSurveyDTO doctorSurveyDTO)
+		{
+			int newID = createId();
 			DoctorSurvey newDoctorSurvey = new DoctorSurvey(newID, doctorSurveyDTO.Question1, doctorSurveyDTO.Question2, doctorSurveyDTO.Question3, doctorSurveyDTO.patient, doctorSurveyDTO.doctor);
 
 			File.WriteAllText(idFile, newID.ToString());
@@ -54,5 +62,6 @@ namespace Service
 
 		public DoctorSurveyRepository doctorSurveyRepository = new DoctorSurveyRepository();
 		public String idFile = @"..\..\..\Data\doctorSurveyID.txt";
+		public int id = 0;
 	}
 }

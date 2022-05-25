@@ -16,30 +16,30 @@ namespace Controller
 		public PatientService patientService = new PatientService();
 		public RoomService roomService = new RoomService();
 		public DoctorService doctorService = new DoctorService();
-		public Boolean CreateApp(DateTime dateTime, String description, int duration, Boolean emergency, int patientId, int doctorId, int roomId, Boolean finished)
+		public Boolean CreateAppointment(DateTime dateTime, String description, int duration, Boolean emergency, int patientId, int doctorId, int roomId, Boolean finished)
 		{
 			Patient patient = patientService.ReadPatient(patientId);
 			Doctor doctor = doctorService.ReadDoctor(doctorId);
 			Room room = roomService.ReadRoom(roomId);
-			return appointmentService.CreateApp(dateTime, description, duration, emergency, patient, doctor, room, finished);
+			return appointmentService.CreateAppointment(dateTime, description, duration, emergency, patient, doctor, room, finished);
 		}
 		
-		public Boolean DeleteApp(int id)
+		public Boolean DeleteAppointment(int id)
 		{
-			return appointmentService.DeleteApp(id);
+			return appointmentService.DeleteAppointment(id);
 		}
 		
-		public Boolean UpdateApp(DateTime dateTime, String description, int duration, Boolean emergency, int patientId, int doctorId, int roomId, int appId, Boolean finished)
+		public Boolean UpdateAppointment(DateTime dateTime, String description, int duration, Boolean emergency, int patientId, int doctorId, int roomId, int appId, Boolean finished)
 		{
 			Patient patient = patientService.ReadPatient(patientId);
 			Doctor doctor = doctorService.ReadDoctor(doctorId);
 			Room room = roomService.ReadRoom(roomId);
-			return appointmentService.UpdateApp(dateTime, description, duration, emergency, patient, doctor, room, appId, finished);
+			return appointmentService.UpdateAppointment(dateTime, description, duration, emergency, patient, doctor, room, appId, finished);
 		}
 		
-		public Appointment ReadApp(int id)
+		public Appointment ReadAppointment(int id)
 		{
-			Appointment appointment = appointmentService.ReadApp(id);
+			Appointment appointment = appointmentService.ReadAppointment(id);
 			return appointment;
 		}
 

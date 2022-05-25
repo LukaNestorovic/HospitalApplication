@@ -42,7 +42,7 @@ namespace ProjekatSIMS.View.SecretaryView
             int patientId = appointment.Patient.Id;
             int roomId = appointment.Room.Id;
             Boolean emergency = appointment.Emergency;
-            appointmentController.UpdateApp(dateTime, description, duration, emergency, patientId, doctorId, roomId, appointmentId, false);
+            appointmentController.UpdateAppointment(dateTime, description, duration, emergency, patientId, doctorId, roomId, appointmentId, false);
             var s = new ShowAppointments();
             s.Show();
             Close();
@@ -59,7 +59,7 @@ namespace ProjekatSIMS.View.SecretaryView
         {
             Appointment appointment = AppointmentsGrid.SelectedItem as Appointment;
             int appointmentId = appointment.Id;
-            appointmentController.DeleteApp(appointmentId);
+            appointmentController.DeleteAppointment(appointmentId);
             var s = new ShowAppointments();
             s.Show();
             Close();

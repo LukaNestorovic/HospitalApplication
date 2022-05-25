@@ -52,11 +52,11 @@ namespace ProjekatSIMS.View.PatientView
             {
                 if (appointment.Doctor != null && appointment.Room != null)
                 {
-                    appointmentController.UpdateApp(appointment.DateTime, appointment.Descripton, appointment.Duration, appointment.Emergency, id, appointment.Doctor.Id, appointment.Room.Id, appointment.Id, false);
+                    appointmentController.UpdateAppointment(appointment.DateTime, appointment.Descripton, appointment.Duration, appointment.Emergency, id, appointment.Doctor.Id, appointment.Room.Id, appointment.Id, false);
                 }
                 else
                 {
-                    appointmentController.UpdateApp(appointment.DateTime, appointment.Descripton, appointment.Duration, appointment.Emergency, id, 1, 1, appointment.Id, false);
+                    appointmentController.UpdateAppointment(appointment.DateTime, appointment.Descripton, appointment.Duration, appointment.Emergency, id, 1, 1, appointment.Id, false);
                 }
                 var s = new PatientView(id, 0);
                 s.Show();

@@ -16,7 +16,12 @@ namespace Repository
             serializer.toJSON(FileName, all);
             return true;
         }
-        
+
+        public List<Prescription> FindAll()
+        {
+            return serializer.fromJSON(FileName);
+        }
+
         private static String FileName = @"..\..\..\data\Prescriptions.json";
 
         private static Serializer<Prescription> serializer = new Serializer<Prescription>();

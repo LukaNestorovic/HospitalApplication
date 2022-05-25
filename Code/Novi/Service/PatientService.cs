@@ -15,15 +15,23 @@ namespace Service
 {
 	public class PatientService
 	{
-		public Boolean CreatePatient(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String insuranceCarrier, Boolean guest, String password) { 
+		public int createId()
+		{
 			int newID;
-			if(File.Exists(idFile)){
+			if (File.Exists(idFile))
+			{
 				newID = int.Parse(File.ReadAllText(idFile));
 				newID++;
-			}else
+			}
+			else
 				newID = 0;
-		
-
+			File.Create(idFile).Close();
+			File.WriteAllText(idFile, newID.ToString());
+			id = newID;
+			return newID;
+		}
+		public Boolean CreatePatient(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String insuranceCarrier, Boolean guest, String password) {
+			int newID = createId();
 			Patient patient = new Patient(name, surname, jmbg, telephone, email, birthDate, adress, insuranceCarrier, guest, false, newID, password);
 
 
@@ -59,7 +67,7 @@ namespace Service
 
 		public Patient ReadPatientByEmail(String email)
 		{
-			List<Patient> all = serializer.fromJSON(FileName);
+			List<Patient> all = patientRepository.FindAll(); ;
 			Patient a = null;
 			foreach (Patient i in all)
 			{
@@ -79,8 +87,7 @@ namespace Service
 
 		public PatientRepository patientRepository = new PatientRepository();
 		public String idFile = @"..\..\..\Data\patientID.txt";
-		private static String FileName = @"..\..\..\data\Patients.json";
-
-		private static Serializer<Patient> serializer = new Serializer<Patient>();
+		public int id = 0;
+	
 	}
 }

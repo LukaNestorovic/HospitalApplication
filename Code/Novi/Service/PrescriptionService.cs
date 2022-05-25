@@ -12,7 +12,7 @@ namespace Service
 {
     public class PrescriptionService
     {
-		public Boolean CreatePrescription(String instructions, Doctor doctor, Patient patient, Drug drug, DateTime datetime)
+		public int createId()
 		{
 			int newID;
 			if (File.Exists(idFile))
@@ -22,7 +22,14 @@ namespace Service
 			}
 			else
 				newID = 0;
-			
+			File.Create(idFile).Close();
+			File.WriteAllText(idFile, newID.ToString());
+			id = newID;
+			return newID;
+		}
+		public Boolean CreatePrescription(String instructions, Doctor doctor, Patient patient, Drug drug, DateTime datetime)
+		{
+			int newID = createId();
 			Prescription newPrescription = new Prescription(instructions, newID, doctor, patient, drug, datetime);
 
 
@@ -34,7 +41,7 @@ namespace Service
 
 		public List<Prescription> ReadAllByPatientId(int id)
 		{
-            List<Prescription> all = serializer.fromJSON(FileName);
+            List<Prescription> all = prescriptionRepository.FindAll();
             List<Prescription> ret = new List<Prescription>();
             foreach (Prescription i in all)
             {
@@ -62,10 +69,6 @@ namespace Service
 
 		public String idFile = @"..\..\..\Data\prescriptionID.txt";
 		public PrescriptionRepository prescriptionRepository = new PrescriptionRepository();
-		public DoctorRepository doctorRepository = new DoctorRepository();
-		public PatientRepository patientRepository = new PatientRepository();
-        private static String FileName = @"..\..\..\data\Prescriptions.json";
-
-        private static Serializer<Prescription> serializer = new Serializer<Prescription>();
+        public int id = 0;
     }
 }

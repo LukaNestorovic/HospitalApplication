@@ -15,7 +15,7 @@ namespace Service
 {
 	public class AppointmentService
 	{
-		public Boolean CreateApp(DateTime dateTime, String descripton, int duration, Boolean emergency, Patient patient, Doctor doctor, Room room, Boolean finished)
+		public int createId()
 		{
 			int newID;
 			if (File.Exists(idFile))
@@ -25,6 +25,14 @@ namespace Service
 			}
 			else
 				newID = 0;
+			File.Create(idFile).Close();
+			File.WriteAllText(idFile, newID.ToString());
+			id = newID;
+			return newID;
+		}
+		public Boolean CreateAppointment(DateTime dateTime, String descripton, int duration, Boolean emergency, Patient patient, Doctor doctor, Room room, Boolean finished)
+		{
+			int newID = createId();
 			Appointment newAppointment = new Appointment(dateTime, descripton, duration, emergency, newID, patient, doctor, room, finished);
 
 			File.WriteAllText(idFile, newID.ToString());
@@ -32,7 +40,7 @@ namespace Service
 			return appointmentRepository.Save(newAppointment);
 		}
 		
-		public Boolean UpdateApp(DateTime dateTime, String descripton, int duration, Boolean emergency, Patient patient, Doctor doctor, Room room, int id, Boolean finished)
+		public Boolean UpdateAppointment(DateTime dateTime, String descripton, int duration, Boolean emergency, Patient patient, Doctor doctor, Room room, int id, Boolean finished)
 		{
 			Appointment appointment = appointmentRepository.FindByID(id);
 			appointment.DateTime = dateTime;
@@ -46,19 +54,19 @@ namespace Service
 			return appointmentRepository.UpdateByID(appointment);
 		}
 		
-		public Boolean DeleteApp(int id)
+		public Boolean DeleteAppointment(int id)
 		{
 			return appointmentRepository.DeleteByID(id);
 		}
 		
-		public Appointment ReadApp(int id)
+		public Appointment ReadAppointment(int id)
 		{
 			return appointmentRepository.FindByID(id);
 		}
 
 		public Appointment ReadWithPriority(DateTime date)
         {
-			List<Appointment> all = serializer.fromJSON(FileName);
+			List<Appointment> all = appointmentRepository.FindAll();
 			List<Appointment> ret = new List<Appointment>();
 			Appointment app = new Appointment();
 			foreach (Appointment i in all)
@@ -82,7 +90,7 @@ namespace Service
 
 		public Appointment ReadWithPriorityDoctor(int id, DateTime date)
         {
-			List<Appointment> all = serializer.fromJSON(FileName);
+			List<Appointment> all = appointmentRepository.FindAll();
 			List<Appointment> ret = new List<Appointment>();
 			Appointment app = new Appointment();
 			foreach (Appointment i in all)
@@ -116,7 +124,7 @@ namespace Service
 
 		public List<Appointment> ReadByDoctor (Doctor doctor)
         {
-			List<Appointment> all = serializer.fromJSON(FileName);
+			List<Appointment> all = appointmentRepository.FindAll();
 			List<Appointment> appointments = new List<Appointment>();
 			foreach (Appointment i in all)
 			{
@@ -131,7 +139,7 @@ namespace Service
 
 		public List<Appointment> ReadIfFinished()
         {
-			List<Appointment> all = serializer.fromJSON(FileName);
+			List<Appointment> all = appointmentRepository.FindAll();
 			List<Appointment> appointments = new List<Appointment>();
 			foreach (Appointment i in all)
 			{
@@ -148,7 +156,7 @@ namespace Service
         {
 			try
 			{
-				List<Appointment> all = serializer.fromJSON(FileName);
+				List<Appointment> all = appointmentRepository.FindAll();
 				List<Appointment> ret = new List<Appointment>();
 				foreach (Appointment i in all)
 				{
@@ -161,7 +169,6 @@ namespace Service
 						ret.Add(i);
 					}
 				}
-				this.ret = ret;
 				return ret;
 			}
 			catch
@@ -174,7 +181,7 @@ namespace Service
 		{
 			try
 			{
-				List<Appointment> all = serializer.fromJSON(FileName);
+				List<Appointment> all = appointmentRepository.FindAll();
 				List<Appointment> ret = new List<Appointment>();
 				foreach (Appointment i in all)
 				{
@@ -197,7 +204,7 @@ namespace Service
 
 		public List<Appointment> ReadAllWithoutPatient()
 		{
-			List<Appointment> all = serializer.fromJSON(FileName);
+			List<Appointment> all = appointmentRepository.FindAll();
 			List<Appointment> ret = new List<Appointment>();
 			List<Appointment> retdate = new List<Appointment>();
 			foreach (Appointment i in all)
@@ -211,11 +218,9 @@ namespace Service
 			return ret;
 		}
 
-		private List<Appointment> ret = new List<Appointment>();
+		
 		public String idFile = @"..\..\..\Data\appointmentID.txt";
 		public AppointmentRepository appointmentRepository = new AppointmentRepository();
-		private static String FileName = @"..\..\..\data\Appointments.json";
-
-		private static Serializer<Appointment> serializer = new Serializer<Appointment>();
+		public int id = 0;
 	}
 }

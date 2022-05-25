@@ -48,6 +48,10 @@ namespace Repository
 			return a;
 		}
 
+		public List<DynamicEquipment> FindAll()
+		{
+			return serializer.fromJSON(FileName);
+		}
 		public List<DynamicEquipment> ReadAllInStorage()
 		{
 			List<DynamicEquipment> all = serializer.fromJSON(FileName);

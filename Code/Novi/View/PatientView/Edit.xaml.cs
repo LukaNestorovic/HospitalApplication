@@ -59,7 +59,7 @@ namespace ProjekatSIMS.View.PatientView
                 }
                 else
                 {
-                    appointmentController.UpdateApp(DP.SelectedDate.GetValueOrDefault(), TBDescription.Text, appointment.Duration, appointment.Emergency, appointment.Patient.Id, doctor.Id, appointment.Room.Id, appointment.Id, false);
+                    appointmentController.UpdateAppointment(DP.SelectedDate.GetValueOrDefault(), TBDescription.Text, appointment.Duration, appointment.Emergency, appointment.Patient.Id, doctor.Id, appointment.Room.Id, appointment.Id, false);
                     var s = new PatientView(id, brojac);
                     s.Show();
                     Close();

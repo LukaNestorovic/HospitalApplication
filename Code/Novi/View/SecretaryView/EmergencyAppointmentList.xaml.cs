@@ -37,7 +37,7 @@ namespace ProjekatSIMS.View.SecretaryView
         {
             Doctor doctor = EmergencyAppointmentsGrid.SelectedItem as Doctor;
             int doctorId = doctor.Id;
-            appointmentController.CreateApp(DateTime.Now.AddHours(1), "emergency", 1, true, patientId, doctorId, 1, false);
+            appointmentController.CreateAppointment(DateTime.Now.AddHours(1), "emergency", 1, true, patientId, doctorId, 1, false);
             MessageBox.Show("Termin je uspesno zakazan");
             freeDoctors.Remove(doctor);
         }

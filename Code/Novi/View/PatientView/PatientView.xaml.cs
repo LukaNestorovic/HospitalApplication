@@ -63,7 +63,7 @@ namespace ProjekatSIMS.View.PatientView
                 }
                 else
                 {
-                    appointmentController.DeleteApp(appointment.Id);
+                    appointmentController.DeleteAppointment(appointment.Id);
                     var s = new PatientView(id, brojac);
                     s.Show();
                     Close();
@@ -100,7 +100,7 @@ namespace ProjekatSIMS.View.PatientView
                 }
                 else
                 {
-                    appointment1 = appointmentController.ReadApp(appointment.Id);
+                    appointment1 = appointmentController.ReadAppointment(appointment.Id);
                     var s = new Edit(appointment1, id, brojac);
                     s.Show();
                     Close();

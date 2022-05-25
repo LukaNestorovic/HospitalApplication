@@ -17,8 +17,6 @@ namespace Repository
 		{
 			return serializer.fromJSON(FileName);
 		}
-
-		private List<Appointment> ret = new List<Appointment>();
 		
 		public Appointment FindByID(int id)
 		{
