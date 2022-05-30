@@ -19,6 +19,8 @@ namespace Service
 		public int patientId;
 		public PatientService patientService = new PatientService();
 		public AppointmentDTO appointmentDTO1 = new AppointmentDTO();
+		public Patient patient;
+		public Appointment appointment1;
 		public int createId()
 		{
 			int newID;
@@ -46,7 +48,6 @@ namespace Service
 		
 		public Boolean UpdateAppointment(AppointmentDTO appointmentDTO, int id)
 		{
-			this.appointmentDTO1 = appointmentDTO;
 			appointmentDTO.Patient.Brojac++;
 			Appointment appointment = appointmentRepository.FindByID(id);
 			appointment.DateTime = appointmentDTO.DateTime;
@@ -71,8 +72,18 @@ namespace Service
 			return appointmentRepository.UpdateByID(appointment);
 		}
 		
-		public Boolean DeleteAppointment(int id)
+		public Boolean DeleteAppointment(int id, int patientId)
 		{
+			Patient patient = patientService.ReadPatient(1);
+			patient.Brojac++;
+			if(patient.Brojac > 4)
+            {
+				patientService.UpdatePatient(patient.Name, patient.Surname, patient.Jmbg, patient.Telephone, patient.Email, patient.BirthDate, patient.Adress, patient.InsuranceCarrier, patient.Guest, true, patient.Id, patient.Password, patient.Brojac);
+				Patient patient1 = patientService.ReadPatient(patient.Id);
+				return appointmentRepository.DeleteByID(id);
+			}
+			patientService.UpdatePatient(patient.Name, patient.Surname, patient.Jmbg, patient.Telephone, patient.Email, patient.BirthDate, patient.Adress, patient.InsuranceCarrier, patient.Guest, true, patient.Id, patient.Password, patient.Brojac);
+			Patient patient2 = patientService.ReadPatient(patient.Id);
 			return appointmentRepository.DeleteByID(id);
 		}
 		

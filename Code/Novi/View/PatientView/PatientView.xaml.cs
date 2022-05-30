@@ -42,6 +42,7 @@ namespace ProjekatSIMS.View.PatientView
        
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
+            patient = patientController.ReadPatient(id);
             appointment = (Appointment)PatientAppointments.SelectedItem;
             if (appointment == null)
             {
@@ -49,17 +50,27 @@ namespace ProjekatSIMS.View.PatientView
             }
             else
             {
-                appointmentController.DeleteAppointment(appointment.Id);
-                var s = new PatientView(id);
-                s.Show();
-                Close();
+                if (patient.Brojac > 4)
+                {
+                    MessageBox.Show("Blokirani ste", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+                    var t = new LogIn();
+                    t.Show();
+                    Close();
+                }
+                else
+                {
+                    appointmentController.DeleteAppointment(appointment.Id, id);
+                    var s = new PatientView(id);
+                    s.Show();
+                    Close();
+                }
             }
             
         }
 
 
         private void Edit_Click(object sender, RoutedEventArgs e)
-        {            
+        {
             Appointment appointment1 = new Appointment();
             appointment = (Appointment)PatientAppointments.SelectedItem;
             if (appointment == null)
@@ -68,10 +79,10 @@ namespace ProjekatSIMS.View.PatientView
             }
             else
             {
-                appointment1 = appointmentController.ReadAppointment(appointment.Id);
-                var s = new Edit(appointment1, id);
-                s.Show();
-                Close();
+                    appointment1 = appointmentController.ReadAppointment(appointment.Id);
+                    var s = new Edit(appointment1, id);
+                    s.Show();
+                    Close();
             }
         }
 

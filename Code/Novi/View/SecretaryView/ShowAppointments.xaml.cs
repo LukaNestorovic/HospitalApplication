@@ -64,7 +64,7 @@ namespace ProjekatSIMS.View.SecretaryView
         {
             Appointment appointment = AppointmentsGrid.SelectedItem as Appointment;
             int appointmentId = appointment.Id;
-            appointmentController.DeleteAppointment(appointmentId);
+            appointmentController.DeleteAppointment(appointmentId, 1);
             var s = new ShowAppointments();
             s.Show();
             Close();

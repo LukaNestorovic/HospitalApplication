@@ -22,9 +22,9 @@ namespace Controller
 			return appointmentService.CreateAppointment(appointmentDTO);
 		}
 		
-		public Boolean DeleteAppointment(int id)
+		public Boolean DeleteAppointment(int id, int patientId)
 		{
-			return appointmentService.DeleteAppointment(id);
+			return appointmentService.DeleteAppointment(id, patientId);
 		}
 		
 		public Boolean UpdateAppointment(AppointmentDTO appointmentDTO, int id)
