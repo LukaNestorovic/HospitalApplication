@@ -48,9 +48,19 @@ namespace ProjekatSIMS
             {
                 if(patient.Password == TBPass.Password)
                 {
-                    var s = new PatientHome(patient.Id);
-                    s.Show();
-                    Close();
+                    if (patient.Blocked == true)
+                    {
+                        MessageBox.Show("Blokirani ste", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+                        var t = new LogIn();
+                        t.Show();
+                        Close();
+                    }
+                    else
+                    {
+                        var s = new PatientHome(patient.Id);
+                        s.Show();
+                        Close();
+                    }
                 }
                 else
                 {

@@ -16,6 +16,9 @@ namespace Service
 {
 	public class AppointmentService
 	{
+		public int patientId;
+		public PatientService patientService = new PatientService();
+		public AppointmentDTO appointmentDTO1 = new AppointmentDTO();
 		public int createId()
 		{
 			int newID;
@@ -43,15 +46,28 @@ namespace Service
 		
 		public Boolean UpdateAppointment(AppointmentDTO appointmentDTO, int id)
 		{
+			this.appointmentDTO1 = appointmentDTO;
+			appointmentDTO.Patient.Brojac++;
 			Appointment appointment = appointmentRepository.FindByID(id);
 			appointment.DateTime = appointmentDTO.DateTime;
 			appointment.Descripton = appointmentDTO.Descripton;
 			appointment.Duration = appointmentDTO.Duration;
 			appointment.Emergency = appointmentDTO.Emergency;
-			appointment.Patient = appointmentDTO.Patient;
 			appointment.Doctor = appointmentDTO.Doctor;
 			appointment.Room = appointmentDTO.Room;
 			appointment.Finished = appointmentDTO.Finished;
+			patientId = appointmentDTO.Patient.Id;
+			if (appointmentDTO.Patient.Brojac > 4)
+			{
+				patientService.UpdatePatient(appointmentDTO.Patient.Name, appointmentDTO.Patient.Surname, appointmentDTO.Patient.Jmbg, appointmentDTO.Patient.Telephone, appointmentDTO.Patient.Email, appointmentDTO.Patient.BirthDate, appointmentDTO.Patient.Adress, appointmentDTO.Patient.InsuranceCarrier, appointmentDTO.Patient.Guest, true, patientId, appointmentDTO.Patient.Password, appointmentDTO.Patient.Brojac);
+				Patient patient1 = patientService.ReadPatient(patientId);
+				appointment.Patient = patient1;
+				return appointmentRepository.UpdateByID(appointment);
+			}
+			patientService.UpdatePatient(appointmentDTO.Patient.Name, appointmentDTO.Patient.Surname, appointmentDTO.Patient.Jmbg, appointmentDTO.Patient.Telephone, appointmentDTO.Patient.Email, appointmentDTO.Patient.BirthDate, appointmentDTO.Patient.Adress, appointmentDTO.Patient.InsuranceCarrier, appointmentDTO.Patient.Guest, appointmentDTO.Patient.Blocked, patientId, appointmentDTO.Patient.Password, appointmentDTO.Patient.Brojac);
+			Patient patient = patientService.ReadPatient(patientId);
+			appointment.Patient = patient;
+
 			return appointmentRepository.UpdateByID(appointment);
 		}
 		

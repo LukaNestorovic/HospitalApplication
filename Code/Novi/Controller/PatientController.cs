@@ -13,14 +13,14 @@ namespace Controller
 {
    public class PatientController
    {
-      public Boolean CreatePatient(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String insuranceCarrier, Boolean guest, String password)
+      public Boolean CreatePatient(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String insuranceCarrier, Boolean guest, String password, int brojac)
       {
-         return patientService.CreatePatient(name, surname, jmbg, telephone, email, birthDate, adress, insuranceCarrier, guest, password);
+         return patientService.CreatePatient(name, surname, jmbg, telephone, email, birthDate, adress, insuranceCarrier, guest, password, brojac);
       }
       
-      public Boolean UpdatePatient(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String insuranceCarrier, Boolean guest, Boolean blocked, int id, String password)
+      public Boolean UpdatePatient(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String insuranceCarrier, Boolean guest, Boolean blocked, int id, String password, int brojac)
       {
-         return patientService.UpdatePatient(name, surname, jmbg, telephone, email, birthDate, adress, insuranceCarrier, guest, blocked, id, password);
+         return patientService.UpdatePatient(name, surname, jmbg, telephone, email, birthDate, adress, insuranceCarrier, guest, blocked, id, password, brojac);
       }
       
       public Boolean DeletePatient(int id)

@@ -62,19 +62,29 @@ namespace ProjekatSIMS.View.PatientView
                 }
                 else
                 {
-                    appointmentDTO.DateTime = DP.SelectedDate.GetValueOrDefault();
-                    appointmentDTO.Descripton = appointment.Descripton;
-                    appointmentDTO.Duration = appointment.Duration;
-                    appointmentDTO.Emergency = appointment.Emergency;
-                    appointmentDTO.Patient = appointment.Patient;
-                    appointmentDTO.Doctor = doctor;
-                    appointmentDTO.Room = appointment.Room;
-                    appointmentDTO.Finished = false;
+                    if (appointment.Patient.Brojac > 4)
+                    {
+                        MessageBox.Show("Blokirani ste", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+                        var t = new LogIn();
+                        t.Show();
+                        Close();
+                    }
+                    else
+                    {
+                        appointmentDTO.DateTime = DP.SelectedDate.GetValueOrDefault();
+                        appointmentDTO.Descripton = appointment.Descripton;
+                        appointmentDTO.Duration = appointment.Duration;
+                        appointmentDTO.Emergency = appointment.Emergency;
+                        appointmentDTO.Patient = appointment.Patient;
+                        appointmentDTO.Doctor = doctor;
+                        appointmentDTO.Room = appointment.Room;
+                        appointmentDTO.Finished = false;
 
-                    appointmentController.UpdateAppointment(appointmentDTO, appointment.Id);
-                    var s = new PatientView(id);
-                    s.Show();
-                    Close();
+                        appointmentController.UpdateAppointment(appointmentDTO, appointment.Id);
+                        var s = new PatientView(id);
+                        s.Show();
+                        Close();
+                    }
                 }
             }
             else

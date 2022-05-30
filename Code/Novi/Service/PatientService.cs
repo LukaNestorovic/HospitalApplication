@@ -30,15 +30,15 @@ namespace Service
 			id = newID;
 			return newID;
 		}
-		public Boolean CreatePatient(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String insuranceCarrier, Boolean guest, String password) {
+		public Boolean CreatePatient(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String insuranceCarrier, Boolean guest, String password, int brojac) {
 			int newID = createId();
-			Patient patient = new Patient(name, surname, jmbg, telephone, email, birthDate, adress, insuranceCarrier, guest, false, newID, password);
+			Patient patient = new Patient(name, surname, jmbg, telephone, email, birthDate, adress, insuranceCarrier, guest, false, newID, password, 0);
 
 
 			return patientRepository.Save(patient);
 		}
 		
-		public Boolean UpdatePatient(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String insuranceCarrier, Boolean guest, Boolean blocked, int id, String password)
+		public Boolean UpdatePatient(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String insuranceCarrier, Boolean guest, Boolean blocked, int id, String password, int brojac)
 		{
 			Patient patient = patientRepository.FindByID(id);
 			patient.Name = name;
@@ -52,6 +52,7 @@ namespace Service
 			patient.Guest = guest;
 			patient.Password = password;
 			patient.Blocked = blocked;
+			patient.Brojac = brojac;
 			return patientRepository.UpdateByID(patient);
 		}
 		
