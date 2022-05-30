@@ -38,36 +38,9 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
-            if (Combo1.SelectedIndex == 0)
-                hospitalSurveyDTO.Question1 = 1;
-            else if (Combo1.SelectedIndex == 1)
-                hospitalSurveyDTO.Question1 = 2;
-            else if (Combo1.SelectedIndex == 2)
-                hospitalSurveyDTO.Question1 = 3;
-            else if (Combo1.SelectedIndex == 3)
-                hospitalSurveyDTO.Question1 = 4;
-            else if (Combo1.SelectedIndex == 4)
-                hospitalSurveyDTO.Question1 = 5;
-            if (Combo2.SelectedIndex == 0)
-                hospitalSurveyDTO.Question2 = 1;
-            else if (Combo2.SelectedIndex == 1)
-                hospitalSurveyDTO.Question2 = 2;
-            else if (Combo2.SelectedIndex == 2)
-                hospitalSurveyDTO.Question2 = 3;
-            else if (Combo2.SelectedIndex == 3)
-                hospitalSurveyDTO.Question2 = 4;
-            else if (Combo2.SelectedIndex == 4)
-                hospitalSurveyDTO.Question2 = 5;
-            if (Combo3.SelectedIndex == 0)
-                hospitalSurveyDTO.Question3 = 1;
-            else if (Combo3.SelectedIndex == 1)
-                hospitalSurveyDTO.Question3 = 2;
-            else if (Combo3.SelectedIndex == 2)
-                hospitalSurveyDTO.Question3 = 3;
-            else if (Combo3.SelectedIndex == 3)
-                hospitalSurveyDTO.Question3 = 4;
-            else if (Combo3.SelectedIndex == 4)
-                hospitalSurveyDTO.Question3 = 5;
+            hospitalSurveyDTO.Question1 = Combo1.SelectedIndex + 1;
+            hospitalSurveyDTO.Question2 = Combo2.SelectedIndex + 1;
+            hospitalSurveyDTO.Question3 = Combo3.SelectedIndex + 1;
             hospitalSurveyDTO.patient = patientController.ReadPatient(id);
             hospitalSurveyController.CreateHospitalSurvey(hospitalSurveyDTO);
             var s = new PatientHome(id);

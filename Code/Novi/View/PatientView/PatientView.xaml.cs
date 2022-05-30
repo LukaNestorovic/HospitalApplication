@@ -31,12 +31,11 @@ namespace ProjekatSIMS.View.PatientView
         private int brojac;
         private int id;
 
-        public PatientView(int id, int brojac)
+        public PatientView(int id)
         {
             InitializeComponent();
             appointments = new ObservableCollection<Appointment>(appointmentController.ReadAllByPatientId(id));
             PatientAppointments.ItemsSource = appointments;
-            this.brojac = brojac;
             this.id = id;
         }
 
@@ -51,7 +50,7 @@ namespace ProjekatSIMS.View.PatientView
             else
             {
                 appointmentController.DeleteAppointment(appointment.Id);
-                var s = new PatientView(id, brojac);
+                var s = new PatientView(id);
                 s.Show();
                 Close();
             }
@@ -70,7 +69,7 @@ namespace ProjekatSIMS.View.PatientView
             else
             {
                 appointment1 = appointmentController.ReadAppointment(appointment.Id);
-                var s = new Edit(appointment1, id, brojac);
+                var s = new Edit(appointment1, id);
                 s.Show();
                 Close();
             }

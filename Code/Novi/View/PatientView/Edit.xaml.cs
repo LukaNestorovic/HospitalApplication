@@ -36,7 +36,7 @@ namespace ProjekatSIMS.View.PatientView
         public AppointmentDTO appointmentDTO = new AppointmentDTO();
         public RoomController roomController = new RoomController();
         public PatientController patientController = new PatientController();
-        public Edit(Appointment appointment, int id, int brojac)
+        public Edit(Appointment appointment, int id)
         {
             InitializeComponent();
             DP.SelectedDate = appointment.DateTime;
@@ -46,7 +46,6 @@ namespace ProjekatSIMS.View.PatientView
             Combo.ItemsSource = doctors;
             this.appointment = appointment;
             this.id = id;
-            this.brojac = brojac;
         }
 
         private void Confirm_Click(object sender, RoutedEventArgs e)
@@ -73,7 +72,7 @@ namespace ProjekatSIMS.View.PatientView
                     appointmentDTO.Finished = false;
 
                     appointmentController.UpdateAppointment(appointmentDTO, appointment.Id);
-                    var s = new PatientView(id, brojac);
+                    var s = new PatientView(id);
                     s.Show();
                     Close();
                 }
@@ -86,7 +85,7 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            var s = new PatientView(id, brojac);
+            var s = new PatientView(id);
             s.Show();
             Close();
 

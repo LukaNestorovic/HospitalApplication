@@ -33,7 +33,7 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Appointments_Click(object sender, RoutedEventArgs e)
         {
-            var s = new PatientView(id, brojac);
+            var s = new PatientView(id);
             s.Show();
             Close();
         }

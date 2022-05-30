@@ -56,7 +56,7 @@ namespace ProjekatSIMS.View.PatientView
             appointmentDTO.Finished = false;
             
             appointmentController.UpdateAppointment(appointmentDTO, appointment.Id);
-            var s = new PatientView(id, 0);
+            var s = new PatientView(id);
             s.Show();
             Close();
         }

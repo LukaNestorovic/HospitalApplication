@@ -39,7 +39,7 @@ namespace ProjekatSIMS.View.PatientView
       
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            var s = new PatientView(id, 0);
+            var s = new PatientView(id);
             s.Show();
             Close();
         }
@@ -56,7 +56,7 @@ namespace ProjekatSIMS.View.PatientView
             appointmentDTO.Finished = false;
 
             appointmentController.CreateAppointment(appointmentDTO);
-            var s = new PatientView(id, 0);
+            var s = new PatientView(id);
             s.Show();
             Close();
         }
