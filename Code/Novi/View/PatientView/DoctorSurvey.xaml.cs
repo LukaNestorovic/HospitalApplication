@@ -41,36 +41,9 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
-            if (Combo1.SelectedIndex == 0)
-                doctorSurveyDTO.Question1 = 1;
-            else if (Combo1.SelectedIndex == 1)
-                doctorSurveyDTO.Question1 = 2;
-            else if (Combo1.SelectedIndex == 2)
-                doctorSurveyDTO.Question1 = 3;
-            else if (Combo1.SelectedIndex == 3)
-                doctorSurveyDTO.Question1 = 4;
-            else if (Combo1.SelectedIndex == 4)
-                doctorSurveyDTO.Question1 = 5;
-            if (Combo2.SelectedIndex == 0)
-                doctorSurveyDTO.Question2 = 1;
-            else if (Combo2.SelectedIndex == 1)
-                doctorSurveyDTO.Question2 = 2;
-            else if (Combo2.SelectedIndex == 2)
-                doctorSurveyDTO.Question2 = 3;
-            else if (Combo2.SelectedIndex == 3)
-                doctorSurveyDTO.Question2 = 4;
-            else if (Combo2.SelectedIndex == 4)
-                doctorSurveyDTO.Question2 = 5;
-            if (Combo3.SelectedIndex == 0)
-                doctorSurveyDTO.Question3 = 1;
-            else if (Combo3.SelectedIndex == 1)
-                doctorSurveyDTO.Question3 = 2;
-            else if (Combo3.SelectedIndex == 2)
-                doctorSurveyDTO.Question3 = 3;
-            else if (Combo3.SelectedIndex == 3)
-                doctorSurveyDTO.Question3 = 4;
-            else if (Combo3.SelectedIndex == 4)
-                doctorSurveyDTO.Question3 = 5;
+            doctorSurveyDTO.Question1 = Combo1.SelectedIndex + 1;
+            doctorSurveyDTO.Question2 = Combo2.SelectedIndex + 1;
+            doctorSurveyDTO.Question3 = Combo3.SelectedIndex + 1;
             doctorSurveyDTO.patient = appointment.Patient;
             doctorSurveyDTO.doctor = appointment.Doctor;
             doctorSurveyController.CreateDoctorSurvey(doctorSurveyDTO);
@@ -93,7 +66,7 @@ namespace ProjekatSIMS.View.PatientView
             Close();
         }
 
-        private void Click(object sender, RoutedEventArgs e)
+        private void Help_Click(object sender, RoutedEventArgs e)
         {
         }
     }

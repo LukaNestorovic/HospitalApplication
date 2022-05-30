@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using Controller;
 using Model;
+using DTO;
 
 namespace ProjekatSIMS.View.SecretaryView
 {
@@ -24,6 +25,10 @@ namespace ProjekatSIMS.View.SecretaryView
     {
         public ObservableCollection<Appointment> appointments;
         public AppointmentController appointmentController = new AppointmentController();
+        public PatientController patientController = new PatientController();
+        public DoctorController doctorController = new DoctorController();
+        public RoomController roomController = new RoomController();
+        public AppointmentDTO appointmentDTO = new AppointmentDTO();
         public ShowAppointments()
         {
             InitializeComponent();
@@ -34,15 +39,15 @@ namespace ProjekatSIMS.View.SecretaryView
         private void Update_Click(object sender, RoutedEventArgs e)
         {
             Appointment appointment = AppointmentsGrid.SelectedItem as Appointment;
-            int appointmentId = appointment.Id;
-            String description = appointment.Descripton;
-            int duration = appointment.Duration;
-            DateTime dateTime = appointment.DateTime;
-            int doctorId = appointment.Doctor.Id;
-            int patientId = appointment.Patient.Id;
-            int roomId = appointment.Room.Id;
-            Boolean emergency = appointment.Emergency;
-            appointmentController.UpdateAppointment(dateTime, description, duration, emergency, patientId, doctorId, roomId, appointmentId, false);
+            appointmentDTO.Descripton = appointment.Descripton;
+            appointmentDTO.Duration = appointment.Duration;
+            appointmentDTO.DateTime = appointment.DateTime;
+            appointmentDTO.Emergency = appointment.Emergency;
+            appointmentDTO.Patient = patientController.ReadPatient(appointment.Patient.Id);
+            appointmentDTO.Doctor = doctorController.ReadDoctor(appointment.Doctor.Id);
+            appointmentDTO.Room = roomController.ReadRoom(appointment.Room.Id);
+            appointmentDTO.Finished = false;
+            appointmentController.UpdateAppointment(appointmentDTO, appointment.Id);
             var s = new ShowAppointments();
             s.Show();
             Close();

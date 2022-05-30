@@ -20,7 +20,7 @@ namespace Repository
 		
 		public Appointment FindByID(int id)
 		{
-			List<Appointment> all = serializer.fromJSON(FileName);
+			List<Appointment> all = FindAll();
 			Appointment a = null;
 			foreach(Appointment i in all){
 				if(i.Id == id){
@@ -33,7 +33,7 @@ namespace Repository
 		
 		public Boolean Save(Appointment appointment)
 		{
-			List<Appointment> all = serializer.fromJSON(FileName);
+			List<Appointment> all = FindAll();
 			all.Add(appointment);
 			serializer.toJSON(FileName, all);
 			return true;
@@ -41,7 +41,7 @@ namespace Repository
 		
 		public Boolean DeleteByID(int id)
 		{
-			List<Appointment> all = serializer.fromJSON(FileName);
+			List<Appointment> all = FindAll();
 			foreach(Appointment i in all){
 				if(i.Id == id){
 					all.Remove(i);
@@ -54,7 +54,7 @@ namespace Repository
 		
 		public Boolean UpdateByID(Appointment appointment)
 		{
-			List<Appointment> all = serializer.fromJSON(FileName);
+			List<Appointment> all = FindAll();
 			for(int i = 0; i < all.Count; i++){
 				if(all[i].Id == appointment.Id){
 					all[i] = appointment;

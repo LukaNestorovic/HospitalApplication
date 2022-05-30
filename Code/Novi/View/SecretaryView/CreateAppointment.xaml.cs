@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using Model;
 using Controller;
+using DTO;
 
 namespace ProjekatSIMS.View.SecretaryView
 {
@@ -24,6 +25,10 @@ namespace ProjekatSIMS.View.SecretaryView
     {
         public AppointmentController appointmentController = new AppointmentController();
         public ObservableCollection<Appointment> appointments;
+        public AppointmentDTO appointmentDTO = new AppointmentDTO();
+        public RoomController roomController = new RoomController();
+        public DoctorController doctorController = new DoctorController();
+        public PatientController patientController = new PatientController();
         public CreateAppointment(ObservableCollection<Appointment> appointments)
         {
             InitializeComponent();
@@ -41,7 +46,15 @@ namespace ProjekatSIMS.View.SecretaryView
 
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
-            appointmentController.CreateAppointment(DatePicker.SelectedDate.GetValueOrDefault(), TBDescription.Text, Int32.Parse(TBDuration.Text), (Boolean)CBEmergency.IsChecked, Int32.Parse(TBPatient.Text), Int32.Parse(TBDoctor.Text), Int32.Parse(TBRoom.Text), false);
+            appointmentDTO.DateTime = DatePicker.SelectedDate.GetValueOrDefault();
+            appointmentDTO.Descripton = TBDescription.Text;
+            appointmentDTO.Duration = Int32.Parse(TBDuration.Text);
+            appointmentDTO.Emergency = (Boolean)CBEmergency.IsChecked;
+            appointmentDTO.Patient = patientController.ReadPatient(Int32.Parse(TBPatient.Text));
+            appointmentDTO.Doctor = doctorController.ReadDoctor(Int32.Parse(TBDoctor.Text));
+            appointmentDTO.Room = roomController.ReadRoom(Int32.Parse(TBRoom.Text));
+            appointmentDTO.Finished = false;
+            appointmentController.CreateAppointment(appointmentDTO);
             var s = new ShowAppointments();
             s.Show();
             Close();

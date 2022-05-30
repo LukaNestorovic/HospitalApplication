@@ -89,7 +89,7 @@ namespace ProjekatSIMS.View.PatientView
             Close();
         }
 
-        private void Click(object sender, RoutedEventArgs e)
+        private void Help_Click(object sender, RoutedEventArgs e)
         {
         }
     }

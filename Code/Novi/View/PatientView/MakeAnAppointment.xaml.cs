@@ -16,6 +16,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DTO;
 
 namespace ProjekatSIMS.View.PatientView
 {
@@ -27,6 +28,10 @@ namespace ProjekatSIMS.View.PatientView
         public AppointmentController appointmentController = new AppointmentController();
         public ObservableCollection<Appointment> appointments;
         private int id;
+        public AppointmentDTO appointmentDTO = new AppointmentDTO();
+        public PatientController patientController = new PatientController();
+        public DoctorController doctorController = new DoctorController();
+        public RoomController roomController = new RoomController();
         public MakeAnAppointment()
         {
             InitializeComponent();
@@ -37,13 +42,20 @@ namespace ProjekatSIMS.View.PatientView
             var s = new PatientView(id, 0);
             s.Show();
             Close();
-
-
         }
 
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
-            appointmentController.CreateAppointment(DatePicker.SelectedDate.GetValueOrDefault(), TBDescription.Text, Int32.Parse(TBDuration.Text), (Boolean)CBEmergency.IsChecked, Int32.Parse(TBPatient.Text), Int32.Parse(TBDoctor.Text), Int32.Parse(TBRoom.Text), false);
+            appointmentDTO.DateTime = DatePicker.SelectedDate.GetValueOrDefault();
+            appointmentDTO.Descripton = TBDescription.Text;
+            appointmentDTO.Duration = Int32.Parse(TBDuration.Text);
+            appointmentDTO.Emergency = (Boolean)CBEmergency.IsChecked;
+            appointmentDTO.Patient = patientController.ReadPatient(Int32.Parse(TBPatient.Text));
+            appointmentDTO.Doctor = doctorController.ReadDoctor(Int32.Parse(TBDoctor.Text));
+            appointmentDTO.Room = roomController.ReadRoom(Int32.Parse(TBRoom.Text));
+            appointmentDTO.Finished = false;
+
+            appointmentController.CreateAppointment(appointmentDTO);
             var s = new PatientView(id, 0);
             s.Show();
             Close();

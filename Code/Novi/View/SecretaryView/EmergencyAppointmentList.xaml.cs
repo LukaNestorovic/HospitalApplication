@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using Model;
 using Controller;
 using System.Collections.ObjectModel;
+using DTO;
 
 namespace ProjekatSIMS.View.SecretaryView
 {
@@ -25,6 +26,10 @@ namespace ProjekatSIMS.View.SecretaryView
         private int patientId;
         public ObservableCollection<Doctor> freeDoctors;
         public AppointmentController appointmentController = new AppointmentController();
+        public AppointmentDTO appointmentDTO = new AppointmentDTO();
+        public RoomController roomController = new RoomController();
+        public PatientController patientController = new PatientController();
+        public DoctorController doctorController = new DoctorController();
         public EmergencyAppointmentList(int patientId, ObservableCollection<Doctor> freeDoctors)
         {
             InitializeComponent();
@@ -37,7 +42,15 @@ namespace ProjekatSIMS.View.SecretaryView
         {
             Doctor doctor = EmergencyAppointmentsGrid.SelectedItem as Doctor;
             int doctorId = doctor.Id;
-            appointmentController.CreateAppointment(DateTime.Now.AddHours(1), "emergency", 1, true, patientId, doctorId, 1, false);
+            appointmentDTO.DateTime = DateTime.Now.AddHours(1);
+            appointmentDTO.Descripton = "emergency";
+            appointmentDTO.Room = roomController.ReadRoom(1);
+            appointmentDTO.Emergency = true;
+            appointmentDTO.Doctor = doctorController.ReadDoctor(doctorId);
+            appointmentDTO.Patient = patientController.ReadPatient(patientId);
+            appointmentDTO.Duration = 1;
+
+            appointmentController.CreateAppointment(appointmentDTO);
             MessageBox.Show("Termin je uspesno zakazan");
             freeDoctors.Remove(doctor);
         }

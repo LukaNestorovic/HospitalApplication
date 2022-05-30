@@ -14,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DTO;
 
 namespace ProjekatSIMS.View.PatientView
 {
@@ -26,6 +27,9 @@ namespace ProjekatSIMS.View.PatientView
         public ObservableCollection<Appointment> appointments;
         public Appointment appointment = new Appointment();
         public AppointmentController appointmentController = new AppointmentController();
+        public AppointmentDTO appointmentDTO = new AppointmentDTO();
+        public PatientController patientController = new PatientController();
+        public Patient patient = new Patient();
         public FreeAppointments(int id)
         {
             InitializeComponent();
@@ -41,7 +45,7 @@ namespace ProjekatSIMS.View.PatientView
             Close();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Schedule_Click(object sender, RoutedEventArgs e)
         {
             appointment = (Appointment)PatientAppointments.SelectedItem;
             if (appointment == null)
@@ -50,14 +54,16 @@ namespace ProjekatSIMS.View.PatientView
             }
             else
             {
-                if (appointment.Doctor != null && appointment.Room != null)
-                {
-                    appointmentController.UpdateAppointment(appointment.DateTime, appointment.Descripton, appointment.Duration, appointment.Emergency, id, appointment.Doctor.Id, appointment.Room.Id, appointment.Id, false);
-                }
-                else
-                {
-                    appointmentController.UpdateAppointment(appointment.DateTime, appointment.Descripton, appointment.Duration, appointment.Emergency, id, 1, 1, appointment.Id, false);
-                }
+                patient = patientController.ReadPatient(id);
+                appointmentDTO.DateTime = appointment.DateTime;
+                appointmentDTO.Descripton = appointment.Descripton;
+                appointmentDTO.Duration = appointment.Duration;
+                appointmentDTO.Emergency = appointment.Emergency;
+                appointmentDTO.Doctor = appointment.Doctor;
+                appointmentDTO.Room = appointment.Room;
+                appointmentDTO.Patient = patient;
+                appointmentDTO.Finished = false;
+                appointmentController.UpdateAppointment(appointmentDTO, appointment.Id);
                 var s = new PatientView(id, 0);
                 s.Show();
                 Close();
@@ -70,7 +76,7 @@ namespace ProjekatSIMS.View.PatientView
             s.Show();
             Close();
         }
-        private void Click(object sender, RoutedEventArgs e)
+        private void Help_Click(object sender, RoutedEventArgs e)
         {
         }
     }

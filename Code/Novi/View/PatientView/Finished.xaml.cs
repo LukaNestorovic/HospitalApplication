@@ -33,7 +33,7 @@ namespace ProjekatSIMS.View.PatientView
             this.id = id;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Rate_Click(object sender, RoutedEventArgs e)
         {
             appointment = (Appointment)PatientAppointments.SelectedItem;
             if (appointment == null)
@@ -77,7 +77,7 @@ namespace ProjekatSIMS.View.PatientView
 
         }
 
-        private void Click(object sender, RoutedEventArgs e)
+        private void Help_Click(object sender, RoutedEventArgs e)
         {
         }
     }

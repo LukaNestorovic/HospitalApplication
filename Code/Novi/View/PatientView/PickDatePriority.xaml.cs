@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Model;
 using Controller;
+using DTO;
 
 namespace ProjekatSIMS.View.PatientView
 {
@@ -24,17 +25,29 @@ namespace ProjekatSIMS.View.PatientView
         private int id;
         public Appointment appointment = new Appointment();
         public AppointmentController appointmentController = new AppointmentController();
+        public AppointmentDTO appointmentDTO = new AppointmentDTO();
+        public PatientController patientController = new PatientController();
+        public Patient patient = new Patient();
         public PickDatePriority(int id)
         {
             InitializeComponent();
             this.id = id;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Submit_Click(object sender, RoutedEventArgs e)
         {
             DateTime date = DatePicker.SelectedDate.GetValueOrDefault();
             appointment = appointmentController.ReadWithPriority(date);
-            appointmentController.UpdateAppointment(appointment.DateTime, appointment.Descripton, appointment.Duration, appointment.Emergency, id, appointment.Doctor.Id, appointment.Room.Id, appointment.Id, false); //Zameniti 1 sa Doctor.Id i Room.Id
+            patient = patientController.ReadPatient(id);
+            appointmentDTO.DateTime = appointment.DateTime;
+            appointmentDTO.Descripton = appointment.Descripton;
+            appointmentDTO.Duration = appointment.Duration;
+            appointmentDTO.Emergency = appointment.Emergency;
+            appointmentDTO.Doctor = appointment.Doctor;
+            appointmentDTO.Room = appointment.Room;
+            appointmentDTO.Patient = patient;
+            appointmentDTO.Finished = false;
+            appointmentController.UpdateAppointment(appointmentDTO, appointment.Id);
             var s = new PatientView(id, 0);
             s.Show();
             Close();

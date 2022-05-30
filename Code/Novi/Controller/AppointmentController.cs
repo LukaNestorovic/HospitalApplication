@@ -8,6 +8,7 @@ using System;
 using Service;
 using Model;
 using System.Collections.Generic;
+using DTO;
 
 namespace Controller
 {
@@ -16,12 +17,9 @@ namespace Controller
 		public PatientService patientService = new PatientService();
 		public RoomService roomService = new RoomService();
 		public DoctorService doctorService = new DoctorService();
-		public Boolean CreateAppointment(DateTime dateTime, String description, int duration, Boolean emergency, int patientId, int doctorId, int roomId, Boolean finished)
+		public Boolean CreateAppointment(AppointmentDTO appointmentDTO)
 		{
-			Patient patient = patientService.ReadPatient(patientId);
-			Doctor doctor = doctorService.ReadDoctor(doctorId);
-			Room room = roomService.ReadRoom(roomId);
-			return appointmentService.CreateAppointment(dateTime, description, duration, emergency, patient, doctor, room, finished);
+			return appointmentService.CreateAppointment(appointmentDTO);
 		}
 		
 		public Boolean DeleteAppointment(int id)
@@ -29,12 +27,9 @@ namespace Controller
 			return appointmentService.DeleteAppointment(id);
 		}
 		
-		public Boolean UpdateAppointment(DateTime dateTime, String description, int duration, Boolean emergency, int patientId, int doctorId, int roomId, int appId, Boolean finished)
+		public Boolean UpdateAppointment(AppointmentDTO appointmentDTO, int id)
 		{
-			Patient patient = patientService.ReadPatient(patientId);
-			Doctor doctor = doctorService.ReadDoctor(doctorId);
-			Room room = roomService.ReadRoom(roomId);
-			return appointmentService.UpdateAppointment(dateTime, description, duration, emergency, patient, doctor, room, appId, finished);
+			return appointmentService.UpdateAppointment(appointmentDTO, id);
 		}
 		
 		public Appointment ReadAppointment(int id)
@@ -58,7 +53,6 @@ namespace Controller
 		public List<Appointment> ReadAll()
 		{
 			List<Appointment> appointments = appointmentService.ReadAll();
-
 			return appointments;
 		}
 

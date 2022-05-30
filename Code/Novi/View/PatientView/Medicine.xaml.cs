@@ -33,7 +33,7 @@ namespace ProjekatSIMS.View.PatientView
             this.id = id;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             var s = new PatientHome(id);
             s.Show();
@@ -47,7 +47,7 @@ namespace ProjekatSIMS.View.PatientView
             Close();
         }
 
-        private void Click(object sender, RoutedEventArgs e)
+        private void Help_Click(object sender, RoutedEventArgs e)
         {
         }
     }

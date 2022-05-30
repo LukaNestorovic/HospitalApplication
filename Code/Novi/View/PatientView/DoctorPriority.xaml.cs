@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Model;
 using Controller;
+using DTO;
 
 
 namespace ProjekatSIMS.View.PatientView
@@ -28,6 +29,9 @@ namespace ProjekatSIMS.View.PatientView
         public DoctorController doctorController = new DoctorController();
         public List<Model.Doctor> doctors = new List<Model.Doctor>();
         public Model.Doctor doctor = new Model.Doctor();
+        public AppointmentDTO appointmentDTO = new AppointmentDTO();
+        public PatientController patientController = new PatientController();
+        public Patient patient = new Patient();
         public DoctorPriority(int id)
         {
             InitializeComponent();
@@ -36,12 +40,22 @@ namespace ProjekatSIMS.View.PatientView
             this.id = id;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Submit_Click(object sender, RoutedEventArgs e)
         {
             DateTime date = DatePicker.SelectedDate.GetValueOrDefault();
             doctor = (Model.Doctor)Combo.SelectedItem;
+            patient = patientController.ReadPatient(id);
             appointment = appointmentController.ReadWithPriorityDoctor(doctor.Id, date);
-            appointmentController.UpdateAppointment(appointment.DateTime, appointment.Descripton, appointment.Duration, appointment.Emergency, id, appointment.Doctor.Id, 1, appointment.Id, false);
+            appointmentDTO.DateTime = appointment.DateTime;
+            appointmentDTO.Descripton = appointment.Descripton;
+            appointmentDTO.Duration = appointment.Duration;
+            appointmentDTO.Emergency = appointment.Emergency;
+            appointmentDTO.Doctor = appointment.Doctor;
+            appointmentDTO.Room = appointment.Room;
+            appointmentDTO.Patient = patient;
+            appointmentDTO.Finished = false;
+            
+            appointmentController.UpdateAppointment(appointmentDTO, appointment.Id);
             var s = new PatientView(id, 0);
             s.Show();
             Close();

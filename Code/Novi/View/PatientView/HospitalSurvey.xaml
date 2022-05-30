@@ -43,7 +43,7 @@
         <Button Content="LogOff" HorizontalAlignment="Left" Margin="861,3,0,0" VerticalAlignment="Top" Height="55" Width="153" Click="LogOff_Click" FontSize="18" Background="#66A5AD" Foreground="Black"/>
         <Label Content="Hospital survey" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Height="48" Width="200" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
         <Button  x:Name="Confirm" Content="Confirm" HorizontalAlignment="Center" Margin="0,583,0,0" VerticalAlignment="Top" Width="208" Click="Confirm_Click" Background="#66A5AD" Height="50" FontSize="25"/>
-        <Button HorizontalAlignment="Left" Margin="762,13,0,0" VerticalAlignment="Top" Height="40" Click="Click">
+        <Button HorizontalAlignment="Left" Margin="762,13,0,0" VerticalAlignment="Top" Height="40" Click="Help_Click">
             <Image Source="Source\Question-Mark.jpeg" Height="38">
             </Image>
         </Button>

@@ -16,6 +16,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DTO;
 
 namespace ProjekatSIMS.View.PatientView
 {
@@ -32,6 +33,9 @@ namespace ProjekatSIMS.View.PatientView
         public List<Model.Doctor> doctors = new List<Model.Doctor>();
         public Model.Doctor doctor = new Model.Doctor();
         private int brojac;
+        public AppointmentDTO appointmentDTO = new AppointmentDTO();
+        public RoomController roomController = new RoomController();
+        public PatientController patientController = new PatientController();
         public Edit(Appointment appointment, int id, int brojac)
         {
             InitializeComponent();
@@ -59,7 +63,16 @@ namespace ProjekatSIMS.View.PatientView
                 }
                 else
                 {
-                    appointmentController.UpdateAppointment(DP.SelectedDate.GetValueOrDefault(), TBDescription.Text, appointment.Duration, appointment.Emergency, appointment.Patient.Id, doctor.Id, appointment.Room.Id, appointment.Id, false);
+                    appointmentDTO.DateTime = DP.SelectedDate.GetValueOrDefault();
+                    appointmentDTO.Descripton = appointment.Descripton;
+                    appointmentDTO.Duration = appointment.Duration;
+                    appointmentDTO.Emergency = appointment.Emergency;
+                    appointmentDTO.Patient = appointment.Patient;
+                    appointmentDTO.Doctor = doctor;
+                    appointmentDTO.Room = appointment.Room;
+                    appointmentDTO.Finished = false;
+
+                    appointmentController.UpdateAppointment(appointmentDTO, appointment.Id);
                     var s = new PatientView(id, brojac);
                     s.Show();
                     Close();
@@ -87,7 +100,7 @@ namespace ProjekatSIMS.View.PatientView
             Close();
         }
 
-        private void Click(object sender, RoutedEventArgs e)
+        private void Help_Click(object sender, RoutedEventArgs e)
         {
         }
     }

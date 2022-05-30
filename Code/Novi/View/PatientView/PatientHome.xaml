@@ -39,7 +39,7 @@
         <Button HorizontalAlignment="Center" Margin="0,336,0,0" VerticalAlignment="Top" Height="78" Width="160" Click="Medicine_Click" Background="#C4DFE6" FontSize="26" BorderBrush="#C4DFE6">
             <Image Source="Source\medicine.png" Height="78" Width="80"/>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="762,13,0,0" VerticalAlignment="Top" Height="40" Click="Click">
+        <Button HorizontalAlignment="Left" Margin="762,13,0,0" VerticalAlignment="Top" Height="40" Click="Help_Click">
             <Image Source="Source\Question-Mark.jpeg" Height="38">
             </Image>
         </Button>
