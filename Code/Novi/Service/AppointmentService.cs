@@ -21,6 +21,7 @@ namespace Service
 		public AppointmentDTO appointmentDTO1 = new AppointmentDTO();
 		public Patient patient;
 		public Appointment appointment1;
+		public PatientDTO patientDTO = new PatientDTO();
 		public int createId()
 		{
 			int newID;
@@ -48,7 +49,7 @@ namespace Service
 		
 		public Boolean UpdateAppointment(AppointmentDTO appointmentDTO, int id)
 		{
-			appointmentDTO.Patient.Brojac++;
+			//appointmentDTO.Patient.Brojac++;
 			Appointment appointment = appointmentRepository.FindByID(id);
 			appointment.DateTime = appointmentDTO.DateTime;
 			appointment.Descripton = appointmentDTO.Descripton;
@@ -57,15 +58,29 @@ namespace Service
 			appointment.Doctor = appointmentDTO.Doctor;
 			appointment.Room = appointmentDTO.Room;
 			appointment.Finished = appointmentDTO.Finished;
+			patientDTO.Name = appointment.Patient.Name;
+			patientDTO.Surname = appointment.Patient.Surname;
+			patientDTO.Jmbg = appointment.Patient.Jmbg;
+			patientDTO.Telephone = appointment.Patient.Telephone;
+			patientDTO.Email = appointment.Patient.Email;
+			patientDTO.BirthDate = appointment.Patient.BirthDate;
+			patientDTO.Adress = appointment.Patient.Adress;
+			patientDTO.InsuranceCarrier = appointment.Patient.InsuranceCarrier;
+			patientDTO.Guest = appointment.Patient.Guest;
+			patientDTO.Password = appointment.Patient.Password;
+			patientDTO.Blocked = appointment.Patient.Blocked;
+			appointmentDTO.Patient.Brojac++;
+			patientDTO.Brojac = appointmentDTO.Patient.Brojac;
 			patientId = appointmentDTO.Patient.Id;
 			if (appointmentDTO.Patient.Brojac > 4)
 			{
-				patientService.UpdatePatient(appointmentDTO.Patient.Name, appointmentDTO.Patient.Surname, appointmentDTO.Patient.Jmbg, appointmentDTO.Patient.Telephone, appointmentDTO.Patient.Email, appointmentDTO.Patient.BirthDate, appointmentDTO.Patient.Adress, appointmentDTO.Patient.InsuranceCarrier, appointmentDTO.Patient.Guest, true, patientId, appointmentDTO.Patient.Password, appointmentDTO.Patient.Brojac);
+				patientDTO.Blocked = true;
+				patientService.UpdatePatient(patientDTO, patientId);
 				Patient patient1 = patientService.ReadPatient(patientId);
 				appointment.Patient = patient1;
 				return appointmentRepository.UpdateByID(appointment);
 			}
-			patientService.UpdatePatient(appointmentDTO.Patient.Name, appointmentDTO.Patient.Surname, appointmentDTO.Patient.Jmbg, appointmentDTO.Patient.Telephone, appointmentDTO.Patient.Email, appointmentDTO.Patient.BirthDate, appointmentDTO.Patient.Adress, appointmentDTO.Patient.InsuranceCarrier, appointmentDTO.Patient.Guest, appointmentDTO.Patient.Blocked, patientId, appointmentDTO.Patient.Password, appointmentDTO.Patient.Brojac);
+			patientService.UpdatePatient(patientDTO, patientId);
 			Patient patient = patientService.ReadPatient(patientId);
 			appointment.Patient = patient;
 
@@ -74,15 +89,28 @@ namespace Service
 		
 		public Boolean DeleteAppointment(int id, int patientId)
 		{
-			Patient patient = patientService.ReadPatient(1);
+			Patient patient = patientService.ReadPatient(patientId);
+			patientDTO.Name = patient.Name;
+			patientDTO.Surname = patient.Surname;
+			patientDTO.Jmbg = patient.Jmbg;
+			patientDTO.Telephone = patient.Telephone;
+			patientDTO.Email = patient.Email;
+			patientDTO.BirthDate = patient.BirthDate;
+			patientDTO.Adress = patient.Adress;
+			patientDTO.InsuranceCarrier = patient.InsuranceCarrier;
+			patientDTO.Guest = patient.Guest;
+			patientDTO.Password = patient.Password;
+			patientDTO.Blocked = patient.Blocked;
 			patient.Brojac++;
-			if(patient.Brojac > 4)
+			patientDTO.Brojac = patient.Brojac;
+			if (patient.Brojac > 4)
             {
-				patientService.UpdatePatient(patient.Name, patient.Surname, patient.Jmbg, patient.Telephone, patient.Email, patient.BirthDate, patient.Adress, patient.InsuranceCarrier, patient.Guest, true, patient.Id, patient.Password, patient.Brojac);
+				patientDTO.Blocked = true;
+				patientService.UpdatePatient(patientDTO, patient.Id);
 				Patient patient1 = patientService.ReadPatient(patient.Id);
 				return appointmentRepository.DeleteByID(id);
 			}
-			patientService.UpdatePatient(patient.Name, patient.Surname, patient.Jmbg, patient.Telephone, patient.Email, patient.BirthDate, patient.Adress, patient.InsuranceCarrier, patient.Guest, true, patient.Id, patient.Password, patient.Brojac);
+			patientService.UpdatePatient(patientDTO, patient.Id);
 			Patient patient2 = patientService.ReadPatient(patient.Id);
 			return appointmentRepository.DeleteByID(id);
 		}

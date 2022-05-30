@@ -16,6 +16,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DTO;
 
 namespace ProjekatSIMS.View.SecretaryView
 {
@@ -26,6 +27,7 @@ namespace ProjekatSIMS.View.SecretaryView
     {
         public PatientController patientController = new PatientController();
         public ObservableCollection<Patient> patients;
+        public PatientDTO patientDTO = new PatientDTO();
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string n)
@@ -43,7 +45,18 @@ namespace ProjekatSIMS.View.SecretaryView
 
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
-            patientController.CreatePatient(TBName.Text, TBSurname.Text, TBJmbg.Text, TBTelephone.Text, TBEmail.Text, DPBirthDate.SelectedDate.GetValueOrDefault(), TBAdress.Text, TBInsurance.Text, (Boolean)CBGuest.IsChecked, TBPassword.Text, 0);
+            patientDTO.Name = TBName.Text;
+            patientDTO.Surname = TBSurname.Text;
+            patientDTO.Jmbg = TBJmbg.Text;
+            patientDTO.Telephone = TBTelephone.Text;
+            patientDTO.Email = TBEmail.Text;
+            patientDTO.BirthDate = DPBirthDate.SelectedDate.GetValueOrDefault();
+            patientDTO.Adress = TBAdress.Text;
+            patientDTO.InsuranceCarrier = TBInsurance.Text;
+            patientDTO.Guest = (Boolean)CBGuest.IsChecked;
+            patientDTO.Password = TBPassword.Text;
+            patientDTO.Brojac = 0;
+            patientController.CreatePatient(patientDTO);
             var s = new ShowPatient();
             s.Show();
             Close();

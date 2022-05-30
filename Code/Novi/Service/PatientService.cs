@@ -10,6 +10,7 @@ using Repository;
 using System.IO;
 using System.Collections.Generic;
 using Serialization;
+using DTO;
 
 namespace Service
 {
@@ -30,29 +31,27 @@ namespace Service
 			id = newID;
 			return newID;
 		}
-		public Boolean CreatePatient(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String insuranceCarrier, Boolean guest, String password, int brojac) {
+		public Boolean CreatePatient(PatientDTO patientDTO) {
 			int newID = createId();
-			Patient patient = new Patient(name, surname, jmbg, telephone, email, birthDate, adress, insuranceCarrier, guest, false, newID, password, 0);
-
-
+			Patient patient = new Patient(patientDTO.Name, patientDTO.Surname, patientDTO.Jmbg, patientDTO.Telephone, patientDTO.Email, patientDTO.BirthDate, patientDTO.Adress, patientDTO.InsuranceCarrier, patientDTO.Guest, false, newID,patientDTO.Password, 0);
 			return patientRepository.Save(patient);
 		}
 		
-		public Boolean UpdatePatient(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String insuranceCarrier, Boolean guest, Boolean blocked, int id, String password, int brojac)
+		public Boolean UpdatePatient(PatientDTO patientDTO, int id)
 		{
 			Patient patient = patientRepository.FindByID(id);
-			patient.Name = name;
-			patient.Surname = surname;
-			patient.Jmbg = jmbg;
-			patient.Telephone = telephone;
-			patient.Email = email;
-			patient.BirthDate = birthDate;
-			patient.Adress = adress;
-			patient.InsuranceCarrier = insuranceCarrier;
-			patient.Guest = guest;
-			patient.Password = password;
-			patient.Blocked = blocked;
-			patient.Brojac = brojac;
+			patient.Name = patientDTO.Name;
+			patient.Surname = patientDTO.Surname;
+			patient.Jmbg = patientDTO.Jmbg;
+			patient.Telephone = patientDTO.Telephone;
+			patient.Email = patientDTO.Email;
+			patient.BirthDate = patientDTO.BirthDate;
+			patient.Adress = patientDTO.Adress;
+			patient.InsuranceCarrier = patientDTO.InsuranceCarrier;
+			patient.Guest = patientDTO.Guest;
+			patient.Password = patientDTO.Password;
+			patient.Blocked = patientDTO.Blocked;
+			patient.Brojac = patientDTO.Brojac;
 			return patientRepository.UpdateByID(patient);
 		}
 		

@@ -8,19 +8,20 @@ using System;
 using Service;
 using Model;
 using System.Collections.Generic;
+using DTO;
 
 namespace Controller
 {
    public class PatientController
    {
-      public Boolean CreatePatient(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String insuranceCarrier, Boolean guest, String password, int brojac)
+      public Boolean CreatePatient(PatientDTO patientDTO)
       {
-         return patientService.CreatePatient(name, surname, jmbg, telephone, email, birthDate, adress, insuranceCarrier, guest, password, brojac);
+         return patientService.CreatePatient(patientDTO);
       }
       
-      public Boolean UpdatePatient(String name, String surname, String jmbg, String telephone, String email, DateTime birthDate, String adress, String insuranceCarrier, Boolean guest, Boolean blocked, int id, String password, int brojac)
+      public Boolean UpdatePatient(PatientDTO patientDTO, int id)
       {
-         return patientService.UpdatePatient(name, surname, jmbg, telephone, email, birthDate, adress, insuranceCarrier, guest, blocked, id, password, brojac);
+         return patientService.UpdatePatient(patientDTO, id);
       }
       
       public Boolean DeletePatient(int id)
