@@ -16,6 +16,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DTO;
 
 namespace ProjekatSIMS.View.DoctorView
 {
@@ -26,6 +27,10 @@ namespace ProjekatSIMS.View.DoctorView
     {
         public PrescriptionController prescriptionController = new PrescriptionController();
         private int id;
+        public PrescriptionDTO prescriptionDTO = new PrescriptionDTO();
+        public DoctorController doctorController = new DoctorController();
+        public PatientController patientController = new PatientController();
+        public DrugController drugController = new DrugController();
 
         public Prescription()
         {
@@ -34,7 +39,12 @@ namespace ProjekatSIMS.View.DoctorView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            prescriptionController.CreatePrescription(TBInstructions.Text, Int32.Parse(TBDoctor.Text), Int32.Parse(TBPatient.Text), Int32.Parse(TBDrug.Text), DatePicker.SelectedDate.GetValueOrDefault());
+            prescriptionDTO.Instructions = TBInstructions.Text;
+            prescriptionDTO.doctor = doctorController.ReadDoctor(Int32.Parse(TBDoctor.Text));
+            prescriptionDTO.patient = patientController.ReadPatient(Int32.Parse(TBPatient.Text));
+            prescriptionDTO.drug = drugController.ReadDrug(Int32.Parse(TBDrug.Text));
+            prescriptionDTO.datetime = DatePicker.SelectedDate.GetValueOrDefault();
+            prescriptionController.CreatePrescription(prescriptionDTO);
         }
         private void Back_Click(object sender, RoutedEventArgs e)
         {

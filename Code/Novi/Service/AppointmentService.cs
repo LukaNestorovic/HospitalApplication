@@ -46,10 +46,21 @@ namespace Service
 
 			return appointmentRepository.Save(newAppointment);
 		}
+
+		public Appointment AppointmentFromDTO(AppointmentDTO appointmentDTO, Appointment appointment)
+        {
+			appointment.DateTime = appointmentDTO.DateTime;
+			appointment.Descripton = appointmentDTO.Descripton;
+			appointment.Duration = appointmentDTO.Duration;
+			appointment.Emergency = appointmentDTO.Emergency;
+			appointment.Doctor = appointmentDTO.Doctor;
+			appointment.Room = appointmentDTO.Room;
+			appointment.Finished = appointmentDTO.Finished;
+			return appointment;
+		}
 		
 		public Boolean UpdateAppointment(AppointmentDTO appointmentDTO, int id)
-		{
-			//appointmentDTO.Patient.Brojac++;
+        {
 			Appointment appointment = appointmentRepository.FindByID(id);
 			appointment.DateTime = appointmentDTO.DateTime;
 			appointment.Descripton = appointmentDTO.Descripton;
@@ -58,6 +69,13 @@ namespace Service
 			appointment.Doctor = appointmentDTO.Doctor;
 			appointment.Room = appointmentDTO.Room;
 			appointment.Finished = appointmentDTO.Finished;
+			return appointmentRepository.UpdateByID(appointment);
+		}
+
+		public Boolean UpdateAppointmentAntiTroll(AppointmentDTO appointmentDTO, int id)
+		{
+			Appointment appointment = appointmentRepository.FindByID(id);
+			appointment = AppointmentFromDTO(appointmentDTO, appointment);
 			patientDTO.Name = appointment.Patient.Name;
 			patientDTO.Surname = appointment.Patient.Surname;
 			patientDTO.Jmbg = appointment.Patient.Jmbg;
@@ -107,11 +125,9 @@ namespace Service
             {
 				patientDTO.Blocked = true;
 				patientService.UpdatePatient(patientDTO, patient.Id);
-				Patient patient1 = patientService.ReadPatient(patient.Id);
 				return appointmentRepository.DeleteByID(id);
 			}
 			patientService.UpdatePatient(patientDTO, patient.Id);
-			Patient patient2 = patientService.ReadPatient(patient.Id);
 			return appointmentRepository.DeleteByID(id);
 		}
 		
@@ -123,32 +139,56 @@ namespace Service
 		public Appointment ReadWithPriority(DateTime date)
         {
 			List<Appointment> all = appointmentRepository.FindAll();
-			List<Appointment> ret = new List<Appointment>();
-			Appointment app = new Appointment();
-			foreach (Appointment i in all)
-			{
-				if (i.Patient == null)
-				{
-					ret.Add(i);
-				}
-			}
+			List<Appointment> ret = AppointmentListWithoutPatient(all);
+			Appointment appointment = new Appointment();
 			ret.Sort((y, x) => y.DateTime.CompareTo(x.DateTime));
+			appointment = FirstFreeAppointment(ret, date);
+			return appointment;
+		}
+
+		public Appointment FirstFreeAppointmentOfDoctor(List<Appointment> ret, DateTime date, int id)
+        {
+			Appointment appointment = new Appointment();
 			foreach (Appointment i in ret)
 			{
-				if (i.DateTime >= date)
+				if (i.Doctor == null)
 				{
-					app = i;
+					continue;
+				}
+				if (i.DateTime >= date && i.Doctor.Id == id)
+				{
+					appointment = i;
 					break;
 				}
 			}
-			return app;
+			return appointment;
 		}
 
 		public Appointment ReadWithPriorityDoctor(int id, DateTime date)
         {
 			List<Appointment> all = appointmentRepository.FindAll();
+			List<Appointment> ret = AppointmentListWithoutPatient(all);
+			ret.Sort((y, x) => y.DateTime.CompareTo(x.DateTime));
+			return FirstFreeAppointmentOfDoctor(ret, date, id);
+        }
+
+		public Appointment FirstFreeAppointment(List<Appointment> ret, DateTime date)
+		{
+			Appointment appointment = new Appointment();
+			foreach (Appointment i in ret)
+			{
+				if (i.DateTime >= date)
+				{
+					appointment = i;
+					break;
+				}
+			}
+			return appointment;
+		}
+
+		public List<Appointment> AppointmentListWithoutPatient(List<Appointment> all)
+		{
 			List<Appointment> ret = new List<Appointment>();
-			Appointment app = new Appointment();
 			foreach (Appointment i in all)
 			{
 				if (i.Patient == null)
@@ -156,21 +196,8 @@ namespace Service
 					ret.Add(i);
 				}
 			}
-			ret.Sort((y, x) => y.DateTime.CompareTo(x.DateTime));
-			foreach (Appointment i in ret)
-			{
-				if(i.Doctor == null)
-                {
-					continue;
-                }
-				if (i.DateTime >= date && i.Doctor.Id == id)
-				{
-					app = i;
-					break;
-				}
-			}
-			return app;
-        }
+			return ret;
+		}
 
 		public List<Appointment> ReadAll()
 		{
@@ -178,20 +205,7 @@ namespace Service
 		}
 
 
-		public List<Appointment> ReadByDoctor (Doctor doctor)
-        {
-			List<Appointment> all = appointmentRepository.FindAll();
-			List<Appointment> appointments = new List<Appointment>();
-			foreach (Appointment i in all)
-			{
-				if (i.Doctor == doctor)
-				{
-					appointments.Add(i);
-				}
-			}
-
-			return appointments;
-		}
+		
 
 		public List<Appointment> ReadIfFinished()
         {
@@ -204,7 +218,6 @@ namespace Service
 					appointments.Add(i);
 				}
 			}
-
 			return appointments;
 		}
 

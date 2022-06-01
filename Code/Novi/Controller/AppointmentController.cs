@@ -31,7 +31,12 @@ namespace Controller
 		{
 			return appointmentService.UpdateAppointment(appointmentDTO, id);
 		}
-		
+
+		public Boolean UpdateAppointmentAntiTroll(AppointmentDTO appointmentDTO, int id)
+		{
+			return appointmentService.UpdateAppointmentAntiTroll(appointmentDTO, id);
+		}
+
 		public Appointment ReadAppointment(int id)
 		{
 			Appointment appointment = appointmentService.ReadAppointment(id);
@@ -74,11 +79,7 @@ namespace Controller
 			return appointments;
 		}
 
-		public List<Appointment> ReadByDoctor(int doctorId)
-        {
-			Doctor doctor = doctorService.ReadDoctor(doctorId);
-			return appointmentService.ReadByDoctor(doctor);
-        }
+		
 
 		public List<Appointment> ReadIfFinished()
         {

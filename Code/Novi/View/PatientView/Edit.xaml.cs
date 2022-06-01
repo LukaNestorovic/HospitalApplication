@@ -80,7 +80,7 @@ namespace ProjekatSIMS.View.PatientView
                         appointmentDTO.Room = appointment.Room;
                         appointmentDTO.Finished = false;
 
-                        appointmentController.UpdateAppointment(appointmentDTO, appointment.Id);
+                        appointmentController.UpdateAppointmentAntiTroll(appointmentDTO, appointment.Id);
                         var s = new PatientView(id);
                         s.Show();
                         Close();

@@ -6,6 +6,7 @@ using Repository;
 using System.Collections;
 using Serialization;
 using System.Windows;
+using DTO;
 
 
 namespace Service
@@ -27,16 +28,12 @@ namespace Service
 			id = newID;
 			return newID;
 		}
-		public Boolean CreatePrescription(String instructions, Doctor doctor, Patient patient, Drug drug, DateTime datetime)
+		public Boolean CreatePrescription(PrescriptionDTO prescriptionDTO)
 		{
 			int newID = createId();
-			Prescription newPrescription = new Prescription(instructions, newID, doctor, patient, drug, datetime);
-
-
+			Prescription newPrescription = new Prescription(prescriptionDTO.Instructions, newID, prescriptionDTO.doctor, prescriptionDTO.patient, prescriptionDTO.drug, prescriptionDTO.datetime);
 			File.WriteAllText(idFile, newID.ToString());
-
 			return prescriptionRepository.Save(newPrescription);
-			
 		}
 
 		public List<Prescription> ReadAllByPatientId(int id)
