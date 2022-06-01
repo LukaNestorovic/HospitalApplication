@@ -21,9 +21,9 @@ using DTO;
 namespace ProjekatSIMS.View.PatientView
 {
     /// <summary>
-    /// Interaction logic for Edit.xaml
+    /// Interaction logic for EditAppointment.xaml
     /// </summary>
-    public partial class Edit : Window
+    public partial class EditAppointment : Page
     {
         public AppointmentController appointmentController = new AppointmentController();
         public DoctorController doctorController = new DoctorController();
@@ -35,7 +35,7 @@ namespace ProjekatSIMS.View.PatientView
         public AppointmentDTO appointmentDTO = new AppointmentDTO();
         public RoomController roomController = new RoomController();
         public PatientController patientController = new PatientController();
-        public Edit(Appointment appointment, int id)
+        public EditAppointment(Appointment appointment, int id)
         {
             InitializeComponent();
             DP.SelectedDate = appointment.DateTime;
@@ -45,12 +45,11 @@ namespace ProjekatSIMS.View.PatientView
             this.appointment = appointment;
             this.id = id;
         }
-
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
             DateTime today = DateTime.Now;
             DateTime today2 = today.AddDays(2);
-           
+
             if (today2 <= appointment.DateTime)
             {
                 doctor = (Model.Doctor)Combo.SelectedItem;
@@ -60,15 +59,6 @@ namespace ProjekatSIMS.View.PatientView
                 }
                 else
                 {
-                    if (appointment.Patient.Brojac > 4)
-                    {
-                        MessageBox.Show("Blokirani ste", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
-                        var t = new LogIn();
-                        t.Show();
-                        Close();
-                    }
-                    else
-                    {
                         appointmentDTO.DateTime = DP.SelectedDate.GetValueOrDefault();
                         appointmentDTO.Descripton = appointment.Descripton;
                         appointmentDTO.Duration = appointment.Duration;
@@ -79,10 +69,8 @@ namespace ProjekatSIMS.View.PatientView
                         appointmentDTO.Finished = false;
 
                         appointmentController.UpdateAppointmentAntiTroll(appointmentDTO, appointment.Id);
-                        var s = new PatientView(id);
-                        s.Show();
-                        Close();
-                    }
+                        var s = new ScheduledAppointments(id);
+                        NavigationService.Navigate(s);
                 }
             }
             else
@@ -93,18 +81,14 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            var s = new PatientView(id);
-            s.Show();
-            Close();
-
-
+            var s = new Home(id);
+            NavigationService.Navigate(s);
         }
 
         private void LogOff_Click(object sender, RoutedEventArgs e)
         {
             var s = new LogIn();
-            s.Show();
-            Close();
+            NavigationService.Navigate(s);
         }
 
         private void Help_Click(object sender, RoutedEventArgs e)

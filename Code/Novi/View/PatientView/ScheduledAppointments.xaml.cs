@@ -15,23 +15,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace ProjekatSIMS.View.PatientView
 {
     /// <summary>
-    /// Interaction logic for PatientView.xaml
+    /// Interaction logic for ScheduledAppointments.xaml
     /// </summary>
-    public partial class PatientView : Window
+    public partial class ScheduledAppointments : Page
     {
-        
         public AppointmentController appointmentController = new AppointmentController();
         public PatientController patientController = new PatientController();
         public Appointment appointment = new Appointment();
         public ObservableCollection<Appointment> appointments;
         public Patient patient = new Patient();
-        private int brojac;
         private int id;
-
-        public PatientView(int id)
+        public ScheduledAppointments(int id)
         {
             InitializeComponent();
             appointments = new ObservableCollection<Appointment>(appointmentController.FindAllByPatientId(id));
@@ -39,7 +37,6 @@ namespace ProjekatSIMS.View.PatientView
             this.id = id;
         }
 
-       
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             patient = patientController.ReadPatient(id);
@@ -49,23 +46,13 @@ namespace ProjekatSIMS.View.PatientView
                 MessageBox.Show("Choose appointment", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
-            {
-                if (patient.Brojac > 4)
-                {
-                    MessageBox.Show("Blokirani ste", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
-                    var t = new LogIn();
-                    t.Show();
-                    Close();
-                }
-                else
-                {
+            { 
                     appointmentController.DeleteAppointment(appointment.Id, id);
-                    var s = new PatientView(id);
-                    s.Show();
-                    Close();
-                }
+                    var s = new ScheduledAppointments(id);
+                    NavigationService.Navigate(s);
+                
             }
-            
+
         }
 
 
@@ -79,32 +66,31 @@ namespace ProjekatSIMS.View.PatientView
             }
             else
             {
-                    appointment1 = appointmentController.FindAppointment(appointment.Id);
-                    var s = new Edit(appointment1, id);
-                    s.Show();
-                    Close();
+                appointment1 = appointmentController.FindAppointment(appointment.Id);
+                var s = new EditAppointment(appointment1, id);
+                NavigationService.Navigate(s);
             }
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            var s = new PatientHome(id);
-            s.Show();
-            Close();
+            var s = new Home(id);
+            NavigationService.Navigate(s);
+
         }
 
         private void Schedule_Click(object sender, RoutedEventArgs e)
         {
-            var s = new FreeAppointments(id);
-            s.Show();
-            Close();
+            var s = new ScheduleAppointment(id);
+            NavigationService.Navigate(s);
+
         }
 
         private void LogOff_Click(object sender, RoutedEventArgs e)
         {
             var s = new LogIn();
-            s.Show();
-            Close();
+            NavigationService.Navigate(s);
+
         }
 
         private void Help_Click(object sender, RoutedEventArgs e)

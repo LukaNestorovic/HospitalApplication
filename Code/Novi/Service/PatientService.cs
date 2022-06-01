@@ -54,6 +54,23 @@ namespace Service
 			patient.Brojac = patientDTO.Brojac;
 			return patientRepository.UpdateByID(patient);
 		}
+
+		public PatientDTO MakePatientDTO(PatientDTO patientDTO, Patient patient)
+        {
+			patientDTO.Name = patient.Name;
+			patientDTO.Surname = patient.Surname;
+			patientDTO.Jmbg = patient.Jmbg;
+			patientDTO.Telephone = patient.Telephone;
+			patientDTO.Email = patient.Email;
+			patientDTO.BirthDate = patient.BirthDate;
+			patientDTO.Adress = patient.Adress;
+			patientDTO.InsuranceCarrier = patient.InsuranceCarrier;
+			patientDTO.Guest = patient.Guest;
+			patientDTO.Password = patient.Password;
+			patientDTO.Blocked = patient.Blocked;
+			patientDTO.Brojac= patient.Brojac;
+			return patientDTO;
+		}
 		
 		public Boolean DeletePatient(int id)
 		{

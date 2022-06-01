@@ -82,7 +82,7 @@ namespace Service
 			}
 			foreach(Doctor i in specialDoctors)
             {
-                List<Appointment> appointments = appointmentService.ReadAllByDoctorId(i.Id);
+                List<Appointment> appointments = appointmentService.FindAllByDoctorId(i.Id);
 
                 Boolean a = new Boolean();
 				foreach (Appointment appointment in appointments)

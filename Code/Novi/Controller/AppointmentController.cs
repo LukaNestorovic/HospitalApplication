@@ -37,56 +37,55 @@ namespace Controller
 			return appointmentService.UpdateAppointmentAntiTroll(appointmentDTO, id);
 		}
 
-		public Appointment ReadAppointment(int id)
+		public Appointment FindAppointment(int id)
 		{
-			Appointment appointment = appointmentService.ReadAppointment(id);
+			Appointment appointment = appointmentService.FindAppointment(id);
 			return appointment;
 		}
 
-		public Appointment ReadWithPriority(DateTime date)
+		public Appointment FindWithDatePriority(DateTime date)
         {
-			Appointment appointment = appointmentService.ReadWithPriority(date);
+			Appointment appointment = appointmentFindService.FindWithDatePriority(date);
 			return appointment;
         }
 
-		public Appointment ReadWithPriorityDoctor(int id, DateTime date)
+		public Appointment FindWithDoctorPriority(int id, DateTime date)
         {
-			Appointment appointment = appointmentService.ReadWithPriorityDoctor(id, date);
+			Appointment appointment = appointmentFindService.FindWithDoctorPriority(id, date);
 			return appointment;
         }
 
-		public List<Appointment> ReadAll()
+		public List<Appointment> FindAll()
 		{
-			List<Appointment> appointments = appointmentService.ReadAll();
+			List<Appointment> appointments = appointmentService.FindAll();
 			return appointments;
 		}
 
-		public List<Appointment> ReadAllByPatientId(int id)
+		public List<Appointment> FindAllByPatientId(int id)
         {
-			List<Appointment> appointments = appointmentService.ReadAllByPatientId(id);
+			List<Appointment> appointments = appointmentFindService.FindAllByPatientId(id);
 			return appointments;
         }
 
-		public List<Appointment> ReadAllByDoctorId(int id)
+		public List<Appointment> FindAllByDoctorId(int id)
 		{
-			List<Appointment> appointments = appointmentService.ReadAllByDoctorId(id);
+			List<Appointment> appointments = appointmentFindService.FindAllByDoctorId(id);
 			return appointments;
 		}
 
-		public List<Appointment> ReadAllWithoutPatient()
+		public List<Appointment> FindAllWithoutPatient()
 		{
-			List<Appointment> appointments = appointmentService.ReadAllWithoutPatient();
+			List<Appointment> appointments = appointmentFindService.FindAllWithoutPatient();
 			return appointments;
 		}
 
-		
-
-		public List<Appointment> ReadIfFinished()
+		public List<Appointment> FindIfFinished()
         {
-			return appointmentService.ReadIfFinished();
+			return appointmentFindService.FindIfFinished();
         }
 
 		public AppointmentService appointmentService = new AppointmentService();
+		public AppointmentFindService appointmentFindService = new AppointmentFindService();
 	
 	}
 }

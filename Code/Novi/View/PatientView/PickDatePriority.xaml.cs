@@ -37,7 +37,7 @@ namespace ProjekatSIMS.View.PatientView
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
             DateTime date = DatePicker.SelectedDate.GetValueOrDefault();
-            appointment = appointmentController.ReadWithPriority(date);
+            appointment = appointmentController.FindWithDatePriority(date);
             patient = patientController.ReadPatient(id);
             appointmentDTO.DateTime = appointment.DateTime;
             appointmentDTO.Descripton = appointment.Descripton;

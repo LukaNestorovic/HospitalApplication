@@ -28,7 +28,7 @@ namespace ProjekatSIMS.View.PatientView
         public Finished(int id)
         {
             InitializeComponent();
-            appointments = new ObservableCollection<Appointment>(appointmentController.ReadIfFinished());
+            appointments = new ObservableCollection<Appointment>(appointmentController.FindIfFinished());
             PatientAppointments.ItemsSource = appointments;
             this.id = id;
         }

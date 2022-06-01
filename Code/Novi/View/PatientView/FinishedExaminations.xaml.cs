@@ -14,38 +14,27 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using DTO;
 
 namespace ProjekatSIMS.View.PatientView
 {
     /// <summary>
-    /// Interaction logic for FreeAppointments.xaml
+    /// Interaction logic for FinishedExaminations.xaml
     /// </summary>
-    public partial class FreeAppointments : Window
+    public partial class FinishedExaminations : Page
     {
         private int id;
         public ObservableCollection<Appointment> appointments;
         public Appointment appointment = new Appointment();
         public AppointmentController appointmentController = new AppointmentController();
-        public AppointmentDTO appointmentDTO = new AppointmentDTO();
-        public PatientController patientController = new PatientController();
-        public Patient patient = new Patient();
-        public FreeAppointments(int id)
+        public FinishedExaminations(int id)
         {
             InitializeComponent();
-            appointments = new ObservableCollection<Appointment>(appointmentController.FindAllWithoutPatient());
+            appointments = new ObservableCollection<Appointment>(appointmentController.FindIfFinished());
             PatientAppointments.ItemsSource = appointments;
             this.id = id;
         }
 
-        private void Back_Click(object sender, RoutedEventArgs e)
-        {
-            var s = new PatientView(id);
-            s.Show();
-            Close();
-        }
-
-        private void Schedule_Click(object sender, RoutedEventArgs e)
+        private void Rate_Click(object sender, RoutedEventArgs e)
         {
             appointment = (Appointment)PatientAppointments.SelectedItem;
             if (appointment == null)
@@ -54,28 +43,40 @@ namespace ProjekatSIMS.View.PatientView
             }
             else
             {
-                patient = patientController.ReadPatient(id);
-                appointmentDTO.DateTime = appointment.DateTime;
-                appointmentDTO.Descripton = appointment.Descripton;
-                appointmentDTO.Duration = appointment.Duration;
-                appointmentDTO.Emergency = appointment.Emergency;
-                appointmentDTO.Doctor = appointment.Doctor;
-                appointmentDTO.Room = appointment.Room;
-                appointmentDTO.Patient = patient;
-                appointmentDTO.Finished = false;
-                appointmentController.UpdateAppointment(appointmentDTO, appointment.Id);
-                var s = new PatientView(id);
+                var s = new DoctorSurvey(id, appointment);
                 s.Show();
-                Close();
+                
             }
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new PatientHome(id);
+            s.Show();
+            
         }
 
         private void LogOff_Click(object sender, RoutedEventArgs e)
         {
             var s = new LogIn();
             s.Show();
-            Close();
         }
+
+        private void Note_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Prescription_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Report_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void Help_Click(object sender, RoutedEventArgs e)
         {
         }

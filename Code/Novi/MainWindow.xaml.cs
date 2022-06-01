@@ -57,9 +57,11 @@ namespace ProjekatSIMS
                     }
                     else
                     {
-                        var s = new PatientHome(patient.Id);
+                        /*var s = new PatientHome(patient.Id);
                         s.Show();
-                        Close();
+                        Close();*/
+                        var s = new Home(patient.Id);
+                        MainFrame.Navigate(s);
                     }
                 }
                 else

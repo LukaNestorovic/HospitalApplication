@@ -1,0 +1,29 @@
+﻿<Page x:Class="ProjekatSIMS.View.PatientView.ScheduleWithPriority"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjekatSIMS.View.PatientView"
+      mc:Ignorable="d" 
+      d:DesignHeight="768" d:DesignWidth="1024"
+      Title="ScheduleWithPriority">
+
+    <Grid>
+        <Rectangle HorizontalAlignment="Center" Height="61" Stroke="Black" VerticalAlignment="Top" Width="1024" Fill="#003B46"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="691" Margin="0,61,0,0" VerticalAlignment="Top" Width="1024" Background="#C4DFE6">
+            <Grid Margin="0,0,-2,-63">
+                <Button Name="Submit" Visibility="Hidden" Content="Submit" HorizontalAlignment="Center" Margin="0,521,0,0" VerticalAlignment="Top" Height="55" Width="153" Click="Submit_Click" RenderTransformOrigin="0.558,-0.611" FontSize="18" Background="#66A5AD" Foreground="Black"/>
+                <DatePicker x:Name="DatePicker1" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top" Width="304" Height="58" Margin="364,230,0,0" FontSize="25"/>
+                <ComboBox x:Name="Combo" Visibility="Hidden" Margin="364,340,360,361" FontSize="25" DisplayMemberPath="Name"/>
+                <Label Name="LabelDoctor" Visibility="Hidden" Content="Doctor:" HorizontalAlignment="Left" Margin="224,337,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.982,0.36" Height="57" FontSize="25"/>
+
+            </Grid>
+        </Border>
+        <Button Content="Doctor" HorizontalAlignment="Left" Margin="63,184,0,0" VerticalAlignment="Top" Width="212" Height="79" Click="Doctor_click" Background="#66A5AD" FontSize="18"/>
+        <Button Content="Time" HorizontalAlignment="Left" Margin="726,184,0,0" VerticalAlignment="Top" Width="212" Height="79" Click="Time_click" Background="#66A5AD" FontSize="18"/>
+        <Button x:Name="Cancel" Content="Back" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="153" Click="Cancel_click" Height="55" FontSize="18" Background="#66A5AD" Foreground="Black"/>
+        <Button Content="LogOff" HorizontalAlignment="Left" Margin="861,3,0,0" VerticalAlignment="Top" Height="55" Width="153" Click="LogOff_Click" FontSize="18" Background="#66A5AD" Foreground="Black"/>
+        <Label Content="Schedule with priority" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Height="48" Width="280" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
+
+    </Grid>
+</Page>

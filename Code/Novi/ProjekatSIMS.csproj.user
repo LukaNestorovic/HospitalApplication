@@ -46,10 +46,19 @@
     <Compile Update="View\PatientView\Edit.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\PatientView\EditAppointment.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\PatientView\Finished.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\PatientView\FinishedExaminations.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\PatientView\FreeAppointments.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PatientView\Home.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\PatientView\HospitalSurvey.xaml.cs">
@@ -65,6 +74,24 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\PatientView\PickDatePriority.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PatientView\Prescription.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PatientView\RateAppointment.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PatientView\RateHospital.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PatientView\ScheduleAppointment.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PatientView\ScheduledAppointments.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PatientView\ScheduleWithPriority.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\SecretaryView\AddDynamicEquipment.xaml.cs">
@@ -141,10 +168,19 @@
     <Page Update="View\PatientView\Edit.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\PatientView\EditAppointment.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\PatientView\Finished.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\PatientView\FinishedExaminations.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\PatientView\FreeAppointments.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PatientView\Home.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\PatientView\HospitalSurvey.xaml">
@@ -160,6 +196,24 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\PatientView\PickDatePriority.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PatientView\Prescription.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PatientView\RateAppointment.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PatientView\RateHospital.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PatientView\ScheduleAppointment.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PatientView\ScheduledAppointments.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PatientView\ScheduleWithPriority.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\SecretaryView\AddDynamicEquipment.xaml">

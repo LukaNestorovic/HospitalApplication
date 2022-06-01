@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="DoctorPriority" Height="768" Width="1024">
     <Grid>
-        <Grid>
+        <Grid Margin="0,7,0,-7">
             <Button Content="Ok" HorizontalAlignment="Left" Margin="466,565,0,0" VerticalAlignment="Top" Width="96" Height="37" Click="Submit_Click"/>
             <DatePicker x:Name="DatePicker" HorizontalAlignment="Center" VerticalAlignment="Top" Width="304" Height="58" Margin="0,208,0,0" FontSize="25"/>
             <ComboBox x:Name="Combo" Margin="364,340,360,361" FontSize="25" DisplayMemberPath="Name"/>

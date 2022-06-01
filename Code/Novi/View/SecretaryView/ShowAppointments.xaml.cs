@@ -32,7 +32,7 @@ namespace ProjekatSIMS.View.SecretaryView
         public ShowAppointments()
         {
             InitializeComponent();
-            appointments = new ObservableCollection<Appointment>(appointmentController.ReadAll());
+            appointments = new ObservableCollection<Appointment>(appointmentController.FindAll());
             AppointmentsGrid.ItemsSource = appointments;
         }
 

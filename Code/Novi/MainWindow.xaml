@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjekatSIMS"
         mc:Ignorable="d"
-        Title="LogIn" Height="450" Width="800">
+        Title="LogIn" Height="768" Width="1024">
     <Grid>
         <TextBox x:Name="TBEmail" HorizontalAlignment="Left" Margin="324,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" Height="28"/>
         <PasswordBox x:Name="TBPass" HorizontalAlignment="Left" Margin="324,231,0,0"  VerticalAlignment="Top" Width="133" Height="28" PasswordChar="*"/>
@@ -17,6 +17,7 @@
         <Button Content="Room" HorizontalAlignment="Left" Margin="727,126,0,0" VerticalAlignment="Top" Click="Room_Click"/>
         <Button Content="Drug" HorizontalAlignment="Left" Margin="729,177,0,0" VerticalAlignment="Top" Click="Drug_Click" />
         <Button Content="Prescription" HorizontalAlignment="Left" Margin="714,225,0,0" VerticalAlignment="Top" Click="Prescription_Click"/>
+        <Frame Name="MainFrame" RenderTransformOrigin="0.499,1.002"/>
 
 
     </Grid>

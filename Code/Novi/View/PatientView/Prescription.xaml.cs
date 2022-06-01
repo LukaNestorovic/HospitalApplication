@@ -18,37 +18,37 @@ using System.Windows.Shapes;
 namespace ProjekatSIMS.View.PatientView
 {
     /// <summary>
-    /// Interaction logic for Medicine.xaml
+    /// Interaction logic for Prescription.xaml
     /// </summary>
-    public partial class Medicine : Window
+    public partial class Prescription : Page
     {
         public PrescriptionController prescriptionController = new PrescriptionController();
         public ObservableCollection<Model.Prescription> prescriptions;
         private int id;
-        public Medicine(int id)
+        public Prescription(int id)
         {
             InitializeComponent();
             prescriptions = new ObservableCollection<Model.Prescription>(prescriptionController.ReadAllByPatientId(id));
             PatientAppointments.ItemsSource = prescriptions;
             this.id = id;
         }
-
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             var s = new PatientHome(id);
             s.Show();
-            Close();
+            
         }
 
         private void LogOff_Click(object sender, RoutedEventArgs e)
         {
             var s = new LogIn();
             s.Show();
-            Close();
+            
         }
 
         private void Help_Click(object sender, RoutedEventArgs e)
         {
         }
     }
+
 }

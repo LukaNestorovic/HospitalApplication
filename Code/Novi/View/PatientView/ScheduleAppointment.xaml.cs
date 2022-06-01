@@ -16,12 +16,13 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DTO;
 
+
 namespace ProjekatSIMS.View.PatientView
 {
     /// <summary>
-    /// Interaction logic for FreeAppointments.xaml
+    /// Interaction logic for ScheduleAppointment.xaml
     /// </summary>
-    public partial class FreeAppointments : Window
+    public partial class ScheduleAppointment : Page
     {
         private int id;
         public ObservableCollection<Appointment> appointments;
@@ -30,19 +31,17 @@ namespace ProjekatSIMS.View.PatientView
         public AppointmentDTO appointmentDTO = new AppointmentDTO();
         public PatientController patientController = new PatientController();
         public Patient patient = new Patient();
-        public FreeAppointments(int id)
+        public ScheduleAppointment(int id)
         {
             InitializeComponent();
             appointments = new ObservableCollection<Appointment>(appointmentController.FindAllWithoutPatient());
             PatientAppointments.ItemsSource = appointments;
             this.id = id;
         }
-
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            var s = new PatientView(id);
-            s.Show();
-            Close();
+            var s = new ScheduledAppointments(id);
+            NavigationService.Navigate(s);
         }
 
         private void Schedule_Click(object sender, RoutedEventArgs e)
@@ -64,17 +63,17 @@ namespace ProjekatSIMS.View.PatientView
                 appointmentDTO.Patient = patient;
                 appointmentDTO.Finished = false;
                 appointmentController.UpdateAppointment(appointmentDTO, appointment.Id);
-                var s = new PatientView(id);
-                s.Show();
-                Close();
+                var s = new ScheduledAppointments(id);
+                NavigationService.Navigate(s);
+                
             }
         }
 
         private void LogOff_Click(object sender, RoutedEventArgs e)
         {
             var s = new LogIn();
-            s.Show();
-            Close();
+            NavigationService.Navigate(s);
+            
         }
         private void Help_Click(object sender, RoutedEventArgs e)
         {
