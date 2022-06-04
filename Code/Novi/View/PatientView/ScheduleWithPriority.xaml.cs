@@ -57,16 +57,14 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Cancel_click(object sender, RoutedEventArgs e)
         {
-            var s = new PatientView(id);
-            s.Show();
-            
+            var s = new ScheduledAppointments(id);
+            NavigationService.Navigate(s); 
         }
 
         private void LogOff_Click(object sender, RoutedEventArgs e)
         {
             var s = new LogIn();
-            s.Show();
-            
+            NavigationService.Navigate(s); 
         }
 
         private void Submit_Click(object sender, RoutedEventArgs e)

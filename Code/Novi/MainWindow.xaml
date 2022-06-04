@@ -17,7 +17,7 @@
         <Button Content="Room" HorizontalAlignment="Left" Margin="727,126,0,0" VerticalAlignment="Top" Click="Room_Click"/>
         <Button Content="Drug" HorizontalAlignment="Left" Margin="729,177,0,0" VerticalAlignment="Top" Click="Drug_Click" />
         <Button Content="Prescription" HorizontalAlignment="Left" Margin="714,225,0,0" VerticalAlignment="Top" Click="Prescription_Click"/>
-        <Frame Name="MainFrame" RenderTransformOrigin="0.499,1.002"/>
+        <Frame Name="MainFrame" RenderTransformOrigin="0.499,1.002" NavigationUIVisibility="Hidden"/>
 
 
     </Grid>

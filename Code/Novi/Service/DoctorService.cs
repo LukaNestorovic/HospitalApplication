@@ -82,7 +82,7 @@ namespace Service
 			}
 			foreach(Doctor i in specialDoctors)
             {
-                List<Appointment> appointments = appointmentService.FindAllByDoctorId(i.Id);
+                List<Appointment> appointments = appointmentFindService.FindAllByDoctorId(i.Id);
 
                 Boolean a = new Boolean();
 				foreach (Appointment appointment in appointments)
@@ -147,6 +147,7 @@ namespace Service
 		private static String FileName = @"..\..\..\data\Doctors.json";
 		public AppointmentService appointmentService = new AppointmentService();
 		public OperationRepository operationRepository = new OperationRepository();
+		public AppointmentFindService appointmentFindService = new AppointmentFindService();
 
 		private static Serializer<Doctor> serializer = new Serializer<Doctor>();
 
