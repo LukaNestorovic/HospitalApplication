@@ -35,6 +35,7 @@ namespace ProjekatSIMS
         public SecretaryController secretaryController = new SecretaryController();
         public Secretary secretary = new Secretary();
         public ObservableCollection<Room> rooms;
+        public ReminderController reminderController = new ReminderController();
         public LogIn()
         {
             InitializeComponent();
@@ -59,6 +60,7 @@ namespace ProjekatSIMS
                     {
                         var s = new Home(patient.Id);
                         MainFrame.Navigate(s);
+                        reminderController.Notification();
                     }
                 }
                 else
