@@ -44,7 +44,7 @@ namespace Service
 		public Boolean CreateAppointment(AppointmentDTO appointmentDTO)
 		{
 			int newID = createId();
-			Appointment newAppointment = new Appointment(appointmentDTO.DateTime, appointmentDTO.Descripton, appointmentDTO.Duration, appointmentDTO.Emergency, newID, appointmentDTO.Patient, appointmentDTO.Doctor, appointmentDTO.Room, appointmentDTO.Finished);
+			Appointment newAppointment = new Appointment(appointmentDTO.DateTime, appointmentDTO.Descripton, appointmentDTO.Duration, appointmentDTO.Emergency, newID, appointmentDTO.Patient, appointmentDTO.Doctor, appointmentDTO.Room, appointmentDTO.Finished, appointmentDTO.Anamnesis, appointmentDTO.Comment);
 
 			File.WriteAllText(idFile, newID.ToString());
 
@@ -60,20 +60,15 @@ namespace Service
 			appointment.Doctor = appointmentDTO.Doctor;
 			appointment.Room = appointmentDTO.Room;
 			appointment.Finished = appointmentDTO.Finished;
+			appointment.Anamnesis = appointmentDTO.Anamnesis;
+			appointment.Comment = appointmentDTO.Comment;
 			return appointment;
 		}
 		
 		public Boolean UpdateAppointment(AppointmentDTO appointmentDTO, int id)
         {
 			Appointment appointment = appointmentRepository.FindByID(id);
-			appointment.DateTime = appointmentDTO.DateTime;
-			appointment.Descripton = appointmentDTO.Descripton;
-			appointment.Duration = appointmentDTO.Duration;
-			appointment.Emergency = appointmentDTO.Emergency;
-			appointment.Doctor = appointmentDTO.Doctor;
-			appointment.Room = appointmentDTO.Room;
-			appointment.Patient = appointmentDTO.Patient;
-			appointment.Finished = appointmentDTO.Finished;
+			appointment = AppointmentFromDTO(appointmentDTO, appointment);
 			return appointmentRepository.UpdateByID(appointment);
 		}
 

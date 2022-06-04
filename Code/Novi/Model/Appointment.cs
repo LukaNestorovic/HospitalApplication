@@ -15,12 +15,13 @@ namespace Model
 		public int Duration { get; set; }
 		public Boolean Emergency { get; set; }
 		public int Id { get; set; }
+		public String Anamnesis { get; set; }
 		public Boolean Finished { get; set; }
 		public Patient Patient { get; set; }
 		public Doctor Doctor { get; set; }
 		public Room Room { get; set; }
-
-		  public Appointment(DateTime dateTime, string descripton, int duration, bool emergency, int id, Patient patient, Doctor doctor, Room room, Boolean finished)
+		public String Comment { get; set; }
+		  public Appointment(DateTime dateTime, string descripton, int duration, bool emergency, int id,  Patient patient, Doctor doctor, Room room, Boolean finished, string anamnesis, string comment)
 		  {
 				DateTime = dateTime;
 				Descripton = descripton;
@@ -31,6 +32,8 @@ namespace Model
 				this.Patient = patient;
 				this.Doctor = doctor;
 				this.Room = room;
+				Anamnesis = anamnesis;
+				Comment = comment;
 		  }
 
 		  public Appointment()

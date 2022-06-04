@@ -43,15 +43,15 @@ namespace ProjekatSIMS.View.PatientView
             hospitalSurveyDTO.Question3 = Combo3.SelectedIndex + 1;
             hospitalSurveyDTO.patient = patientController.ReadPatient(id);
             hospitalSurveyController.CreateHospitalSurvey(hospitalSurveyDTO);
-            var s = new PatientHome(id);
-            s.Show();
+            var s = new Home(id);
+            NavigationService.Navigate(s);
             
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            var s = new PatientHome(id);
-            s.Show();
+            var s = new Home(id);
+            NavigationService.Navigate(s);
            
         }
 

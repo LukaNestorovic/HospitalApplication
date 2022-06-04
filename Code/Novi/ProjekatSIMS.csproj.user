@@ -34,46 +34,22 @@
     <Compile Update="View\ManagerView\ManagerView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\PatientView\CreateReminder.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\PatientView\Doctor.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\PatientView\DoctorPriority.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\PatientView\DoctorSurvey.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\PatientView\Edit.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\PatientView\EditAppointment.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\PatientView\Finished.xaml.cs">
+    <Compile Update="View\PatientView\EditReminder.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\PatientView\FinishedExaminations.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\PatientView\FreeAppointments.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="View\PatientView\Home.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\PatientView\HospitalSurvey.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\PatientView\Medicine.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\PatientView\PatientHome.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\PatientView\PatientView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="View\PatientView\PickDatePriority.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\PatientView\Prescription.xaml.cs">
@@ -83,6 +59,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\PatientView\RateHospital.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PatientView\Reminder.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PatientView\Report.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\PatientView\ScheduleAppointment.xaml.cs">
@@ -156,46 +138,22 @@
     <Page Update="View\ManagerView\ManagerView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\PatientView\CreateReminder.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\PatientView\Doctor.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\PatientView\DoctorPriority.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\PatientView\DoctorSurvey.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\PatientView\Edit.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\PatientView\EditAppointment.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\PatientView\Finished.xaml">
+    <Page Update="View\PatientView\EditReminder.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\PatientView\FinishedExaminations.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\PatientView\FreeAppointments.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="View\PatientView\Home.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\PatientView\HospitalSurvey.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\PatientView\Medicine.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\PatientView\PatientHome.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\PatientView\PatientView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\PatientView\PickDatePriority.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\PatientView\Prescription.xaml">
@@ -205,6 +163,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\PatientView\RateHospital.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PatientView\Reminder.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PatientView\Report.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\PatientView\ScheduleAppointment.xaml">

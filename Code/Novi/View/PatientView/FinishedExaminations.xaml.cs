@@ -43,17 +43,16 @@ namespace ProjekatSIMS.View.PatientView
             }
             else
             {
-                var s = new DoctorSurvey(id, appointment);
-                s.Show();
+                var s = new RateAppointment(id, appointment);
+                NavigationService.Navigate(s);
                 
             }
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            var s = new PatientHome(id);
-            s.Show();
-            
+            var s = new Home(id);
+            NavigationService.Navigate(s);
         }
 
         private void LogOff_Click(object sender, RoutedEventArgs e)
@@ -69,12 +68,24 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Prescription_Click(object sender, RoutedEventArgs e)
         {
-
+            var s = new Prescription(id);
+            NavigationService.Navigate(s);
         }
 
         private void Report_Click(object sender, RoutedEventArgs e)
         {
-
+            Appointment appointment1 = new Appointment();
+            appointment = (Appointment)PatientAppointments.SelectedItem;
+            if (appointment == null)
+            {
+                MessageBox.Show("Choose appointment", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                appointment1 = appointmentController.FindAppointment(appointment.Id);
+                var s = new Report(appointment1, id);
+                NavigationService.Navigate(s);
+            }
         }
 
         private void Help_Click(object sender, RoutedEventArgs e)

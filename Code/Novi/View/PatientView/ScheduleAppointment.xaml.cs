@@ -64,16 +64,15 @@ namespace ProjekatSIMS.View.PatientView
                 appointmentDTO.Finished = false;
                 appointmentController.UpdateAppointment(appointmentDTO, appointment.Id);
                 var s = new ScheduledAppointments(id);
-                NavigationService.Navigate(s);
-                
+                NavigationService.Navigate(s);            
             }
         }
 
         private void LogOff_Click(object sender, RoutedEventArgs e)
         {
             var s = new LogIn();
-            NavigationService.Navigate(s);
-            
+            s.Show();
+
         }
         private void Help_Click(object sender, RoutedEventArgs e)
         {
