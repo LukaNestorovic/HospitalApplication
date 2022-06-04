@@ -5,6 +5,7 @@ using System.IO;
 using System.Collections.Generic;
 using Serialization;
 using DTO;
+using System.Windows;
 
 
 namespace Service
@@ -60,6 +61,20 @@ namespace Service
 		public List<Reminder> FindAll()
         {
 			return reminderRepository.FindAll();
+        }
+
+		public Boolean Notification()
+        {
+			List<Reminder> reminders = FindAll();
+			foreach(Reminder r in reminders)
+            {
+				TimeSpan razlika = r.DateTime - DateTime.Now;
+				if(razlika.TotalMinutes < 15)
+                {
+					MessageBox.Show("Za " + (int)razlika.TotalMinutes + " minuta treba da " + r.Event, "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+				}
+            }
+			return true;
         }
 	}
 }

@@ -34,5 +34,10 @@ namespace Controller
         {
             return reminderService.FindAll();
         }
+
+        public Boolean Notification()
+        {
+            return reminderService.Notification();
+        }
     }
 }
