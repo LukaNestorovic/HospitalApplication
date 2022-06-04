@@ -52,14 +52,14 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            var s = new Home(id);
+            var s = new FinishedExaminations(id);
             NavigationService.Navigate(s);
         }
 
         private void LogOff_Click(object sender, RoutedEventArgs e)
         {
             var s = new LogIn();
-            NavigationService.Navigate(s);
+            s.Show();
         }
 
         private void Help_Click(object sender, RoutedEventArgs e)

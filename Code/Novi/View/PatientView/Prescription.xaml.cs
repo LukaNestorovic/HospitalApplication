@@ -34,8 +34,8 @@ namespace ProjekatSIMS.View.PatientView
         }
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            var s = new PatientHome(id);
-            s.Show();
+            var s = new Home(id);
+            NavigationService.Navigate(s);
             
         }
 

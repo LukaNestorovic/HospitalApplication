@@ -89,7 +89,7 @@ namespace ProjekatSIMS.View.PatientView
         private void LogOff_Click(object sender, RoutedEventArgs e)
         {
             var s = new LogIn();
-            NavigationService.Navigate(s);
+            s.Show();
 
         }
 

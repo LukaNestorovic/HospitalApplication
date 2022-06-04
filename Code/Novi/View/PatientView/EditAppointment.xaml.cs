@@ -67,6 +67,8 @@ namespace ProjekatSIMS.View.PatientView
                         appointmentDTO.Doctor = doctor;
                         appointmentDTO.Room = appointment.Room;
                         appointmentDTO.Finished = false;
+                        appointmentDTO.Comment = appointment.Comment;
+                        appointmentDTO.Anamnesis = appointment.Anamnesis;
 
                         appointmentController.UpdateAppointmentAntiTroll(appointmentDTO, appointment.Id);
                         var s = new ScheduledAppointments(id);
@@ -81,14 +83,14 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            var s = new Home(id);
+            var s = new ScheduledAppointments(id);
             NavigationService.Navigate(s);
         }
 
         private void LogOff_Click(object sender, RoutedEventArgs e)
         {
             var s = new LogIn();
-            NavigationService.Navigate(s);
+            s.Show();
         }
 
         private void Help_Click(object sender, RoutedEventArgs e)

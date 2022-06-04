@@ -17,8 +17,9 @@ namespace DTO
 		public Patient Patient { get; set; }
 		public Doctor Doctor { get; set; }
 		public Room Room { get; set; }
-
-        public AppointmentDTO(DateTime dateTime, string descripton, int duration, bool emergency, bool finished, Patient patient, Doctor doctor, Room room)
+        public String Anamnesis { get; set; }
+        public String Comment { get; set; }
+        public AppointmentDTO(DateTime dateTime, string descripton, int duration, bool emergency, bool finished, Patient patient, Doctor doctor, Room room, string anamnesis, string comment)
         {
             DateTime = dateTime;
             Descripton = descripton;
@@ -28,6 +29,8 @@ namespace DTO
             Patient = patient;
             Doctor = doctor;
             Room = room;
+            Anamnesis = anamnesis;
+            Comment = comment;
         }
 
         public AppointmentDTO()
