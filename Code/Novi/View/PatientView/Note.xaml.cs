@@ -29,8 +29,6 @@ namespace ProjekatSIMS.View.PatientView
         {
             InitializeComponent();
             TBAnamnesis.Text = appointment.Anamnesis;
-//            DateTime sad = DateTime.ParseExact(DateTime.Now.ToString(), "MM/dd/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture);
-//            String s = sad.ToString("dd/M/yyyy", CultureInfo.InvariantCulture);
             TBDate.Text = DateTime.Now.ToString();
             TBName.Text = appointment.Patient.Name;
             TBSurname.Text = appointment.Patient.Surname;
@@ -61,7 +59,8 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Help_Click(object sender, RoutedEventArgs e)
         {
-
+            var s = new Help(id);
+            NavigationService.Navigate(s);
         }
     }
 }

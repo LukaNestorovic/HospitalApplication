@@ -1,8 +1,5 @@
-﻿using Controller;
-using Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,44 +10,33 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ProjekatSIMS.View.PatientView
 {
     /// <summary>
-    /// Interaction logic for Prescription.xaml
+    /// Interaction logic for Help.xaml
     /// </summary>
-    public partial class Prescription : Page
+    public partial class Help : Page
     {
-        public PrescriptionController prescriptionController = new PrescriptionController();
-        public ObservableCollection<Model.Prescription> prescriptions;
-        private int id;
-        public Prescription(int id)
+        public int id;
+        public Help(int id)
         {
             InitializeComponent();
-            prescriptions = new ObservableCollection<Model.Prescription>(prescriptionController.PrescriptionListOfPatient(id));
-            PatientAppointments.ItemsSource = prescriptions;
             this.id = id;
         }
+
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             var s = new Home(id);
             NavigationService.Navigate(s);
-            
         }
 
         private void LogOff_Click(object sender, RoutedEventArgs e)
         {
             var s = new LogIn();
             s.Show();
-            
-        }
-
-        private void Help_Click(object sender, RoutedEventArgs e)
-        {
-            var s = new Help(id);
-            NavigationService.Navigate(s);
         }
     }
-
 }

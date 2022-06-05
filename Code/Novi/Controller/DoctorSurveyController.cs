@@ -18,15 +18,15 @@ namespace Controller
 			return doctorSurveyService.DeleteDoctorSurvey(id);
 		}
 
-		public DoctorSurvey ReadDoctorSurvey(int id)
+		public DoctorSurvey FindDoctorSurvey(int id)
 		{
-			DoctorSurvey doctorSurvey = doctorSurveyService.ReadDoctorSurvey(id);
+			DoctorSurvey doctorSurvey = doctorSurveyService.FindDoctorSurvey(id);
 			return doctorSurvey;
 		}
 
-		public List<DoctorSurvey> ReadAll()
+		public List<DoctorSurvey> FindAll()
 		{
-			List<DoctorSurvey> doctorSurvey = doctorSurveyService.ReadAll();
+			List<DoctorSurvey> doctorSurvey = doctorSurveyService.FindAll();
 			return doctorSurvey;
 		}
 		public Boolean UpdateDoctorSurvey(DoctorSurveyDTO doctorSurveyDTO, int id)

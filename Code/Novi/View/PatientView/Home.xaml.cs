@@ -57,7 +57,8 @@ namespace ProjekatSIMS.View.PatientView
 
         private void MedicalRecord_Click(object sender, RoutedEventArgs e)
         {
-
+            var s = new MedicalRecord(id);
+            NavigationService.Navigate(s);
         }
 
         private void Reminder_Click(object sender, RoutedEventArgs e)
@@ -80,6 +81,8 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Help_Click(object sender, RoutedEventArgs e)
         {
+            var s = new Help(id);
+            NavigationService.Navigate(s);
         }
     }
 }

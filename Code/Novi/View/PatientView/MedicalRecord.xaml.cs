@@ -1,8 +1,5 @@
-﻿using Controller;
-using Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,37 +10,45 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Model;
+using Controller;
 
 namespace ProjekatSIMS.View.PatientView
 {
     /// <summary>
-    /// Interaction logic for Prescription.xaml
+    /// Interaction logic for MedicalRecord.xaml
     /// </summary>
-    public partial class Prescription : Page
+    public partial class MedicalRecord : Page
     {
-        public PrescriptionController prescriptionController = new PrescriptionController();
-        public ObservableCollection<Model.Prescription> prescriptions;
-        private int id;
-        public Prescription(int id)
+        public int id;
+        public Patient patient = new Patient();
+        public PatientController patientController = new PatientController();
+        public MedicalRecord(int id)
         {
             InitializeComponent();
-            prescriptions = new ObservableCollection<Model.Prescription>(prescriptionController.PrescriptionListOfPatient(id));
-            PatientAppointments.ItemsSource = prescriptions;
             this.id = id;
+            patient = patientController.ReadPatient(id);
+            TBAdress.Text = patient.Adress;
+            TBBirth.Text = patient.BirthDate.ToString();
+            TBEmail.Text = patient.Email;
+            TBName.Text = patient.Name;
+            TBSurname.Text = patient.Surname;
+            TBTelephone.Text = patient.Telephone;
+            TBJmbg.Text = patient.Jmbg;
         }
+
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             var s = new Home(id);
             NavigationService.Navigate(s);
-            
         }
 
         private void LogOff_Click(object sender, RoutedEventArgs e)
         {
             var s = new LogIn();
             s.Show();
-            
         }
 
         private void Help_Click(object sender, RoutedEventArgs e)
@@ -52,5 +57,4 @@ namespace ProjekatSIMS.View.PatientView
             NavigationService.Navigate(s);
         }
     }
-
 }

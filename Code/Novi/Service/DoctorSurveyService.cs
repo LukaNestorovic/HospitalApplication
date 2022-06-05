@@ -50,12 +50,12 @@ namespace Service
 			return doctorSurveyRepository.DeleteByID(id);
 		}
 
-		public DoctorSurvey ReadDoctorSurvey(int id)
+		public DoctorSurvey FindDoctorSurvey(int id)
 		{
 			return doctorSurveyRepository.FindByID(id);
 		}
 
-		public List<DoctorSurvey> ReadAll()
+		public List<DoctorSurvey> FindAll()
 		{
 			return doctorSurveyRepository.FindAll();
 		}
