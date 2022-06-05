@@ -79,9 +79,9 @@ namespace Controller
 			return appointments;
 		}
 
-		public List<Appointment> FindIfFinished()
+		public List<Appointment> FindAllFinished()
         {
-			return appointmentFindService.FindIfFinished();
+			return appointmentFindService.FindAllFinished();
         }
 
 		public AppointmentService appointmentService = new AppointmentService();

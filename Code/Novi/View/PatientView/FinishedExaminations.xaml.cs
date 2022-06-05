@@ -29,7 +29,7 @@ namespace ProjekatSIMS.View.PatientView
         public FinishedExaminations(int id)
         {
             InitializeComponent();
-            appointments = new ObservableCollection<Appointment>(appointmentController.FindIfFinished());
+            appointments = new ObservableCollection<Appointment>(appointmentController.FindAllFinished());
             PatientAppointments.ItemsSource = appointments;
             this.id = id;
         }
@@ -63,7 +63,16 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Note_Click(object sender, RoutedEventArgs e)
         {
-
+            appointment = (Appointment)PatientAppointments.SelectedItem;
+            if (appointment == null)
+            {
+                MessageBox.Show("Choose appointment", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                var s = new Note(appointment, id);
+                NavigationService.Navigate(s);
+            }
         }
 
         private void Prescription_Click(object sender, RoutedEventArgs e)

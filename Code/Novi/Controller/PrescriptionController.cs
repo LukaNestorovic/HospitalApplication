@@ -18,9 +18,9 @@ namespace Controller
             return prescriptionService.CreatePrescription(prescriptionDTO);
         }
 
-        public List<Prescription> ReadAllByPatientId(int id)
+        public List<Prescription> PrescriptionListOfPatient(int id)
         {
-            List<Prescription> prescriptions = prescriptionService.ReadAllByPatientId(id);
+            List<Prescription> prescriptions = prescriptionService.PrescriptionListOfPatient(id);
             return prescriptions;
         }
     }

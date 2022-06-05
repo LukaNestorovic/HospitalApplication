@@ -36,21 +36,27 @@ namespace Service
 			return prescriptionRepository.Save(newPrescription);
 		}
 
-		public List<Prescription> ReadAllByPatientId(int id)
-		{
-            List<Prescription> all = prescriptionRepository.FindAll();
+        public List<Prescription> FindAllByPatientId(List<Prescription> all, int id)
+        {
             List<Prescription> ret = new List<Prescription>();
-            foreach (Prescription i in all)
+            foreach (Prescription prescription in all)
             {
-                if (i.patient == null)
+                if(prescription.patient == null)
                 {
                     continue;
                 }
-                if (i.patient.Id == id)
+                if(prescription.patient.Id == id)
                 {
-                    ret.Add(i);
+                    ret.Add(prescription);
                 }
             }
+            return ret;
+        }
+
+		public List<Prescription> PrescriptionListOfPatient(int id)
+		{
+            List<Prescription> all = prescriptionRepository.FindAll();
+            List<Prescription> ret = FindAllByPatientId(all, id);
             foreach (Prescription i in ret)
             {
                 DateTime now = DateTime.Now;

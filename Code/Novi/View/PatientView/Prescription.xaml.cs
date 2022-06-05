@@ -28,7 +28,7 @@ namespace ProjekatSIMS.View.PatientView
         public Prescription(int id)
         {
             InitializeComponent();
-            prescriptions = new ObservableCollection<Model.Prescription>(prescriptionController.ReadAllByPatientId(id));
+            prescriptions = new ObservableCollection<Model.Prescription>(prescriptionController.PrescriptionListOfPatient(id));
             PatientAppointments.ItemsSource = prescriptions;
             this.id = id;
         }

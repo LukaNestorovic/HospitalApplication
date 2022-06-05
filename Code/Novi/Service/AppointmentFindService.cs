@@ -85,7 +85,7 @@ namespace Service
 			return ret;
 		}
 
-		public List<Appointment> FindIfFinished()
+		public List<Appointment> FindAllFinished()
 		{
 			List<Appointment> all = appointmentRepository.FindAll();
 			List<Appointment> appointments = new List<Appointment>();

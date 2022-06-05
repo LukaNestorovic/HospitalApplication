@@ -69,7 +69,7 @@ namespace Service
 			foreach(Reminder r in reminders)
             {
 				TimeSpan razlika = r.DateTime - DateTime.Now;
-				if(razlika.TotalMinutes < 15)
+				if(razlika.TotalMinutes < 15 && razlika.TotalMinutes > 0)
                 {
 					MessageBox.Show("Za " + (int)razlika.TotalMinutes + " minuta treba da " + r.Event, "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
 				}
