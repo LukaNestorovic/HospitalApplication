@@ -24,8 +24,7 @@ namespace ProjekatSIMS.View.PatientView
         private int id;
         public Patient patient = new Patient();
         public PatientController patientController = new PatientController();
-        public int brojac = 0;
-    public Home(int id)
+        public Home(int id)
         {
             InitializeComponent();
             this.id = id;
