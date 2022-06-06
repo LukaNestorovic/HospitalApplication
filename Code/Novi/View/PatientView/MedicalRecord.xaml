@@ -13,8 +13,16 @@
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="691" Margin="0,61,0,0" VerticalAlignment="Top" Width="1024" Background="#C4DFE6">
             <TextBox Name="TBName" TextWrapping="Wrap" Margin="345,66,345,580" FontSize="28" TextAlignment="Center"  Background="#C4DFE6" BorderBrush="#C4DFE6" IsReadOnly="True"/>
         </Border>
-        <Button x:Name="Cancel" Content="Back" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="153" Click="Cancel_Click" Height="55" FontSize="18" Background="#66A5AD" Foreground="Black"/>
-        <Button Content="LogOff" HorizontalAlignment="Left" Margin="861,3,0,0" VerticalAlignment="Top" Height="55" Width="153" Click="LogOff_Click" FontSize="18" Background="#66A5AD" Foreground="Black"/>
+        <Button x:Name="Cancel" Content="Back" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="153" Click="Cancel_Click" Height="55" FontSize="18" Background="#66A5AD" Foreground="Black">
+            <Button.ToolTip>
+                Vrati se nazad
+            </Button.ToolTip>
+        </Button>
+        <Button Content="LogOff" HorizontalAlignment="Left" Margin="861,3,0,0" VerticalAlignment="Top" Height="55" Width="153" Click="LogOff_Click" FontSize="18" Background="#66A5AD" Foreground="Black">
+            <Button.ToolTip>
+                Odjavi se
+            </Button.ToolTip>
+        </Button>
         <Label Content="Medicine" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Height="48" Width="123" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
         <Label Content="Name:" HorizontalAlignment="Left" Margin="199,121,0,0" VerticalAlignment="Top" Height="48" Width="94" FontSize="28" Foreground="Black" RenderTransformOrigin="0.474,0.227"/>
         <Label Content="Surname:" HorizontalAlignment="Left" Margin="184,208,0,0" VerticalAlignment="Top" Height="48" Width="124" FontSize="28" Foreground="Black" RenderTransformOrigin="0.474,0.227"/>
@@ -32,6 +40,9 @@
         <Button HorizontalAlignment="Left" Margin="762,13,0,0" VerticalAlignment="Top" Height="40" Click="Help_Click">
             <Image Source="Source\Question-Mark.jpeg" Height="38">
             </Image>
+            <Button.ToolTip>
+                Help
+            </Button.ToolTip>
         </Button>
     </Grid>
 </Page>

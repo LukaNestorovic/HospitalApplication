@@ -25,7 +25,7 @@ namespace ProjekatSIMS.View.PatientView
         public Patient patient = new Patient();
         public PatientController patientController = new PatientController();
         public int brojac = 0;
-        public Home(int id)
+    public Home(int id)
         {
             InitializeComponent();
             this.id = id;
@@ -84,5 +84,6 @@ namespace ProjekatSIMS.View.PatientView
             var s = new Help(id);
             NavigationService.Navigate(s);
         }
+
     }
 }
