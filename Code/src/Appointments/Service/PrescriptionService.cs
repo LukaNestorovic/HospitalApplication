@@ -89,7 +89,7 @@ namespace Appointments.Service
             return ret;
         }
 
-        public void GeneratePDF(int id, DateTime dateTime)
+/*        public void GeneratePDF(int id, DateTime dateTime)
         {
             using (PdfDocument doc = new PdfDocument())
             {
@@ -97,30 +97,30 @@ namespace Appointments.Service
                 PdfGraphics graphics = page.Graphics;
                 PdfFont font = new PdfStandardFont(PdfFontFamily.Helvetica, 20);
                 PdfFont font1 = new PdfStandardFont(PdfFontFamily.Helvetica, 15);
-                string naslov = "Bolnica Zdravo";
+                string naslov = "Klinika Zdravo";
+                PdfImage image = PdfImage.FromFile(@"..\..\..\srce.jpg");
+                graphics.DrawImage(image, 165, 0);
                 graphics.DrawString(naslov, font, PdfBrushes.Black, new PointF(200, 0));
                 string textPDF = "Izvestaj o lekovima za dan: " + String.Format("{0:M/d/yyyy}", dateTime);
-                graphics.DrawString(textPDF, font, PdfBrushes.Black, new PointF(100, 30));
+                graphics.DrawString(textPDF, font1, PdfBrushes.Black, new PointF(270, 75));
                 PdfLightTable pdfLightTable = new PdfLightTable();
                 DataTable table = new DataTable();
-                table.Columns.Add("Id");
-                table.Columns.Add("Date");
-                table.Columns.Add("Instructions");
-                table.Columns.Add("Doctor");
-                table.Columns.Add("Drug");
+                table.Columns.Add("Naziv leka");
+                table.Columns.Add("Instrukcije");
+                table.Columns.Add("Doktor");
                 List<Prescription> prescriptions = FindAllPrescriptionsByDate(dateTime);
                 foreach(Prescription p in prescriptions)
                 {
-                    table.Rows.Add(new string[] { p.Id.ToString(), String.Format("{0:M/d/yyyy}", dateTime), p.Instructions, p.doctor.Name, p.drug.Name});
+                    table.Rows.Add(new string[] { p.drug.Name, p.Instructions, p.doctor.Name});
                 }
                 pdfLightTable.DataSource = table;
                 pdfLightTable.Style.ShowHeader = true;
                 Patient patient = patientService.FindPatientById(id);
-                string ime = patient.Name + " " + patient.Surname;
-                graphics.DrawString(ime, font1, PdfBrushes.Black, new PointF(200, 75));
+                string ime ="Pacijent: " + patient.Name + " " + patient.Surname;
+                graphics.DrawString(ime, font1, PdfBrushes.Black, new PointF(0, 75));
                 pdfLightTable.Draw(page, new PointF(0, 100));
                 doc.Save(@"..\..\..\Reports\MedicineReport.pdf");
-                doc.Close(true);
+                doc.Close(false);
                 
             }
         }
@@ -134,7 +134,7 @@ namespace Appointments.Service
         {
             GeneratePDF(id, dateTime);
             SendMessage();
-        }
+        }*/
 
 
 

@@ -20,9 +20,9 @@ namespace Controller
             return reminderService.UpdateReminder(reminderDTO, id);
         }
 
-        public Reminder FindReminder(int id)
+        public Reminder FindReminderById(int id)
         {
-            return reminderService.FindReminder(id);
+            return reminderService.FindReminderById(id);
         }
 
         public Boolean DeleteReminder(int id)
