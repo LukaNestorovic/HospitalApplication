@@ -13,7 +13,8 @@ using Syncfusion.Pdf.Tables;
 using System.Data;
 using System.Drawing;
 using Interface;
-
+using Syncfusion.Pdf.Parsing;
+using System.Windows.Controls;
 
 namespace Appointments.Service
 {
@@ -89,7 +90,9 @@ namespace Appointments.Service
             return ret;
         }
 
-/*        public void GeneratePDF(int id, DateTime dateTime)
+       
+
+ /*       public void GeneratePDF(int id, DateTime dateTime)
         {
             using (PdfDocument doc = new PdfDocument())
             {
@@ -120,8 +123,7 @@ namespace Appointments.Service
                 graphics.DrawString(ime, font1, PdfBrushes.Black, new PointF(0, 75));
                 pdfLightTable.Draw(page, new PointF(0, 100));
                 doc.Save(@"..\..\..\Reports\MedicineReport.pdf");
-                doc.Close(false);
-                
+                doc.Close(true);
             }
         }
 
