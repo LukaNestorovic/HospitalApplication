@@ -6,23 +6,23 @@
 
 using System;
 using System.Collections.Generic;
-using Model;
+using Appointments.Model;
 using Serialization;
 
-namespace Repository
+namespace Appointments.Repository
 {
 	public class AppointmentRepository
 	{
-		public List<Appointment> FindAll()
+		public List<Model.Appointment> FindAll()
 		{
 			return serializer.fromJSON(FileName);
 		}
 		
-		public Appointment FindByID(int id)
+		public Model.Appointment FindByID(int id)
 		{
-			List<Appointment> all = FindAll();
-			Appointment a = null;
-			foreach(Appointment i in all){
+			List<Model.Appointment> all = FindAll();
+			Model.Appointment a = null;
+			foreach (Model.Appointment i in all){
 				if(i.Id == id){
 					a = i;
 					break;
@@ -31,9 +31,9 @@ namespace Repository
 			return a;
 		}
 		
-		public Boolean Save(Appointment appointment)
+		public Boolean Save(Model.Appointment appointment)
 		{
-			List<Appointment> all = FindAll();
+			List<Model.Appointment> all = FindAll();
 			all.Add(appointment);
 			serializer.toJSON(FileName, all);
 			return true;
@@ -41,8 +41,8 @@ namespace Repository
 		
 		public Boolean DeleteByID(int id)
 		{
-			List<Appointment> all = FindAll();
-			foreach(Appointment i in all){
+			List<Model.Appointment> all = FindAll();
+			foreach (Model.Appointment i in all){
 				if(i.Id == id){
 					all.Remove(i);
 					break;
@@ -52,9 +52,9 @@ namespace Repository
 			return true;
 		}
 		
-		public Boolean UpdateByID(Appointment appointment)
+		public Boolean UpdateByID(Model.Appointment appointment)
 		{
-			List<Appointment> all = FindAll();
+			List<Model.Appointment> all = FindAll();
 			for(int i = 0; i < all.Count; i++){
 				if(all[i].Id == appointment.Id){
 					all[i] = appointment;
@@ -67,7 +67,7 @@ namespace Repository
 	
 		private static String FileName = @"..\..\..\data\Appointments.json";
 		
-		private static Serializer<Appointment> serializer = new Serializer<Appointment>();
+		private static Serializer<Model.Appointment> serializer = new Serializer<Model.Appointment>();
 	
 	}
 }

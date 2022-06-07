@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using Model;
+using Appointments.Model;
 using Serialization;
 using System.Windows;
 
-namespace Repository
+namespace Appointments.Repository
 {
     public class PrescriptionRepository
     {

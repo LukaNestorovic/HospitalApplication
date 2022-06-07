@@ -6,11 +6,12 @@
 
 using System;
 using Service;
-using Model;
+using Appointments.Service;
+using Appointments.Model;
 using System.Collections.Generic;
-using DTO;
+using Appointments.DTO;
 
-namespace Controller
+namespace Appointments.Controller
 {
 	public class AppointmentController
 	{
@@ -37,49 +38,49 @@ namespace Controller
 			return appointmentService.UpdateAppointmentAntiTroll(appointmentDTO, id);
 		}
 
-		public Appointment FindAppointment(int id)
+		public Appointments.Model.Appointment FindAppointment(int id)
 		{
-			Appointment appointment = appointmentService.FindAppointment(id);
+			Appointments.Model.Appointment appointment = appointmentService.FindAppointment(id);
 			return appointment;
 		}
 
-		public Appointment FindWithDatePriority(DateTime date)
+		public Appointments.Model.Appointment FindWithDatePriority(DateTime date)
         {
-			Appointment appointment = appointmentFindService.FindWithDatePriority(date);
+			Appointments.Model.Appointment appointment = appointmentFindService.FindWithDatePriority(date);
 			return appointment;
         }
 
-		public Appointment FindWithDoctorPriority(int id, DateTime date)
+		public Appointments.Model.Appointment FindWithDoctorPriority(int id, DateTime date)
         {
-			Appointment appointment = appointmentFindService.FindWithDoctorPriority(id, date);
+			Appointments.Model.Appointment appointment = appointmentFindService.FindWithDoctorPriority(id, date);
 			return appointment;
         }
 
-		public List<Appointment> FindAll()
+		public List<Appointments.Model.Appointment> FindAll()
 		{
-			List<Appointment> appointments = appointmentService.FindAll();
+			List<Appointments.Model.Appointment> appointments = appointmentService.FindAll();
 			return appointments;
 		}
 
-		public List<Appointment> FindAllByPatientId(int id)
+		public List<Appointments.Model.Appointment> FindAllByPatientId(int id)
         {
-			List<Appointment> appointments = appointmentFindService.FindAllByPatientId(id);
+			List<Appointments.Model.Appointment> appointments = appointmentFindService.FindAllByPatientId(id);
 			return appointments;
         }
 
-		public List<Appointment> FindAllByDoctorId(int id)
+		public List<Appointments.Model.Appointment> FindAllByDoctorId(int id)
 		{
-			List<Appointment> appointments = appointmentFindService.FindAllByDoctorId(id);
+			List<Appointments.Model.Appointment> appointments = appointmentFindService.FindAllByDoctorId(id);
 			return appointments;
 		}
 
-		public List<Appointment> FindAllWithoutPatient()
+		public List<Appointments.Model.Appointment> FindAllWithoutPatient()
 		{
-			List<Appointment> appointments = appointmentFindService.FindAllWithoutPatient();
+			List<Appointments.Model.Appointment> appointments = appointmentFindService.FindAllWithoutPatient();
 			return appointments;
 		}
 
-		public List<Appointment> FindAllFinished()
+		public List<Appointments.Model.Appointment> FindAllFinished()
         {
 			return appointmentFindService.FindAllFinished();
         }

@@ -15,6 +15,10 @@ using System.Collections.ObjectModel;
 using Model;
 using Controller;
 using DTO;
+using Appointments.Model;
+using Appointments.Controller;
+using Appointments.DTO;
+
 
 namespace ProjekatSIMS.View.SecretaryView
 {

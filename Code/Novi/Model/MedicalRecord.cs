@@ -5,6 +5,7 @@
  ***********************************************************************/
 
 using System;
+using Appointments.Model;
 
 namespace Model
 {

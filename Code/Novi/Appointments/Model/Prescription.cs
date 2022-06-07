@@ -6,8 +6,9 @@
 
 using System;
 using System.Collections;
+using Model;
 
-namespace Model
+namespace Appointments.Model
 {
 	public class Prescription
 	{

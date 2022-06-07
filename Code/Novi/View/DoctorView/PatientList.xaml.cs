@@ -14,6 +14,8 @@ using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using Controller;
 using Model;
+using Appointments.Model;
+using Appointments.Controller;
 
 namespace ProjekatSIMS.View.DoctorView
 {

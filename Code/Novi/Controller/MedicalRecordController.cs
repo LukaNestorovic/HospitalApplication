@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Model;
 using Service;
+using Appointments.Service;
+using Appointments.Model;
 
 namespace Controller
 {

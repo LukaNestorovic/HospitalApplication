@@ -18,6 +18,8 @@ using ProjekatSIMS.View.DoctorView;
 using ProjekatSIMS.View.ManagerView;
 using ProjekatSIMS.View.SecretaryView;
 using System.Collections.ObjectModel;
+using Appointments.Controller;
+using Appointments.Model;
 
 namespace ProjekatSIMS
 {
@@ -29,7 +31,7 @@ namespace ProjekatSIMS
         public PatientController patientController = new PatientController();
         public Patient patient = new Patient();
         public DoctorController doctorController = new DoctorController();
-        public Model.Doctor doctor = new Model.Doctor();
+        public Appointments.Model.Doctor doctor = new Appointments.Model.Doctor();
         public DeanController deanController = new DeanController();
         public Dean dean = new Dean();
         public SecretaryController secretaryController = new SecretaryController();

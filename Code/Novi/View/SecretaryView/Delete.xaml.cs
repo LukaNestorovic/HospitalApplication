@@ -15,6 +15,8 @@ using System.Windows.Shapes;
 using Controller;
 using Model;
 using Service;
+using Appointments.Model;
+using Appointments.Controller;
 
 namespace ProjekatSIMS.View.SecretaryView
 {

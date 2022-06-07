@@ -15,6 +15,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DTO;
+using Appointments.Model;
+using Appointments.Controller;
+using Appointments.DTO;
 
 
 namespace ProjekatSIMS.View.PatientView

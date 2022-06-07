@@ -9,6 +9,7 @@ using Model;
 using Repository;
 using System.IO;
 using System.Collections.Generic;
+using Appointments.Model;
 
 namespace Service
 {

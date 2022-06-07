@@ -5,14 +5,14 @@
  ***********************************************************************/
 
 using System;
-using Model;
-using Repository;
+using Appointments.Model;
+using Appointments.Repository;
 using System.IO;
 using System.Collections.Generic;
 using Serialization;
-using DTO;
+using Appointments.DTO;
 
-namespace Service
+namespace Appointments.Service
 {
 	public class PatientService
 	{

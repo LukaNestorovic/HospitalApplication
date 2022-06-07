@@ -5,8 +5,9 @@
  ***********************************************************************/
 
 using System;
+using Model;
 
-namespace Model
+namespace Appointments.Model
 {
    public class Patient : User
    {

@@ -6,10 +6,10 @@
 
 using System;
 using System.Collections.Generic;
-using Model;
+using Appointments.Model;
 using Serialization;
 
-namespace Repository
+namespace Appointments.Repository
 {
 	public class PatientRepository
 	{

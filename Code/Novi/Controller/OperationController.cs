@@ -8,6 +8,8 @@ using System;
 using Service;
 using Model;
 using System.Collections.Generic;
+using Appointments.Service;
+using Appointments.Model;
 
 namespace Controller
 {

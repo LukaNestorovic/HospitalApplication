@@ -5,18 +5,18 @@
  ***********************************************************************/
 
 using System;
-using Model;
+using Appointments.Model;
 using System.IO;
 using System.Collections.Generic;
-using Repository;
+using Appointments.Repository;
 using Serialization;
-using DTO;
+using Appointments.DTO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Collections.ObjectModel;
 using ProjekatSIMS;
 
-namespace Service
+namespace Appointments.Service
 {
 	public class AppointmentService
 	{
@@ -24,7 +24,7 @@ namespace Service
 		public PatientService patientService = new PatientService();
 		public AppointmentDTO appointmentDTO1 = new AppointmentDTO();
 		public Patient patient;
-		public Appointment appointment1;
+		public Model.Appointment appointment1;
 		public PatientDTO patientDTO = new PatientDTO();
 		public int createId()
 		{
@@ -44,14 +44,14 @@ namespace Service
 		public Boolean CreateAppointment(AppointmentDTO appointmentDTO)
 		{
 			int newID = createId();
-			Appointment newAppointment = new Appointment(appointmentDTO.DateTime, appointmentDTO.Descripton, appointmentDTO.Duration, appointmentDTO.Emergency, newID, appointmentDTO.Patient, appointmentDTO.Doctor, appointmentDTO.Room, appointmentDTO.Finished, appointmentDTO.Anamnesis, appointmentDTO.Comment);
+			Model.Appointment newAppointment = new Model.Appointment(appointmentDTO.DateTime, appointmentDTO.Descripton, appointmentDTO.Duration, appointmentDTO.Emergency, newID, appointmentDTO.Patient, appointmentDTO.Doctor, appointmentDTO.Room, appointmentDTO.Finished, appointmentDTO.Anamnesis, appointmentDTO.Comment);
 
 			File.WriteAllText(idFile, newID.ToString());
 
 			return appointmentRepository.Save(newAppointment);
 		}
 
-		public Appointment AppointmentFromDTO(AppointmentDTO appointmentDTO, Appointment appointment)
+		public Model.Appointment AppointmentFromDTO(AppointmentDTO appointmentDTO, Model.Appointment appointment)
         {
 			appointment.DateTime = appointmentDTO.DateTime;
 			appointment.Descripton = appointmentDTO.Descripton;
@@ -62,19 +62,20 @@ namespace Service
 			appointment.Finished = appointmentDTO.Finished;
 			appointment.Anamnesis = appointmentDTO.Anamnesis;
 			appointment.Comment = appointmentDTO.Comment;
+			appointment.Patient = appointmentDTO.Patient;
 			return appointment;
 		}
 		
 		public Boolean UpdateAppointment(AppointmentDTO appointmentDTO, int id)
         {
-			Appointment appointment = appointmentRepository.FindByID(id);
+			Model.Appointment appointment = appointmentRepository.FindByID(id);
 			appointment = AppointmentFromDTO(appointmentDTO, appointment);
 			return appointmentRepository.UpdateByID(appointment);
 		}
 
 		public Boolean UpdateAppointmentAntiTroll(AppointmentDTO appointmentDTO, int id)
 		{
-			Appointment appointment = appointmentRepository.FindByID(id);
+			Model.Appointment appointment = appointmentRepository.FindByID(id);
 			appointment = AppointmentFromDTO(appointmentDTO, appointment);
 			patientDTO = patientService.MakePatientDTO(patientDTO, appointment.Patient);
 			patientDTO.Brojac++;
@@ -110,12 +111,12 @@ namespace Service
 			return appointmentRepository.DeleteByID(id);
 		}
 		
-		public Appointment FindAppointment(int id)
+		public Model.Appointment FindAppointment(int id)
 		{
 			return appointmentRepository.FindByID(id);
 		}
 
-		public List<Appointment> FindAll()
+		public List<Model.Appointment> FindAll()
 		{
 			return appointmentRepository.FindAll();
 		}

@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Model;
 using Controller;
+using Appointments.Model;
+using Appointments.Controller;
 
 namespace ProjekatSIMS.View.PatientView
 {

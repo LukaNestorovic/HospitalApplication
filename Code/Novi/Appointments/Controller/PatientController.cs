@@ -5,12 +5,12 @@
  ***********************************************************************/
 
 using System;
-using Service;
-using Model;
+using Appointments.Service;
+using Appointments.Model;
 using System.Collections.Generic;
-using DTO;
+using Appointments.DTO;
 
-namespace Controller
+namespace Appointments.Controller
 {
    public class PatientController
    {

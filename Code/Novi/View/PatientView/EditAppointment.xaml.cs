@@ -17,6 +17,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DTO;
+using Appointments.Controller;
+using Appointments.DTO;
+using Appointments.Model;
+
 
 namespace ProjekatSIMS.View.PatientView
 {
@@ -29,13 +33,13 @@ namespace ProjekatSIMS.View.PatientView
         public DoctorController doctorController = new DoctorController();
         public ObservableCollection<Appointment> appointments;
         private int id;
-        public Appointment appointment = new Appointment();
-        public List<Model.Doctor> doctors = new List<Model.Doctor>();
-        public Model.Doctor doctor = new Model.Doctor();
+        public Appointments.Model.Appointment appointment = new Appointments.Model.Appointment();
+        public List<Appointments.Model.Doctor> doctors = new List<Appointments.Model.Doctor>();
+        public Appointments.Model.Doctor doctor = new Appointments.Model.Doctor();
         public AppointmentDTO appointmentDTO = new AppointmentDTO();
         public RoomController roomController = new RoomController();
         public PatientController patientController = new PatientController();
-        public EditAppointment(Appointment appointment, int id)
+        public EditAppointment(Appointments.Model.Appointment appointment, int id)
         {
             InitializeComponent();
             DP.SelectedDate = appointment.DateTime;
@@ -52,7 +56,7 @@ namespace ProjekatSIMS.View.PatientView
 
             if (today2 <= appointment.DateTime)
             {
-                doctor = (Model.Doctor)Combo.SelectedItem;
+                doctor = (Appointments.Model.Doctor)Combo.SelectedItem;
                 if (doctor == null)
                 {
                     MessageBox.Show("Choose doctor", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);

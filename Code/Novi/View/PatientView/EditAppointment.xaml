@@ -14,7 +14,7 @@
             <ComboBox x:Name="Combo" Margin="363,345,359,306" FontSize="25" DisplayMemberPath="Name">
                 <ComboBox.ToolTip>
                     Izaberite doktora
-                </ComboBox.ToolTip>>
+                </ComboBox.ToolTip>
             </ComboBox>
         </Border>
 

@@ -10,8 +10,9 @@ using System.Collections.Generic;
 using System.IO;
 using Repository;
 using Serialization;
+using Appointments.Model;
 
-namespace Service
+namespace Appointments.Service
 {
 	public class DoctorService
 	{
@@ -82,10 +83,10 @@ namespace Service
 			}
 			foreach(Doctor i in specialDoctors)
             {
-                List<Appointment> appointments = appointmentFindService.FindAllByDoctorId(i.Id);
+                List<Model.Appointment> appointments = appointmentFindService.FindAllByDoctorId(i.Id);
 
                 Boolean a = new Boolean();
-				foreach (Appointment appointment in appointments)
+				foreach (Model.Appointment appointment in appointments)
                 {
 					if(!(appointment.DateTime > DateTime.Now && appointment.DateTime < DateTime.Now.AddHours(2)) == false)
                     {
@@ -142,7 +143,7 @@ namespace Service
 			return doctorRepository.FindAll();
 		}
 	
-		public Repository.DoctorRepository doctorRepository = new DoctorRepository();
+		public Repository.DoctorRepository doctorRepository = new Repository.DoctorRepository();
 		public String idFile = @"..\..\..\Data\doctorID.txt";
 		private static String FileName = @"..\..\..\data\Doctors.json";
 		public AppointmentService appointmentService = new AppointmentService();

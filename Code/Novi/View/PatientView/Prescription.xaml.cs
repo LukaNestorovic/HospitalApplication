@@ -14,6 +14,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Appointments.Model;
+using Appointments.Controller;
 
 
 namespace ProjekatSIMS.View.PatientView
@@ -24,12 +26,12 @@ namespace ProjekatSIMS.View.PatientView
     public partial class Prescription : Page
     {
         public PrescriptionController prescriptionController = new PrescriptionController();
-        public ObservableCollection<Model.Prescription> prescriptions;
+        public ObservableCollection<Appointments.Model.Prescription> prescriptions;
         private int id;
         public Prescription(int id)
         {
             InitializeComponent();
-            prescriptions = new ObservableCollection<Model.Prescription>(prescriptionController.PrescriptionListOfPatient(id));
+            prescriptions = new ObservableCollection<Appointments.Model.Prescription>(prescriptionController.PrescriptionListOfPatient(id));
             PatientAppointments.ItemsSource = prescriptions;
             this.id = id;
         }

@@ -15,6 +15,9 @@ using System.Windows.Shapes;
 using Model;
 using Controller;
 using DTO;
+using Appointments.Model;
+using Appointments.Controller;
+using Appointments.DTO;
 
 namespace ProjekatSIMS.View.PatientView
 {

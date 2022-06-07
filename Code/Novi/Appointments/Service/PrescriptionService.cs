@@ -1,12 +1,12 @@
 ﻿using System;
-using Model;
+using Appointments.Model;
 using System.IO;
 using System.Collections.Generic;
-using Repository;
+using Appointments.Repository;
 using System.Collections;
 using Serialization;
 using System.Windows;
-using DTO;
+using Appointments.DTO;
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Tables;
@@ -14,7 +14,7 @@ using System.Data;
 using System.Drawing;
 
 
-namespace Service
+namespace Appointments.Service
 {
     public class PrescriptionService
     {
@@ -127,7 +127,6 @@ namespace Service
         {
             GeneratePDF(id, dateTime);
             SendMessage();
-            FileStream stream = new FileStream(@"MedicineReport.pdf", FileMode.Open);
         }
 
 
