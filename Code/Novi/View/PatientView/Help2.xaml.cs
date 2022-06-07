@@ -16,12 +16,12 @@ using System.Windows.Shapes;
 namespace ProjekatSIMS.View.PatientView
 {
     /// <summary>
-    /// Interaction logic for Help.xaml
+    /// Interaction logic for Help2.xaml
     /// </summary>
-    public partial class Help : Page
+    public partial class Help2 : Page
     {
         public int id;
-        public Help(int id)
+        public Help2(int id)
         {
             InitializeComponent();
             this.id = id;
@@ -41,7 +41,7 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Next_Click(object sender, RoutedEventArgs e)
         {
-            var s = new Help2(id);
+            var s = new Help(id);
             NavigationService.Navigate(s);
         }
     }
