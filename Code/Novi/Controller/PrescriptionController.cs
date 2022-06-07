@@ -23,5 +23,10 @@ namespace Controller
             List<Prescription> prescriptions = prescriptionService.PrescriptionListOfPatient(id);
             return prescriptions;
         }
+
+        public void GeneratePDF(int id, DateTime dateTime)
+        {
+            prescriptionService.GenerateReport(id, dateTime);
+        }
     }
 }

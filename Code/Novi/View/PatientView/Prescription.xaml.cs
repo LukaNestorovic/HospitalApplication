@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace ProjekatSIMS.View.PatientView
 {
     /// <summary>
@@ -50,6 +51,12 @@ namespace ProjekatSIMS.View.PatientView
         {
             var s = new Help(id);
             NavigationService.Navigate(s);
+        }
+
+        private void Generate_Click(object sender, RoutedEventArgs e)
+        {
+            DateTime dateTime = DatePicker1.SelectedDate.GetValueOrDefault();
+            prescriptionController.GeneratePDF(id, dateTime);
         }
     }
 

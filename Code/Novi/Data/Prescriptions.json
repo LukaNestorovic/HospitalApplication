@@ -37,13 +37,91 @@
       "Password": "123"
     },
     "drug": {
-      "Name": "1",
+      "Name": "Kafetin",
       "Ingredients": "1",
       "Approved": true,
       "Id": 1,
       "Drugnum": 1
     },
-    "Id": 1,
+    "Id": 2,
+    "Instructions": "1",
+    "patient": {
+      "InsuranceCarrier": "1",
+      "Guest": false,
+      "Name": "1",
+      "Surname": "1",
+      "Jmbg": "1",
+      "Telephone": "1",
+      "Email": "@gmail.com",
+      "BirthDate": "2022-04-12T00:00:00",
+      "Adress": "1",
+      "Id": 0,
+      "Password": "123"
+    }
+  },
+  {
+    "datetime": "2022-05-04T11:55:00",
+    "doctor": {
+      "Specialty": "1",
+      "Grade": 1,
+      "Salary": 1,
+      "Name": "Filip",
+      "Surname": "1",
+      "Jmbg": "1",
+      "Telephone": "1",
+      "Email": "bb@gmail.com",
+      "BirthDate": "2022-05-18T00:00:00",
+      "Adress": "1",
+      "Id": 1,
+      "Password": "123"
+    },
+    "drug": {
+      "Name": "Brufen",
+      "Ingredients": "1",
+      "Approved": true,
+      "Id": 1,
+      "Drugnum": 1
+    },
+    "Id": 3,
+    "Instructions": "1",
+    "patient": {
+      "InsuranceCarrier": "1",
+      "Guest": false,
+      "Name": "1",
+      "Surname": "1",
+      "Jmbg": "1",
+      "Telephone": "1",
+      "Email": "@gmail.com",
+      "BirthDate": "2022-04-12T00:00:00",
+      "Adress": "1",
+      "Id": 0,
+      "Password": "123"
+    }
+  },
+  {
+    "datetime": "2022-05-04T11:55:00",
+    "doctor": {
+      "Specialty": "1",
+      "Grade": 1,
+      "Salary": 1,
+      "Name": "Filip",
+      "Surname": "1",
+      "Jmbg": "1",
+      "Telephone": "1",
+      "Email": "bb@gmail.com",
+      "BirthDate": "2022-05-18T00:00:00",
+      "Adress": "1",
+      "Id": 1,
+      "Password": "123"
+    },
+    "drug": {
+      "Name": "Penicilin",
+      "Ingredients": "1",
+      "Approved": true,
+      "Id": 1,
+      "Drugnum": 1
+    },
+    "Id": 4,
     "Instructions": "1",
     "patient": {
       "InsuranceCarrier": "1",
