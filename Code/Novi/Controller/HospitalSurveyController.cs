@@ -18,15 +18,15 @@ namespace Controller
 			return hospitalSurveyService.DeleteHospitalSurvey(id);
 		}
 
-		public HospitalSurvey ReadHospitalSurvey(int id)
+		public HospitalSurvey FindHospitalSurvey(int id)
 		{
-			HospitalSurvey hospitalSurvey = hospitalSurveyService.ReadHospitalSurvey(id);
+			HospitalSurvey hospitalSurvey = hospitalSurveyService.FindHospitalSurvey(id);
 			return hospitalSurvey;
 		}
 
 		public List<HospitalSurvey> ReadAll()
 		{
-			List<HospitalSurvey> hospitalSurvey = hospitalSurveyService.ReadAll();
+			List<HospitalSurvey> hospitalSurvey = hospitalSurveyService.FindAll();
 			return hospitalSurvey;
 		}
 

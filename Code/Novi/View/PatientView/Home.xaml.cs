@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Model;
 using Controller;
+using Appointments.Model;
+using Appointments.Controller;
 
 namespace ProjekatSIMS.View.PatientView
 {
@@ -24,7 +26,6 @@ namespace ProjekatSIMS.View.PatientView
         private int id;
         public Patient patient = new Patient();
         public PatientController patientController = new PatientController();
-        public int brojac = 0;
         public Home(int id)
         {
             InitializeComponent();
@@ -46,7 +47,7 @@ namespace ProjekatSIMS.View.PatientView
         private void LogOff_Click(object sender, RoutedEventArgs e)
         {
             var s = new LogIn();
-            NavigationService.Navigate(s);
+            s.Show();
         }
 
         private void Schedule_Click(object sender, RoutedEventArgs e)
@@ -57,12 +58,14 @@ namespace ProjekatSIMS.View.PatientView
 
         private void MedicalRecord_Click(object sender, RoutedEventArgs e)
         {
-
+            var s = new MedicalRecord(id);
+            NavigationService.Navigate(s);
         }
 
         private void Reminder_Click(object sender, RoutedEventArgs e)
         {
-
+            var s = new Reminder(id);
+            NavigationService.Navigate(s);
         }
 
         private void Rate_Click(object sender, RoutedEventArgs e)
@@ -79,6 +82,9 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Help_Click(object sender, RoutedEventArgs e)
         {
+            var s = new Help(id);
+            NavigationService.Navigate(s);
         }
+
     }
 }

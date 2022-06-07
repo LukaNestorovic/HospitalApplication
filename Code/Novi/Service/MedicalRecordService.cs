@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Model;
 using Repository;
 using System.IO;
+using Appointments.Model;
+using Appointments.Repository;
 
 namespace Service
 {

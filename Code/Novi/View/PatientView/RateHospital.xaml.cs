@@ -17,6 +17,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DTO;
+using Appointments.Model;
+using Appointments.Controller;
 
 namespace ProjekatSIMS.View.PatientView
 {
@@ -43,15 +45,15 @@ namespace ProjekatSIMS.View.PatientView
             hospitalSurveyDTO.Question3 = Combo3.SelectedIndex + 1;
             hospitalSurveyDTO.patient = patientController.ReadPatient(id);
             hospitalSurveyController.CreateHospitalSurvey(hospitalSurveyDTO);
-            var s = new PatientHome(id);
-            s.Show();
+            var s = new Home(id);
+            NavigationService.Navigate(s);
             
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            var s = new PatientHome(id);
-            s.Show();
+            var s = new Home(id);
+            NavigationService.Navigate(s);
            
         }
 
@@ -64,6 +66,8 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Help_Click(object sender, RoutedEventArgs e)
         {
+            var s = new Help(id);
+            NavigationService.Navigate(s);
         }
     }
 }

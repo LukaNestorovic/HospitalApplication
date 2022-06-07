@@ -17,6 +17,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DTO;
+using Appointments.Model;
+using Appointments.Controller;
+using Appointments.DTO;
 
 namespace ProjekatSIMS.View.PatientView
 {
@@ -39,9 +42,7 @@ namespace ProjekatSIMS.View.PatientView
       
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            var s = new PatientView(id);
-            s.Show();
-            Close();
+          
         }
 
         private void Confirm_Click(object sender, RoutedEventArgs e)
@@ -56,9 +57,7 @@ namespace ProjekatSIMS.View.PatientView
             appointmentDTO.Finished = false;
 
             appointmentController.CreateAppointment(appointmentDTO);
-            var s = new PatientView(id);
-            s.Show();
-            Close();
+
         }
     }
 }

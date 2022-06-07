@@ -17,6 +17,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using DTO;
+using Appointments.Model;
+using Appointments.Controller;
 
 namespace ProjekatSIMS.View.PatientView
 {
@@ -30,7 +32,7 @@ namespace ProjekatSIMS.View.PatientView
         public Patient patient = new Patient();
         public PatientController patientController = new PatientController();
         public Appointment appointment = new Appointment();
-        public Model.Doctor doctor = new Model.Doctor();
+        public Appointments.Model.Doctor doctor = new Appointments.Model.Doctor();
         public DoctorSurveyDTO doctorSurveyDTO = new DoctorSurveyDTO();
         public RateAppointment(int id, Appointment appointment)
         {
@@ -52,18 +54,20 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            var s = new Home(id);
+            var s = new FinishedExaminations(id);
             NavigationService.Navigate(s);
         }
 
         private void LogOff_Click(object sender, RoutedEventArgs e)
         {
             var s = new LogIn();
-            NavigationService.Navigate(s);
+            s.Show();
         }
 
         private void Help_Click(object sender, RoutedEventArgs e)
         {
+            var s = new Help(id);
+            NavigationService.Navigate(s);
         }
     }
 }

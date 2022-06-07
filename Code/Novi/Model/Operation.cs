@@ -6,6 +6,7 @@
 
 using System;
 using System.Collections;
+using Appointments.Model;
 
 namespace Model
 {

@@ -1,0 +1,33 @@
+﻿<Page x:Class="ProjekatSIMS.View.PatientView.Help"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjekatSIMS.View.PatientView"
+      mc:Ignorable="d" 
+      d:DesignHeight="768" d:DesignWidth="1024"
+      Title="Help">
+
+    <Grid>
+        <Rectangle HorizontalAlignment="Center" Height="61" Stroke="Black" VerticalAlignment="Top" Width="1024" Fill="#003B46"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="691" Margin="0,61,0,0" VerticalAlignment="Top" Width="1024" Background="#C4DFE6">
+            <TextBlock TextWrapping="Wrap" Text="1.Biranjem opcije Appointment prikazuju se svi odradjeni pregledi.                                                      1.1.Biranjem opcije Schedule appointment prikazuje se lista slobodnih termina. Ukoliko zelite da zakazete termin odaberete zeljeni termin i kliknete na dugme Schedule Appointment.                                       1.2.Ukoliko zelite da otkazete neki od pregleda izabere iz liste zeljeni pregled i kliknete na dugme Cancel Appointment.                                                                                                                                             1.3.Ukoliko zelite da promenite odredjeni termin izaberete zeljeni termin i kliknete na dugme Edit Appointment, gde vam se prikaze dijalog sa biranjem datuma i zeljenog doktora, nakon toga potvrdite klikom na dugme Submit.                                                                                                                                      2.Biranjem opcije Finished Examinations prikazuje vam se lista svih odredjenih pregleda.                    2.1.Ukoliko zelite da ocenite lekara za odredjeni pregled izaberete taj pregled i prikaze vam se dijalog sa odredjenim pitanjima na koje odgovorite za ocenom od 1 do 5.                                                            2.2.Takodje mozete da dobijete i opravdanje za odredjeni pregled tako sto ga izabere i kliknete dugme Note koje vas upucuje na sledeci dijalog gde ga na dugme Print stampate.                                                      2.3.Ukoliko zelite detaljniji izvestaj sa pregleda izaberete zeljeni pregled i kliknete na dugme Report gde vam se prikazuje dijalog sa anamnezom koju vam je doktor prepisao i imate mogucnost da ostavite komentar. 2.4.Klikom na dugme Prescription izlazi vam dijalog sa listom prepisanih lekova.                                  3.Biranjem opcije Rate Hospital izlazi vam dijalog sa ponudjenim pitanjima na koja odgovarate sa ocenom od 1 do 5.                                                                                                                                                          4.Biranjem opcije Medicine otvara vam se dijalog sa listom prepisanih lekova.                                           5.Biranjem opcije Schedule with priority otvara vam se dijalog gde biranjem prioriteta Doctor ili Time birate datum i doktora koji vam odgovara i sistem automatski bira prvi slobodan termin koji ispunjava vase uslove. 6.Biranjem opcije Reminder otvara vam se dijalog sa vasim podsetnicima.                                           6.1.Biranjem opcije Create reminder otvara vam se dijalog gde mozete da izabere datum i vreme kao i da upisete podsetnik." FontSize="20" Margin="23,23,23,23"/>
+        </Border>
+        <Button x:Name="Cancel" Content="Back" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="153" Click="Cancel_Click" Height="55" FontSize="18" Background="#66A5AD" Foreground="Black">
+            <Button.ToolTip>
+                Vrati se nazad
+            </Button.ToolTip>
+        </Button>
+        <Button Content="LogOff" HorizontalAlignment="Left" Margin="861,3,0,0" VerticalAlignment="Top" Height="55" Width="153" Click="LogOff_Click" FontSize="18" Background="#66A5AD" Foreground="Black">
+            <Button.ToolTip>
+                Odjavi se
+            </Button.ToolTip>
+        </Button>
+        <Label Content="Help" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Height="48" Width="73" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
+        <Button Content="Next" HorizontalAlignment="Left" Margin="917,697,0,0" VerticalAlignment="Top" Height="27" Width="86" Click="Next_Click" FontSize="18" Background="#66A5AD" Foreground="Black">
+            <Button.ToolTip>
+                Sledeca strana
+            </Button.ToolTip>
+        </Button>
+    </Grid>
+</Page>

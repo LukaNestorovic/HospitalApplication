@@ -14,6 +14,9 @@ using System.Windows.Shapes;
 using Model;
 using Controller;
 using DTO;
+using Appointments.Model;
+using Appointments.Controller;
+using Appointments.DTO;
 
 
 namespace ProjekatSIMS.View.PatientView
@@ -29,8 +32,8 @@ namespace ProjekatSIMS.View.PatientView
         public AppointmentDTO appointmentDTO = new AppointmentDTO();
         public PatientController patientController = new PatientController();
         public Patient patient = new Patient();
-        public List<Model.Doctor> doctors = new List<Model.Doctor>();
-        public Model.Doctor doctor = new Model.Doctor();
+        public List<Appointments.Model.Doctor> doctors = new List<Appointments.Model.Doctor>();
+        public Appointments.Model.Doctor doctor = new Appointments.Model.Doctor();
         public DoctorController doctorController = new DoctorController();
         public ScheduleWithPriority(int id)
         {
@@ -57,14 +60,14 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Cancel_click(object sender, RoutedEventArgs e)
         {
-            var s = new ScheduledAppointments(id);
+            var s = new Home(id);
             NavigationService.Navigate(s); 
         }
 
         private void LogOff_Click(object sender, RoutedEventArgs e)
         {
             var s = new LogIn();
-            NavigationService.Navigate(s); 
+            s.Show(); 
         }
 
         private void Submit_Click(object sender, RoutedEventArgs e)
@@ -90,7 +93,7 @@ namespace ProjekatSIMS.View.PatientView
             else
             {
                 DateTime date = DatePicker1.SelectedDate.GetValueOrDefault();
-                doctor = (Model.Doctor)Combo.SelectedItem;
+                doctor = (Appointments.Model.Doctor)Combo.SelectedItem;
                 patient = patientController.ReadPatient(id);
                 appointment = appointmentController.FindWithDoctorPriority(doctor.Id, date);
                 appointmentDTO.DateTime = appointment.DateTime;
@@ -106,6 +109,12 @@ namespace ProjekatSIMS.View.PatientView
                 var s = new ScheduledAppointments(id);
                 NavigationService.Navigate(s);
             }
+        }
+
+        private void Help_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new Help(id);
+            NavigationService.Navigate(s);
         }
     }
 }

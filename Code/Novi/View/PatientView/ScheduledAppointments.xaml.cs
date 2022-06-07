@@ -14,6 +14,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Appointments.Model;
+using Appointments.Controller;
 
 
 namespace ProjekatSIMS.View.PatientView
@@ -89,12 +91,14 @@ namespace ProjekatSIMS.View.PatientView
         private void LogOff_Click(object sender, RoutedEventArgs e)
         {
             var s = new LogIn();
-            NavigationService.Navigate(s);
+            s.Show();
 
         }
 
         private void Help_Click(object sender, RoutedEventArgs e)
         {
+            var s = new Help(id);
+            NavigationService.Navigate(s);
         }
     }
 }

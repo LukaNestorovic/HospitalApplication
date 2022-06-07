@@ -39,12 +39,12 @@ namespace Service
 			return hospitalSurveyRepository.DeleteByID(id);
 		}
 
-		public HospitalSurvey ReadHospitalSurvey(int id)
+		public HospitalSurvey FindHospitalSurvey(int id)
 		{
 			return hospitalSurveyRepository.FindByID(id);
 		}
 
-		public List<HospitalSurvey> ReadAll()
+		public List<HospitalSurvey> FindAll()
 		{
 			return hospitalSurveyRepository.FindAll();
 		}

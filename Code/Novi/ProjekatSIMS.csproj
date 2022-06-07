@@ -26,6 +26,7 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Syncfusion.DocToPDFConverter.Wpf" Version="20.1.0.58" />
   </ItemGroup>
 
   <ItemGroup>

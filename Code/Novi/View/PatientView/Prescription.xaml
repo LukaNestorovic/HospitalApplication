@@ -10,23 +10,42 @@
 
     <Grid>
         <Rectangle HorizontalAlignment="Center" Height="61" Stroke="Black" VerticalAlignment="Top" Width="1024" Fill="#003B46"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="691" Margin="0,61,0,0" VerticalAlignment="Top" Width="1024" Background="#C4DFE6"/>
-        <DataGrid x:Name="PatientAppointments" Margin="37,99,36,31" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding pregledi}">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="691" Margin="0,61,0,0" VerticalAlignment="Top" Width="1024" Background="#C4DFE6">
+            <Button Content="Generate report" HorizontalAlignment="Left" VerticalAlignment="Top" Width="234" Height="32" Click="Generate_Click" Background="#66A5AD" FontSize="20" Margin="511,31,0,0">
+                <Button.ToolTip>Generisi izvestaj za odabrani dan</Button.ToolTip>
+            </Button>
+        </Border>
+        <DataGrid x:Name="PatientAppointments" Margin="37,147,36,31" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding pregledi}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}"    Width="25"/>
                 <DataGridTextColumn Header="Instructions" Binding="{Binding Instructions}" Width="*"/>
                 <DataGridTextColumn Header="Doctor"  Binding="{Binding doctor.Name}" Width="*"/>
                 <DataGridTextColumn Header="Drug"  Binding="{Binding drug.Name}" Width="*"/>
                 <DataGridTextColumn Header="Start"  Binding="{Binding datetime}" Width="*"/>
-                <DataGridTextColumn Header="Interval"  Binding="{Binding drug.Drugnum}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="Cancel" Content="Back" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="153" Click="Cancel_Click" Height="55" FontSize="18" Background="#66A5AD" Foreground="Black"/>
-        <Button Content="LogOff" HorizontalAlignment="Left" Margin="861,3,0,0" VerticalAlignment="Top" Height="55" Width="153" Click="LogOff_Click" FontSize="18" Background="#66A5AD" Foreground="Black"/>
+        <Button x:Name="Cancel" Content="Back" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="153" Click="Cancel_Click" Height="55" FontSize="18" Background="#66A5AD" Foreground="Black">
+            <Button.ToolTip>
+                Vrati se nazad
+            </Button.ToolTip>
+        </Button>
+        <DatePicker x:Name="DatePicker1"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="302" Height="40" Margin="183,90,0,0" FontSize="25">
+            <DatePicker.ToolTip>
+                Izaberite datum
+            </DatePicker.ToolTip>
+        </DatePicker>
+        <Button Content="LogOff" HorizontalAlignment="Left" Margin="861,3,0,0" VerticalAlignment="Top" Height="55" Width="153" Click="LogOff_Click" FontSize="18" Background="#66A5AD" Foreground="Black">
+            <Button.ToolTip>
+                Odjavi se
+            </Button.ToolTip>
+        </Button>
         <Label Content="Medicine" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Height="48" Width="123" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
         <Button HorizontalAlignment="Left" Margin="762,13,0,0" VerticalAlignment="Top" Height="40" Click="Help_Click">
             <Image Source="Source\Question-Mark.jpeg" Height="38">
             </Image>
+            <Button.ToolTip>
+                Help
+            </Button.ToolTip>
         </Button>
     </Grid>
 </Page>
