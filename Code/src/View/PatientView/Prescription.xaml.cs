@@ -58,7 +58,7 @@ namespace ProjekatSIMS.View.PatientView
         private void Generate_Click(object sender, RoutedEventArgs e)
         {
             DateTime dateTime = DatePicker1.SelectedDate.GetValueOrDefault();
-            prescriptionController.GeneratePDF(id, dateTime);
+ //           prescriptionController.GeneratePDF(id, dateTime);
         }
     }
 

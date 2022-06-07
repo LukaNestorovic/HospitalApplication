@@ -25,9 +25,9 @@ namespace Appointments.Controller
             return prescriptions;
         }
 
-        public void GeneratePDF(int id, DateTime dateTime)
+/*        public void GeneratePDF(int id, DateTime dateTime)
         {
             prescriptionService.GenerateReport(id, dateTime);
-        }
+        }*/
     }
 }
