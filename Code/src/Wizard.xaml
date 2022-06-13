@@ -11,10 +11,48 @@
     <Grid>
         <xctk:Wizard FinishButtonClosesWindow="True">
             <xctk:WizardPage x:Name="IntroPage" Title="Dobro dosli u aplikaciju klinike Zdravo" Description="Ovaj wizard ce vam pokazati kako da koristite aplikaciju" HelpButtonVisibility="Hidden">
-                <Image x:Name="Slika" Source="Home.png" Height="600" Width="600" Visibility="Visible" HorizontalAlignment="Right" Margin="0,0,115,0"/>
             </xctk:WizardPage>
-            <xctk:WizardPage x:Name="Page1" PageType="Interior" Title="Page 1" Description="Ovo je prva strana" PreviousPage="{Binding ElementName=IntroPage}" CanFinish="True" HelpButtonVisibility="Hidden" Content="1.Biranjem opcije Appointment prikazuju se svi odradjeni pregledi.&#xA;1.1.Biranjem opcije Schedule appointment prikazuje se lista slobodnih termina. Ukoliko zelite da zakazete termin odaberete zeljeni termin i kliknete na dugme Schedule Appointment.&#xA;1.2.Ukoliko zelite da otkazete neki od pregleda izabere iz liste zeljeni pregled i kliknete na dugme Cancel Appointment.&#xA;1.3.Ukoliko zelite da promenite odredjeni termin izaberete zeljeni termin i kliknete na dugme Edit Appointment, gde vam se prikaze dijalog sa biranjem datuma i zeljenog doktora,&#xA; nakon toga potvrdite klikom na dugme Submit.&#xA;2.Biranjem opcije Finished Examinations prikazuje vam se lista svih odredjenih pregleda.&#xA;2.1.Ukoliko zelite da ocenite lekara za odredjeni pregled izaberete taj pregled i prikaze vam se dijalog sa odredjenim pitanjima na koje odgovorite za ocenom od 1 do 5.&#xA;2.2.Takodje mozete da dobijete i opravdanje za odredjeni pregled tako sto ga izabere i kliknete dugme Note koje vas upucuje na sledeci dijalog gde ga na dugme Print stampate.&#xA;2.3.Ukoliko zelite detaljniji izvestaj sa pregleda izaberete zeljeni pregled i kliknete na dugme Report gde vam se prikazuje dijalog sa anamnezom koju vam je doktor prepisao i imate&#xA; mogucnost da ostavite komentar.&#xA;2.4.Klikom na dugme Prescription izlazi vam dijalog sa listom prepisanih lekova.&#xA;3.Biranjem opcije Rate Hospital izlazi vam dijalog sa ponudjenim pitanjima na koja odgovarate sa ocenom od 1 do 5.&#xA;4.Biranjem opcije Medicine otvara vam se dijalog sa listom prepisanih lekova.&#xA;5.Biranjem opcije Schedule with priority otvara vam se dijalog gde biranjem prioriteta Doctor ili Time birate datum i doktora koji vam odgovara i sistem automatski bira prvi slobodan&#xA; termin koji ispunjava vase uslove.&#xA;6.Biranjem opcije Reminder otvara vam se dijalog sa vasim podsetnicima.&#xA;6.1.Biranjem opcije Create reminder otvara vam se dijalog gde mozete da izabere datum i vreme kao i da upisete podsetnik.&#xA;6.2.Ukoliko zelite da uklonite neki od podsetnika izabere zeljeni podsetnik i klikom na dugme Cancel reminder uklanjate ga iz liste.&#xA;6.3.Ukoliko zelite da izmenite odredjeni podsetnik izaberete zeljeni podsetnik i klikom na dugme Edit reminder otvara vam se dijalog gde mozete da promenite &#xA; i datum i vreme kao i sam podsetnik, klikom na dugme Submit izvrsili ste promenu podsetnika.&#xA;7.Biranjem opcije Medical Record izlaze vam svi licni detalji."/>
-            
+            <xctk:WizardPage x:Name="Page1" PageType="Interior" Title="Home" PreviousPage="{Binding ElementName=IntroPage}" HelpButtonVisibility="Hidden">
+                <TextBlock Text="1.Biranjem opcije Appointment prikazuju se svi odradjeni pregledi.&#xA;2.Biranjem opcije Finished Examinations prikazuje vam se lista svih odredjenih pregleda.&#xA;3.Biranjem opcije Rate Hospital izlazi vam dijalog sa ponudjenim pitanjima na koja odgovarate sa ocenom od 1 do 5.&#xA;4.Biranjem opcije Medicine otvara vam se dijalog sa listom prepisanih lekova.&#xA;5.Biranjem opcije Schedule with priority otvara vam se dijalog gde biranjem prioriteta Doctor ili Time birate datum i doktora koji vam odgovara i sistem automatski bira prvi slobodan&#xA; termin koji ispunjava vase uslove.&#xA;6.Biranjem opcije Reminder otvara vam se dijalog sa vasim podsetnicima.&#xA;7.Biranjem opcije Medical Record izlaze vam svi licni detalji.">
+                    <Image x:Name="Slika" Source="Home.png" Height="400" Width="400"/>
+                </TextBlock>
+            </xctk:WizardPage>
+            <xctk:WizardPage x:Name="Page2" PageType="Interior" Title="Scheduled appointments" PreviousPage="{Binding ElementName=Page1}" NextPage="{Binding ElementName=Page3}"  HelpButtonVisibility="Hidden">
+                <TextBlock Text="Na slici oznaceno brojem 1 nalazi se lista zakazanih pregleda.&#xA;Klikom na Schedule Appointment otvara se pregled pregleda koje je moguce zakazati(Na slici oznaceno 2)&#xA;Biranjem pregleda iz liste i klikom na Edit Appointment otvara se dijalog za menjanje zakazanog pregleda(Na slici oznaceno 3)&#xA;Biranjem pregleda iz liste i klikom na Cancel Appointment brise se taj pregled(Na slici oznaceno 4)&#xA;Klikom na LogOff odjavljuje se iz aplikacije(Na slici oznaceno 5)&#xA;Klikom na Back vraca se na prethodni dijalog(Na slici oznaceno 6)">
+                    <Image x:Name="Scheduled" Source="ScheduledAppointments.png" Height="400" Width="400"/>
+                </TextBlock>
+            </xctk:WizardPage>
+            <xctk:WizardPage x:Name="Page3" PageType="Interior" Title="Finished examinations" PreviousPage="{Binding ElementName=Page2}" NextPage="{Binding ElementName=Page4}"  HelpButtonVisibility="Hidden">
+                <TextBlock Text="Na slici oznaceno brojem 1 nalazi se lista odradjenih pregleda.&#xA;Biranjem pregleda i klikom na Rate appointment otvara se dijalog za ocenjivanje doktora(Na slici oznaceno 2).&#xA;Biranjem pregleda iz liste i klikom na Note otvara se dijalog sa generisanim opravdanjem(Na slici oznaceno 3).&#xA;Klikom na Prescription otvara se dijalog sa prepisanim receptima(Na slici oznaceno 4).&#xA;Biranjem pregleda iz liste i klikom na Report otvara se dijalog sa detaljnijim opisom pregleda i mogucnost ostavljanja komentara(Na slici oznaceno 5).&#xA;Klikom na LogOff odjavljuje se iz aplikacije(Na slici oznaceno 6).&#xA;Klikom na Back vraca se na prethodni dijalog(Na slici oznaceno 7).">
+                    <Image Source="FinishedExaminations.png" Height="400" Width="400"/>
+                </TextBlock>
+            </xctk:WizardPage>
+            <xctk:WizardPage x:Name="Page4" PageType="Interior" Title="Hospital survey" PreviousPage="{Binding ElementName=Page3}" NextPage="{Binding ElementName=Page5}"  HelpButtonVisibility="Hidden">
+                <TextBlock Text="Na slici oznaceno brojem 1 nalaze se pitanja na koja se bira odgovor iz padajuceg menija.&#xA;Klikom na Confirm cuvaju se odgovori(Na slici oznaceno 2)&#xA;Klikom na LogOff odjavljuje se iz aplikacije(Na slici oznaceno 3)&#xA;Klikom na Back vraca se na prethodni dijalog(Na slici oznaceno 4)">
+                    <Image Source="HospitalSurvey.png" Height="400" Width="400"/>
+                </TextBlock>
+            </xctk:WizardPage>
+            <xctk:WizardPage x:Name="Page5" PageType="Interior" Title="Schedule with priority" PreviousPage="{Binding ElementName=Page4}" NextPage="{Binding ElementName=Page6}"  HelpButtonVisibility="Hidden">
+                <TextBlock Text="Na slici oznaceno brojem 1 nalazi se biranje prioriteta doktor ili vreme.&#xA;Na slici oznaceno brojem 2 nalazi se date-picker za biranje datuma&#xA;Na slici oznaceno brojem 3 nalazi se padajuci meni za biranje doktora ukoliko se izabere prioritet doktor&#xA;Klikom na dugme Submit salju se podaci sistemi i zakazuje prvi slobodan termin u odnosu na prioritet(Na slici oznaceno 4)&#xA;Klikom na LogOff odjavljuje se iz aplikacije(Na slici oznaceno 5)&#xA;Klikom na Back vraca se na prethodni dijalog(Na slici oznaceno 6)">
+                    <Image Source="ScheduleWithPriority.png" Height="400" Width="400"/>
+                </TextBlock>
+            </xctk:WizardPage>
+            <xctk:WizardPage x:Name="Page6" PageType="Interior" Title="Medicine" PreviousPage="{Binding ElementName=Page5}" NextPage="{Binding ElementName=Page7}"  HelpButtonVisibility="Hidden">
+                <TextBlock Text="Na slici oznaceno brojem 1 nalazi se lista recepata&#xA;Klikom na Generate report generise se izvestaj o lekovima za dan koji je odabran u date-pickeru(Na slici oznaceno 2)&#xA;Klikom na LogOff odjavljuje se iz aplikacije(Na slici oznaceno 3)&#xA;Klikom na Back vraca se na prethodni dijalog(Na slici oznaceno 4)">
+                    <Image Source="Medicine.png" Height="400" Width="400"/>
+                </TextBlock>
+            </xctk:WizardPage>
+            <xctk:WizardPage x:Name="Page7" PageType="Interior" Title="Reminder" PreviousPage="{Binding ElementName=Page6}" NextPage="{Binding ElementName=Page8}" HelpButtonVisibility="Hidden">
+                <TextBlock Text="Na slici oznaceno brojem 1 nalazi se lista podsetnika&#xA;Klikom na Create reminder prelazi se u dijalog za pravljenje podsetnika(Na slici oznaceno 2)&#xA;Biranjem podsetnika iz liste i klikom na Edit reminder prelazi se u dijalog za izmenu tog podsetnika(Na slici oznaceno 3)&#xA;Biranjem podsetnika iz liste i klikom na Cancel reminder brise se taj podsetnik iz liste(Na slici oznaceno 4)&#xA;Klikom na LogOff odjavljuje se iz aplikacije(Na slici oznaceno 5)&#xA;Klikom na Back vraca se na prethodni dijalog(Na slici oznaceno 6)">
+                    <Image Source="Reminder.png" Height="400" Width="400"/>
+                </TextBlock>
+            </xctk:WizardPage>
+            <xctk:WizardPage x:Name="Page8" PageType="Interior" Title="Medical record" PreviousPage="{Binding ElementName=Page7}" CanFinish="True" HelpButtonVisibility="Hidden">
+                <TextBlock Text="Na slici oznaceno brojem 1 nalazi se pregled licnih podataka&#xA;Klikom na Finished appointments otvara se dijalog sa odradjenih pregledima(Na slici oznaceno 2)&#xA;Klikom na LogOff odjavljuje se iz aplikacije(Na slici oznaceno 3)&#xA;Klikom na Back vraca se na prethodni dijalog(Na slici oznaceno 4)">
+                    <Image Source="MedicalRecord.png" Height="400" Width="400"/>
+                </TextBlock>
+            </xctk:WizardPage>
+
         </xctk:Wizard>
     </Grid>
 </Window>

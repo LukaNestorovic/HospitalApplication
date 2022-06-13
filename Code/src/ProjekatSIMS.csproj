@@ -14,7 +14,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="FinishedExaminations.png" />
     <None Remove="Home.png" />
+    <None Remove="HospitalSurvey.png" />
+    <None Remove="MedicalRecord.png" />
+    <None Remove="Medicine.png" />
+    <None Remove="Reminder.png" />
+    <None Remove="ScheduledAppointments.png" />
+    <None Remove="ScheduleWithPriority.png" />
     <None Remove="View\PatientView\Source\appointment.png" />
     <None Remove="View\PatientView\Source\finished.png" />
     <None Remove="View\PatientView\Source\medicine.png" />
@@ -33,7 +40,28 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="FinishedExaminations.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Home.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="HospitalSurvey.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="MedicalRecord.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Medicine.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Reminder.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ScheduledAppointments.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ScheduleWithPriority.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="View\PatientView\Source\appointment.png">
