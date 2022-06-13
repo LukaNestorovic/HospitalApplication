@@ -15,39 +15,39 @@
         <Label Content="" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="73,82,845,636" />
 
 
-        <Button  x:Name="Confirm" Content="Print" HorizontalAlignment="Center" VerticalAlignment="Top" Width="208" Click="Confirm_Click" Background="#66A5AD" Height="50" FontSize="25" Margin="0,631,0,0">
+        <Button  x:Name="Confirm" Content="Print" HorizontalAlignment="Center" VerticalAlignment="Top" Width="208"  Background="#66A5AD" Height="50" FontSize="25" Margin="0,631,0,0">
             <Button.ToolTip>
                 Stampaj opravdanje
             </Button.ToolTip>
         </Button>
-        <Button x:Name="Cancel" Content="Back" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="153" Click="Back_Click" Height="55" FontSize="18" Background="#66A5AD" Foreground="Black">
+        <Button x:Name="Cancel" Command="{Binding NavigateFinishedExamination}" Content="Back" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="153"  Height="55" FontSize="18" Background="#66A5AD" Foreground="Black">
             <Button.ToolTip>
                 Vrati se nazad
             </Button.ToolTip>
         </Button>
-        <Label Content="Note" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Height="48" Width="72" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
+        <Label x:Name="LNaslov" Content="Note" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Height="48" Width="72" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
         <Label Content="Pacijent:" HorizontalAlignment="Left" Margin="60,83,0,0" VerticalAlignment="Top" Height="48" Width="103" FontSize="25" Foreground="Black" RenderTransformOrigin="0.474,0.227"/>
         <Label Content="Doktor:" HorizontalAlignment="Left" Margin="60,487,0,0" VerticalAlignment="Top" Height="48" Width="103" FontSize="25" Foreground="Black" RenderTransformOrigin="0.474,0.227"/>
         <Label Content="ima opravdanje od dana:" HorizontalAlignment="Left" Margin="476,82,0,0" VerticalAlignment="Top" Height="48" Width="291" FontSize="25" Foreground="Black" RenderTransformOrigin="0.474,0.227"/>
         <Label Content="narednih 7 dana zato sto boluje od:" HorizontalAlignment="Left" Margin="146,130,0,0" VerticalAlignment="Top" Height="48" Width="402" FontSize="25" Foreground="Black" RenderTransformOrigin="0.474,0.227"/>
-        <Button Content="LogOff" HorizontalAlignment="Left" Margin="861,3,0,0" VerticalAlignment="Top" Height="55" Width="153" Click="LogOff_Click" FontSize="18" Background="#66A5AD" Foreground="Black">
+        <Button Content="LogOff" Command="{Binding NavigateLogOff}" HorizontalAlignment="Left" Margin="861,3,0,0" VerticalAlignment="Top" Height="55" Width="153"  FontSize="18" Background="#66A5AD" Foreground="Black">
             <Button.ToolTip>
                 Odjavi se
             </Button.ToolTip>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="762,13,0,0" VerticalAlignment="Top" Height="40" Click="Help_Click">
+        <Button HorizontalAlignment="Left" Margin="762,13,0,0" VerticalAlignment="Top" Height="40" >
             <Image Source="Source\Question-Mark.jpeg" Height="38">
             </Image>
             <Button.ToolTip>
                 Help
             </Button.ToolTip>
         </Button>
-        <TextBox Name="TBName" HorizontalAlignment="Left" Margin="184,87,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="136" Height="30" Background="#C4DFE6" BorderBrush="#C4DFE6" FontSize="25" TextAlignment="Center" IsReadOnly="True" />
-        <TextBox Name="TBNameDoctor" HorizontalAlignment="Left" Margin="184,491,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="136" Height="36" Background="#C4DFE6" BorderBrush="#C4DFE6" FontSize="25" TextAlignment="Center" IsReadOnly="True"/>
-        <TextBox Name="TBSurname" HorizontalAlignment="Left" Margin="320,87,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="136" Height="30" Background="#C4DFE6" BorderBrush="#C4DFE6" FontSize="25" TextAlignment="Center" RenderTransformOrigin="0.467,-0.017" IsReadOnly="True"/>
-        <TextBox Name="TBSurnameDoctor" HorizontalAlignment="Left" Margin="325,491,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="136" Height="36" Background="#C4DFE6" BorderBrush="#C4DFE6" FontSize="25" TextAlignment="Center" IsReadOnly="True"/>
-        <TextBox Name="TBDate" HorizontalAlignment="Left" Margin="772,87,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="152" Height="30" Background="#C4DFE6" BorderBrush="#C4DFE6" FontSize="25" TextAlignment="Center" IsReadOnly="True"/>
-        <TextBox Name="TBAnamnesis" HorizontalAlignment="Left" Margin="566,133,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="282" Height="30" Background="#C4DFE6" BorderBrush="#C4DFE6" FontSize="25" TextAlignment="Center" IsReadOnly="True"/>
+        <TextBlock Name="TBName" Text="{Binding appointment.Patient.Name}" HorizontalAlignment="Left" Margin="184,87,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="136" Height="30" Background="#C4DFE6"  FontSize="25" TextAlignment="Center"  />
+        <TextBlock Name="TBNameDoctor" Text="{Binding appointment.Doctor.Name}" HorizontalAlignment="Left" Margin="184,491,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="136" Height="36" Background="#C4DFE6"  FontSize="25" TextAlignment="Center" />
+        <TextBlock Name="TBSurname" Text="{Binding appointment.Patient.Surname}" HorizontalAlignment="Left" Margin="320,87,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="136" Height="30" Background="#C4DFE6"  FontSize="25" TextAlignment="Center" RenderTransformOrigin="0.467,-0.017" />
+        <TextBlock Name="TBSurnameDoctor" Text="{Binding appointment.Doctor.Surname}" HorizontalAlignment="Left" Margin="325,491,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="136" Height="36" Background="#C4DFE6"  FontSize="25" TextAlignment="Center" />
+        <TextBlock Name="TBDate" Text="{Binding appointment.DateTime}" HorizontalAlignment="Left" Margin="772,87,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="152" Height="30" Background="#C4DFE6"  FontSize="25" TextAlignment="Center" />
+        <TextBlock Name="TBAnamnesis" Text="{Binding appointment.Anamnesis}" HorizontalAlignment="Left" Margin="566,133,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="282" Height="30" Background="#C4DFE6"  FontSize="25" TextAlignment="Center" />
 
     </Grid>
 </Page>

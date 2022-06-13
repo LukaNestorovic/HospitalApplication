@@ -1,0 +1,20 @@
+﻿<Window x:Class="ProjekatSIMS.Wizard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjekatSIMS"
+        xmlns:xctk ="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Wizard" Height="768" Width="1024">
+    <Grid>
+        <xctk:Wizard FinishButtonClosesWindow="True">
+            <xctk:WizardPage x:Name="IntroPage" Title="Dobro dosli u aplikaciju klinike Zdravo" Description="Ovaj wizard ce vam pokazati kako da koristite aplikaciju" HelpButtonVisibility="Hidden">
+                <Image x:Name="Slika" Source="Home.png" Height="600" Width="600" Visibility="Visible" HorizontalAlignment="Right" Margin="0,0,115,0"/>
+            </xctk:WizardPage>
+            <xctk:WizardPage x:Name="Page1" PageType="Interior" Title="Page 1" Description="Ovo je prva strana" PreviousPage="{Binding ElementName=IntroPage}" CanFinish="True" HelpButtonVisibility="Hidden" Content="1.Biranjem opcije Appointment prikazuju se svi odradjeni pregledi.&#xA;1.1.Biranjem opcije Schedule appointment prikazuje se lista slobodnih termina. Ukoliko zelite da zakazete termin odaberete zeljeni termin i kliknete na dugme Schedule Appointment.&#xA;1.2.Ukoliko zelite da otkazete neki od pregleda izabere iz liste zeljeni pregled i kliknete na dugme Cancel Appointment.&#xA;1.3.Ukoliko zelite da promenite odredjeni termin izaberete zeljeni termin i kliknete na dugme Edit Appointment, gde vam se prikaze dijalog sa biranjem datuma i zeljenog doktora,&#xA; nakon toga potvrdite klikom na dugme Submit.&#xA;2.Biranjem opcije Finished Examinations prikazuje vam se lista svih odredjenih pregleda.&#xA;2.1.Ukoliko zelite da ocenite lekara za odredjeni pregled izaberete taj pregled i prikaze vam se dijalog sa odredjenim pitanjima na koje odgovorite za ocenom od 1 do 5.&#xA;2.2.Takodje mozete da dobijete i opravdanje za odredjeni pregled tako sto ga izabere i kliknete dugme Note koje vas upucuje na sledeci dijalog gde ga na dugme Print stampate.&#xA;2.3.Ukoliko zelite detaljniji izvestaj sa pregleda izaberete zeljeni pregled i kliknete na dugme Report gde vam se prikazuje dijalog sa anamnezom koju vam je doktor prepisao i imate&#xA; mogucnost da ostavite komentar.&#xA;2.4.Klikom na dugme Prescription izlazi vam dijalog sa listom prepisanih lekova.&#xA;3.Biranjem opcije Rate Hospital izlazi vam dijalog sa ponudjenim pitanjima na koja odgovarate sa ocenom od 1 do 5.&#xA;4.Biranjem opcije Medicine otvara vam se dijalog sa listom prepisanih lekova.&#xA;5.Biranjem opcije Schedule with priority otvara vam se dijalog gde biranjem prioriteta Doctor ili Time birate datum i doktora koji vam odgovara i sistem automatski bira prvi slobodan&#xA; termin koji ispunjava vase uslove.&#xA;6.Biranjem opcije Reminder otvara vam se dijalog sa vasim podsetnicima.&#xA;6.1.Biranjem opcije Create reminder otvara vam se dijalog gde mozete da izabere datum i vreme kao i da upisete podsetnik.&#xA;6.2.Ukoliko zelite da uklonite neki od podsetnika izabere zeljeni podsetnik i klikom na dugme Cancel reminder uklanjate ga iz liste.&#xA;6.3.Ukoliko zelite da izmenite odredjeni podsetnik izaberete zeljeni podsetnik i klikom na dugme Edit reminder otvara vam se dijalog gde mozete da promenite &#xA; i datum i vreme kao i sam podsetnik, klikom na dugme Submit izvrsili ste promenu podsetnika.&#xA;7.Biranjem opcije Medical Record izlaze vam svi licni detalji."/>
+            
+        </xctk:Wizard>
+    </Grid>
+</Window>

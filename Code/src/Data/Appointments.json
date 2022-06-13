@@ -226,7 +226,7 @@
     "Duration": 1,
     "Emergency": false,
     "Id": 26,
-    "Anamnesis": "aaaaaaaaa",
+    "Anamnesis": "Prehlada",
     "Finished": true,
     "Patient": {
       "InsuranceCarrier": "1",
@@ -625,6 +625,186 @@
       "Id": 0,
       "Password": "123"
     },
+    "Doctor": {
+      "Specialty": "1",
+      "Grade": 1,
+      "Salary": 1,
+      "Name": "Filip",
+      "Surname": "1",
+      "Jmbg": "1",
+      "Telephone": "1",
+      "Email": "bb@gmail.com",
+      "BirthDate": "2022-05-18T00:00:00",
+      "Adress": "1",
+      "Id": 1,
+      "Password": "123"
+    },
+    "Room": {
+      "RoomType": "Soba",
+      "Name": "204",
+      "Id": 1
+    },
+    "Comment": null
+  },
+  {
+    "DateTime": "2022-07-12T00:00:00",
+    "Descripton": "1",
+    "Duration": 1,
+    "Emergency": false,
+    "Id": 29,
+    "Anamnesis": "aaaaaaaaa",
+    "Finished": false,
+    "Patient": null,
+    "Doctor": {
+      "Specialty": "1",
+      "Grade": 1,
+      "Salary": 1,
+      "Name": "Filip",
+      "Surname": "1",
+      "Jmbg": "1",
+      "Telephone": "1",
+      "Email": "bb@gmail.com",
+      "BirthDate": "2022-05-18T00:00:00",
+      "Adress": "1",
+      "Id": 1,
+      "Password": "123"
+    },
+    "Room": {
+      "RoomType": "Soba",
+      "Name": "204",
+      "Id": 1
+    },
+    "Comment": null
+  },
+  {
+    "DateTime": "2022-07-12T00:00:00",
+    "Descripton": "1",
+    "Duration": 1,
+    "Emergency": false,
+    "Id": 29,
+    "Anamnesis": "aaaaaaaaa",
+    "Finished": false,
+    "Patient": null,
+    "Doctor": {
+      "Specialty": "1",
+      "Grade": 1,
+      "Salary": 1,
+      "Name": "Filip",
+      "Surname": "1",
+      "Jmbg": "1",
+      "Telephone": "1",
+      "Email": "bb@gmail.com",
+      "BirthDate": "2022-05-18T00:00:00",
+      "Adress": "1",
+      "Id": 1,
+      "Password": "123"
+    },
+    "Room": {
+      "RoomType": "Soba",
+      "Name": "204",
+      "Id": 1
+    },
+    "Comment": null
+  },
+  {
+    "DateTime": "2022-07-10T00:00:00",
+    "Descripton": "1",
+    "Duration": 1,
+    "Emergency": false,
+    "Id": 29,
+    "Anamnesis": "aaaaaaaaa",
+    "Finished": false,
+    "Patient": null,
+    "Doctor": {
+      "Specialty": "1",
+      "Grade": 1,
+      "Salary": 1,
+      "Name": "Filip",
+      "Surname": "1",
+      "Jmbg": "1",
+      "Telephone": "1",
+      "Email": "bb@gmail.com",
+      "BirthDate": "2022-05-18T00:00:00",
+      "Adress": "1",
+      "Id": 1,
+      "Password": "123"
+    },
+    "Room": {
+      "RoomType": "Soba",
+      "Name": "204",
+      "Id": 1
+    },
+    "Comment": null
+  },
+  {
+    "DateTime": "2022-07-10T00:00:00",
+    "Descripton": "1",
+    "Duration": 1,
+    "Emergency": false,
+    "Id": 29,
+    "Anamnesis": "aaaaaaaaa",
+    "Finished": false,
+    "Patient": null,
+    "Doctor": {
+      "Specialty": "1",
+      "Grade": 1,
+      "Salary": 1,
+      "Name": "Filip",
+      "Surname": "1",
+      "Jmbg": "1",
+      "Telephone": "1",
+      "Email": "bb@gmail.com",
+      "BirthDate": "2022-05-18T00:00:00",
+      "Adress": "1",
+      "Id": 1,
+      "Password": "123"
+    },
+    "Room": {
+      "RoomType": "Soba",
+      "Name": "204",
+      "Id": 1
+    },
+    "Comment": null
+  },
+  {
+    "DateTime": "2022-07-15T00:00:00",
+    "Descripton": "1",
+    "Duration": 1,
+    "Emergency": false,
+    "Id": 36,
+    "Anamnesis": null,
+    "Finished": false,
+    "Patient": null,
+    "Doctor": {
+      "Specialty": "1",
+      "Grade": 1,
+      "Salary": 1,
+      "Name": "Filip",
+      "Surname": "1",
+      "Jmbg": "1",
+      "Telephone": "1",
+      "Email": "bb@gmail.com",
+      "BirthDate": "2022-05-18T00:00:00",
+      "Adress": "1",
+      "Id": 1,
+      "Password": "123"
+    },
+    "Room": {
+      "RoomType": "Soba",
+      "Name": "204",
+      "Id": 1
+    },
+    "Comment": null
+  },
+  {
+    "DateTime": "2022-07-15T00:00:00",
+    "Descripton": "1",
+    "Duration": 1,
+    "Emergency": false,
+    "Id": 37,
+    "Anamnesis": null,
+    "Finished": false,
+    "Patient": null,
     "Doctor": {
       "Specialty": "1",
       "Grade": 1,

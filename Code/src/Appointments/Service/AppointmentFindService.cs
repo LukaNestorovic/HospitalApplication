@@ -151,5 +151,20 @@ namespace Appointments.Service
 			ret.Sort((y, x) => y.DateTime.CompareTo(x.DateTime));
 			return ret;
 		}
+
+		public List<Appointment> Filter(DateTime start, DateTime end)
+        {
+			List<Appointment> all = FindAllWithoutPatient();
+			List<Appointment> ret = new List<Appointment>();
+			foreach(Appointment i in all)
+            {
+				if(start < i.DateTime && i.DateTime < end)
+                {
+					ret.Add(i);
+                }
+            }
+			ret.Sort((y, x) => y.DateTime.CompareTo(x.DateTime));
+			return ret;
+		}
 	}
 }

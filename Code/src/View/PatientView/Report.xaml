@@ -28,7 +28,7 @@
                 Unesite komentar na anamnezu
             </TextBox.ToolTip>
         </TextBox>
-            <Label Content="Report" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Height="48" Width="94" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
+        <Label x:Name="LNaslov" Content="Report" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Height="48" Width="94" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
         <Label Content="Comment" HorizontalAlignment="Left" VerticalAlignment="Top" Height="48" Width="131" FontSize="25" Foreground="Black" RenderTransformOrigin="0.474,0.227" Margin="86,424,0,0"/>
         <Button x:Name="Cancel" Content="Back" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="153" Click="Back_Click" Height="55" FontSize="18" Background="#66A5AD" Foreground="Black">
             <Button.ToolTip>

@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Home.png" />
     <None Remove="View\PatientView\Source\appointment.png" />
     <None Remove="View\PatientView\Source\finished.png" />
     <None Remove="View\PatientView\Source\medicine.png" />
@@ -25,11 +26,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.3.0" />
+    <PackageReference Include="JetBrains.Annotations" Version="2022.1.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Syncfusion.DocToPDFConverter.Wpf" Version="20.1.0.58" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Home.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="View\PatientView\Source\appointment.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>

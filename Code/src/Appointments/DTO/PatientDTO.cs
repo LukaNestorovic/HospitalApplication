@@ -20,8 +20,9 @@ namespace Appointments.DTO
         public DateTime BirthDate { get; set; }
         public String Adress { get; set; }
         public String Password { get; set; }
+        public Boolean First { get; set; }
 
-        public PatientDTO(string insuranceCarrier, bool guest, bool blocked, int brojac, string name, string surname, string jmbg, string telephone, string email, DateTime birthDate, string adress, string password)
+        public PatientDTO(string insuranceCarrier, bool guest, bool blocked, int brojac, string name, string surname, string jmbg, string telephone, string email, DateTime birthDate, string adress, string password, Boolean first)
         {
             InsuranceCarrier = insuranceCarrier;
             Guest = guest;
@@ -35,6 +36,7 @@ namespace Appointments.DTO
             BirthDate = birthDate;
             Adress = adress;
             Password = password;
+            First = first;
         }
 
         public PatientDTO()

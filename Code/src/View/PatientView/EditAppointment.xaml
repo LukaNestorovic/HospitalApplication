@@ -28,14 +28,14 @@
                 Prosledi promene
             </Button.ToolTip>
         </Button>
-        <DatePicker x:Name="DP" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" Width="304" Height="42" FontSize="25" >
+        <DatePicker x:Name="DP" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top" Width="304" Height="42" FontSize="25" BorderBrush="#C4DFE6" >
             <DatePicker.ToolTip>
                 Izaberite datum
             </DatePicker.ToolTip>
         </DatePicker>
         <Label Content="Select Date:" HorizontalAlignment="Left" Margin="190,172,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.982,0.36 " Height="57" FontSize="25"/>
         <Label Content="Doctor:" HorizontalAlignment="Left" Margin="198,400,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.982,0.36" Height="57" FontSize="25"/>
-        <Label Content="Appointment edit" HorizontalAlignment="Left" Margin="372,6,0,0" VerticalAlignment="Top" Height="48" Width="244" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
+        <Label x:Name="LNaslov" Content="Edit appointment" HorizontalAlignment="Left" Margin="372,6,0,0" VerticalAlignment="Top" Height="48" Width="244" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
         <Button Content="LogOff" HorizontalAlignment="Left" Margin="861,3,0,0" VerticalAlignment="Top" Height="55" Width="153" Click="LogOff_Click" FontSize="18" Background="#66A5AD" Foreground="Black">
             <Button.ToolTip>
                 Odjavi se

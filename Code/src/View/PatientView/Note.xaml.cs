@@ -24,22 +24,27 @@ namespace ProjekatSIMS.View.PatientView
     /// </summary>
     public partial class Note : Page
     {
-        public int id;
-        public Appointment appointment = new Appointment();
+ //       public int id;
+ //       public Appointment appointment = new Appointment();
         public Note(Appointment appointment, int id)
         {
+            var sw = Application.Current.Windows
+            .Cast<Window>()
+            .FirstOrDefault(window => window is LogIn) as LogIn;
+
+            this.DataContext = new ViewModel.NoteVM(sw.MainFrame.NavigationService, id, appointment);
             InitializeComponent();
-            TBAnamnesis.Text = appointment.Anamnesis;
+/*            TBAnamnesis.Text = appointment.Anamnesis;
             TBDate.Text = DateTime.Now.ToString();
             TBName.Text = appointment.Patient.Name;
             TBSurname.Text = appointment.Patient.Surname;
             TBNameDoctor.Text = appointment.Doctor.Name;
             TBSurnameDoctor.Text = appointment.Doctor.Surname;
             this.id = id;
-            this.appointment = appointment;
+            this.appointment = appointment;*/
         }
 
-        private void Confirm_Click(object sender, RoutedEventArgs e)
+/*        private void Confirm_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Stampanje uspesno", "Alert", MessageBoxButton.OK, MessageBoxImage.Information);
             var s = new FinishedExaminations(id);
@@ -60,8 +65,9 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Help_Click(object sender, RoutedEventArgs e)
         {
-            var s = new Help(id);
-            NavigationService.Navigate(s);
-        }
+            String naslov = (String)LNaslov.Content;
+            var s = new ProjekatSIMS.Help(naslov);
+            s.Show();
+        }*/
     }
 }

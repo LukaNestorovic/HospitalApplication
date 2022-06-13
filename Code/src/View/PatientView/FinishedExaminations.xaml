@@ -9,7 +9,7 @@
       Title="FinishedExaminations">
 
     <Grid>
-        <Rectangle HorizontalAlignment="Center" Height="61" Stroke="Black" VerticalAlignment="Top" Width="1024" Fill="#003B46"/>
+        <Rectangle  HorizontalAlignment="Center" Height="61" Stroke="Black" VerticalAlignment="Top" Width="1024" Fill="#003B46"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="691" Margin="0,61,0,0" VerticalAlignment="Top" Width="1024" Background="#C4DFE6"/>
         <DataGrid x:Name="PatientAppointments" Margin="37,131,22,31" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding pregledi}">
 
@@ -54,7 +54,7 @@
                 Odjavi se
             </Button.ToolTip>
         </Button>
-        <Label Content="Finished examinations" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Height="48" Width="282" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
+        <Label x:Name="LNaslov" Content="Finished examinations" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Height="48" Width="282" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
         <Button HorizontalAlignment="Left" Margin="762,13,0,0" VerticalAlignment="Top" Height="40" Click="Help_Click">
             <Image Source="Source\Question-Mark.jpeg" Height="38">
             </Image>

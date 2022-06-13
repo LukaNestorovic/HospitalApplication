@@ -27,20 +27,29 @@ namespace ProjekatSIMS.View.PatientView
     /// </summary>
     public partial class RateAppointment : Page
     {
-        private int id;
+/*        private int id;
         public DoctorSurveyController doctorSurveyController = new DoctorSurveyController();
         public Patient patient = new Patient();
         public PatientController patientController = new PatientController();
         public Appointment appointment = new Appointment();
         public Appointments.Model.Doctor doctor = new Appointments.Model.Doctor();
-        public DoctorSurveyDTO doctorSurveyDTO = new DoctorSurveyDTO();
+        public DoctorSurveyDTO doctorSurveyDTO = new DoctorSurveyDTO();*/
         public RateAppointment(int id, Appointment appointment)
         {
+            var sw = Application.Current.Windows
+            .Cast<Window>()
+            .FirstOrDefault(window => window is LogIn) as LogIn;
+
+            this.DataContext = new ViewModel.RateDoctorVM(sw.MainFrame.NavigationService, id, appointment);
             InitializeComponent();
-            this.appointment = appointment;
-            this.id = id;
+//            this.appointment = appointment;
+//            this.id = id;
         }
-        private void Confirm_Click(object sender, RoutedEventArgs e)
+        public RateAppointment()
+        {
+            InitializeComponent();
+        }
+/*        private void Confirm_Click(object sender, RoutedEventArgs e)
         {
             doctorSurveyDTO.Question1 = Combo1.SelectedIndex + 1;
             doctorSurveyDTO.Question2 = Combo2.SelectedIndex + 1;
@@ -66,8 +75,9 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Help_Click(object sender, RoutedEventArgs e)
         {
-            var s = new Help(id);
-            NavigationService.Navigate(s);
-        }
+            String naslov = (String)LNaslov.Content;
+            var s = new ProjekatSIMS.Help(naslov);
+            s.Show();
+        }*/
     }
 }

@@ -20,6 +20,8 @@ using ProjekatSIMS.View.SecretaryView;
 using System.Collections.ObjectModel;
 using Appointments.Controller;
 using Appointments.Model;
+using Appointments.DTO;
+using Appointments.Service;
 
 namespace ProjekatSIMS
 {
@@ -38,6 +40,8 @@ namespace ProjekatSIMS
         public Secretary secretary = new Secretary();
         public ObservableCollection<Room> rooms;
         public ReminderController reminderController = new ReminderController();
+        public PatientDTO patientDTO = new PatientDTO();
+        public PatientService patientService = new PatientService();
         public LogIn()
         {
             InitializeComponent();
@@ -60,9 +64,23 @@ namespace ProjekatSIMS
                     }
                     else
                     {
-                        var s = new Home(patient.Id);
-                        MainFrame.Navigate(s);
-                        reminderController.Notification();
+                        if (patient.First == true)
+                        {
+                            var s = new Wizard(patient.Id);
+                            s.ShowDialog();
+                            var t = new Home(patient.Id);
+                            MainFrame.Navigate(t);
+                            reminderController.Notification();
+//                            patient.First = false;
+                            patientService.MakePatientDTO(patientDTO, patient);
+//                            patientController.UpdatePatient(patientDTO, patient.Id);
+                        }
+                        else
+                        {
+                            var t = new Home(patient.Id);
+                            MainFrame.Navigate(t);
+                            reminderController.Notification();
+                        }
                     }
                 }
                 else

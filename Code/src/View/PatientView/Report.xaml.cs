@@ -71,8 +71,9 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Help_Click(object sender, RoutedEventArgs e)
         {
-            var s = new Help(id);
-            NavigationService.Navigate(s);
+            String naslov = (String)LNaslov.Content;
+            var s = new ProjekatSIMS.Help(naslov);
+            s.Show();
         }
     }
 }

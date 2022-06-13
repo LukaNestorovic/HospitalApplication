@@ -83,7 +83,8 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Schedule_Click(object sender, RoutedEventArgs e)
         {
-            var s = new ScheduleAppointment(id);
+            DateTime dt = new DateTime();
+            var s = new ScheduleAppointment(id, dt, dt);
             NavigationService.Navigate(s);
 
         }
@@ -97,8 +98,9 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Help_Click(object sender, RoutedEventArgs e)
         {
-            var s = new Help(id);
-            NavigationService.Navigate(s);
+            String naslov = (String)LNaslov.Content;
+            var s = new ProjekatSIMS.Help(naslov);
+            s.Show();
         }
     }
 }

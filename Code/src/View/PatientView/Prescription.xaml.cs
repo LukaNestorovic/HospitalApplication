@@ -51,14 +51,15 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Help_Click(object sender, RoutedEventArgs e)
         {
-            var s = new Help(id);
-            NavigationService.Navigate(s);
+            String naslov = (String)LNaslov.Content;
+            var s = new ProjekatSIMS.Help(naslov);
+            s.Show();
         }
 
         private void Generate_Click(object sender, RoutedEventArgs e)
         {
             DateTime dateTime = DatePicker1.SelectedDate.GetValueOrDefault();
- //           prescriptionController.GeneratePDF(id, dateTime);
+            prescriptionController.GeneratePDF(id, dateTime);
         }
     }
 

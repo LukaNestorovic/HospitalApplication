@@ -92,7 +92,7 @@ namespace Appointments.Service
 
        
 
- /*       public void GeneratePDF(int id, DateTime dateTime)
+        public void GeneratePDF(int id, DateTime dateTime)
         {
             using (PdfDocument doc = new PdfDocument())
             {
@@ -136,7 +136,10 @@ namespace Appointments.Service
         {
             GeneratePDF(id, dateTime);
             SendMessage();
-        }*/
+            var s = new ProjekatSIMS.Pdf();
+            s.Show();
+            s.Close();
+        }
 
 
 

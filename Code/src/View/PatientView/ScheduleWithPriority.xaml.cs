@@ -42,21 +42,6 @@ namespace ProjekatSIMS.View.PatientView
             Combo.ItemsSource = doctors;
             this.id = id;
         }
-        private void Doctor_click(object sender, RoutedEventArgs e)
-        {
-            LabelDoctor.Visibility = Visibility.Visible;
-            DatePicker1.Visibility = Visibility.Visible;
-            Combo.Visibility = Visibility.Visible;
-            Submit.Visibility = Visibility.Visible;
-        }
-
-        private void Time_click(object sender, RoutedEventArgs e)
-        {
-            LabelDoctor.Visibility = Visibility.Hidden;
-            DatePicker1.Visibility = Visibility.Visible;
-            Combo.Visibility = Visibility.Hidden;
-            Submit.Visibility = Visibility.Visible;
-        }
 
         private void Cancel_click(object sender, RoutedEventArgs e)
         {
@@ -113,8 +98,25 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Help_Click(object sender, RoutedEventArgs e)
         {
-            var s = new Help(id);
-            NavigationService.Navigate(s);
+            String naslov = (String)LNaslov.Content;
+            var s = new ProjekatSIMS.Help(naslov);
+            s.Show();
+        }
+
+        private void RBTime_Checked(object sender, RoutedEventArgs e)
+        {
+            LabelDoctor.Visibility = Visibility.Hidden;
+            DatePicker1.Visibility = Visibility.Visible;
+            Combo.Visibility = Visibility.Hidden;
+            Submit.Visibility = Visibility.Visible;
+        }
+
+        private void RBDoctor_Checked(object sender, RoutedEventArgs e)
+        {
+            LabelDoctor.Visibility = Visibility.Visible;
+            DatePicker1.Visibility = Visibility.Visible;
+            Combo.Visibility = Visibility.Visible;
+            Submit.Visibility = Visibility.Visible;
         }
     }
 }

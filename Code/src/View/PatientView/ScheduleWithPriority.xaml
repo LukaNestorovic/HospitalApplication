@@ -17,7 +17,7 @@
                         Potvrdi promene
                     </Button.ToolTip>
                 </Button>
-                <DatePicker x:Name="DatePicker1" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top" Width="304" Height="58" Margin="364,230,0,0" FontSize="25">
+                <DatePicker x:Name="DatePicker1" Visibility="Hidden" HorizontalAlignment="Left" VerticalAlignment="Top" Width="304" Height="58" Margin="364,230,0,0" FontSize="25" BorderBrush="#C4DFE6">
                     <DatePicker.ToolTip>
                         Izaberite datum
                      </DatePicker.ToolTip>
@@ -28,19 +28,10 @@
                     </ComboBox.ToolTip>
                 </ComboBox>
                 <Label Name="LabelDoctor" Visibility="Hidden" Content="Doctor:" HorizontalAlignment="Left" Margin="224,337,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.982,0.36" Height="57" FontSize="25"/>
-
+                <RadioButton x:Name="RBDoctor" Content="Doctor" IsChecked="True" FontSize="18" Margin="291,164,654,566" Checked="RBDoctor_Checked"/>
+                <RadioButton x:Name="RBTime" Content="Time" FontSize="18" Margin="637,164,323,566" Checked="RBTime_Checked"/>
             </Grid>
         </Border>
-        <Button Content="Doctor" HorizontalAlignment="Left" Margin="63,184,0,0" VerticalAlignment="Top" Width="212" Height="79" Click="Doctor_click" Background="#66A5AD" FontSize="18">
-            <Button.ToolTip>
-               Prioritet doktor
-            </Button.ToolTip>
-        </Button>
-        <Button Content="Time" HorizontalAlignment="Left" Margin="726,184,0,0" VerticalAlignment="Top" Width="212" Height="79" Click="Time_click" Background="#66A5AD" FontSize="18">
-            <Button.ToolTip>
-                Prioritet vreme
-            </Button.ToolTip>
-        </Button>
         <Button x:Name="Cancel" Content="Back" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" Width="153" Click="Cancel_click" Height="55" FontSize="18" Background="#66A5AD" Foreground="Black">
             <Button.ToolTip>
                Vrati se nazad
@@ -51,7 +42,7 @@
                 Odjavi se
             </Button.ToolTip>
         </Button>
-        <Label Content="Schedule with priority" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Height="48" Width="280" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
+        <Label x:Name="LNaslov" Content="Schedule with priority" HorizontalAlignment="Center" Margin="0,6,0,0" VerticalAlignment="Top" Height="48" Width="280" FontSize="28" Foreground="White" RenderTransformOrigin="0.474,0.227"/>
         <Button HorizontalAlignment="Left" Margin="762,13,0,0" VerticalAlignment="Top" Height="40" Click="Help_Click">
             <Image Source="Source\Question-Mark.jpeg" Height="38">
             </Image>

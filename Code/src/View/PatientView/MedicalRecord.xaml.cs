@@ -24,13 +24,18 @@ namespace ProjekatSIMS.View.PatientView
     /// </summary>
     public partial class MedicalRecord : Page
     {
-        public int id;
+/*        public int id;
         public Patient patient = new Patient();
-        public PatientController patientController = new PatientController();
+        public PatientController patientController = new PatientController();*/
         public MedicalRecord(int id)
         {
             InitializeComponent();
-            this.id = id;
+            var sw = Application.Current.Windows
+            .Cast<Window>()
+            .FirstOrDefault(window => window is LogIn) as LogIn;
+
+            this.DataContext = new ViewModel.MedicalRecordVM(sw.MainFrame.NavigationService, id);
+/*            this.id = id;
             patient = patientController.FindPatientById(id);
             TBAdress.Text = patient.Adress;
             TBBirth.Text = patient.BirthDate.ToString();
@@ -38,10 +43,14 @@ namespace ProjekatSIMS.View.PatientView
             TBName.Text = patient.Name;
             TBSurname.Text = patient.Surname;
             TBTelephone.Text = patient.Telephone;
-            TBJmbg.Text = patient.Jmbg;
+            TBJmbg.Text = patient.Jmbg;*/
+        }
+        public MedicalRecord()
+        {
+            InitializeComponent();
         }
 
-        private void Cancel_Click(object sender, RoutedEventArgs e)
+/*        private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             var s = new Home(id);
             NavigationService.Navigate(s);
@@ -55,8 +64,15 @@ namespace ProjekatSIMS.View.PatientView
 
         private void Help_Click(object sender, RoutedEventArgs e)
         {
-            var s = new Help(id);
-            NavigationService.Navigate(s);
+            String naslov = (String)LNaslov.Content;
+            var s = new ProjekatSIMS.Help(naslov);
+            s.Show();
         }
+
+        private void Finished_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new FinishedExaminations(id);
+            NavigationService.Navigate(s);
+        }*/
     }
 }

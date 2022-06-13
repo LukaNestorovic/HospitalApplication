@@ -27,47 +27,57 @@ namespace ProjekatSIMS.View.PatientView
     /// </summary>
     public partial class RateHospital : Page
     {
-        private int id;
+/*        private int id;
         public HospitalSurveyController hospitalSurveyController = new HospitalSurveyController();
         public Patient patient = new Patient();
         public PatientController patientController = new PatientController();
-        public HospitalSurveyDTO hospitalSurveyDTO = new HospitalSurveyDTO();
+        public HospitalSurveyDTO hospitalSurveyDTO = new HospitalSurveyDTO();*/
         public RateHospital(int id)
         {
+            var sw = Application.Current.Windows
+            .Cast<Window>()
+            .FirstOrDefault(window => window is LogIn) as LogIn;
+
+            this.DataContext = new ViewModel.RateHospitalVM(sw.MainFrame.NavigationService, id);
             InitializeComponent();
-            this.id = id;
+//            this.id = id;
+        }
+        public RateHospital()
+        {
+            InitializeComponent();
         }
 
-        private void Confirm_Click(object sender, RoutedEventArgs e)
-        {
-            hospitalSurveyDTO.Question1 = Combo1.SelectedIndex + 1;
-            hospitalSurveyDTO.Question2 = Combo2.SelectedIndex + 1;
-            hospitalSurveyDTO.Question3 = Combo3.SelectedIndex + 1;
-            hospitalSurveyDTO.patient = patientController.FindPatientById(id);
-            hospitalSurveyController.CreateHospitalSurvey(hospitalSurveyDTO);
-            var s = new Home(id);
-            NavigationService.Navigate(s);
-            
-        }
+            /*        private void Confirm_Click(object sender, RoutedEventArgs e)
+                    {
+                        hospitalSurveyDTO.Question1 = Combo1.SelectedIndex + 1;
+                        hospitalSurveyDTO.Question2 = Combo2.SelectedIndex + 1;
+                        hospitalSurveyDTO.Question3 = Combo3.SelectedIndex + 1;
+                        hospitalSurveyDTO.patient = patientController.FindPatientById(id);
+                        hospitalSurveyController.CreateHospitalSurvey(hospitalSurveyDTO);
+                        var s = new Home(id);
+                        NavigationService.Navigate(s);
 
-        private void Back_Click(object sender, RoutedEventArgs e)
-        {
-            var s = new Home(id);
-            NavigationService.Navigate(s);
-           
-        }
+                    }
 
-        private void LogOff_Click(object sender, RoutedEventArgs e)
-        {
-            var s = new LogIn();
-            s.Show();
-           
-        }
+                    private void Back_Click(object sender, RoutedEventArgs e)
+                    {
+                        var s = new Home(id);
+                        NavigationService.Navigate(s);
 
-        private void Help_Click(object sender, RoutedEventArgs e)
-        {
-            var s = new Help(id);
-            NavigationService.Navigate(s);
+                    }
+
+                    private void LogOff_Click(object sender, RoutedEventArgs e)
+                    {
+                        var s = new LogIn();
+                        s.Show();
+
+                    }
+
+                    private void Help_Click(object sender, RoutedEventArgs e)
+                    {
+                        String naslov = (String)LNaslov.Content;
+                        var s = new ProjekatSIMS.Help(naslov);
+                        s.Show();
+                    }*/
         }
-    }
 }

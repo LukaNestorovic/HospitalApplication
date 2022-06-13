@@ -34,7 +34,7 @@ namespace Appointments.Service
 		}
 		public Boolean CreatePatient(PatientDTO patientDTO) {
 			int newID = createId();
-			Patient patient = new Patient(patientDTO.Name, patientDTO.Surname, patientDTO.Jmbg, patientDTO.Telephone, patientDTO.Email, patientDTO.BirthDate, patientDTO.Adress, patientDTO.InsuranceCarrier, patientDTO.Guest, false, newID,patientDTO.Password, 0);
+			Patient patient = new Patient(patientDTO.Name, patientDTO.Surname, patientDTO.Jmbg, patientDTO.Telephone, patientDTO.Email, patientDTO.BirthDate, patientDTO.Adress, patientDTO.InsuranceCarrier, patientDTO.Guest, false, newID,patientDTO.Password, 0, true);
 			return patientRepository.Save(patient);
 		}
 		
@@ -53,6 +53,7 @@ namespace Appointments.Service
 			patient.Password = patientDTO.Password;
 			patient.Blocked = patientDTO.Blocked;
 			patient.Brojac = patientDTO.Brojac;
+			patient.First = patientDTO.First;
 			return patientRepository.UpdateByID(patient);
 		}
 
@@ -70,6 +71,7 @@ namespace Appointments.Service
 			patientDTO.Password = patient.Password;
 			patientDTO.Blocked = patient.Blocked;
 			patientDTO.Brojac= patient.Brojac;
+			patientDTO.First = patient.First;
 			return patientDTO;
 		}
 		
