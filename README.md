@@ -1,4 +1,4 @@
--Mine assignment was Patient role
--Credentials for patient login:
--Email: a@gmail.com
--Password: 1234
+- Mine assignment was Patient role
+- Credentials for patient login:
+- Email: a@gmail.com
+- Password: 1234
